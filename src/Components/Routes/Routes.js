@@ -1,10 +1,22 @@
 import React from 'react';
+import Login from '../Login/Login';
+import Header from '../Header/Header';
+import Homepage from '../Homepage/Homepage';
+import User from '../User/User';
+import Group from '../Group/Group';
+import { Route, Switch } from 'react-router-dom';
 
 const Routes = () => {
 
 	return (
 		<div>
-			routes
+			<Route path='/login' component={Login} />
+			<Route path='/' component={Header} />
+			<Switch>
+				<Route path='/user' component={User} />
+				<Route path='/group' component={Group} />
+				<Route exact path='/' component={Homepage} />
+			</Switch>
 		</div>
 	) 
 }

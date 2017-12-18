@@ -1,15 +1,16 @@
 import React from 'react';
+import Routes from '../Routes/Routes';
 import './App.css';
+import Login from '../Login/Login';
 
 const App = () => {
 
-  render() {
-    return (
-      <div className="App">
-        App
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+    	<Routes />
+      App
+    </div>
+  );
 }
 
 export default App;
