@@ -1,6 +1,6 @@
 .header-component {
 	background-color: grey;
-	padding: 20px 0;
+	padding: 21px 0;
 
 	h1 {
 		margin: 0;
@@ -13,18 +13,39 @@
 		position: absolute;
 		right: 15px;
 		top: 15px;
-		color: #fff;
+		color: rgba(255,255,255, .75);
+		transition: all .15s ease-in-out;
+	}
+
+	.login:hover {
+		color: rgba(255,255,255, 1);
 	}
 
 	.user {
 		position: absolute;
 		right: 15px;
-		top: 30px;
+		top: 35px;
 	}
 
 	.group {
 		position: absolute;
 		right: 15px;
-		top: 45px;
+		top: 55px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.header-component {
+
+		h1 {
+			margin-bottom: 15px;
+		}
+
+		.login, .user, .group {
+			display: block;
+			position: static;
+			text-align: center;
+			margin: 3px;
+		}
 	}
 }

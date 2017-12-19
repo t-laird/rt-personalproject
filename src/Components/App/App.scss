@@ -1,20 +1,36 @@
 * {
 	box-sizing: border-box;
+	font-family: "alda";
+	font-weight: 500;
+	font-size: 16px;
 }
 
 a {
 	text-decoration: none;
 	color: #444;
+	font-family: "semplicitapro", sans-serif;
+
 }
 
-h1,h2,h3,h4,h5,h6,p {
+h1,h2,h3,h4,h5,h6 {
 	padding: 0;
 	margin: 0;
+	font-family: "semplicitapro", sans-serif;
+	font-weight: 300;
 }
 
-h2 {
-	font-size: 26px;
+p {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
 }
+
+h1 { font-size: 40px; }
+h2 { font-size: 32px; }
+h3 { font-size: 26px; }
+h4 { font-size: 21px; }
+h5 { font-size: 16px; }
+h6 { font-size: 13px; }
 
 body {
 	background-color: lightgrey;
