@@ -1,0 +1,30 @@
+.header-component {
+	background-color: grey;
+	padding: 20px 0;
+
+	h1 {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		color: #fff;
+	}
+
+	.login {
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		color: #fff;
+	}
+
+	.user {
+		position: absolute;
+		right: 15px;
+		top: 30px;
+	}
+
+	.group {
+		position: absolute;
+		right: 15px;
+		top: 45px;
+	}
+}

@@ -10,8 +10,8 @@ const Routes = () => {
 
 	return (
 		<div>
-			<Route path='/login' component={Login} />
 			<Route path='/' component={Header} />
+			<Route path='/login' component={Login} />
 			<Switch>
 				<Route path='/user' component={User} />
 				<Route path='/group' component={Group} />

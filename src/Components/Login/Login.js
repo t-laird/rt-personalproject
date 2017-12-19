@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Login.css';
 
 class Login extends Component {
 	constructor() {
@@ -20,11 +21,12 @@ class Login extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="login-component">
+				<h2>Create an account</h2>
 				<input 
 					className="userName"
 					type="text"
-					placeholder="userName"
+					placeholder="name"
 					onChange={this.handleChange}
 					value={this.state.userName}
 					name="userName"
@@ -45,7 +47,7 @@ class Login extends Component {
 					value={this.state.password}
 					name="password"
 				/>
-				<button>submit</button>
+				<button>SUBMIT</button>
 			</div>
 		) 
 	}
