@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import rootReducer from './Reducers';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger'; 
-import App from './Component/App/App';
+import App from './Components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import './normalize.css';
 
