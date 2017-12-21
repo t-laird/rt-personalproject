@@ -22,7 +22,7 @@ class Login extends Component {
 	render() {
 		return (
 			<div className="login-component">
-				<h2>Create an account</h2>
+				<h2>create an account</h2>
 				<input 
 					className="userName"
 					type="text"
@@ -47,7 +47,7 @@ class Login extends Component {
 					value={this.state.password}
 					name="password"
 				/>
-				<button>SUBMIT</button>
+				<button><h5>SUBMIT</h5></button>
 			</div>
 		) 
 	}
