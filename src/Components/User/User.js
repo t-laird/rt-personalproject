@@ -5,8 +5,9 @@ import UserProfile from '../UserProfile/UserProfile';
 import * as actions from '../../Actions/';
 import './User.css';
 import clearLocalStorage from '../../helpers/clearLocalStorage';
+import { NavLink } from 'react-router-dom';
 
-class User extends Component{
+class User extends Component {
   constructor() {
     super();
   }
@@ -52,15 +53,18 @@ class User extends Component{
   getToken () {
     const tokenRegex = new RegExp(/\?token=/);
     const parseToken = this.props.location.search.replace(tokenRegex, '');
-    
+
     return parseToken;
   }
+
+
 
   render() {
     return (
       <div className="user-component">
         <UserData />
         <UserProfile />
+        <NavLink to='/joingroup' >Join / Switch Group</NavLink>
       </div>
     )
   }

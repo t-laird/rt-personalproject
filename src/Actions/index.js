@@ -10,3 +10,10 @@ export const logoutUser = () => {
 		type: 'LOGOUT_USER',
 	}
 }
+
+export const updateGroup = (group) => {
+	return {
+		type: 'UPDATE_GROUP',
+		group
+	}
+}
