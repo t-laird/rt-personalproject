@@ -21,7 +21,6 @@ class CreateGroup extends Component {
 			number: true
 		})
 
-		console.log('gnwp', groupName, weeklyPoints)
 		const response = await fetch('http://localhost:3000/api/v1/group/new', {
 			method: 'POST',
 			body: JSON.stringify({
@@ -31,7 +30,7 @@ class CreateGroup extends Component {
 				administrator_id: this.props.user.user_id
 			}),
 			headers: {
-				'Content-Type': 'application/x-www-form-urlencoded'
+				'Content-Type': 'application/json'
 			}
 		})
 
