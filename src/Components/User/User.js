@@ -4,6 +4,7 @@ import UserData from '../UserData/UserData';
 import UserProfile from '../UserProfile/UserProfile';
 import * as actions from '../../Actions/';
 import './User.css';
+import clearLocalStorage from '../../helpers/clearLocalStorage';
 
 class User extends Component{
   constructor() {
@@ -21,14 +22,19 @@ class User extends Component{
         "CONTENT-TYPE": 'application/json'
       }
     });
+    console.log(loginResponse)
+    if (loginResponse.status > 400) {
+    	clearLocalStorage();
+    	this.props.history.push('/user');
+    }
     const userData = await loginResponse.json();
 
-    this.props.updateUser(userData);
+
+    this.props.updateUser(userData[0]);
     this.props.history.push('/user');
   }
 
   checkForKey() {
-    console.log(this.props.location.search.length);
     const userKey = JSON.parse(localStorage.getItem('123rtx-token'));
     if (this.props.location.search.length > 500) {
       const passedToken = this.getToken();
@@ -36,7 +42,6 @@ class User extends Component{
       this.sendKey(passedToken);
     } else if (userKey) {
       this.sendKey(userKey);
-      console.log('sent via local');
     }
 
     //pass to backend
@@ -54,7 +59,6 @@ class User extends Component{
   }
 
   render() {
-    // this.getToken();
     return (
       <div className="user-component">
         <UserData />
@@ -73,6 +77,5 @@ const mapDispatchToProps = dispatch => ({
     dispatch(actions.updateUser(user))
   }
 });
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(User);
