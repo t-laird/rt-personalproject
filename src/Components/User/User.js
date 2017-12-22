@@ -22,13 +22,7 @@ class User extends Component{
         "CONTENT-TYPE": 'application/json'
       }
     });
-    console.log(loginResponse)
-    if (loginResponse.status > 400) {
-    	clearLocalStorage();
-    	this.props.history.push('/user');
-    }
     const userData = await loginResponse.json();
-
 
     this.props.updateUser(userData[0]);
     this.props.history.push('/user');
@@ -42,6 +36,9 @@ class User extends Component{
       this.sendKey(passedToken);
     } else if (userKey) {
       this.sendKey(userKey);
+    } else {
+    	clearLocalStorage();
+    	window.location="https://tr-personal-proj.e1.loginrocket.com"
     }
 
     //pass to backend
@@ -55,6 +52,7 @@ class User extends Component{
   getToken () {
     const tokenRegex = new RegExp(/\?token=/);
     const parseToken = this.props.location.search.replace(tokenRegex, '');
+    
     return parseToken;
   }
 
