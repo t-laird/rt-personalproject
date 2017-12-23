@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import generator from 'generate-password';
 import * as actions from '../../Actions';
 import getKeyFromLS from '../../helpers/getKeyFromLS';
+import validateGroup from '../../helpers/validateGroup';
+
 
 class CreateGroup extends Component {
 	constructor() {
@@ -36,9 +38,14 @@ class CreateGroup extends Component {
 			}
 		})
 
-		const cleanResponse = await response.json();
-		console.log('1234', response, cleanResponse)
-		this.props.updateGroup(cleanResponse[0])
+		const groupResponse = await response.json();
+		this.props.updateGroup(groupResponse[0])
+
+		console.log('GROUP RESPONSE', groupResponse[0].group_passphrase)
+
+		const userResponse = await validateGroup(groupResponse[0].group_passphrase, this.props.user.user_id)
+		// console.log(userResponse)
+		this.props.updateUser(userResponse[0])
 	}
 
 	handleChange = (event) => {
@@ -82,6 +89,9 @@ const mapStateToProps = ( store ) => ({
 const mapDispatchToProps = dispatch => ({
 	updateGroup: group => {
 		dispatch(actions.updateGroup(group))
+	},
+	updateUser: user => {
+		dispatch(actions.updateUser(user))
 	}
 });
 
