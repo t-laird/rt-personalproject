@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import generator from 'generate-password';
 import * as actions from '../../Actions';
+import getKeyFromLS from '../../helpers/getKeyFromLS';
 
 class CreateGroup extends Component {
 	constructor() {
@@ -26,11 +27,12 @@ class CreateGroup extends Component {
 			body: JSON.stringify({
 				group_name: groupName,
 				group_passphrase: password,
-				weekly_points: weeklyPoints,
-				administrator_id: this.props.user.user_id
+				weekly_points: weeklyPoints
 			}),
 			headers: {
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/json',
+	      'x-token': getKeyFromLS(),
+
 			}
 		})
 
