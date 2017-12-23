@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../Actions';
 import { NavLink } from 'react-router-dom';
+import validateGroup from '../../helpers/validateGroup';
+
 
 
 class JoinGroup extends Component {
@@ -21,22 +23,21 @@ class JoinGroup extends Component {
 		this.setState({[name]: value})
 	}
 
-	joinGroup = (event) => {
+	joinGroup = async (event) => {
 		event.preventDefault();
-		this.validateGroup(this.state.passphrase)
+		const response = await validateGroup(this.state.passphrase, this.props.user.user_id)
+		this.props.updateUser(response[0])
 	}
 
-	validateGroup = async (passphrase) => {
-		console.log(this.props.user)
-		const response = await fetch(`http://localhost:3000/api/v1/group/validate/${passphrase}/${this.props.user.user_id}`)
-		if (response.status >= 400) {
-			this.setState({message: 'Passphrase not valid!  Please try again.'})
-		} else {
-			const cleanResponse = await response.json();
-			console.log(cleanResponse)
-			this.props.updateUser(cleanResponse[0])
-		}
-	}
+	// validateGroup = async (passphrase) => {
+	// 	const response = await fetch(`http://localhost:3000/api/v1/group/validate/${passphrase}/${this.props.user.user_id}`, {
+	// 		headers: {
+	// 			'x-token': getKeyFromLS(),
+	// 		}
+	// 	})
+	// 	const cleanResponse = await response.json();
+	// 	this.props.updateUser(cleanResponse[0])
+	// }
 
 	render() {
 		return (
