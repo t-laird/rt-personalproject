@@ -7,6 +7,7 @@ import './User.css';
 import clearLocalStorage from '../../helpers/clearLocalStorage';
 import { NavLink } from 'react-router-dom';
 import getKeyFromLS from '../../helpers/getKeyFromLS';
+import Transaction from '../Transaction/Transaction';
 
 class User extends Component {
   constructor() {
@@ -14,7 +15,8 @@ class User extends Component {
   }
 
   componentDidMount = async () => {
-  	await this.loadUser();
+    const userData = await this.loadUser();
+    await this.loadTransactionData(userData);
   }
 
   loadUser = async () => {
@@ -29,12 +31,35 @@ class User extends Component {
 	    const userData = await user.json();
 
 	    this.props.updateUser(userData[0]);
-
+      return userData[0];
   	} catch (e) {
   		console.log('heeeeeeeyo')
     	window.location="https://tr-personal-proj.e1.loginrocket.com"
-    	return
+    	return;
   	}
+  }
+
+  loadTransactionData = async (userData) => {
+    try {
+      const userTransactionData = await fetch('http://localhost:3000/api/v1/events/getuserdata/', {
+        method: 'POST',
+        headers: {
+          "x-token": getKeyFromLS(),
+          "CONTENT-TYPE": 'application/json'
+        },
+        body: JSON.stringify({user: userData})
+      });
+
+      const userTransactions = await userTransactionData.json();
+
+      this.props.updateUserTransactions(userTransactions);
+
+
+    } catch (e) {
+      console.log('hmmmmmmm ');
+    	window.location="https://tr-personal-proj.e1.loginrocket.com"
+      return;
+    }
   }
 
   render() {
@@ -43,6 +68,7 @@ class User extends Component {
         <UserData />
         <UserProfile />
         <NavLink to='/joingroup' >Join / Switch Group</NavLink>
+        <Transaction />
       </div>
     )
   }
@@ -54,7 +80,10 @@ const mapStateToProps = ( store ) => ({
 
 const mapDispatchToProps = dispatch => ({
   updateUser: user => {
-    dispatch(actions.updateUser(user))
+    dispatch(actions.updateUser(user));
+  },
+  updateUserTransactions: transactions => {
+    dispatch(actions.updateUserTransactions(transactions));
   }
 });
 

@@ -1,0 +1,85 @@
+@import '../../Variables.scss';
+
+.Transaction {
+  width: 90%;
+  margin-top: 20px;
+  margin: 20px auto 0px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px 10px 8px 8px;
+  position: relative;
+  box-sizing: border-box;
+
+  max-width: 600px;
+
+  input {
+    padding: 0px 20px;
+    border: 2px solid black;
+    border-bottom: 1px solid black;
+    background: $primary2;
+    color: white;
+    &:focus {
+      background: darken($primary2, 10%);
+    }
+    &::placeholder{
+      color: rgb(255, 255, 255);
+    }
+  }
+  button {
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background: $primary1;
+    color: white;
+    cursor: pointer;
+    border-top: 1px solid black;
+    border-radius: 0px 0px 8px 8px;
+    
+    &:hover {
+      background-color: darken($primary1, 5%);
+    }
+  }
+  
+  input,
+  button {
+    width: 100%;
+    display: flex;
+    font-size: 50px;
+    height: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+  }
+
+  .points {
+    position: relative;
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+    border: 2px 2px 0px 2px solid black;
+    
+    input {
+      border-radius: 8px 8px 0px 0px;
+      border: 2px 2px 0px 2px solid black;
+      border: none;
+    }
+    .point-error {
+      position: absolute;
+      height: 50px;
+      top: 25px;
+      right: 10px;
+      font-size: 40px;
+      color: red;
+    }
+  }
+
+  .remaining-points {
+    width: 100%;
+    span {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 8px 0px;
+      font-size: 30px;
+    }
+  }
+}
