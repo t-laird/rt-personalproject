@@ -69,12 +69,14 @@ class Transaction extends Component {
   }
 
   recipientOptions() {
-    const filterSelf = this.props.UserList.filter( user => user.name !== this.props.User.name);
-    const userOptions = filterSelf.map( (user, index) => {
-      return <option value={user.name} key={`userOption${index}`}>{user.name}</option>
-    });
-
-    return userOptions;
+    if (this.props.userList) {
+      const filterSelf = this.props.UserList.filter( user => user.name !== this.props.User.name);
+      const userOptions = filterSelf.map( (user, index) => {
+        return <option value={user.name} key={`userOption${index}`}>{user.name}</option>
+      });
+  
+      return userOptions;
+    }
   }
 
   render() {
