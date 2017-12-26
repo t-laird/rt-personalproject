@@ -17,6 +17,7 @@ class User extends Component {
   componentDidMount = async () => {
     const userData = await this.loadUser();
     await this.loadTransactionData(userData);
+    await this.loadUsersInGroup(userData);
   }
 
   loadUser = async () => {
@@ -62,6 +63,23 @@ class User extends Component {
     }
   }
 
+  loadUsersInGroup = async (userdata) => {
+    try {
+      const usersInGroupResponse = await fetch(`http://localhost:3000/api/v1/users/group/${userdata.group_id}`, {
+        method: 'GET',
+        headers: {
+          "x-token": getKeyFromLS(),
+          'CONTENT-TYPE': 'application/json'
+        }
+      });
+
+      const usersInGroup = await usersInGroupResponse.json();
+      this.props.updateUserList(usersInGroup);
+    } catch (error) {
+      console.log('error: ', error);
+    }
+  }
+
   render() {
     return (
       <div className="user-component">
@@ -84,6 +102,9 @@ const mapDispatchToProps = dispatch => ({
   },
   updateUserTransactions: transactions => {
     dispatch(actions.updateUserTransactions(transactions));
+  },
+  updateUserList: users => {
+    dispatch(actions.updateUserList(users));
   }
 });
 
