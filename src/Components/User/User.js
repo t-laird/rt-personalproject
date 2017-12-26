@@ -18,6 +18,7 @@ class User extends Component {
     const userData = await this.loadUser();
     await this.loadTransactionData(userData);
     await this.loadUsersInGroup(userData);
+    await this.loadGroupSettings(userData);
   }
 
   loadUser = async () => {
@@ -80,6 +81,27 @@ class User extends Component {
     }
   }
 
+  loadGroupSettings = async (userdata) => {
+    try {
+      if (!userdata.group_id) {
+        throw new Error('user not in group');
+      }
+      const groupDataResponse = await fetch(`http://localhost:3000/api/v1/group/${userdata.group_id}`, {
+        method: 'GET',
+        headers: {
+          'CONTENT-TYPE': 'application/json',
+          'x-token': getKeyFromLS()
+        }
+      });
+
+      const groupData = await groupDataResponse.json();
+      this.props.updateGroup(groupData[0]);
+
+    } catch (error) {
+      return 'error retrieving group data';
+    }
+  }
+
   render() {
     return (
       <div className="user-component">
@@ -105,6 +127,9 @@ const mapDispatchToProps = dispatch => ({
   },
   updateUserList: users => {
     dispatch(actions.updateUserList(users));
+  },
+  updateGroup: group => {
+    dispatch(actions.updateGroup(group));
   }
 });
 
