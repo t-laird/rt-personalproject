@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Transaction.css';
 import getKeyFromLS from '../../helpers/getKeyFromLS';
+import { connect } from 'react-redux';
+
 
 class Transaction extends Component {
   constructor() {
@@ -56,6 +58,15 @@ class Transaction extends Component {
     console.log(submitResponse);
   }
 
+  recipientOptions() {
+    const filterSelf = this.props.UserList.filter( user => user.name !== this.props.User.name);
+    const userOptions = filterSelf.map( (user, index) => {
+      return <option value={user.name} key={`userOption${index}`}>{user.name}</option>
+    });
+
+    return userOptions;
+  }
+
   render() {
     return (
       <div className="Transaction">
@@ -72,12 +83,9 @@ class Transaction extends Component {
             onChange={(e) => {this.handleInput(e)}} />
           {this.pointStatus()}
         </div>
-        <input 
-          type="text" 
-          name="recipient" 
-          placeholder="recipient" 
-          value={this.state.recipient} 
-          onChange={(e) => {this.handleInput(e)}} />
+        <select name="cars">
+          {this.recipientOptions()}
+        </select> 
         <button onClick={()=> {this.handleSubmit()}}>SEND!</button>
       </div>
     );
@@ -85,4 +93,10 @@ class Transaction extends Component {
 }
 
 
-export default Transaction;
+const mapStateToProps = ( store ) => ({
+  UserList: store.UserList,
+  User: store.User
+});
+
+
+export default connect(mapStateToProps, null)(Transaction);
