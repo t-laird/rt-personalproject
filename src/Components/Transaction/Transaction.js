@@ -36,7 +36,17 @@ class Transaction extends Component {
   }
 
   getRemainingPoints() {
-    return <span>remaining points: {100-30}</span>
+    const { UserTransactions } = this.props;
+    if (UserTransactions.length) {
+      const recentTransactions = UserTransactions[UserTransactions.length - 1];
+      const spentPoints = recentTransactions.sent.reduce( (total, transaction) => {
+        total += transaction.point_value;
+        return total;
+      }, 0);
+      const weeklyPoints = this.props.Group.weekly_points;
+      return <span>remaining points: {weeklyPoints-spentPoints}</span>;
+    } 
+    return <span>login to send points!</span>;
   }
 
   async handleSubmit() {
@@ -94,8 +104,10 @@ class Transaction extends Component {
 
 
 const mapStateToProps = ( store ) => ({
+  UserTransactions: store.UserTransactions,
   UserList: store.UserList,
-  User: store.User
+  User: store.User,
+  Group: store.Group
 });
 
 
