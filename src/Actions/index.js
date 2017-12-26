@@ -24,3 +24,10 @@ export const updateUserTransactions = (transactions) => {
     transactions
   };
 };
+
+export const updateUserList = (users) => {
+  return {
+    type: 'UPDATE_USERS',
+    users
+  };
+};
