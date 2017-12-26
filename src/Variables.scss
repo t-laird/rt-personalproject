@@ -1,5 +1,28 @@
-$primary1: #d64933;
-$primary2: #2b303a;
-$primary3: #0a2342;
-$primary4: #58a4b0;
-$primary5: #bac1b8;
+/********  FONT SIZES  ********/
+
+h1 { font-size: 40px; }
+h2 { font-size: 32px; }
+h3 { font-size: 26px; }
+h4 { font-size: 21px; }
+h5 { font-size: 16px; }
+h6 { font-size: 13px; }
+
+/********  COLORS  ********/
+
+$red: #fe5630;
+$blue: #b9e5fb;	 
+$yellow: #ffe196; 
+$grey: #b4bcc2;  	
+
+$red-light: #ffddd6;
+$blue-light: #e3f5fd;
+$yellow-light: #fff3d5;
+$grey-light: #e0e5e8;
+
+$red-dark: #c93f20;
+$blue-dark: #85c0de;
+$yellow-dark: #e3cb8d;
+$grey-dark: #7d8d9c;
+
+$grey-text: #37414d;
+$blue-text: #006699;
