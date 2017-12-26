@@ -41,10 +41,7 @@ class CreateGroup extends Component {
 		const groupResponse = await response.json();
 		this.props.updateGroup(groupResponse[0])
 
-		console.log('GROUP RESPONSE', groupResponse[0].group_passphrase)
-
 		const userResponse = await validateGroup(groupResponse[0].group_passphrase, this.props.user.user_id)
-		// console.log(userResponse)
 		this.props.updateUser(userResponse[0])
 	}
 

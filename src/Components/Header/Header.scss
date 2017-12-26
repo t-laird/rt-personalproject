@@ -1,5 +1,7 @@
+@import '../App/App.scss';
+
 .header-component {
-	background-color: grey;
+	background-color: $blue-dark;
 	padding: 21px 0;
 
 	h1 {
