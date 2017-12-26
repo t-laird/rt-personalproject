@@ -1,29 +1,5 @@
-* {
-	box-sizing: border-box;
-	font-family: "alda";
-	font-weight: 500;
-	font-size: 16px;
-}
 
-a {
-	text-decoration: none;
-	color: #444;
-	font-family: "semplicitapro", sans-serif;
-
-}
-
-h1,h2,h3,h4,h5,h6 {
-	padding: 0;
-	margin: 0;
-	font-family: "semplicitapro", sans-serif;
-	font-weight: 300;
-}
-
-p {
-	padding: 0;
-	margin: 0;
-	font-size: 16px;
-}
+/********  FONT SIZES  ********/
 
 h1 { font-size: 40px; }
 h2 { font-size: 32px; }
@@ -32,6 +8,65 @@ h4 { font-size: 21px; }
 h5 { font-size: 16px; }
 h6 { font-size: 13px; }
 
+/********  COLORS  ********/
+
+$red: #fe5630;
+$blue: #b9e5fb;	 
+$yellow: #ffe196; 
+$grey: #b4bcc2;  	
+
+$red-light: #ffddd6;
+$blue-light: #e3f5fd;
+$yellow-light: #fff3d5;
+$grey-light: #e0e5e8;
+
+$red-dark: #c93f20;
+$blue-dark: #85c0de;
+$yellow-dark: #e3cb8d;
+$grey-dark: #7d8d9c;
+
+$grey-text: #37414d;
+$blue-text: #006699;
+
+/*$red-light: lighten($red, 15%);
+$blue-light: lighten($blue, 9%);
+$yellow-light: lighten($yellow, 15%);
+$grey-light: lighten($grey, 17%);*/
+/*$red-dark: darken($red, 30%);*/
+/*$blue-dark: darken($blue, 35%);*/
+/*$yellow-dark: darken($yellow, 40%);*/
+/*$grey-dark: darken($grey, 30%);*/
+
+/********  APP STYLES  ********/
+
+* {
+	box-sizing: border-box;
+	font-family: "alda";
+	font-weight: 500;
+	font-size: 16px;
+}
+
 body {
-	background-color: lightgrey;
+	background-color: $blue-light;
+}
+
+a {
+	text-decoration: none;
+	color: #444;
+	font-family: "semplicitapro", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	padding: 0;
+	margin: 0;
+	font-family: "semplicitapro", sans-serif;
+	font-weight: 300;
+	color: $grey-text;
+}
+
+p {
+	color: $grey-text;
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
 }

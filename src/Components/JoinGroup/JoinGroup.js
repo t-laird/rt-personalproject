@@ -16,6 +16,14 @@ class JoinGroup extends Component {
 		}
 	}
 
+	componentDidMount = () => {
+		if (this.props.group.group_name) {
+			this.setState({message: `You are a member of: ${this.props.group.group_name}`})
+		} else if (this.props.user.group_id) {
+			this.setState({message: 'You are a member of a group!'})
+		}
+	}
+
 	handleChange = (event) => {
 		const { target } = event;
 		const { name, value } = target;
@@ -28,16 +36,6 @@ class JoinGroup extends Component {
 		const response = await validateGroup(this.state.passphrase, this.props.user.user_id)
 		this.props.updateUser(response[0])
 	}
-
-	// validateGroup = async (passphrase) => {
-	// 	const response = await fetch(`http://localhost:3000/api/v1/group/validate/${passphrase}/${this.props.user.user_id}`, {
-	// 		headers: {
-	// 			'x-token': getKeyFromLS(),
-	// 		}
-	// 	})
-	// 	const cleanResponse = await response.json();
-	// 	this.props.updateUser(cleanResponse[0])
-	// }
 
 	render() {
 		return (
@@ -62,7 +60,8 @@ class JoinGroup extends Component {
 }
 
 const mapStateToProps = ( store ) => ({
-	user: store.User
+	user: store.User,
+	group: store.Group
 })
 
 const mapDispatchToProps = dispatch => ({
