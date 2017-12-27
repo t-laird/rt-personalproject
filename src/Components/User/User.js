@@ -10,15 +10,25 @@ import getKeyFromLS from '../../helpers/getKeyFromLS';
 import Transaction from '../Transaction/Transaction';
 
 class User extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      joinText: 'Join a Group'
+    }
   }
 
-  componentDidMount = async () => {
+  componentDidMount = async (props) => {
     const userData = await this.loadUser();
     await this.loadTransactionData(userData);
     await this.loadUsersInGroup(userData);
     await this.loadGroupSettings(userData);
+  }
+
+  componentWillReceiveProps = (nextProps) => {
+    if (nextProps.user.group_id > 0) {
+      this.setState({joinText: 'SWITCH GROUPS'})
+    }
   }
 
   loadUser = async () => {
@@ -55,7 +65,6 @@ class User extends Component {
       const userTransactions = await userTransactionData.json();
 
       this.props.updateUserTransactions(userTransactions);
-
 
     } catch (e) {
       console.log('hmmmmmmm ');
@@ -106,16 +115,16 @@ class User extends Component {
     return (
       <div className="user-component">
         <UserData />
-        <UserProfile />
-        <NavLink to='/joingroup' >Join / Switch Group</NavLink>
         <Transaction />
+        <UserProfile />
+        <NavLink className="join-group" to='/joingroup'>{this.state.joinText}</NavLink>
       </div>
     )
   }
 }
 
 const mapStateToProps = ( store ) => ({
-  user: store.user
+  user: store.User
 });
 
 const mapDispatchToProps = dispatch => ({

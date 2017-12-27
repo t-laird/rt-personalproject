@@ -12,29 +12,24 @@ const Header = (props) => {
 		clearLocalStorage();
 	}
 
-	let noUser;
-	let userLoggedIn;
+	let headerDisplay;
 
 	if (!Object.keys(props.user).length) {
-		noUser = (<a className="login" href="https://tr-personal-proj.e1.loginrocket.com">LOGIN / SIGNUP</a>)
+		headerDisplay = (<a className="login" href="https://tr-personal-proj.e1.loginrocket.com">LOGIN / SIGNUP</a>)
 	} else {
-		userLoggedIn = (
+		headerDisplay = (
 			<div>
+				<NavLink className="user" to='/user'>{props.user.name}<img src={require('./assets/user.svg')} /></NavLink>
+		    <NavLink className="group" to='/group'>{props.group.group_name} group<img src={require('./assets/group.svg')} /></NavLink>
 		    <NavLink className="logout" to='/' onClick={logout} >LOGOUT</NavLink>
-				<NavLink className="user" to='/user'><span>User: </span>{props.user.name}</NavLink>
-		    <NavLink className="group" to='/group'><span>Group: </span>{props.group.group_name}</NavLink>
 	    </div>
 		)
 	}
 
-
-
 	return (
 	  <div className="header-component">
-	    <NavLink exact to='/'><h1>APP NAME</h1></NavLink>
-	  	{noUser}
-	  	{userLoggedIn}
-	    
+	    <NavLink exact to='/'><h1>SNAP<img className="header-logo" src={require('./assets/ninja-logo.svg')} />NINJA</h1></NavLink>
+	  	{headerDisplay}
 	  </div>
 	)
 }

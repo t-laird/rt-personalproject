@@ -1,97 +1,113 @@
 @import '../../Variables.scss';
 
 .Transaction {
-  width: 90%;
-  margin-top: 20px;
-  margin: 20px auto 0px;
-  height: 300px;
-  display: flex;
-  flex-wrap: wrap;
-  border-radius: 10px 10px 8px 8px;
   position: relative;
-  box-sizing: border-box;
-
-  max-width: 600px;
-
   input {
-    padding: 0px 20px;
-    border: 2px solid black;
-    border-bottom: 1px solid black;
-    background: $blue;
-    color: white;
-    &:focus {
-      background: darken($blue, 10%);
-    }
+    background-color: $red-light;
+    color: $red;
+    font-size: 34px;
+    text-align: center;
     &::placeholder{
-      color: rgb(255, 255, 255);
+      color: #fff;
+      font-size: 24px;
+      position: relative;
+      bottom: 2px;
     }
   }
+
+  .current-points {
+    background: linear-gradient(to right, rgba(227,245,253,1) 0%,rgba(241,250,254,1) 20%,rgba(241,250,254,1) 80%,rgba(227,245,253,1) 100%);
+    border-bottom: 7px solid #b9e5fb;
+    width: 770px;
+    margin: 0 auto 30px;
+    padding: 2px 25px 8px;
+  }
+
+  .current-span {
+    background-color: $blue;
+    padding: 10px 17px;
+    font-family: "semplicitapro", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    margin-left: 5px
+  }
+
+  h3 {
+    margin: 0 0 13px 20px
+  }
+
   button {
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
-    background: $grey-light;
+    background-color: #fe5630;
     color: white;
     cursor: pointer;
-    border-top: 1px solid black;
-    border-radius: 0px 0px 8px 8px;
-    
+    padding: 9px 22px 8px;
+    font-size: 24px;
+    margin-left: 15px;
+    transition: background-color .15s ease-in-out;
+
     &:hover {
-      background-color: darken($grey, 5%);
+      background-color: darken($red, 8%);
     }
   }
   
+  hr {
+    margin: 23px 0 20px;
+    opacity: .2;
+  }
+
   input,
   button,
   select {
-    width: 100%;
-    display: flex;
-    font-size: 50px;
     outline: none;
-    height: 100px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
+    border: none;
   }
 
   select {
-    border: none;
-    border: 0;
-    padding: 10px;
-    option {
-      padding: 20px;
+    font-size: 24px;
+    background-color: #ffddd6;
+    margin-left: 15px;
+    width: 268px;
+    border-radius: 0;
+    background: url(assets/selectors.svg) no-repeat 96% $red-light;
+    background-size: 24px;
+    -webkit-appearance: none;
+  }
 
+  .award {
+    display: flex;
+
+    h3 {
+      margin-top: 13px;
     }
   }
 
-  .points {
+  .points-to {
+    margin-left: 0;
+  }
+
+  .points-block {
     position: relative;
-    width: 100%;
-    border-radius: 8px 8px 0px 0px;
-    border: 2px 2px 0px 2px solid black;
-    
+    background: linear-gradient(to right, rgba(227,245,253,1) 0%,rgba(241,250,254,1) 20%,rgba(241,250,254,1) 80%,rgba(227,245,253,1) 100%);
+    border-top: 7px solid #b9e5fb;
+    border-bottom: 7px solid #b9e5fb;
+    padding: 20px 25px;
+    width: 770px;
+    margin: auto;
+
+
+    h2 {
+      margin-bottom: 13px;
+    }
+
     input {
-      border-radius: 8px 8px 0px 0px;
-      border: 2px 2px 0px 2px solid black;
-      border: none;
+      width: 80px;
+      margin: 0 15px;
     }
     .point-error {
       position: absolute;
-      height: 50px;
       top: 25px;
       right: 10px;
-      font-size: 40px;
       color: red;
-    }
-  }
-
-  .remaining-points {
-    width: 100%;
-    span {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin: 8px 0px;
-      font-size: 30px;
     }
   }
 }
