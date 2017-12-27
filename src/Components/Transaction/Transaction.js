@@ -44,9 +44,9 @@ class Transaction extends Component {
         return total;
       }, 0);
       const weeklyPoints = this.props.Group.weekly_points;
-      return <span>remaining points: {weeklyPoints-spentPoints}</span>;
+      return <h3>Remaining weekly points to award: <span className="current-span">{weeklyPoints-spentPoints}</span></h3>;
     } 
-    return <span>login to send points!</span>;
+    return <h3>login to send points!</h3>;
   }
 
   async handleSubmit() {
@@ -82,23 +82,32 @@ class Transaction extends Component {
   render() {
     return (
       <div className="Transaction">
-        <div className="remaining-points">
-          {this.getRemainingPoints()}
+        <div className="current-points">
+          <div className="remaining-points">
+            {this.getRemainingPoints()}
+          </div>
+          <div className="received-points">
+            <h3>Points received this week: <span className="current-span">206</span></h3>
+          </div>
         </div>
-        <div className="points">
-          <input 
-            type="text" 
-            name="points" 
-            placeholder="points" 
-            value={this.state.points} 
-            className="points"
-            onChange={(e) => {this.handleInput(e)}} />
-          {this.pointStatus()}
+        <div className="points-block">
+          <h2>Award points: </h2>
+          <div className="award">
+            <h3>Send </h3>
+            <input 
+              type="text" 
+              name="points" 
+              placeholder="QTY" 
+              value={this.state.points} 
+              onChange={(e) => {this.handleInput(e)}} />
+            {this.pointStatus()}
+            <h3 className="points-to">points to</h3>
+            <select>
+              {this.recipientOptions()}
+            </select> 
+            <button onClick={()=> {this.handleSubmit()}}>SEND</button>
+          </div>
         </div>
-        <select name="cars">
-          {this.recipientOptions()}
-        </select> 
-        <button onClick={()=> {this.handleSubmit()}}>SEND!</button>
       </div>
     );
   }

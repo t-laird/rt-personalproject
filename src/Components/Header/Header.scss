@@ -1,53 +1,101 @@
-@import '../App/App.scss';
+@import '../../Variables.scss';
 
 .header-component {
 	background-color: $blue-dark;
+	background: linear-gradient(to right, rgba(185,229,251,1) 0%,rgba(227,245,253,1) 20%,rgba(227,245,253,1) 80%,rgba(185,229,251,1) 100%);
 	padding: 21px 0;
+	border-bottom: 7px solid #b9e5fb;
 
 	h1 {
 		margin: 0;
 		padding: 0;
 		text-align: center;
-		color: #fff;
+		color: $blue-text;
+		font-weight: 900;
 	}
+
+	.logout {
+		position: absolute;
+		font-size: 11px;
+		top: 12px;
+		right: 15px;
+		font-weight: 900;
+		color: rgba(255,255,255, .75);
+		transition: opacity .15s ease-in-out;
+
+	}
+
 
 	.login {
+		font-size: 11px;
+		font-weight: 900;
 		position: absolute;
-		right: 15px;
+		right: 12px;
 		top: 15px;
 		color: rgba(255,255,255, .75);
-		transition: all .15s ease-in-out;
+		transition: opacity .15s ease-in-out;
 	}
 
-	.login:hover {
+	.login:hover, .logout:hover {
 		color: rgba(255,255,255, 1);
 	}
 
-	.user {
+	.user, .group {
+		color: $blue-text;
 		position: absolute;
+		transition: opacity .15s ease-in-out;
+		opacity: .8;
+		display: flex;
+		align-items: center;
+
+		img {
+			width: 20px;
+			height: 20px;
+			margin-left: 6px;
+		}
+	}
+
+	.user {
 		right: 15px;
-		top: 35px;
+		top: 30px;
 	}
 
 	.group {
-		position: absolute;
 		right: 15px;
 		top: 55px;
 	}
+
+	.header-logo {
+		width: 60px;
+		margin: 0 10px -10px 15px;
+	}
+
+	.user:hover, .group:hover {
+		opacity: 1;
+	}
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
 	.header-component {
 
 		h1 {
 			margin-bottom: 15px;
 		}
 
-		.login, .user, .group {
+		.login, .user, .group, .logout {
 			display: block;
 			position: static;
 			text-align: center;
-			margin: 3px;
+			margin: 7px;
+
+			img {
+				position: relative;
+				top: 3px;
+			}
+		}
+
+		.logout {
+			margin-top: 20px;
 		}
 	}
 }

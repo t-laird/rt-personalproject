@@ -33,6 +33,7 @@
     "npm-run-all": "^4.1.2",
     "prop-types": "^15.6.0",
     "redux-devtools": "^3.4.1",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "url-loader": "^0.6.2"
   }
 }

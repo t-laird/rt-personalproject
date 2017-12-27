@@ -1,7 +1,21 @@
+@import '../../Variables.scss';
+
 .user-component {
-  padding: 15px;
+  padding: 3px;
   width: 100%;
 
-	
-	
+  .join-group {
+  	width: 770px;
+  	margin: auto;
+  	display: block;
+  	padding: 0 25px;
+  	color: rgba(255,255,255,.7);
+  	transition: color .15s ease-in-out;
+  	font-weight: 900;
+  	text-align: right;
+  }
+
+  .join-group:hover {
+  	color: rgba(255,255,255,1);
+  }
 }
