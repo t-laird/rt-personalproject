@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import * as actions from '../../Actions/index.js';
 import clearLocalStorage from '../../helpers/clearLocalStorage';
 
-const Header = (props) => {
+export const Header = (props) => {
 
 	const logout = () => {
 		props.logoutUser();
@@ -23,7 +23,7 @@ const Header = (props) => {
 	)
 }
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
 	logoutUser: () => {
 		dispatch(actions.logoutUser())
 	}
