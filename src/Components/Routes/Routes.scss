@@ -1,1 +1,14 @@
 @import '../../Variables.scss';
+
+.switch-wrapper {
+  @include component-transition;
+  width: 100%;
+}
+
+.switch-wrapper.fade-enter {
+  @include component-entering;
+}
+
+.switch-wrapper.fade-exit {
+  @include component-exiting;
+}
