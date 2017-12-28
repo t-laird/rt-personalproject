@@ -2,18 +2,9 @@
 
 .group-component {
   padding: 15px;
-  margin-top: 30px;
+  // margin-top: 30px;
   width: 100%;
-  @include component-transition;
 	
-}
-
-.group-component.fade-enter {
-  @include component-entering;
-}
-
-.group-component.fade-exit {
-  @include component-exiting;
 }
 
 
