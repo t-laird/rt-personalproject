@@ -3,7 +3,6 @@
 .user-component {
   padding: 3px;
   width: 100%;
-  @include component-transition;
 
   .join-group {
   	width: 770px;
@@ -21,13 +20,6 @@
   }
 }
 
-.user-component.fade-enter {
-  @include component-entering;
-}
-
-.user-component.fade-exit {
-  @include component-exiting;
-}
 
 
 
