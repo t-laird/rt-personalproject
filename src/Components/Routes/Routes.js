@@ -19,14 +19,16 @@ const Routes = ({ location }) => {
           key={location.key} 
           classNames="fade" 
           timeout={400}>
-          <Switch 
-            location={location}>
-            <Route exact path='/' component={Homepage} />
-            <Route path='/user' component={User} />
-            <Route path='/group' component={Group} />
-            <Route path='/joingroup' component={JoinGroup} />
-            <Route path='/creategroup' component={CreateGroup} />
-          </Switch>
+          <div className="switch-wrapper">
+            <Switch 
+              location={location}>
+              <Route exact path='/' component={Homepage} />
+              <Route path='/user' component={User} />
+              <Route path='/group' component={Group} />
+              <Route path='/joingroup' component={JoinGroup} />
+              <Route path='/creategroup' component={CreateGroup} />
+            </Switch>
+          </div>
         </CSSTransition>
       </TransitionGroup>
     </div>
