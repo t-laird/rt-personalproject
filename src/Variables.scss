@@ -32,3 +32,22 @@ $grey-dark: #7d8d9c;
 
 $grey-text: #37414d;
 $blue-text: #006699;
+
+/******** MIXINS ********/
+@mixin component-transition {
+  transition: .4s ease-in;
+}
+
+@mixin component-entering {
+  opacity: 0.5;
+  position: absolute;
+  transform: translate(0, -5px);
+  top: 105px;
+}
+
+@mixin component-exiting {
+  opacity: 0.5;
+  position: absolute;
+  top: 105px;
+  transform: translate(0, -5px);
+}
