@@ -7,22 +7,30 @@ import Group from '../Group/Group';
 import JoinGroup from '../JoinGroup/JoinGroup';
 import CreateGroup from '../CreateGroup/CreateGroup';
 import { Route, Switch } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-const Routes = () => {
-
+const Routes = ({ location }) => {
   return (
-    <div>
+    <div className="routes">
       <Route path='/' component={Header} />
       <Route path='/login' component={Login} />
-      <Switch>
-        <Route path='/user' component={User} />
-        <Route path='/group' component={Group} />
-        <Route exact path='/' component={Homepage} />
-        <Route path='/joingroup' component={JoinGroup} />
-        <Route path='/creategroup' component={CreateGroup} />
-      </Switch>
+      <TransitionGroup className="switch-routes">
+        <CSSTransition 
+          key={location.key} 
+          classNames="fade" 
+          timeout={400}>
+          <Switch 
+            location={location}>
+            <Route exact path='/' component={Homepage} />
+            <Route path='/user' component={User} />
+            <Route path='/group' component={Group} />
+            <Route path='/joingroup' component={JoinGroup} />
+            <Route path='/creategroup' component={CreateGroup} />
+          </Switch>
+        </CSSTransition>
+      </TransitionGroup>
     </div>
-  ) 
-}
+  );
+};
 
 export default Routes;
