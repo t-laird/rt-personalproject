@@ -8,6 +8,7 @@ import JoinGroup from '../JoinGroup/JoinGroup';
 import CreateGroup from '../CreateGroup/CreateGroup';
 import { Route, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import './Routes.css';
 
 const Routes = ({ location }) => {
   return (
