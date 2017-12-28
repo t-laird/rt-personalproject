@@ -4,21 +4,21 @@ import GroupData from '../GroupData/GroupData';
 
 
 class Group extends Component {
-	constructor() {
-		super();
+  constructor() {
+    super();
 
-		this.state = {
+    this.state = {
 
-		}
-	}
+    }
+  }
 
-	render() {
-		return (
-			<div className="group-component">
-				<GroupData />
-			</div>
-		) 
-	}
+  render() {
+    return (
+      <div className="group-component">
+        <GroupData />
+      </div>
+    ) 
+  }
 }
 
 export default Group;
