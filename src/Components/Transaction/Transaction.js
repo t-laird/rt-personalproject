@@ -29,7 +29,7 @@ class Transaction extends Component {
       parsePoints > 100) &&
       points.length
     ) {
-      return <span className="point-error">X</span>
+      return <span className="point-error">X</span>;
     } else {
       return null;
     }
@@ -37,7 +37,7 @@ class Transaction extends Component {
 
   getRemainingPoints() {
     const { UserTransactions } = this.props;
-    if (UserTransactions.length) {
+    if (UserTransactions.length && Object.keys(this.props.Group).length) {
       const recentTransactions = UserTransactions[UserTransactions.length - 1];
       const spentPoints = recentTransactions.sent.reduce( (total, transaction) => {
         total += transaction.point_value;
@@ -72,7 +72,7 @@ class Transaction extends Component {
     if (this.props.userList) {
       const filterSelf = this.props.UserList.filter( user => user.name !== this.props.User.name);
       const userOptions = filterSelf.map( (user, index) => {
-        return <option value={user.name} key={`userOption${index}`}>{user.name}</option>
+        return <option value={user.name} key={`userOption${index}`}>{user.name}</option>;
       });
   
       return userOptions;
@@ -99,13 +99,13 @@ class Transaction extends Component {
               name="points" 
               placeholder="QTY" 
               value={this.state.points} 
-              onChange={(e) => {this.handleInput(e)}} />
+              onChange={(e) => { this.handleInput(e); }} />
             {this.pointStatus()}
             <h3 className="points-to">points to</h3>
             <select>
               {this.recipientOptions()}
             </select> 
-            <button onClick={()=> {this.handleSubmit()}}>SEND</button>
+            <button onClick={()=> { this.handleSubmit(); }}>SEND</button>
           </div>
         </div>
       </div>
