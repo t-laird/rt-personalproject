@@ -52,7 +52,7 @@ class User extends Component {
 
   loadTransactionData = async (userData) => {
     try {
-      userData.created_date = "2017-11-11T18:34:30.017Z";  /// PULL THIS LINE OUT FOR PRODUCTION
+      userData.created_date = "2017-11-18T18:34:30.017Z";  /// PULL THIS LINE OUT FOR PRODUCTION
       const userTransactionData = await fetch('http://localhost:3000/api/v1/events/getuserdata/', {
         method: 'POST',
         headers: {

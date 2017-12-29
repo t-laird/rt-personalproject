@@ -34,7 +34,7 @@ $grey-text: #37414d;
 $blue-text: #006699;
 
 /******** MIXINS ********/
-@mixin component-transition {
+/*@mixin component-transition {
   transition: .4s ease-in;
 }
 
@@ -50,4 +50,43 @@ $blue-text: #006699;
   position: absolute;
   top: 105px;
   transform: translate(0, -5px);
+}*/
+
+@mixin component-transition {
+  // transition: .25s ease-in;
+  transition: .25s cubic-bezier(.78,.07,.35,1);  
 }
+
+@mixin component-entering {
+  opacity: 0.5;
+  position: absolute;
+  transform: translate(-100%);
+  top: 105px;
+}
+
+@mixin component-exiting {
+  opacity: 0.5;
+  position: absolute;
+  top: 105px;
+  transform: translate(100%);
+}
+
+/*@mixin component-transition {
+  transition: .4s cubic-bezier(.78,.07,.35,1);
+}
+
+@mixin component-entering {
+  opacity: 0.5;
+  position: absolute;
+  transform: translate(0, -300%);
+  top: 105px;
+  z-index: -10;
+}
+
+@mixin component-exiting {
+  opacity: 0.5;
+  position: absolute;
+  top: 105px;
+  transform: translate(0, 300%);
+  z-index: -10;
+}*/
