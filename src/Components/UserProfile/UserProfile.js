@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './UserProfile.css';
 import { connect } from 'react-redux';
-import { VictoryClipContainer, VictoryChart, VictoryLine, VictoryLegend, VictoryAxis } from 'victory';
+import { VictoryClipContainer, VictoryChart, VictoryLine, VictoryLegend, VictoryAxis, VictoryLabel } from 'victory';
 
 class UserProfile extends Component {
   constructor() {
@@ -44,49 +44,54 @@ class UserProfile extends Component {
     }
   }
 
-  chartLabels = () => {
-    let labelArray = ['this week']
-    const dataLength = this.props.UserTransactions.length;
-    if (dataLength > 0) {
-    console.log(dataLength)
-      for (let i = 1; i < dataLength - 1; i++) {
-        labelArray.unshift('-' + i.toString())
-        console.log(labelArray)
-      }
-    }
-
-    return labelArray;
-  }
-
-
   render() {
     return (
       <div className="user-profile-component">
         <VictoryChart>
           <VictoryLine
             groupComponent={<VictoryClipContainer clipPadding={{ top: 5, right: 10 }}/>}
-            style={{ data: { stroke: "#85c0de", strokeWidth: 10} }}
-            data={this.formatSent()}
-          />
-          <VictoryLine
-            groupComponent={<VictoryClipContainer clipPadding={{ top: 5, right: 10 }}/>}
             style={{ data: { stroke: "#006699", strokeWidth: 10} }}
             data={this.formatReceived()}
           />
+          <VictoryLine
+            groupComponent={<VictoryClipContainer clipPadding={{ top: 5, right: 10 }}/>}
+            style={{ data: { stroke: "#fe5630", strokeWidth: 10} }}
+            data={this.formatSent()}
+          />
           <VictoryLegend
             data={[ 
-              {name: "POINTS SENT", symbol: { fill: "#006699", type: "square" }, labels: {fontSize: 12, fill: "#006699"}},
-              {name: "POINTS RECEIVED", symbol: { fill: "#85c0de", type: "square" }, labels: {fontSize: 12, fill: "#85c0de"}}
+              {name: "POINTS SENT", symbol: { fill: "#fe5630", type: "square" }, labels: {fontSize: 12, fill: "#fe5630", fontFamily: "semplicitapro", padding: 0, fontWeight: 900}},
+              {name: "POINTS RECEIVED", symbol: { fill: "#006699", type: "square" }, labels: {fontSize: 12, fill: "#006699", fontFamily: "semplicitapro", padding: 0, fontWeight: 900}}
             ]}
             orientation="horizontal"
             gutter={20}
+            y={280}
+            x={-7}
           />
           <VictoryAxis 
-            tickValues={this.chartLabels()}
-            // tickFormat={this.chartLabels()}
+            tickValues={['']}
+            style={{
+              axis: {stroke: "#b9e5fb", strokeWidth: 6},
+            }}
           />
           <VictoryAxis 
             dependentAxis={true}
+            style={{
+              axis: {stroke: "#b9e5fb", strokeWidth: 6},
+              tickLabels: {fill: "#85c0de", fontFamily: "semplicitapro"}
+            }}
+          />
+          <VictoryLabel 
+            text={`Last ${this.props.UserTransactions.length - 1} Week${this.props.UserTransactions.length > 1 ? 's' : ''}`}
+            x={"38%"}
+            y={"4%"}
+            style={{fill: '#85c0de', fontSize: '18', fontWeight: 900, fontFamily: "semplicitapro"}}
+          />
+          <VictoryLabel 
+            text={"this week"}
+            x={"82%"}
+            y={"90%"}
+            style={{fill: '#85c0de', fontSize: '14', fontWeight: 500, fontFamily: "semplicitapro"}}
           />
         </VictoryChart>
       </div>
