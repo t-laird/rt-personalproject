@@ -19,7 +19,7 @@ const Routes = ({ location }) => {
         <CSSTransition 
           key={location.key} 
           classNames="fade" 
-          timeout={400}>
+          timeout={250}>
           <div className="switch-wrapper">
             <Switch 
               location={location}>

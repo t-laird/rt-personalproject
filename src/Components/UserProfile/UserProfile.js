@@ -8,7 +8,34 @@ class UserProfile extends Component {
     super();
   }
 
-  formatSent = () => {
+  generateReceivedLine = () => {
+    const { UserTransactions } = this.props;
+    console.log( UserTransactions )
+    if (UserTransactions.length && Object.keys(this.props.Group).length) {
+
+      const weeklyReceived = UserTransactions.reduce((array, week, index) => {
+        array.push({
+          x: index,
+          y: week.received.reduce((pointsReceived, transaction) => {
+            pointsReceived += transaction.point_value + 1;
+            return pointsReceived;
+          }, 0),
+        });
+        return array
+      }, [])
+      console.log(weeklyReceived)
+
+      return (
+        <VictoryLine
+          groupComponent={<VictoryClipContainer clipPadding={{ top: 5, right: 10 }}/>}
+          style={{ data: { stroke: "#006699", strokeWidth: 10} }}
+          data={weeklyReceived}
+        /> 
+      )
+    }
+  }
+
+  generateSentLine = () => {
     const { UserTransactions } = this.props;
     if (UserTransactions.length && Object.keys(this.props.Group).length) {
 
@@ -23,41 +50,22 @@ class UserProfile extends Component {
         return array
       }, [])
 
-      return weeklySent;
+      return (
+        <VictoryLine
+          groupComponent={<VictoryClipContainer clipPadding={{ top: 5, right: 10 }}/>}
+          style={{ data: { stroke: "#fe5630", strokeWidth: 10} }}
+          data={weeklySent}
+        />
+      )
     }
   }
 
-  formatReceived = () => {
-    const { UserTransactions } = this.props;
-    if (UserTransactions.length && Object.keys(this.props.Group).length) {
-      const weeklyReceived = UserTransactions.reduce((array, week, index) => {
-        array.push({
-          x: index,
-          y: week.received.reduce((pointsReceived, transaction) => {
-            pointsReceived += transaction.point_value;
-            return pointsReceived;
-          }, 0),
-        });
-        return array
-      }, [])
-      return weeklyReceived;
-    }
-  }
-
-  render() {
+  generateChart = () => {
     return (
       <div className="user-profile-component">
         <VictoryChart>
-          <VictoryLine
-            groupComponent={<VictoryClipContainer clipPadding={{ top: 5, right: 10 }}/>}
-            style={{ data: { stroke: "#006699", strokeWidth: 10} }}
-            data={this.formatReceived()}
-          />
-          <VictoryLine
-            groupComponent={<VictoryClipContainer clipPadding={{ top: 5, right: 10 }}/>}
-            style={{ data: { stroke: "#fe5630", strokeWidth: 10} }}
-            data={this.formatSent()}
-          />
+          {this.generateReceivedLine()}
+          {this.generateSentLine()}
           <VictoryLegend
             data={[ 
               {name: "POINTS SENT", symbol: { fill: "#fe5630", type: "square" }, labels: {fontSize: 12, fill: "#fe5630", fontFamily: "semplicitapro", padding: 0, fontWeight: 900}},
@@ -66,7 +74,6 @@ class UserProfile extends Component {
             orientation="horizontal"
             gutter={20}
             y={280}
-            x={-7}
           />
           <VictoryAxis 
             tickValues={['']}
@@ -82,10 +89,10 @@ class UserProfile extends Component {
             }}
           />
           <VictoryLabel 
-            text={`Last ${this.props.UserTransactions.length - 1} Week${this.props.UserTransactions.length > 1 ? 's' : ''}`}
+            text={`Last ${this.props.UserTransactions.length} Week${this.props.UserTransactions.length === 1 ? '' : 's'}`}
             x={"38%"}
             y={"4%"}
-            style={{fill: '#85c0de', fontSize: '18', fontWeight: 900, fontFamily: "semplicitapro"}}
+            style={{fill: '#006699', fontSize: '18', fontWeight: 900, fontFamily: "semplicitapro"}}
           />
           <VictoryLabel 
             text={"this week"}
@@ -94,6 +101,14 @@ class UserProfile extends Component {
             style={{fill: '#85c0de', fontSize: '14', fontWeight: 500, fontFamily: "semplicitapro"}}
           />
         </VictoryChart>
+      </div>
+    )
+  }
+
+  render() {
+    return (
+      <div>
+        {this.generateChart()}
       </div>
     ) 
   }
