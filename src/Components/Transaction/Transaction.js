@@ -3,7 +3,6 @@ import './Transaction.css';
 import getKeyFromLS from '../../helpers/getKeyFromLS';
 import { connect } from 'react-redux';
 
-
 class Transaction extends Component {
   constructor() {
     super();
@@ -79,6 +78,41 @@ class Transaction extends Component {
     }
   }
 
+  getReceivedPoints = () => {
+    const { UserTransactions } = this.props;
+    if (UserTransactions.length && Object.keys(this.props.Group).length) {
+      const recentTransactions = UserTransactions[UserTransactions.length - 1];
+      const receivedPoints = recentTransactions.received.reduce( (total, transaction) => {
+        total += transaction.point_value;
+        return total;
+      }, 0);
+      return receivedPoints;
+    }
+  }
+
+  // formatChartData = () => {
+  //   const { UserTransactions } = this.props;
+  //   if (UserTransactions.length && Object.keys(this.props.Group).length) {
+  //     const weeklyTransactions = UserTransactions.reduce((array, week, index) => {
+  //       array.push({
+  //         sent: week.sent.reduce((pointsSent, transaction) => {
+  //           pointsSent += transaction.point_value;
+  //           return pointsSent;
+  //         }, 0),
+  //         received: week.received.reduce((pointsReceived, transaction) => {
+  //           pointsReceived += transaction.point_value;
+  //           return pointsReceived;
+  //         }, 0)
+  //       });
+        
+  //       return array
+  //     }, [])
+  //     console.log(weeklyTransactions)
+  //   }
+  // }
+
+  
+
   render() {
     return (
       <div className="Transaction">
@@ -87,7 +121,7 @@ class Transaction extends Component {
             {this.getRemainingPoints()}
           </div>
           <div className="received-points">
-            <h3>Points received this week: <span className="current-span">206</span></h3>
+            <h3>Points received this week: <span className="current-span">{this.getReceivedPoints()}</span></h3>
           </div>
         </div>
         <div className="points-block">

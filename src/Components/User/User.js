@@ -45,7 +45,6 @@ class User extends Component {
 	    this.props.updateUser(userData[0]);
       return userData[0];
   	} catch (e) {
-  		console.log('heeeeeeeyo')
     	window.location="https://tr-personal-proj.e1.loginrocket.com"
     	return;
   	}
@@ -53,6 +52,7 @@ class User extends Component {
 
   loadTransactionData = async (userData) => {
     try {
+      userData.created_date = "2017-11-11T18:34:30.017Z";  /// PULL THIS LINE OUT FOR PRODUCTION
       const userTransactionData = await fetch('http://localhost:3000/api/v1/events/getuserdata/', {
         method: 'POST',
         headers: {
