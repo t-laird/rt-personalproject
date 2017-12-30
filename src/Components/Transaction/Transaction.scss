@@ -103,6 +103,11 @@
             background: rgba(235, 234, 234, 0.906);
             color: darken(#fe5630, 10%);            
           }
+
+          &.empty-suggestions {
+            color: red;
+            background-color: rgb(57, 57, 57);
+          }
         }
       }
     }
