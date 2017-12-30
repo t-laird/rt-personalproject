@@ -10,20 +10,18 @@ class UserProfile extends Component {
 
   generateReceivedLine = () => {
     const { UserTransactions } = this.props;
-    console.log( UserTransactions )
     if (UserTransactions.length && Object.keys(this.props.Group).length) {
 
       const weeklyReceived = UserTransactions.reduce((array, week, index) => {
         array.push({
           x: index,
           y: week.received.reduce((pointsReceived, transaction) => {
-            pointsReceived += transaction.point_value + 1;
+            pointsReceived += transaction.point_value;
             return pointsReceived;
           }, 0),
         });
         return array
       }, [])
-      console.log(weeklyReceived)
 
       return (
         <VictoryLine

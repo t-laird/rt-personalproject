@@ -25,6 +25,13 @@ export const updateUserTransactions = (transactions) => {
   };
 };
 
+export const updateGroupTransactions = (groupTransactions) => {
+  return {
+    type: 'UPDATE_GROUP_TRANSACTIONS',
+    groupTransactions
+  };
+};
+
 export const updateUserList = (users) => {
   return {
     type: 'UPDATE_USERS',
