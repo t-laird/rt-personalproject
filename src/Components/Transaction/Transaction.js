@@ -152,9 +152,11 @@ class Transaction extends Component {
     });
 
     if (this.state.recipient.length && !this.state.suggestions.length) {
-      return <li onClick={
-        () => this.setState({recipient: ''})
-      }>NO USERS FOUND</li>
+      return <li 
+        onClick={
+          () => this.setState({recipient: ''})
+        }
+        className="empty-suggestions">NO USERS FOUND</li>
     }
     return listItems;
   }
