@@ -65,7 +65,6 @@ class Transaction extends Component {
 
 
     for(let requiredParameter of ['send_id', 'receive_id', 'group_id', 'point_value', 'recipient_name']) {
-      console.log(requiredParameter);
       if (!transactionInformation[requiredParameter]) {
         this.setState({
           transactionMessage: `Please send a valid ${requiredParameter}.`,
@@ -78,6 +77,8 @@ class Transaction extends Component {
     if(this.state.recipient.length < 3) {
       return;
     }
+
+
 
     const submitEvent = await fetch('http://localhost:3000/api/v1/eventtracking/new', {
       method: 'POST',
@@ -102,6 +103,13 @@ class Transaction extends Component {
         transactionMessage: `Successfully sent ${this.state.points} points to ${transactionInformation.recipient_name}.`,
         points: ''
       });
+    } else if (submitResponse.status === 'failure') {
+      this.setState({
+        recipient: '',
+        suggestions: [],
+        transactionMessage: submitResponse.error,
+        points: ''
+      })
     }
 
   }
