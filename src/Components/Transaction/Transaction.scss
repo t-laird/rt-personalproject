@@ -56,21 +56,9 @@
   }
 
   input,
-  button,
-  select {
+  button {
     outline: none;
     border: none;
-  }
-
-  select {
-    font-size: 24px;
-    background-color: #ffddd6;
-    margin-left: 15px;
-    width: 268px;
-    border-radius: 0;
-    background: url(assets/selectors.svg) no-repeat 96% $red-light;
-    background-size: 24px;
-    -webkit-appearance: none;
   }
 
   .award {
@@ -79,6 +67,46 @@
     h3 {
       margin-top: 13px;
     }
+
+    .recipient-input {
+      width: 268px;
+      height: 60px;
+      margin: 0px 0px 0px 15px;
+      display: flex;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+      input {
+          width: 100%;
+          box-sizing: border-box;
+          height: 100%;
+          margin: 0px;
+        }
+      ul {
+        width: 268px;
+        padding-left: 0px;
+        margin: 0px;
+        position: relative;
+        z-index: 10;
+        
+        li {
+          width: 100%;
+          list-style: none;
+          text-align: center;
+          color: #fe5630;
+          font-size: 34px;
+          z-index: 10;
+          background: rgba(211, 211, 211, 0.749);
+          cursor: pointer;
+
+          &:hover,
+          &.highlight {
+            background: rgba(235, 234, 234, 0.906);
+            color: darken(#fe5630, 10%);            
+          }
+        }
+      }
+    }
+
   }
 
   .points-to {
