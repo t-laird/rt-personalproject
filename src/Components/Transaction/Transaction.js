@@ -162,7 +162,6 @@ class Transaction extends Component {
     }
     return listItems;
   }
-  
 
   render() {
     return (
