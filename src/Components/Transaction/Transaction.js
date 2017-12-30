@@ -11,7 +11,8 @@ class Transaction extends Component {
       recipient: '',
       validInput: true,
       suggestions: [],
-      focus: null
+      focus: null,
+      transactionMessage: null
     };
   }
 
@@ -51,10 +52,33 @@ class Transaction extends Component {
   }
 
   async handleSubmit() {
-    const send_id = 123;
-    const receive_id = parseInt(this.state.recipient);
-    const group_id = 123;
-    const point_value = parseInt(this.state.points);
+    const recipient = new RegExp(this.state.recipient, 'gi');
+    const findReceivingUser = this.props.UserList.find( user => recipient.test(user.name) );
+
+    const transactionInformation = {
+      send_id: this.props.User.user_id,
+      receive_id: findReceivingUser.user_id,
+      group_id: this.props.User.group_id,
+      point_value: parseInt(this.state.points),
+      recipient_name: findReceivingUser.name     
+    };
+
+
+    for(let requiredParameter of ['send_id', 'receive_id', 'group_id', 'point_value', 'recipient_name']) {
+      if (!transactionInformation[requiredParameter]) {
+        this.setState({
+          transactionMessage: `Please send a valid ${requiredParameter}.`,
+          suggestions: [],
+          recipient: ''
+        });
+      }
+    }
+
+    if(this.state.recipient.length < 3) {
+      return;
+    }
+
+
 
     const submitEvent = await fetch('http://localhost:3000/api/v1/eventtracking/new', {
       method: 'POST',
@@ -62,11 +86,32 @@ class Transaction extends Component {
         'CONTENT-TYPE': 'application/json',
         'x-token': getKeyFromLS()
       },
-      body: JSON.stringify({send_id, receive_id, group_id, point_value})
+      body: JSON.stringify({
+        send_id: transactionInformation.send_id, 
+        receive_id: transactionInformation.receive_id, 
+        group_id: transactionInformation.group_id, 
+        point_value: transactionInformation.point_value
+      })
     });
 
     const submitResponse = await submitEvent.json();
-    console.log(submitResponse);
+
+    if (submitResponse.status === 'success') {
+      this.setState({
+        recipient: '',
+        suggestions: [],
+        transactionMessage: `Successfully sent ${this.state.points} points to ${transactionInformation.recipient_name}.`,
+        points: ''
+      });
+    } else if (submitResponse.status === 'failure') {
+      this.setState({
+        recipient: '',
+        suggestions: [],
+        transactionMessage: submitResponse.error,
+        points: ''
+      })
+    }
+
   }
 
   getReceivedPoints = () => {
@@ -162,7 +207,6 @@ class Transaction extends Component {
     }
     return listItems;
   }
-  
 
   render() {
     return (
@@ -199,6 +243,9 @@ class Transaction extends Component {
               </ul>
             </div>
             <button onClick={()=> { this.handleSubmit(); }}>SEND</button>
+          </div>
+          <div className="transaction-message">
+            <h3>{this.state.transactionMessage}</h3>
           </div>
         </div>
       </div>
