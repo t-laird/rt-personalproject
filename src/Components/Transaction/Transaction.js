@@ -68,9 +68,15 @@ class Transaction extends Component {
       console.log(requiredParameter);
       if (!transactionInformation[requiredParameter]) {
         this.setState({
-          transactionMessage: `Please send a valid ${requiredParameter}.`
+          transactionMessage: `Please send a valid ${requiredParameter}.`,
+          suggestions: [],
+          recipient: ''
         });
       }
+    }
+
+    if(this.state.recipient.length < 3) {
+      return;
     }
 
     const submitEvent = await fetch('http://localhost:3000/api/v1/eventtracking/new', {
@@ -84,7 +90,6 @@ class Transaction extends Component {
         receive_id: transactionInformation.receive_id, 
         group_id: transactionInformation.group_id, 
         point_value: transactionInformation.point_value
-        // recipient_name: transactionInformation.recipient_name
       })
     });
 
