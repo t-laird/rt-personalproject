@@ -9,7 +9,9 @@ class Transaction extends Component {
     this.state = {
       points: '',
       recipient: '',
-      validInput: true
+      validInput: true,
+      suggestions: [],
+      focus: null
     };
   }
 
@@ -67,17 +69,6 @@ class Transaction extends Component {
     console.log(submitResponse);
   }
 
-  recipientOptions() {
-    if (this.props.userList) {
-      const filterSelf = this.props.UserList.filter( user => user.name !== this.props.User.name);
-      const userOptions = filterSelf.map( (user, index) => {
-        return <option value={user.name} key={`userOption${index}`}>{user.name}</option>;
-      });
-  
-      return userOptions;
-    }
-  }
-
   getReceivedPoints = () => {
     const { UserTransactions } = this.props;
     if (UserTransactions.length && Object.keys(this.props.Group).length) {
@@ -90,27 +81,83 @@ class Transaction extends Component {
     }
   }
 
-  // formatChartData = () => {
-  //   const { UserTransactions } = this.props;
-  //   if (UserTransactions.length && Object.keys(this.props.Group).length) {
-  //     const weeklyTransactions = UserTransactions.reduce((array, week, index) => {
-  //       array.push({
-  //         sent: week.sent.reduce((pointsSent, transaction) => {
-  //           pointsSent += transaction.point_value;
-  //           return pointsSent;
-  //         }, 0),
-  //         received: week.received.reduce((pointsReceived, transaction) => {
-  //           pointsReceived += transaction.point_value;
-  //           return pointsReceived;
-  //         }, 0)
-  //       });
-        
-  //       return array
-  //     }, [])
-  //     console.log(weeklyTransactions)
-  //   }
-  // }
+  autoComplete = (e) => {
+    this.setState({
+      recipient: e.target.innerText,
+      suggestions: []
+    });
+  }
 
+  populateSuggestions = (e) => {
+    const { value } = e.target;
+    const query = new RegExp(value, 'gi');
+
+    const userNames = this.props.UserList.map( user => user.name);
+    const filterSelf = userNames.filter ( user => user !== this.props.User.name);
+
+    const filterUsers = filterSelf.filter( user => query.test(user));
+    const firstFive = filterUsers.slice(0, 5);
+
+    if (value.length) {
+      this.setState({
+        suggestions: filterUsers
+      });
+    } else {
+      this.setState({
+        suggestions: []
+      });
+    }
+  }
+
+  navigateSuggestions = (e) => {
+    if (e.key === 'ArrowDown' && 
+    this.state.suggestions.slice(0, 5)[this.state.focus + 1]) {
+      e.preventDefault();
+      console.log(this.state.suggestions);
+      if (this.state.focus === null) {
+        this.setState({
+          focus: 0, 
+          recipient: this.state.suggestions[0]
+        });
+      } else {
+        this.setState({
+          focus: (Math.min(this.state.focus + 1, 4)), 
+          recipient: this.state.suggestions[this.state.focus + 1]
+        });
+      }
+    } else if (e.key === 'ArrowUp' && this.state.focus !== null) {
+      e.preventDefault();
+      if (this.state.focus === 0) {
+        this.setState({
+          focus: null, 
+          recipient: ''});
+      } else {
+        this.setState({
+          focus: this.state.focus - 1, 
+          recipient: this.state.suggestions[this.state.focus - 1]
+        });
+      }
+    }
+  }
+
+  generateSuggestions = () => {
+    const listItems = this.state.suggestions.map( (user, index) => {
+      const shouldHighlight = index === this.state.focus ? 'highlight' : '';
+      return (
+        <li 
+          className={shouldHighlight} 
+          onClick={(e) => {this.autoComplete(e)}} 
+          key={`suggestion${index}`}>{user}</li> 
+      );
+    });
+
+    if (this.state.recipient.length && !this.state.suggestions.length) {
+      return <li onClick={
+        () => this.setState({recipient: ''})
+      }>NO USERS FOUND</li>
+    }
+    return listItems;
+  }
   
 
   render() {
@@ -136,9 +183,17 @@ class Transaction extends Component {
               onChange={(e) => { this.handleInput(e); }} />
             {this.pointStatus()}
             <h3 className="points-to">points to</h3>
-            <select>
-              {this.recipientOptions()}
-            </select> 
+            <div className="recipient-input">
+              <input 
+                type="text" 
+                name="recipient" 
+                value={this.state.recipient} 
+                onKeyDown={this.navigateSuggestions}
+                onChange={(e) => {this.handleInput(e); this.populateSuggestions(e); }} />
+              <ul>
+                {this.generateSuggestions()}
+              </ul>
+            </div>
             <button onClick={()=> { this.handleSubmit(); }}>SEND</button>
           </div>
         </div>
