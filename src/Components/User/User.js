@@ -8,6 +8,11 @@ import clearLocalStorage from '../../helpers/clearLocalStorage';
 import { NavLink } from 'react-router-dom';
 import getKeyFromLS from '../../helpers/getKeyFromLS';
 import Transaction from '../Transaction/Transaction';
+import getUser from '../../helpers/fetches/getUser';
+import getUsersInGroup from '../../helpers/fetches/getUsersInGroup';
+import getGroupSettings from '../../helpers/fetches/getGroupSettings';
+import getGroupTransactionData from '../../helpers/fetches/getGroupTransactionData';
+import getTransactionData from '../../helpers/fetches/getTransactionData';
 
 class User extends Component {
   constructor(props) {
@@ -36,17 +41,9 @@ class User extends Component {
 
   loadUser = async () => {
   	try {
-	    const user = await fetch('http://localhost:3000/api/v1/users', {
-	      method: 'GET',
-	      headers: {
-	        "x-token": getKeyFromLS(),
-	        "CONTENT-TYPE": 'application/json'
-	      }
-	    });
-	    const userData = await user.json();
-
-	    this.props.updateUser(userData[0]);
-      return userData[0];
+      const user = await getUser();
+      this.props.updateUser(user);
+      return user;
   	} catch (e) {
     	window.location="https://tr-personal-proj.e1.loginrocket.com"
     	return;
@@ -55,20 +52,8 @@ class User extends Component {
 
   loadTransactionData = async (userData) => {
     try {
-      userData.created_date = "2017-11-18T18:34:30.017Z";  /// PULL THIS LINE OUT FOR PRODUCTION
-      const userTransactionData = await fetch('http://localhost:3000/api/v1/events/getuserdata/', {
-        method: 'POST',
-        headers: {
-          "x-token": getKeyFromLS(),
-          "CONTENT-TYPE": 'application/json'
-        },
-        body: JSON.stringify({user: userData})
-      });
-
-      const userTransactions = await userTransactionData.json();
-
+      const userTransactions = await getTransactionData(userData);
       this.props.updateUserTransactions(userTransactions);
-
     } catch (e) {
       console.log('hmmmmmmm ');
     	window.location="https://tr-personal-proj.e1.loginrocket.com"
@@ -76,40 +61,25 @@ class User extends Component {
     }
   }
 
-  loadUsersInGroup = async (userdata) => {
+  loadUsersInGroup = async (userData) => {
     try {
-      const usersInGroupResponse = await fetch(`http://localhost:3000/api/v1/users/group/${userdata.group_id}`, {
-        method: 'GET',
-        headers: {
-          "x-token": getKeyFromLS(),
-          'CONTENT-TYPE': 'application/json'
-        }
-      });
+      const usersInGroup = await getUsersInGroup(userData)
 
-      const usersInGroup = await usersInGroupResponse.json();
       this.props.updateUserList(usersInGroup);
     } catch (error) {
       console.log('error: ', error);
     }
   }
 
-  loadGroupSettings = async (userdata) => {
+  loadGroupSettings = async (userData) => {
     try {
-      if (!userdata.group_id) {
+      if (!userData.group_id) {
         throw new Error('user not in group');
       }
-      const groupDataResponse = await fetch(`http://localhost:3000/api/v1/group/${userdata.group_id}`, {
-        method: 'GET',
-        headers: {
-          'CONTENT-TYPE': 'application/json',
-          'x-token': getKeyFromLS()
-        }
-      });
+      const groupData = await getGroupSettings(userData);
 
-      const groupData = await groupDataResponse.json();
-      this.props.updateGroup(groupData[0]);
-      return groupData[0]
-
+      this.props.updateGroup(groupData);
+      return groupData;
     } catch (error) {
       return 'error retrieving group data';
     }
@@ -117,17 +87,7 @@ class User extends Component {
 
   loadGroupTransactionData = async (groupData) => {
     try {
-      groupData.created_date = "2017-10-18T18:34:30.017Z";  /// PULL THIS LINE OUT FOR PRODUCTION
-      const groupTransactionData = await fetch('http://localhost:3000/api/v1/events/getgroupdata/', {
-        method: 'POST',
-        headers: {
-          "x-token": getKeyFromLS(),
-          "CONTENT-TYPE": 'application/json'
-        },
-        body: JSON.stringify({group: groupData})
-      });
-
-      const groupTransactions = await groupTransactionData.json();
+      const groupTransactions = await getGroupTransactionData(groupData);
 
       this.props.updateGroupTransactions(groupTransactions);
 
