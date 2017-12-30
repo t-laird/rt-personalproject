@@ -83,9 +83,11 @@ class Transaction extends Component {
 
   autoComplete = (e) => {
     this.setState({
-      recipient: e.target.innerText,
-      suggestions: []
+      recipient: e.target.innerText
     });
+    const mockEvent = {target: {value: e.target.innerText}};
+
+    this.populateSuggestions(mockEvent);
   }
 
   populateSuggestions = (e) => {
