@@ -110,8 +110,18 @@
           }
         }
       }
+    }    
+  }
+  .transaction-message {
+    h3 {
+      margin: 0px;
+      color: red;
+      font-weight: 700;
+      padding-top: 15px;
+      text-align: center;
+      transition: 1s;
+      // font-size: 800px;
     }
-
   }
 
   .points-to {
