@@ -55,6 +55,15 @@ class Transaction extends Component {
     const recipient = new RegExp(this.state.recipient, 'gi');
     const findReceivingUser = this.props.UserList.find( user => recipient.test(user.name) );
 
+    if (!findReceivingUser) {
+      this.setState({
+        transactionMessage: "Receiving user not found, please try again",
+        suggestions: [],
+        recipient: ''
+      });
+      return;
+    }
+
     const transactionInformation = {
       send_id: this.props.User.user_id,
       receive_id: findReceivingUser.user_id,
@@ -107,9 +116,8 @@ class Transaction extends Component {
       this.setState({
         recipient: '',
         suggestions: [],
-        transactionMessage: submitResponse.error,
-        points: ''
-      })
+        transactionMessage: submitResponse.error
+      });
     }
 
   }
