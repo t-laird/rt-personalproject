@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 export const GroupData = (props) => {
 
-	console.log(props.group)
+	
 
 	return (
 		<div className="group-data-component">
@@ -17,7 +17,8 @@ export const GroupData = (props) => {
 }
 
 const mapStateToProps = ( store ) => ({
-	group: store.Group
+	group: store.Group,
+	GroupTransactions: store.GroupTransactions
 });
 
 export default connect(mapStateToProps, null)(GroupData);

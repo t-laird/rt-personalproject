@@ -22,7 +22,10 @@ class User extends Component {
     const userData = await this.loadUser();
     await this.loadTransactionData(userData);
     await this.loadUsersInGroup(userData);
-    await this.loadGroupSettings(userData);
+    const groupData = await this.loadGroupSettings(userData);
+    if (userData.group_id !== null) {
+      await this.loadGroupTransactionData(groupData)
+    }
   }
 
   componentWillReceiveProps = (nextProps) => {
@@ -105,9 +108,33 @@ class User extends Component {
 
       const groupData = await groupDataResponse.json();
       this.props.updateGroup(groupData[0]);
+      return groupData[0]
 
     } catch (error) {
       return 'error retrieving group data';
+    }
+  }
+
+  loadGroupTransactionData = async (groupData) => {
+    try {
+      groupData.created_date = "2017-10-18T18:34:30.017Z";  /// PULL THIS LINE OUT FOR PRODUCTION
+      const groupTransactionData = await fetch('http://localhost:3000/api/v1/events/getgroupdata/', {
+        method: 'POST',
+        headers: {
+          "x-token": getKeyFromLS(),
+          "CONTENT-TYPE": 'application/json'
+        },
+        body: JSON.stringify({group: groupData})
+      });
+
+      const groupTransactions = await groupTransactionData.json();
+
+      this.props.updateGroupTransactions(groupTransactions);
+
+    } catch (e) {
+      console.log('hmmmmmmm ');
+      window.location="https://tr-personal-proj.e1.loginrocket.com"
+      return;
     }
   }
 
@@ -133,6 +160,9 @@ const mapDispatchToProps = dispatch => ({
   },
   updateUserTransactions: transactions => {
     dispatch(actions.updateUserTransactions(transactions));
+  },
+  updateGroupTransactions: groupTransactions => {
+    dispatch(actions.updateGroupTransactions(groupTransactions));
   },
   updateUserList: users => {
     dispatch(actions.updateUserList(users));
