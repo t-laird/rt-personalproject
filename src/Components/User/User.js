@@ -29,6 +29,7 @@ class User extends Component {
     await this.loadTransactionData(userData);
     await this.loadUsersInGroup(userData);
     const groupData = await this.loadGroupSettings(userData);
+    console.log(groupData)
     if (userData.group_id !== null) {
       await this.loadGroupTransactionData(groupData)
     }
@@ -90,6 +91,7 @@ class User extends Component {
     try {
       const groupTransactions = await getGroupTransactionData(groupData);
 
+      console.log(groupTransactions)
       this.props.updateGroupTransactions(groupTransactions);
 
     } catch (e) {
