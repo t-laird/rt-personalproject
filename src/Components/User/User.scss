@@ -1,7 +1,7 @@
 @import '../../Variables.scss';
 
 .user-component {
-  padding: 3px;
+  padding: 3px 3px 50px;
   width: 100%;
   @include component-transition;
 
