@@ -35,7 +35,7 @@ export const Header = (props) => {
 }
 
 
-const mapStateToProps = store => ({
+export const mapStateToProps = store => ({
 	user: store.User,
 	group: store.Group
 });

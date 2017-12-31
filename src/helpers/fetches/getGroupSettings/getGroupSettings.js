@@ -1,4 +1,4 @@
-import getKeyFromLS from '../getKeyFromLS';
+import getKeyFromLS from '../../getKeyFromLS';
 
 const getGroupSettings = async (userData) => {
 	const groupDataResponse = await fetch(`http://localhost:3000/api/v1/group/${userData.group_id}`, {

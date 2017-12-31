@@ -1,4 +1,4 @@
-import getKeyFromLS from '../getKeyFromLS';
+import getKeyFromLS from '../../getKeyFromLS';
 
 const getUsersInGroup = async (userData) => {
 
