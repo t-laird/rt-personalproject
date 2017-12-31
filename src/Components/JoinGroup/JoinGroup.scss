@@ -32,7 +32,7 @@
 		overflow: visible;
     border: none;
     height: 60px;
-    font-size: 26px;
+    font-size: 24px;
     margin-top: 10px;
     text-align: center;
 	}
@@ -53,6 +53,8 @@
 		background-color: $red;
 		cursor: pointer;
 		transition: background-color .15s ease-in-out;
+		padding-top: 2px;
+		border: none;
 
 		&:hover {
       background-color: darken($red, 8%);
