@@ -1,4 +1,4 @@
-import getKeyFromLS from '../getKeyFromLS';
+import getKeyFromLS from '../../getKeyFromLS';
 
 const getUser = async () => {
   const user = await fetch('http://localhost:3000/api/v1/users', {

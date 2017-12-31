@@ -1,4 +1,4 @@
-import getKeyFromLS from '../getKeyFromLS';
+import getKeyFromLS from '../../getKeyFromLS';
 
 const getTransactionData = async (userData) => {
 	userData.created_date = "2017-11-18T18:34:30.017Z";  /// PULL THIS LINE OUT FOR PRODUCTION

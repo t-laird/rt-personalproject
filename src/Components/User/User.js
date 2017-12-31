@@ -8,11 +8,11 @@ import clearLocalStorage from '../../helpers/clearLocalStorage';
 import { NavLink } from 'react-router-dom';
 import getKeyFromLS from '../../helpers/getKeyFromLS';
 import Transaction from '../Transaction/Transaction';
-import getUser from '../../helpers/fetches/getUser';
-import getUsersInGroup from '../../helpers/fetches/getUsersInGroup';
-import getGroupSettings from '../../helpers/fetches/getGroupSettings';
-import getGroupTransactionData from '../../helpers/fetches/getGroupTransactionData';
-import getTransactionData from '../../helpers/fetches/getTransactionData';
+import getUser from '../../helpers/fetches/getUser/getUser';
+import getUsersInGroup from '../../helpers/fetches/getUsersInGroup/getUsersInGroup';
+import getGroupSettings from '../../helpers/fetches/getGroupSettings/getGroupSettings';
+import getGroupTransactionData from '../../helpers/fetches/getGroupTransactionData/getGroupTransactionData';
+import getTransactionData from '../../helpers/fetches/getTransactionData/getTransactionData';
 
 class User extends Component {
   constructor(props) {
@@ -25,6 +25,7 @@ class User extends Component {
 
   componentDidMount = async (props) => {
     const userData = await this.loadUser();
+    console.log('userData', userData)
     await this.loadTransactionData(userData);
     await this.loadUsersInGroup(userData);
     const groupData = await this.loadGroupSettings(userData);
