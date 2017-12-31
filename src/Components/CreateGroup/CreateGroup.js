@@ -4,6 +4,7 @@ import generator from 'generate-password';
 import * as actions from '../../Actions';
 import getKeyFromLS from '../../helpers/getKeyFromLS';
 import validateGroup from '../../helpers/validateGroup';
+import './CreateGroup.css';
 
 
 class CreateGroup extends Component {
@@ -13,7 +14,7 @@ class CreateGroup extends Component {
 		this.state = {
 			groupName: '',
 			weeklyPoints: '',
-			message: 'Create a new group'
+			message: 'Create a new group:'
 		}
 	}
 
@@ -54,24 +55,27 @@ class CreateGroup extends Component {
 
 	render() {
 		return (
-			<div>
-				<h4>{this.state.message}</h4>
+			<div className="create-group-component">
+				<h3>{this.state.message}</h3>
 				<form>
 					<input 
+						className="group-name-input"
 						onChange={this.handleChange}
-						placeholder='choose group name'
+						placeholder='group name'
 						value={this.state.groupName}
 						name='groupName'
 					/>
-					<input 
+					<h3>How many points will group members be able to give away each week? <span className="join-span">(we recommend 50)</span></h3>
+					<input
+						className="points-input"
 						onChange={this.handleChange}
-						placeholder='choose number of weekly points members receive'
+						placeholder='points'
 						value={this.state.weeklyPoints}
 						name='weeklyPoints'
 					/>
 					<button
 						onClick={(event) => this.createGroup(event, this.state.groupName, this.state.weeklyPoints)}
-					>submit
+					>SUBMIT
 					</button>
 				</form>
 			</div>

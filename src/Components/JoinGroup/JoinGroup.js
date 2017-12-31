@@ -5,8 +5,6 @@ import { NavLink } from 'react-router-dom';
 import validateGroup from '../../helpers/validateGroup';
 import './JoinGroup.css';
 
-
-
 class JoinGroup extends Component {
   constructor() {
     super();
@@ -21,7 +19,7 @@ class JoinGroup extends Component {
     if (this.props.group.group_name) {
       this.setState({message: `You are a member of: ${this.props.group.group_name}.  To switch groups, enter new passphrase below.`})
     } else if (this.props.user.group_id) {
-      this.setState({message: 'You are a member of a group!  To switch groups, enter new passphrase below.'})
+      this.setState({message: 'You are already a member of a group!  To switch groups, enter new passphrase below.'})
     }
   }
 
@@ -54,7 +52,6 @@ class JoinGroup extends Component {
             >SUBMIT</button>
           </form>
         </div>
-
         <div className="link-holder">
           <NavLink className="create-group-link" to='/creategroup'>CREATE NEW GROUP</NavLink>
         </div>
