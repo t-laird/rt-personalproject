@@ -1,6 +1,6 @@
 import getGroupTransactionData from './getGroupTransactionData';
 import { mockGroupData } from '../../../mockData/mockGroupData';
-import { getGroupTransactionDataApiResponse } from '../../../mockData/mockApiResponses';
+import { mockApiResponse } from '../../../mockData/mockApiResponses';
 
 global.localStorage = {
 	getItem: () => null
@@ -9,7 +9,7 @@ global.localStorage = {
 describe('get group transaction data tests', () => {
 	window.fetch = jest.fn().mockImplementation(() =>
 		Promise.resolve({
-	    json: () => Promise.resolve(getGroupTransactionDataApiResponse)
+	    json: () => Promise.resolve(mockApiResponse)
 		})
 	);
 

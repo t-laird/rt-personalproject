@@ -1,7 +1,3 @@
-export const getGroupSettingsApiResponse = {
+export const mockApiResponse = {
   status: 'success',
-};
-
-export const getGroupTransactionDataApiResponse = {
-	status: 'success'
 };

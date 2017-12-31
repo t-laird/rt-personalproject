@@ -1,6 +1,6 @@
 import getGroupSettings from './getGroupSettings';
 import { mockUserData } from '../../../mockData/mockUserData';
-import { getGroupSettingsApiResponse } from '../../../mockData/mockApiResponses';
+import { mockApiResponse } from '../../../mockData/mockApiResponses';
 
 global.localStorage = {
   getItem: () => null
@@ -9,7 +9,7 @@ global.localStorage = {
 describe('get group settings tests', () => {
   window.fetch = jest.fn().mockImplementation(() =>
     Promise.resolve({
-      json: () => Promise.resolve(getGroupSettingsApiResponse)
+      json: () => Promise.resolve(mockApiResponse)
     })
   );
 
