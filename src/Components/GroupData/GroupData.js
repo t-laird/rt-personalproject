@@ -24,7 +24,7 @@ export class GroupData extends Component {
 			}, 0)
 
 			return currentTotals;
-	
+
 		}
 	}
 

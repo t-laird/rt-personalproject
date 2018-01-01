@@ -26,10 +26,12 @@ class Comments extends Component {
   displayComments = () => {
     const commentsArray = this.getReceivedData();
     const display = commentsArray.map((comment, index) => {
+      console.log(comment)
       return <CommentCard 
-        displayTextValue={this.randomNum()}
+        displayTextIndex={this.randomNum()}
         value={comment.point_value}
-        sender={comment.send_id} //change this to send name when available!
+        note={comment.note}
+        sender={comment.send_name}
         day={moment(comment.created_at).format('dddd').toUpperCase()}
         key={index}
       />
