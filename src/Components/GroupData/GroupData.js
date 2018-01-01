@@ -3,9 +3,6 @@ import './GroupData.css';
 import { connect } from 'react-redux';
 
 export class GroupData extends Component {
-	constructor() {
-		super();
-	}
 
   totalPoints = () => {
 		const totals = this.props.GroupTransactions.reduce((accum, week) => {
