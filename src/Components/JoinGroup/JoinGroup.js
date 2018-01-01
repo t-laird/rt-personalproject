@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import validateGroup from '../../helpers/validateGroup';
 import './JoinGroup.css';
 
-class JoinGroup extends Component {
+export class JoinGroup extends Component {
   constructor() {
     super();
 
@@ -60,12 +60,12 @@ class JoinGroup extends Component {
   }
 }
 
-const mapStateToProps = ( store ) => ({
+export const mapStateToProps = ( store ) => ({
   user: store.User,
   group: store.Group
 })
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   updateUser: user => {
     dispatch(actions.updateUser(user))
   }

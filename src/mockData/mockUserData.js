@@ -6,3 +6,4 @@ export const mockUserData = {
   name: "Corey Pavin",
   user_id: 95
 }
+
