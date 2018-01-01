@@ -21,7 +21,12 @@ export class CreateGroup extends Component {
 	createGroup = async (event, groupName, weeklyPoints) => {
 		event.preventDefault();
 
-		const groupResponse = await makeGroup(groupName, weeklyPoints);
+		const password = generator.generate({
+			length: 6,
+			number: true
+		})
+
+		const groupResponse = await makeGroup(groupName, weeklyPoints, password);
 		this.props.updateGroup(groupResponse[0])
 
 		const userResponse = await validateGroup(groupResponse[0].group_passphrase, this.props.user.user_id)
