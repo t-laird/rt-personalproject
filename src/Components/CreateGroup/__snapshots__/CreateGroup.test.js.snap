@@ -1,0 +1,369 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create group tests should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CreateGroup
+    user={Object {}}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3>
+          Create a new group:
+</h3>,
+        <form>
+          <input
+                    className="group-name-input"
+                    name="groupName"
+                    onChange={[Function]}
+                    placeholder="group name"
+                    value=""
+          />
+          <h3>
+                    How many points will group members be able to give away each week? 
+                    <span
+                              className="join-span"
+                    >
+                              (we recommend 50)
+                    </span>
+          </h3>
+          <input
+                    className="points-input"
+                    name="weeklyPoints"
+                    onChange={[Function]}
+                    placeholder="points"
+                    value=""
+          />
+          <button
+                    onClick={[Function]}
+          >
+                    SUBMIT
+          </button>
+</form>,
+      ],
+      "className": "create-group-component",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Create a new group:",
+        },
+        "ref": null,
+        "rendered": "Create a new group:",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <input
+              className="group-name-input"
+              name="groupName"
+              onChange={[Function]}
+              placeholder="group name"
+              value=""
+/>,
+            <h3>
+              How many points will group members be able to give away each week? 
+              <span
+                            className="join-span"
+              >
+                            (we recommend 50)
+              </span>
+</h3>,
+            <input
+              className="points-input"
+              name="weeklyPoints"
+              onChange={[Function]}
+              placeholder="points"
+              value=""
+/>,
+            <button
+              onClick={[Function]}
+>
+              SUBMIT
+</button>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "group-name-input",
+              "name": "groupName",
+              "onChange": [Function],
+              "placeholder": "group name",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "How many points will group members be able to give away each week? ",
+                <span
+                  className="join-span"
+>
+                  (we recommend 50)
+</span>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "How many points will group members be able to give away each week? ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "(we recommend 50)",
+                  "className": "join-span",
+                },
+                "ref": null,
+                "rendered": "(we recommend 50)",
+                "type": "span",
+              },
+            ],
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "points-input",
+              "name": "weeklyPoints",
+              "onChange": [Function],
+              "placeholder": "points",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "SUBMIT",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "SUBMIT",
+            "type": "button",
+          },
+        ],
+        "type": "form",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            Create a new group:
+</h3>,
+          <form>
+            <input
+                        className="group-name-input"
+                        name="groupName"
+                        onChange={[Function]}
+                        placeholder="group name"
+                        value=""
+            />
+            <h3>
+                        How many points will group members be able to give away each week? 
+                        <span
+                                    className="join-span"
+                        >
+                                    (we recommend 50)
+                        </span>
+            </h3>
+            <input
+                        className="points-input"
+                        name="weeklyPoints"
+                        onChange={[Function]}
+                        placeholder="points"
+                        value=""
+            />
+            <button
+                        onClick={[Function]}
+            >
+                        SUBMIT
+            </button>
+</form>,
+        ],
+        "className": "create-group-component",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Create a new group:",
+          },
+          "ref": null,
+          "rendered": "Create a new group:",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <input
+                className="group-name-input"
+                name="groupName"
+                onChange={[Function]}
+                placeholder="group name"
+                value=""
+/>,
+              <h3>
+                How many points will group members be able to give away each week? 
+                <span
+                                className="join-span"
+                >
+                                (we recommend 50)
+                </span>
+</h3>,
+              <input
+                className="points-input"
+                name="weeklyPoints"
+                onChange={[Function]}
+                placeholder="points"
+                value=""
+/>,
+              <button
+                onClick={[Function]}
+>
+                SUBMIT
+</button>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "group-name-input",
+                "name": "groupName",
+                "onChange": [Function],
+                "placeholder": "group name",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "How many points will group members be able to give away each week? ",
+                  <span
+                    className="join-span"
+>
+                    (we recommend 50)
+</span>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "How many points will group members be able to give away each week? ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "(we recommend 50)",
+                    "className": "join-span",
+                  },
+                  "ref": null,
+                  "rendered": "(we recommend 50)",
+                  "type": "span",
+                },
+              ],
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "points-input",
+                "name": "weeklyPoints",
+                "onChange": [Function],
+                "placeholder": "points",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "SUBMIT",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "SUBMIT",
+              "type": "button",
+            },
+          ],
+          "type": "form",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

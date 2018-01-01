@@ -19,7 +19,7 @@ class User extends Component {
     super(props);
 
     this.state = {
-      joinText: 'Join a Group'
+      joinText: 'JOIN A GROUP'
     }
   }
 

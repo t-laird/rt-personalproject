@@ -5,9 +5,9 @@ import * as actions from '../../Actions';
 import getKeyFromLS from '../../helpers/getKeyFromLS';
 import validateGroup from '../../helpers/validateGroup';
 import './CreateGroup.css';
+import makeGroup from '../../helpers/fetches/makeGroup/makeGroup';
 
-
-class CreateGroup extends Component {
+export class CreateGroup extends Component {
 	constructor() {
 		super();
 
@@ -20,26 +20,8 @@ class CreateGroup extends Component {
 
 	createGroup = async (event, groupName, weeklyPoints) => {
 		event.preventDefault();
-		const password = generator.generate({
-			length: 6,
-			number: true
-		})
 
-		const response = await fetch('http://localhost:3000/api/v1/group/new', {
-			method: 'POST',
-			body: JSON.stringify({
-				group_name: groupName,
-				group_passphrase: password,
-				weekly_points: weeklyPoints
-			}),
-			headers: {
-				'Content-Type': 'application/json',
-	      'x-token': getKeyFromLS(),
-
-			}
-		})
-
-		const groupResponse = await response.json();
+		const groupResponse = await makeGroup(groupName, weeklyPoints);
 		this.props.updateGroup(groupResponse[0])
 
 		const userResponse = await validateGroup(groupResponse[0].group_passphrase, this.props.user.user_id)
@@ -83,11 +65,11 @@ class CreateGroup extends Component {
 	}
 }
 
-const mapStateToProps = ( store ) => ({
+export const mapStateToProps = ( store ) => ({
 	user: store.User
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
 	updateGroup: group => {
 		dispatch(actions.updateGroup(group))
 	},
@@ -95,7 +77,5 @@ const mapDispatchToProps = dispatch => ({
 		dispatch(actions.updateUser(user))
 	}
 });
-
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateGroup);
