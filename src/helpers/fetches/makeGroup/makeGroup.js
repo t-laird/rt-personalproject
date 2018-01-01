@@ -1,5 +1,4 @@
 import getKeyFromLS from '../../getKeyFromLS';
-import generator from 'generate-password';
 
 const makeGroup = async (groupName, weeklyPoints, password) => {
 

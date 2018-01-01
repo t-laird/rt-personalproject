@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import generator from 'generate-password';
 import * as actions from '../../Actions';
-import getKeyFromLS from '../../helpers/getKeyFromLS';
 import validateGroup from '../../helpers/validateGroup';
 import './CreateGroup.css';
 import makeGroup from '../../helpers/fetches/makeGroup/makeGroup';

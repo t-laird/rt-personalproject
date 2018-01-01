@@ -4,15 +4,14 @@ import UserData from '../UserData/UserData';
 import UserProfile from '../UserProfile/UserProfile';
 import * as actions from '../../Actions/';
 import './User.css';
-import clearLocalStorage from '../../helpers/clearLocalStorage';
 import { NavLink } from 'react-router-dom';
-import getKeyFromLS from '../../helpers/getKeyFromLS';
 import Transaction from '../Transaction/Transaction';
 import getUser from '../../helpers/fetches/getUser/getUser';
 import getUsersInGroup from '../../helpers/fetches/getUsersInGroup/getUsersInGroup';
 import getGroupSettings from '../../helpers/fetches/getGroupSettings/getGroupSettings';
 import getGroupTransactionData from '../../helpers/fetches/getGroupTransactionData/getGroupTransactionData';
 import getTransactionData from '../../helpers/fetches/getTransactionData/getTransactionData';
+import Comments from '../Comments/Comments';
 
 class User extends Component {
   constructor(props) {
@@ -25,11 +24,9 @@ class User extends Component {
 
   componentDidMount = async (props) => {
     const userData = await this.loadUser();
-    console.log('userData', userData)
     await this.loadTransactionData(userData);
     await this.loadUsersInGroup(userData);
     const groupData = await this.loadGroupSettings(userData);
-    console.log(groupData)
     if (userData.group_id !== null) {
       await this.loadGroupTransactionData(groupData)
     }
@@ -91,7 +88,6 @@ class User extends Component {
     try {
       const groupTransactions = await getGroupTransactionData(groupData);
 
-      console.log(groupTransactions)
       this.props.updateGroupTransactions(groupTransactions);
 
     } catch (e) {
@@ -106,6 +102,7 @@ class User extends Component {
       <div className="user-component">
         <UserData />
         <Transaction />
+        <Comments />
         <UserProfile />
         <NavLink className="join-group" to='/joingroup'>{this.state.joinText}</NavLink>
       </div>

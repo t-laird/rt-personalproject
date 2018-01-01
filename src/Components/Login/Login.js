@@ -3,10 +3,7 @@ import './Login.css';
 import clearLocalStorage from '../../helpers/clearLocalStorage';
 
 class Login extends Component {
-	constructor() {
-		super();
-	}
-
+  
 	 componentDidMount() {
     this.checkForKey();    
   }

@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { VictoryArea, VictoryAxis, VictoryLabel, VictoryLegend, VictoryChart } from 'victory';
+import { VictoryArea, VictoryAxis, VictoryLabel, VictoryChart } from 'victory';
 import './GroupProfile.css';
 
 
 class GroupProfile extends Component {
-	constructor() {
-		super();
-
-	}
 
 	generateChartArea = () => {
 		const { GroupTransactions } = this.props;
@@ -30,7 +26,6 @@ class GroupProfile extends Component {
 						style={{data: {fill: '#b9e5fb'}}}
 					/>
 				)
-			console.log(weeklyData)
 		}
 	}
 

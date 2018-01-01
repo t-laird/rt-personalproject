@@ -4,9 +4,6 @@ import { connect } from 'react-redux';
 import { VictoryClipContainer, VictoryChart, VictoryLine, VictoryLegend, VictoryAxis, VictoryLabel } from 'victory';
 
 class UserProfile extends Component {
-  constructor() {
-    super();
-  }
 
   generateReceivedLine = () => {
     const { UserTransactions } = this.props;
