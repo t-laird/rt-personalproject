@@ -32,4 +32,4 @@ describe('get users in group tests', () => {
     await getUsersInGroup(mockUserData);
     expect(window.fetch).toHaveBeenCalledWith(...expected);
   });
-})
+});
