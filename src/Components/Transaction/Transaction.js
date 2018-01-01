@@ -9,6 +9,7 @@ class Transaction extends Component {
     this.state = {
       points: '',
       recipient: '',
+      note: '',
       validInput: true,
       suggestions: [],
       focus: null,
@@ -69,7 +70,8 @@ class Transaction extends Component {
       receive_id: findReceivingUser.user_id,
       group_id: this.props.User.group_id,
       point_value: parseInt(this.state.points),
-      recipient_name: findReceivingUser.name     
+      recipient_name: findReceivingUser.name,
+      note: this.state.note
     };
 
 
@@ -99,7 +101,8 @@ class Transaction extends Component {
         send_id: transactionInformation.send_id, 
         receive_id: transactionInformation.receive_id, 
         group_id: transactionInformation.group_id, 
-        point_value: transactionInformation.point_value
+        point_value: transactionInformation.point_value,
+        note: transactionInformation.note
       })
     });
 
@@ -238,7 +241,7 @@ class Transaction extends Component {
               value={this.state.points} 
               onChange={(e) => { this.handleInput(e); }} />
             {this.pointStatus()}
-            <h3 className="points-to">points to</h3>
+            <h3 className="points-to">points to:</h3>
             <div className="recipient-input">
               <input 
                 type="text" 
@@ -250,8 +253,17 @@ class Transaction extends Component {
                 {this.generateSuggestions()}
               </ul>
             </div>
-            <button onClick={()=> { this.handleSubmit(); }}>SEND</button>
           </div>
+            <textarea
+                className="note-input"
+                type="text"
+                name="note"
+                placeholder="Add a message"
+                value={this.state.note}
+                onChange={(e) => {this.handleInput(e)}}
+              >
+            </textarea>
+            <button onClick={()=> { this.handleSubmit(); }}>SEND</button>
           <div className="transaction-message">
             <h3>{this.state.transactionMessage}</h3>
           </div>
@@ -260,7 +272,6 @@ class Transaction extends Component {
     );
   }
 }
-
 
 const mapStateToProps = ( store ) => ({
   UserTransactions: store.UserTransactions,

@@ -1,7 +1,7 @@
 import React from 'react';
 import './CommentCard.css';
 
-const CommentCard = ({ displayTextValue, value, sender, day }) => {
+const CommentCard = ({ displayTextIndex, value, note, sender, day }) => {
 
 	const displayText = [
 		`${value} points for you!`, 
@@ -14,11 +14,12 @@ const CommentCard = ({ displayTextValue, value, sender, day }) => {
 	return (
 		<div className="comment-card-component">
 			<div className="card-header">
-				<h3>{displayText[displayTextValue]}</h3><h5 className="day-span">{day}</h5>
+				<h3>{displayText[displayTextIndex]}</h3><h5 className="day-span">{day}</h5>
 			</div>
-			<p>Thanks for your help with JS array prototypes.  You totally crushed it!</p>
+			<p>{note}</p>
 			<div className="card-footer">
-				<h4><img src={require('../Header/assets/ninja-logo.svg')} alt="ninja-icon" />{sender}</h4>
+				<img src={require('../Header/assets/ninja-logo.svg')} alt="ninja-icon" />
+				<h4>{sender}</h4>
 			</div>
 		</div>
 	)
