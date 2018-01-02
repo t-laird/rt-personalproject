@@ -3,7 +3,7 @@ import React from 'react';
 import {
   Header,
   mapDispatchToProps,
-  mapStateToProps,
+  mapStateToProps
 } from './Header';
 
 
@@ -31,7 +31,7 @@ describe('Header component tests', () => {
       expect(renderedHeader.find('NavLink').length).toEqual(expectedNavlinks);
       expect(renderedHeader.find('a').length).toEqual(expectedALinks);
     });
-  })
+  });
 
   describe('User NOT Logged In tests', () => {
     let renderedHeader;
@@ -52,6 +52,6 @@ describe('Header component tests', () => {
       expect(renderedHeader.find('NavLink').length).toEqual(expectedNavlinks);
       expect(renderedHeader.find('a').length).toEqual(expectedALinks);
     });
-  })
+  });
 
 });

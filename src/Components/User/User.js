@@ -19,7 +19,7 @@ class User extends Component {
 
     this.state = {
       joinText: 'JOIN A GROUP'
-    }
+    };
   }
 
   componentDidMount = async (props) => {
@@ -28,13 +28,13 @@ class User extends Component {
     await this.loadUsersInGroup(userData);
     const groupData = await this.loadGroupSettings(userData);
     if (userData.group_id !== null) {
-      await this.loadGroupTransactionData(groupData)
+      await this.loadGroupTransactionData(groupData);
     }
   }
 
   componentWillReceiveProps = (nextProps) => {
     if (nextProps.user.group_id > 0) {
-      this.setState({joinText: 'SWITCH GROUPS'})
+      this.setState({joinText: 'SWITCH GROUPS'});
     }
   }
 
@@ -44,7 +44,7 @@ class User extends Component {
       this.props.updateUser(user);
       return user;
   	} catch (e) {
-    	window.location="https://tr-personal-proj.e1.loginrocket.com"
+    	window.location="https://tr-personal-proj.e1.loginrocket.com";
     	return;
   	}
   }
@@ -55,14 +55,14 @@ class User extends Component {
       this.props.updateUserTransactions(userTransactions);
     } catch (e) {
       console.log('hmmmmmmm ');
-    	window.location="https://tr-personal-proj.e1.loginrocket.com"
+    	window.location="https://tr-personal-proj.e1.loginrocket.com";
       return;
     }
   }
 
   loadUsersInGroup = async (userData) => {
     try {
-      const usersInGroup = await getUsersInGroup(userData)
+      const usersInGroup = await getUsersInGroup(userData);
 
       this.props.updateUserList(usersInGroup);
     } catch (error) {
@@ -92,7 +92,7 @@ class User extends Component {
 
     } catch (e) {
       console.log('hmmmmmmm ');
-      window.location="https://tr-personal-proj.e1.loginrocket.com"
+      window.location="https://tr-personal-proj.e1.loginrocket.com";
       return;
     }
   }
@@ -106,7 +106,7 @@ class User extends Component {
         <UserProfile />
         <NavLink className="join-group" to='/joingroup'>{this.state.joinText}</NavLink>
       </div>
-    )
+    );
   }
 }
 

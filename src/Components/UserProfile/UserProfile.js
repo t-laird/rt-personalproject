@@ -15,10 +15,10 @@ class UserProfile extends Component {
           y: week.received.reduce((pointsReceived, transaction) => {
             pointsReceived += transaction.point_value;
             return pointsReceived;
-          }, 0),
+          }, 0)
         });
-        return array
-      }, [])
+        return array;
+      }, []);
 
       return (
         <VictoryLine
@@ -26,7 +26,7 @@ class UserProfile extends Component {
           style={{ data: { stroke: "#006699", strokeWidth: 10} }}
           data={weeklyReceived}
         /> 
-      )
+      );
     }
   }
 
@@ -40,10 +40,10 @@ class UserProfile extends Component {
           y: week.sent.reduce((pointsSent, transaction) => {
             pointsSent += transaction.point_value;
             return pointsSent;
-          }, 0),
+          }, 0)
         });
-        return array
-      }, [])
+        return array;
+      }, []);
 
       return (
         <VictoryLine
@@ -51,7 +51,7 @@ class UserProfile extends Component {
           style={{ data: { stroke: "#fe5630", strokeWidth: 10} }}
           data={weeklySent}
         />
-      )
+      );
     }
   }
 
@@ -73,7 +73,7 @@ class UserProfile extends Component {
           <VictoryAxis 
             tickValues={['']}
             style={{
-              axis: {stroke: "#b9e5fb", strokeWidth: 6},
+              axis: {stroke: "#b9e5fb", strokeWidth: 6}
             }}
           />
           <VictoryAxis 
@@ -97,7 +97,7 @@ class UserProfile extends Component {
           />
         </VictoryChart>
       </div>
-    )
+    );
   }
 
   render() {
@@ -105,7 +105,7 @@ class UserProfile extends Component {
       <div>
         {this.generateChart()}
       </div>
-    ) 
+    ); 
   }
 }
 

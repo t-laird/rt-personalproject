@@ -11,6 +11,6 @@ const getUser = async () => {
   const userData = await user.json();
 
   return userData[0];
-}
+};
 
 export default getUser;
