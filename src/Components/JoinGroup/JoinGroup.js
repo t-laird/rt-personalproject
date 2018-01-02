@@ -12,14 +12,14 @@ export class JoinGroup extends Component {
     this.state = {
       passphrase: '',
       message: `You haven't joined a group yet.  And you should!  Enter your group passphrase below:`
-    }
+    };
   }
 
   componentDidMount = () => {
     if (this.props.group.group_name) {
-      this.setState({message: `You are a member of: ${this.props.group.group_name}.  To switch groups, enter new passphrase below.`})
+      this.setState({message: `You are a member of: ${this.props.group.group_name}.  To switch groups, enter new passphrase below.`});
     } else if (this.props.user.group_id) {
-      this.setState({message: 'You are already a member of a group!  To switch groups, enter new passphrase below.'})
+      this.setState({message: 'You are already a member of a group!  To switch groups, enter new passphrase below.'});
     }
   }
 
@@ -27,13 +27,13 @@ export class JoinGroup extends Component {
     const { target } = event;
     const { name, value } = target;
 
-    this.setState({[name]: value})
+    this.setState({[name]: value});
   }
 
   joinGroup = async (event) => {
     event.preventDefault();
-    const response = await validateGroup(this.state.passphrase, this.props.user.user_id)
-    this.props.updateUser(response[0])
+    const response = await validateGroup(this.state.passphrase, this.props.user.user_id);
+    this.props.updateUser(response[0]);
   }
 
   render() {
@@ -56,18 +56,18 @@ export class JoinGroup extends Component {
           <NavLink className="create-group-link" to='/creategroup'>CREATE NEW GROUP</NavLink>
         </div>
       </div>
-    ) 
+    ); 
   }
 }
 
 export const mapStateToProps = ( store ) => ({
   user: store.User,
   group: store.Group
-})
+});
 
 export const mapDispatchToProps = dispatch => ({
   updateUser: user => {
-    dispatch(actions.updateUser(user))
+    dispatch(actions.updateUser(user));
   }
 });
 

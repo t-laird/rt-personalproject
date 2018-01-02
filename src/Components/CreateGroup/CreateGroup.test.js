@@ -10,18 +10,18 @@ global.localStorage = {
 
 describe('Create group tests', () => {
   it('should match the snapshot', () => {
-    const renderedApp = shallow(<CreateGroup user={{}} />)
+    const renderedApp = shallow(<CreateGroup user={{}} />);
 
     expect(renderedApp).toMatchSnapshot();
-  })
+  });
 
   it('should set state on input', () => {
-    const renderedApp = shallow(<CreateGroup user={{}} />)
-    const mockEvent = { target: { name: 'groupName', value: 'def' } }
+    const renderedApp = shallow(<CreateGroup user={{}} />);
+    const mockEvent = { target: { name: 'groupName', value: 'def' } };
 
-    renderedApp.instance().handleChange(mockEvent)
+    renderedApp.instance().handleChange(mockEvent);
     expect(renderedApp.state('groupName')).toEqual('def');
-  })
+  });
 
   it('should call updateGroup action when createGroup is invoked', async () => {
     window.fetch = jest.fn().mockImplementation(() =>
@@ -32,8 +32,8 @@ describe('Create group tests', () => {
 
     const mockUpdateGroup = jest.fn();
     const mockUpdateUser = jest.fn();
-    const renderedApp = shallow(<CreateGroup user={{}} updateUser={mockUpdateUser} updateGroup={mockUpdateGroup} />)
-    const mockEvent = { preventDefault: jest.fn() }
+    const renderedApp = shallow(<CreateGroup user={{}} updateUser={mockUpdateUser} updateGroup={mockUpdateGroup} />);
+    const mockEvent = { preventDefault: jest.fn() };
     const mockGroupName = 'Turing';
     const mockWeeklyPoints = 50;
 
@@ -41,7 +41,7 @@ describe('Create group tests', () => {
     renderedApp.update();
 
     expect(mockUpdateGroup).toHaveBeenCalledWith(mockGroupData);
-  })
+  });
 
   it('should call updateUser action when createGroup is invoked', async () => {
     window.fetch = jest.fn().mockImplementation(() =>
@@ -52,8 +52,8 @@ describe('Create group tests', () => {
 
     const mockUpdateGroup = jest.fn();
     const mockUpdateUser = jest.fn();
-    const renderedApp = shallow(<CreateGroup user={{}} updateUser={mockUpdateUser} updateGroup={mockUpdateGroup} />)
-    const mockEvent = { preventDefault: jest.fn() }
+    const renderedApp = shallow(<CreateGroup user={{}} updateUser={mockUpdateUser} updateGroup={mockUpdateGroup} />);
+    const mockEvent = { preventDefault: jest.fn() };
     const mockGroupName = 'Turing';
     const mockWeeklyPoints = 50;
 
@@ -61,14 +61,14 @@ describe('Create group tests', () => {
     renderedApp.update();
 
     expect(mockUpdateUser).toHaveBeenCalledWith(mockUserData);
-  })
-})
+  });
+});
 
 describe('mapStateToProps tests', () => {
 
-})
+});
 
 describe('mapDispatchToProps tests', () => {
   
-})
+});
 

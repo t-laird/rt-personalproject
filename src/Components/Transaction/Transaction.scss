@@ -161,16 +161,17 @@
     .note-input {
       display: block;
       width: 89%;
-      margin: 25px auto;
       height: 100px;
       background-color: #fff;
       text-align: left;
       font-size: 24px;
+      box-sizing: border-box;
       color: $blue-text;
-      word-wrap: break-word;
-      word-break: break-all;
       border: none;
       outline: none;
+      resize: none;
+      margin: 25px auto;
+      
 
       &::placeholder{
         color: $red-light ;
