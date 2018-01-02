@@ -4,7 +4,7 @@ import CommentCard from '../CommentCard/CommentCard';
 import './Comments.css';
 import moment from 'moment';
 
-class Comments extends Component {
+export class Comments extends Component {
 
   getReceivedData = () => {
     const receivedPoints = this.props.UserTransactions.reduce((accum, week) => {
@@ -26,7 +26,6 @@ class Comments extends Component {
   displayComments = () => {
     const commentsArray = this.getReceivedData();
     const display = commentsArray.map((comment, index) => {
-      console.log(comment)
       return <CommentCard 
         displayTextIndex={this.randomNum()}
         value={comment.point_value}
@@ -48,7 +47,7 @@ class Comments extends Component {
   }
 }
 
-const mapStateToProps = ( store ) => ({
+export const mapStateToProps = ( store ) => ({
   UserTransactions: store.UserTransactions
 });
 
