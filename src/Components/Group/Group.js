@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Group.css';
 import GroupData from '../GroupData/GroupData';
 import GroupProfile from '../GroupProfile/GroupProfile';
+import Leaderboard from '../Leaderboard/Leaderboard';
 import { connect } from 'react-redux';
 
 
@@ -18,6 +19,7 @@ class Group extends Component {
       <div className="group-component">
         <GroupData />
         <GroupProfile />
+      	<Leaderboard />
       </div>
     ); 
   }
