@@ -1,3 +1,3 @@
 export const mockApiResponse = {
-  status: 'success',
+  status: 'success'
 };

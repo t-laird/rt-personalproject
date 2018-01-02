@@ -1,6 +1,6 @@
 const mockUserTransactions = [
-	{received: [
-		{
+  {received: [
+    {
 	    'send_id': 5,
 	    'receive_id': 8,
 	    'group_id': 1,
@@ -17,9 +17,9 @@ const mockUserTransactions = [
 	    'point_value': 10,
 	    'send_name': 'Paavo Marsicek',
 	    'note': 'I did not think we would ever get finished with testing.'  
-	  },
-	]}
-]
+	  }
+  ]}
+];
 
 export default mockUserTransactions;
 

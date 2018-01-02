@@ -12,14 +12,14 @@ export class Comments extends Component {
         if (transaction.created_time > (moment(Date.now()).subtract(30, 'days'))) {
           accum.push(transaction);
         }
-      })
+      });
       return accum;
-    }, [])
+    }, []);
     return receivedPoints;
   }
 
   randomNum = () => {
-    const num = Math.floor(Math.random() * 5)
+    const num = Math.floor(Math.random() * 5);
     return num;
   }
 
@@ -33,8 +33,8 @@ export class Comments extends Component {
         sender={comment.send_name}
         day={moment(comment.created_at).format('dddd').toUpperCase()}
         key={index}
-      />
-    })
+      />;
+    });
     return display;
   }
 
@@ -43,7 +43,7 @@ export class Comments extends Component {
       <div className="comments-component">
         {this.displayComments()}
       </div>
-    )
+    );
   }
 }
 

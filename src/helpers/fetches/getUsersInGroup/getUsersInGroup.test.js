@@ -3,17 +3,17 @@ import { mockUserData } from '../../../mockData/mockUserData';
 import { mockApiResponse } from '../../../mockData/mockApiResponses';
 
 global.localStorage = {
-	getItem: () => null
+  getItem: () => null
 };
 
 describe('get users in group tests', () => {
-	window.fetch = jest.fn().mockImplementation(() =>
-		Promise.resolve({
+  window.fetch = jest.fn().mockImplementation(() =>
+    Promise.resolve({
 	    json: () => Promise.resolve(mockApiResponse)
-		})
-	);
+    })
+  );
 
-	it('should be a function', () => {
+  it('should be a function', () => {
     expect(getUsersInGroup).toBeAFunction;
   });
 
@@ -25,7 +25,7 @@ describe('get users in group tests', () => {
         headers: { 
           'x-token': null,
           'CONTENT-TYPE': 'application/json'
-        },
+        }
       }
     ];
 

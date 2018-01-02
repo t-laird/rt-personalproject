@@ -79,7 +79,7 @@ describe('Transaction component tests', () => {
     window.fetch = jest.fn().mockImplementation( () =>
       Promise.resolve({
         json: () => Promise.resolve({
-          status: 'success',
+          status: 'success'
 
         })
       })

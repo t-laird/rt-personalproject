@@ -5,5 +5,5 @@ export const mockUserData = {
   group_id: 1,
   name: "Corey Pavin",
   user_id: 95
-}
+};
 

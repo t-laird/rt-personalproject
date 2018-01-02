@@ -35,7 +35,7 @@ class Login extends Component {
 
     } else {
     	clearLocalStorage();
-    	window.location="https://tr-personal-proj.e1.loginrocket.com"
+    	window.location="https://tr-personal-proj.e1.loginrocket.com";
     }
   }
 
@@ -52,13 +52,13 @@ class Login extends Component {
 
 
 
-	render() {
-		return (
-			<div className="login-component">
+  render() {
+    return (
+      <div className="login-component">
 			
-			</div>
-		) 
-	}
+      </div>
+    ); 
+  }
 }
 
 export default Login;

@@ -13,15 +13,15 @@ describe('app tests', () => {
         <App />
       </MemoryRouter>
     );
-  })
+  });
   
   it('renders without crashing', () => {
     expect(renderedApp).toBeDefined();
   });
 
   it.skip('should render with the correct default elements', () => {
-    console.log(renderedApp.debug())
+    console.log(renderedApp.debug());
     expect(renderedApp.find('App').length).toEqual(1);
   });
 
-})
+});

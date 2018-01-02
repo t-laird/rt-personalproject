@@ -75,7 +75,7 @@ export class Transaction extends Component {
     };
 
 
-    for(let requiredParameter of ['send_id', 'receive_id', 'group_id', 'point_value', 'recipient_name']) {
+    for (let requiredParameter of ['send_id', 'receive_id', 'group_id', 'point_value', 'recipient_name']) {
       if (!transactionInformation[requiredParameter]) {
         this.setState({
           transactionMessage: `Please send a valid ${requiredParameter}.`,
@@ -85,7 +85,7 @@ export class Transaction extends Component {
       }
     }
 
-    if(this.state.recipient.length < 3) {
+    if (this.state.recipient.length < 3) {
       return;
     }
 
@@ -149,7 +149,7 @@ export class Transaction extends Component {
     const query = new RegExp(value, 'gi');
 
     const userNames = this.props.UserList.map( user => user.name);
-    const filterSelf = userNames.filter ( user => user !== this.props.User.name);
+    const filterSelf = userNames.filter( user => user !== this.props.User.name);
 
     const filterUsers = filterSelf.filter( user => query.test(user));
     const firstFive = filterUsers.slice(0, 5);
@@ -202,7 +202,7 @@ export class Transaction extends Component {
       return (
         <li 
           className={shouldHighlight} 
-          onClick={(e) => {this.autoComplete(e)}} 
+          onClick={(e) => { this.autoComplete(e); }} 
           key={`suggestion${index}`}>{user}</li> 
       );
     });
@@ -212,7 +212,7 @@ export class Transaction extends Component {
         onClick={
           () => this.setState({recipient: ''})
         }
-        className="empty-suggestions">NO USERS FOUND</li>
+        className="empty-suggestions">NO USERS FOUND</li>;
     }
     return listItems;
   }
@@ -246,22 +246,22 @@ export class Transaction extends Component {
                 name="recipient" 
                 value={this.state.recipient} 
                 onKeyDown={this.navigateSuggestions}
-                onChange={(e) => {this.handleInput(e); this.populateSuggestions(e); }} />
+                onChange={(e) => { this.handleInput(e); this.populateSuggestions(e); }} />
               <ul>
                 {this.generateSuggestions()}
               </ul>
             </div>
           </div>
-            <textarea
-                className="note-input"
-                type="text"
-                name="note"
-                placeholder="Add a message"
-                value={this.state.note}
-                onChange={(e) => {this.handleInput(e)}}
-              >
-            </textarea>
-            <button onClick={()=> { this.handleSubmit(); }}>SEND</button>
+          <textarea
+            className="note-input"
+            type="text"
+            name="note"
+            placeholder="Add a message"
+            value={this.state.note}
+            onChange={(e) => { this.handleInput(e); }}
+          >
+          </textarea>
+          <button onClick={()=> { this.handleSubmit(); }}>SEND</button>
           <div className="transaction-message">
             <h3>{this.state.transactionMessage}</h3>
           </div>
