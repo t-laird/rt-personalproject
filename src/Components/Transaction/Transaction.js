@@ -3,7 +3,7 @@ import './Transaction.css';
 import getKeyFromLS from '../../helpers/getKeyFromLS';
 import { connect } from 'react-redux';
 
-class Transaction extends Component {
+export class Transaction extends Component {
   constructor() {
     super();
     this.state = {
@@ -89,8 +89,6 @@ class Transaction extends Component {
       return;
     }
 
-
-
     const submitEvent = await fetch('http://localhost:3000/api/v1/eventtracking/new', {
       method: 'POST',
       headers: {
@@ -158,7 +156,7 @@ class Transaction extends Component {
 
     if (value.length) {
       this.setState({
-        suggestions: filterUsers
+        suggestions: firstFive
       });
     } else {
       this.setState({
@@ -198,7 +196,7 @@ class Transaction extends Component {
     }
   }
 
-  generateSuggestions = () => {
+  generateSuggestions = () => {    
     const listItems = this.state.suggestions.map( (user, index) => {
       const shouldHighlight = index === this.state.focus ? 'highlight' : '';
       return (
@@ -273,7 +271,7 @@ class Transaction extends Component {
   }
 }
 
-const mapStateToProps = ( store ) => ({
+export const mapStateToProps = ( store ) => ({
   UserTransactions: store.UserTransactions,
   UserList: store.UserList,
   User: store.User,
