@@ -24,7 +24,6 @@ export class GroupData extends Component {
 	    }, 0);
 
 	    return currentTotals;
-
 	  }
 	}
 
@@ -39,7 +38,7 @@ export class GroupData extends Component {
 	}
 }
 
-const mapStateToProps = ( store ) => ({
+export const mapStateToProps = ( store ) => ({
   group: store.Group,
   GroupTransactions: store.GroupTransactions
 });
