@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 import Transaction from '../Transaction/Transaction';
 import Comments from '../Comments/Comments';
 
-class User extends Component {
+export class User extends Component {
   constructor(props) {
     super(props);
 
@@ -19,13 +19,9 @@ class User extends Component {
 
   componentDidMount() {
     if (!this.props.User.name) {
-      console.log('trying to fetch user data');
       this.props.history.push('/login');
     }
-  }
-
-  componentWillReceiveProps = (nextProps) => {
-    if (nextProps.User.group_id > 0) {
+    if (this.props.User.group_id > 0) {
       this.setState({joinText: 'SWITCH GROUPS'});
     }
   }
@@ -43,7 +39,7 @@ class User extends Component {
   }
 }
 
-const mapStateToProps = ( store ) => ({
+export const mapStateToProps = ( store ) => ({
   User: store.User
 });
 
