@@ -5,8 +5,7 @@ import GroupProfile from '../GroupProfile/GroupProfile';
 import Leaderboard from '../Leaderboard/Leaderboard';
 import { connect } from 'react-redux';
 
-
-class Group extends Component {
+export class Group extends Component {
 
   componentDidMount() {
     if (!this.props.User.name) {
@@ -25,7 +24,7 @@ class Group extends Component {
   }
 }
 
-const mapStateToProps = ( store ) => ({
+export const mapStateToProps = ( store ) => ({
   User: store.User
 });
 

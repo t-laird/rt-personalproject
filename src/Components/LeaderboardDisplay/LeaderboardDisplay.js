@@ -1,7 +1,6 @@
 import React from 'react';
 import './LeaderboardDisplay.css';
 
-
 const LeaderboardDisplay = ({ name, points, position }) => {
 
   return (

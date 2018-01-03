@@ -4,7 +4,18 @@ exports[`Group tests Should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Group />,
+  Symbol(enzyme.__unrendered__): <Group
+    User={
+        Object {
+            "authrocket_id": "usr_0vXWX9jSRkbUjLGsOb9S8r",
+            "created_date": "2017-11-18T18:34:30.017Z",
+            "email": "cpavin@usopen.com",
+            "group_id": 1,
+            "name": "Corey Pavin",
+            "user_id": 95,
+          }
+    }
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -20,11 +31,21 @@ ShallowWrapper {
       "children": Array [
         <Connect(GroupData) />,
         <Connect(GroupProfile) />,
+        <Connect(Leaderboard) />,
       ],
       "className": "group-component",
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -55,11 +76,21 @@ ShallowWrapper {
         "children": Array [
           <Connect(GroupData) />,
           <Connect(GroupProfile) />,
+          <Connect(Leaderboard) />,
         ],
         "className": "group-component",
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         Object {
           "instance": null,
           "key": undefined,
