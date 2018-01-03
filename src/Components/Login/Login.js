@@ -89,7 +89,6 @@ class Login extends Component {
   loadGroupTransactionData = async (groupData) => {
     try {
       const groupTransactions = await getGroupTransactionData(groupData);
-
       this.props.updateGroupTransactions(groupTransactions);
 
     } catch (e) {
