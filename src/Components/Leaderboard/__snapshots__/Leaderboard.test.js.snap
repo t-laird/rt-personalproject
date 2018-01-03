@@ -20,12 +20,16 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <div>
+        <div
+          className="givers"
+>
           <h2>
                     Top Givers this week:
           </h2>
 </div>,
-        <div>
+        <div
+          className="senders"
+>
           <h2>
                     Top Earners this week:
           </h2>
@@ -46,6 +50,7 @@ ShallowWrapper {
 </h2>,
             undefined,
           ],
+          "className": "givers",
         },
         "ref": null,
         "rendered": Array [
@@ -75,6 +80,7 @@ ShallowWrapper {
 </h2>,
             undefined,
           ],
+          "className": "senders",
         },
         "ref": null,
         "rendered": Array [
@@ -103,12 +109,16 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <div>
+          <div
+            className="givers"
+>
             <h2>
                         Top Givers this week:
             </h2>
 </div>,
-          <div>
+          <div
+            className="senders"
+>
             <h2>
                         Top Earners this week:
             </h2>
@@ -129,6 +139,7 @@ ShallowWrapper {
 </h2>,
               undefined,
             ],
+            "className": "givers",
           },
           "ref": null,
           "rendered": Array [
@@ -158,6 +169,7 @@ ShallowWrapper {
 </h2>,
               undefined,
             ],
+            "className": "senders",
           },
           "ref": null,
           "rendered": Array [
