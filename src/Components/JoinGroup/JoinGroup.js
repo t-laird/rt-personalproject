@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../Actions';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import validateGroup from '../../helpers/validateGroup';
 import './JoinGroup.css';
+import getUser from '../../helpers/fetches/getUser/getUser';
+import getUsersInGroup from '../../helpers/fetches/getUsersInGroup/getUsersInGroup';
+import getGroupSettings from '../../helpers/fetches/getGroupSettings/getGroupSettings';
+import getGroupTransactionData from '../../helpers/fetches/getGroupTransactionData/getGroupTransactionData';
+import getTransactionData from '../../helpers/fetches/getTransactionData/getTransactionData';
+
 
 export class JoinGroup extends Component {
   constructor() {
@@ -11,15 +17,22 @@ export class JoinGroup extends Component {
 
     this.state = {
       passphrase: '',
-      message: `You haven't joined a group yet.  And you should!  Enter your group passphrase below:`
+      message: null,
+      hideintro: false
     };
   }
 
-  componentDidMount = () => {
+  groupPageMessage = () => {
+    if (this.state.hideintro) {
+      return null;
+    }
+
     if (this.props.group.group_name) {
-      this.setState({message: `You are a member of: ${this.props.group.group_name}.  To switch groups, enter new passphrase below.`});
+      return <h3>You are a member of: <Link to="/group">{this.props.group.group_name}</Link>.  To switch groups, enter new passphrase below.</h3>;
     } else if (this.props.user.group_id) {
-      this.setState({message: 'You are already a member of a group!  To switch groups, enter new passphrase below.'});
+      return <h3>You are already a member of a group!  To switch groups, enter new passphrase below.</h3>;
+    } else if (!this.props.user.name) {
+      return  <h3><Link to="/login">Login</Link> to join a group or to see your group status!</h3>;
     }
   }
 
@@ -32,25 +45,66 @@ export class JoinGroup extends Component {
 
   joinGroup = async (event) => {
     event.preventDefault();
+    if (this.state.passphrase === this.props.group.group_passphrase) {
+      this.setState({
+        message: <h3>You're already in that group!</h3>
+      });
+      return;
+    }
+
     const response = await validateGroup(this.state.passphrase, this.props.user.user_id);
-    this.props.updateUser(response[0]);
+
+    if (response.status === 'success') {
+      const userResponse = await getUser();
+      return this.updateUserInfo(userResponse);
+    } else if (!this.props.user.name) {
+      this.setState({
+        message: <h3>You must be logged in to join a group.</h3>
+      });
+    } else {
+      this.setState({
+        message: <h3>Failed to join group... please try again</h3>
+      });
+    }
+  }
+
+  updateUserInfo = async (userResponse) => {
+    this.props.updateUser(userResponse);
+
+    const userTransactions = await getTransactionData(userResponse);
+    const usersInGroup = await getUsersInGroup(userResponse);
+    const groupData = await getGroupSettings(userResponse);
+    const groupTransactions = await getGroupTransactionData(groupData);
+
+    this.props.updateUserList(usersInGroup);
+    this.props.updateGroup(groupData);
+    this.props.updateUserTransactions(userTransactions);
+    this.props.updateGroupTransactions(groupTransactions);
+
+    this.groupPageMessage(true);
+
+    this.setState({
+      message: <h3>You successfully joined {groupData.group_name}! Click <Link to="/group">here</Link> to visit your group page or <Link to="/user">here</Link> to visit your user page.</h3>,
+      hideintro: true
+    });
   }
 
   render() {
     return (
       <div className="join-group-component">
         <div className="join-container">
-          <h3>{this.state.message}</h3>
+          {this.groupPageMessage()}
           <form>
             <input 
               value={this.state.passphrase}
               onChange={this.handleChange}
-              placeholder='passphrase' 
+              placeholder='passphrase'
               name='passphrase' />
             <button
               onClick={this.joinGroup}
             >SUBMIT</button>
           </form>
+          {this.state.message}
         </div>
         <div className="link-holder">
           <NavLink className="create-group-link" to='/creategroup'>CREATE NEW GROUP</NavLink>
@@ -68,6 +122,18 @@ export const mapStateToProps = ( store ) => ({
 export const mapDispatchToProps = dispatch => ({
   updateUser: user => {
     dispatch(actions.updateUser(user));
+  },
+  updateUserTransactions: transactions => {
+    dispatch(actions.updateUserTransactions(transactions));
+  },
+  updateGroupTransactions: groupTransactions => {
+    dispatch(actions.updateGroupTransactions(groupTransactions));
+  },
+  updateUserList: users => {
+    dispatch(actions.updateUserList(users));
+  },
+  updateGroup: group => {
+    dispatch(actions.updateGroup(group));
   }
 });
 

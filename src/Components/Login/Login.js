@@ -15,6 +15,10 @@ class Login extends Component {
   }
 
   componentDidMount = async () => {
+    await this.fetchUserData();
+  }
+
+  fetchUserData = async () => {
     this.checkForKey();
     
     const userData = await this.loadUser();
@@ -25,8 +29,8 @@ class Login extends Component {
         const groupData = await this.loadGroupSettings(userData);
         await this.loadGroupTransactionData(groupData);
       }
+      this.props.history.push('/user');
     }
-    this.props.history.push('/user');
   }
 
   componentWillReceiveProps = (nextProps) => {
