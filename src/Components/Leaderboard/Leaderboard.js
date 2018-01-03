@@ -41,11 +41,11 @@ export class Leaderboard extends Component {
   render() {
     return (
       <div className="leaderboard-component">
-        <div>
+        <div className="givers">
           <h2>Top Givers this week:</h2>
           {this.displayLeaders('send_name')}
         </div>
-        <div>
+        <div className="senders">
           <h2>Top Earners this week:</h2>
           {this.displayLeaders('received_name')}
         </div>

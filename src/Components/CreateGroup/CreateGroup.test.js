@@ -65,10 +65,31 @@ describe('Create group tests', () => {
 });
 
 describe('mapStateToProps tests', () => {
+  it('should pull user from store', () => {
+    const mockStore = { mockUserData };
+    const result = mapStateToProps(mockStore);
 
+    expect(result.UserData).toEqual(mockStore.UserData)
+  })
 });
 
 describe('mapDispatchToProps tests', () => {
-  
+  it('should call dispatch when updateGroup is called', () => {
+    const mockDispatch = jest.fn();
+    const mockParams = {mockGroupData};
+    const result = mapDispatchToProps(mockDispatch);
+
+    result.updateGroup(mockParams);
+    expect(mockDispatch).toHaveBeenCalled();
+  })
+
+  it('should call dispatch when updateUser is called', () => {
+    const mockDispatch = jest.fn();
+    const mockParams = {mockUserData};
+    const result = mapDispatchToProps(mockDispatch);
+
+    result.updateGroup(mockParams);
+    expect(mockDispatch).toHaveBeenCalled();
+  })
 });
 
