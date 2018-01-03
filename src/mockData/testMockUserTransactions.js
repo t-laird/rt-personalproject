@@ -5,7 +5,7 @@ const mockUserTransactions = [
         'send_id': 5,
         'receive_id': 8,
         'group_id': 1,
-        'created_time': Date.now(),    
+        'created_time': 1504239488330,    
         'point_value': 10,
         'send_name': 'Ronald Marshall',
         'note': 'Tacos make me happy.'
@@ -25,7 +25,7 @@ const mockUserTransactions = [
         'send_id': 8,
         'receive_id': 4,
         'group_id': 1,
-        'created_time': Date.now(),    
+        'created_time': 1504239482343,    
         'point_value': 10,
         'send_name': 'Ronald Marshall',
         'note': 'Tacos make me happy.'
@@ -42,6 +42,3 @@ const mockUserTransactions = [
     ]
   }
 ];
-
-export default mockUserTransactions;
-
