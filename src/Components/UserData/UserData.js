@@ -6,14 +6,14 @@ export const UserData = (props) => {
 
   return (
     <div className="user-data-component">
-      <h2>Welcome, {props.user.User.name}!</h2>
+      <h2>Welcome, {props.user.name}!</h2>
     </div>
   ); 
 };
 
-const mapStateToProps = store => {
+export const mapStateToProps = store => {
   return {
-    user: store
+    user: store.User
   };
 };
 
