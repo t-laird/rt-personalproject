@@ -25,7 +25,13 @@ ShallowWrapper {
           className="join-container"
 >
           <h3>
-                    You haven't joined a group yet.  And you should!  Enter your group passphrase below:
+                    <Link
+                              replace={false}
+                              to="/login"
+                    >
+                              Login
+                    </Link>
+                     to join a group or to see your group status!
           </h3>
           <form>
                     <input
@@ -65,7 +71,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <h3>
-              You haven't joined a group yet.  And you should!  Enter your group passphrase below:
+              <Link
+                            replace={false}
+                            to="/login"
+              >
+                            Login
+              </Link>
+               to join a group or to see your group status!
 </h3>,
             <form>
               <input
@@ -80,6 +92,7 @@ ShallowWrapper {
                             SUBMIT
               </button>
 </form>,
+            null,
           ],
           "className": "join-container",
         },
@@ -90,10 +103,33 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "You haven't joined a group yet.  And you should!  Enter your group passphrase below:",
+              "children": Array [
+                <Link
+                  replace={false}
+                  to="/login"
+>
+                  Login
+</Link>,
+                " to join a group or to see your group status!",
+              ],
             },
             "ref": null,
-            "rendered": "You haven't joined a group yet.  And you should!  Enter your group passphrase below:",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Login",
+                  "replace": false,
+                  "to": "/login",
+                },
+                "ref": null,
+                "rendered": "Login",
+                "type": [Function],
+              },
+              " to join a group or to see your group status!",
+            ],
             "type": "h3",
           },
           Object {
@@ -146,6 +182,7 @@ ShallowWrapper {
             ],
             "type": "form",
           },
+          null,
         ],
         "type": "div",
       },
@@ -196,7 +233,13 @@ ShallowWrapper {
             className="join-container"
 >
             <h3>
-                        You haven't joined a group yet.  And you should!  Enter your group passphrase below:
+                        <Link
+                                    replace={false}
+                                    to="/login"
+                        >
+                                    Login
+                        </Link>
+                         to join a group or to see your group status!
             </h3>
             <form>
                         <input
@@ -236,7 +279,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <h3>
-                You haven't joined a group yet.  And you should!  Enter your group passphrase below:
+                <Link
+                                replace={false}
+                                to="/login"
+                >
+                                Login
+                </Link>
+                 to join a group or to see your group status!
 </h3>,
               <form>
                 <input
@@ -251,6 +300,7 @@ ShallowWrapper {
                                 SUBMIT
                 </button>
 </form>,
+              null,
             ],
             "className": "join-container",
           },
@@ -261,10 +311,33 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "You haven't joined a group yet.  And you should!  Enter your group passphrase below:",
+                "children": Array [
+                  <Link
+                    replace={false}
+                    to="/login"
+>
+                    Login
+</Link>,
+                  " to join a group or to see your group status!",
+                ],
               },
               "ref": null,
-              "rendered": "You haven't joined a group yet.  And you should!  Enter your group passphrase below:",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Login",
+                    "replace": false,
+                    "to": "/login",
+                  },
+                  "ref": null,
+                  "rendered": "Login",
+                  "type": [Function],
+                },
+                " to join a group or to see your group status!",
+              ],
               "type": "h3",
             },
             Object {
@@ -317,6 +390,7 @@ ShallowWrapper {
               ],
               "type": "form",
             },
+            null,
           ],
           "type": "div",
         },
@@ -410,7 +484,14 @@ ShallowWrapper {
           className="join-container"
 >
           <h3>
-                    You are a member of: Turing.  To switch groups, enter new passphrase below.
+                    You are a member of: 
+                    <Link
+                              replace={false}
+                              to="/group"
+                    >
+                              Turing
+                    </Link>
+                    .  To switch groups, enter new passphrase below.
           </h3>
           <form>
                     <input
@@ -450,7 +531,14 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <h3>
-              You are a member of: Turing.  To switch groups, enter new passphrase below.
+              You are a member of: 
+              <Link
+                            replace={false}
+                            to="/group"
+              >
+                            Turing
+              </Link>
+              .  To switch groups, enter new passphrase below.
 </h3>,
             <form>
               <input
@@ -465,6 +553,7 @@ ShallowWrapper {
                             SUBMIT
               </button>
 </form>,
+            null,
           ],
           "className": "join-container",
         },
@@ -475,10 +564,35 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "You are a member of: Turing.  To switch groups, enter new passphrase below.",
+              "children": Array [
+                "You are a member of: ",
+                <Link
+                  replace={false}
+                  to="/group"
+>
+                  Turing
+</Link>,
+                ".  To switch groups, enter new passphrase below.",
+              ],
             },
             "ref": null,
-            "rendered": "You are a member of: Turing.  To switch groups, enter new passphrase below.",
+            "rendered": Array [
+              "You are a member of: ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Turing",
+                  "replace": false,
+                  "to": "/group",
+                },
+                "ref": null,
+                "rendered": "Turing",
+                "type": [Function],
+              },
+              ".  To switch groups, enter new passphrase below.",
+            ],
             "type": "h3",
           },
           Object {
@@ -531,6 +645,7 @@ ShallowWrapper {
             ],
             "type": "form",
           },
+          null,
         ],
         "type": "div",
       },
@@ -581,7 +696,14 @@ ShallowWrapper {
             className="join-container"
 >
             <h3>
-                        You are a member of: Turing.  To switch groups, enter new passphrase below.
+                        You are a member of: 
+                        <Link
+                                    replace={false}
+                                    to="/group"
+                        >
+                                    Turing
+                        </Link>
+                        .  To switch groups, enter new passphrase below.
             </h3>
             <form>
                         <input
@@ -621,7 +743,14 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <h3>
-                You are a member of: Turing.  To switch groups, enter new passphrase below.
+                You are a member of: 
+                <Link
+                                replace={false}
+                                to="/group"
+                >
+                                Turing
+                </Link>
+                .  To switch groups, enter new passphrase below.
 </h3>,
               <form>
                 <input
@@ -636,6 +765,7 @@ ShallowWrapper {
                                 SUBMIT
                 </button>
 </form>,
+              null,
             ],
             "className": "join-container",
           },
@@ -646,10 +776,35 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "You are a member of: Turing.  To switch groups, enter new passphrase below.",
+                "children": Array [
+                  "You are a member of: ",
+                  <Link
+                    replace={false}
+                    to="/group"
+>
+                    Turing
+</Link>,
+                  ".  To switch groups, enter new passphrase below.",
+                ],
               },
               "ref": null,
-              "rendered": "You are a member of: Turing.  To switch groups, enter new passphrase below.",
+              "rendered": Array [
+                "You are a member of: ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Turing",
+                    "replace": false,
+                    "to": "/group",
+                  },
+                  "ref": null,
+                  "rendered": "Turing",
+                  "type": [Function],
+                },
+                ".  To switch groups, enter new passphrase below.",
+              ],
               "type": "h3",
             },
             Object {
@@ -702,6 +857,7 @@ ShallowWrapper {
               ],
               "type": "form",
             },
+            null,
           ],
           "type": "div",
         },
