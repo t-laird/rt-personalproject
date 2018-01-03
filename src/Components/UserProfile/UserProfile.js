@@ -3,12 +3,12 @@ import './UserProfile.css';
 import { connect } from 'react-redux';
 import { VictoryClipContainer, VictoryChart, VictoryLine, VictoryLegend, VictoryAxis, VictoryLabel } from 'victory';
 
-class UserProfile extends Component {
+export class UserProfile extends Component {
 
   generateReceivedLine = () => {
     const { UserTransactions } = this.props;
     if (UserTransactions.length && Object.keys(this.props.Group).length) {
-
+      console.log(UserTransactions);
       const weeklyReceived = UserTransactions.reduce((array, week, index) => {
         array.push({
           x: index,
@@ -109,10 +109,8 @@ class UserProfile extends Component {
   }
 }
 
-const mapStateToProps = ( store ) => ({
+export const mapStateToProps = ( store ) => ({
   UserTransactions: store.UserTransactions,
-  UserList: store.UserList,
-  User: store.User,
   Group: store.Group
 });
 
