@@ -25,8 +25,8 @@ class Login extends Component {
         const groupData = await this.loadGroupSettings(userData);
         await this.loadGroupTransactionData(groupData);
       }
-    }
     this.props.history.push('/user');
+    }
   }
 
   componentWillReceiveProps = (nextProps) => {
@@ -85,7 +85,6 @@ class Login extends Component {
   loadGroupTransactionData = async (groupData) => {
     try {
       const groupTransactions = await getGroupTransactionData(groupData);
-
       this.props.updateGroupTransactions(groupTransactions);
 
     } catch (e) {
