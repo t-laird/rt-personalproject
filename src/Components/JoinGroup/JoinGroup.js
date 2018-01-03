@@ -51,7 +51,6 @@ export class JoinGroup extends Component {
       });
       return;
     }
-
     const response = await validateGroup(this.state.passphrase, this.props.user.user_id);
 
     if (response.status === 'success') {
@@ -80,8 +79,6 @@ export class JoinGroup extends Component {
     this.props.updateGroup(groupData);
     this.props.updateUserTransactions(userTransactions);
     this.props.updateGroupTransactions(groupTransactions);
-
-    this.groupPageMessage(true);
 
     this.setState({
       message: <h3>You successfully joined {groupData.group_name}! Click <Link to="/group">here</Link> to visit your group page or <Link to="/user">here</Link> to visit your user page.</h3>,
