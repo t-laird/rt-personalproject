@@ -50,13 +50,19 @@ export const Header = (props) => {
     <div className="header-component">
       <NavLink 
         exact to='/'>
-        <h1>SNAP
+        <h2>SNAP
           <img 
             className="header-logo" 
             src={require('./assets/ninja-logo.svg')} 
-            alt="logo" />NINJA</h1>
+            alt="logo" />NINJA</h2>
       </NavLink>
       {headerDisplay}
+      <div className="nav-tabs">
+        <NavLink to="/user">USER</NavLink>
+        <NavLink to="/group">GROUP</NavLink>
+        <NavLink to="/creategroup">CREATE</NavLink>
+        <NavLink to="/joingroup">JOIN</NavLink>
+      </div>
     </div>
   );
 };
