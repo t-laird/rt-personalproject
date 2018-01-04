@@ -6,6 +6,21 @@
   width: 100%;
   @include component-transition;
 	
+  .join-group {
+    width: 770px;
+    margin: auto;
+    display: block;
+    padding: 0 25px;
+    color: rgba(255,255,255,.7);
+    transition: color .15s ease-in-out;
+    font-weight: 900;
+    text-align: right;
+  }
+
+  .join-group:hover {
+    color: rgba(255,255,255,1);
+  }
+  
 }
 
 .group-component.fade-enter {
