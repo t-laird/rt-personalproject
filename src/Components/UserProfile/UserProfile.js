@@ -32,7 +32,7 @@ export class UserProfile extends Component {
             <VictoryClipContainer 
               clipPadding={{ top: 5, right: 10 }} />
           }
-          style={{ data: { stroke: "#006699", strokeWidth: 10} }}
+          style={{ data: { stroke: "#df4054", strokeWidth: 10} }}
           data={weeklyReceived}
         /> 
       );
@@ -60,7 +60,7 @@ export class UserProfile extends Component {
             <VictoryClipContainer 
               clipPadding={{ top: 5, right: 10 }} />
           }
-          style={{ data: { stroke: "#fe5630", strokeWidth: 10} }}
+          style={{ data: { stroke: "#fff", strokeWidth: 10} }}
           data={weeklySent}
         />
       );
@@ -76,28 +76,28 @@ export class UserProfile extends Component {
           <VictoryLegend
             data={[ 
               {
-                name: "POINTS SENT", 
+                name: "SNAPS GIVEN", 
                 symbol: { 
-                  fill: "#fe5630", 
+                  fill: "#df4054", 
                   type: "square" 
                 }, 
                 labels: {
                   fontSize: 12, 
-                  fill: "#fe5630", 
+                  fill: "#df4054", 
                   fontFamily: "semplicitapro", 
                   padding: 0, 
                   fontWeight: 900
                 }
               },
               {
-                name: "POINTS RECEIVED", 
+                name: "SNAPS RECEIVED", 
                 symbol: { 
-                  fill: "#006699", 
+                  fill: "#fff", 
                   type: "square" 
                 }, 
                 labels: {
                   fontSize: 12, 
-                  fill: "#006699", 
+                  fill: "#fff", 
                   fontFamily: "semplicitapro", 
                   padding: 0, 
                   fontWeight: 900
@@ -111,14 +111,14 @@ export class UserProfile extends Component {
           <VictoryAxis 
             tickValues={['']}
             style={{
-              axis: {stroke: "#b9e5fb", strokeWidth: 6}
+              axis: {stroke: "#7e6e7a", strokeWidth: 6}
             }}
           />
           <VictoryAxis 
             dependentAxis={true}
             style={{
-              axis: {stroke: "#b9e5fb", strokeWidth: 6},
-              tickLabels: {fill: "#85c0de", fontFamily: "semplicitapro"}
+              axis: {stroke: "#7e6e7a", strokeWidth: 6},
+              tickLabels: {fill: "#7e6e7a", fontFamily: "semplicitapro"}
             }}
           />
           <VictoryLabel 
@@ -127,11 +127,11 @@ export class UserProfile extends Component {
               Week
               ${this.props.UserTransactions.length === 1 ? '' : 's'}`
             }
-            x={"38%"}
+            x={"0%"}
             y={"4%"}
             style={
               {
-                fill: '#006699', 
+                fill: '#fff', 
                 fontSize: '18', 
                 fontWeight: 900, 
                 fontFamily: "semplicitapro"
@@ -144,7 +144,7 @@ export class UserProfile extends Component {
             y={"90%"}
             style={
               {
-                fill: '#85c0de', 
+                fill: '#7e6e7a', 
                 fontSize: '14', 
                 fontWeight: 500, 
                 fontFamily: "semplicitapro"
