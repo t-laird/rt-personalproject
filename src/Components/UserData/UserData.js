@@ -7,7 +7,7 @@ export const UserData = (props) => {
 
   return (
     <div className="user-data-component">
-      <h2>Welcome, {props.user.name}!</h2>
+      <h4>Welcome, {props.user.name}!</h4>
     </div>
   ); 
 };
