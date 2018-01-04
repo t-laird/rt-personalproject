@@ -1,3 +1,5 @@
+import { mockUserData } from "./mockUserData";
+
 const mockUserTransactions = [
   {
     received: [
@@ -42,3 +44,5 @@ const mockUserTransactions = [
     ]
   }
 ];
+
+export default mockUserTransactions;

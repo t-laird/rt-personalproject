@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 import { JoinGroup, mapStateToProps, mapDispatchToProps } from './JoinGroup';
 import React from 'react';
 import { shallow } from 'enzyme';
@@ -22,7 +24,11 @@ describe('Join group tests', () => {
   });
 
   it('should match the snapshot when a user is logged in', () => {
-    const renderedApp = shallow(<JoinGroup group={ mockGroupData } user={ mockUserData } />);
+    const renderedApp = shallow(
+      <JoinGroup 
+        group={ mockGroupData } 
+        user={ mockUserData } />
+    );
 
     expect(renderedApp).toMatchSnapshot();
   });
@@ -36,7 +42,11 @@ describe('Join group tests', () => {
   });
 
   it('should display a message if joining the same group you are currently in', () => {
-    const renderedApp = shallow(<JoinGroup user={{group_id: 5}} group={{group_id: 5, group_passphrase: '12345'}} />);
+    const renderedApp = shallow(
+      <JoinGroup 
+        user={{group_id: 5}} 
+        group={{group_id: 5, group_passphrase: '12345'}} />
+    );
     const mockEvent = {preventDefault: jest.fn()};
     const expectedMessage = "You're already in that group!";
     renderedApp.setState({
@@ -48,7 +58,12 @@ describe('Join group tests', () => {
     expect(renderedApp.state('message').props.children).toEqual(expectedMessage);
   });
   it('should render no message if state says to hide message', () => {
-    const renderedApp = shallow(<JoinGroup user={{group_id: 5}} group={{group_id: 5, group_passphrase: '12345'}} />);
+    const renderedApp = shallow(
+      <JoinGroup 
+        user={{group_id: 5}} 
+        group={{group_id: 5, group_passphrase: '12345'}} />
+    );
+
     renderedApp.setState({
       hideintro: true
     });
@@ -58,20 +73,33 @@ describe('Join group tests', () => {
   });
 
   it('should render a current group message if in a group currently', () => {
-    const renderedApp = shallow(<JoinGroup user={{group_id: 5}} group={{group_id: 5, group_name:'TestGroup', group_passphrase: '12345'}} />);
+    const renderedApp = shallow(
+      <JoinGroup 
+        user={{group_id: 5}} 
+        group={{group_id: 5, group_name:'TestGroup', group_passphrase: '12345'}} />
+    );
+
     const messageResponse = renderedApp.instance().groupPageMessage();
     expect(messageResponse.props.children[0]).toContain('You are a member of:');
   });
 
   it('should render a message indicating that the user is already in a group if appropriate', () => {
-    const renderedApp = shallow(<JoinGroup user={{group_id: 5}} group={{group_id: 5, group_passphrase: '12345'}} />);
+    const renderedApp = shallow(
+      <JoinGroup 
+        user={{group_id: 5}} 
+        group={{group_id: 5, group_passphrase: '12345'}} />);
     const messageResponse = renderedApp.instance().groupPageMessage();
 
     expect(messageResponse.props.children).toContain('You are already a member of a group!');    
   });
 
   it('should indicate that the user should log in if there is no user in store', () => {
-    const renderedApp = shallow(<JoinGroup user={{}} group={{group_passphrase: '12345'}} />);
+    const renderedApp = shallow(
+      <JoinGroup 
+        user={{}} 
+        group={{group_passphrase: '12345'}} />
+    );
+
     const messageResponse = renderedApp.instance().groupPageMessage();
 
     expect(messageResponse.props.children[1]).toContain('to join a group or to see your group status!');

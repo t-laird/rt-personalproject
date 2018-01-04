@@ -5,11 +5,11 @@ import { mockUserData } from '../../mockData/mockUserData';
 
 describe('user data tests', () => {
   it('should match the snapshot', () => {
-    const renderedApp = shallow(<UserData user={mockUserData} />)
+    const renderedApp = shallow(<UserData user={mockUserData} />);
 
     expect(renderedApp).toMatchSnapshot();
-  })
-})
+  });
+});
 
 describe('mapStateToProps tests', () => {
   it('should pull user from store', () => {
@@ -17,5 +17,5 @@ describe('mapStateToProps tests', () => {
     const result = mapStateToProps(mockStore);
 
     expect(result.User).toEqual(mockStore.User);
-  })
-})
+  });
+});

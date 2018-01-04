@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import UserData from '../UserData/UserData';
 import UserProfile from '../UserProfile/UserProfile';
-import * as actions from '../../Actions/';
 import './User.css';
 import { NavLink } from 'react-router-dom';
 import Transaction from '../Transaction/Transaction';
 import Comments from '../Comments/Comments';
+import PropTypes from 'prop-types';
 
 export class User extends Component {
   constructor(props) {
@@ -33,7 +33,10 @@ export class User extends Component {
         <Transaction />
         <Comments />
         <UserProfile />
-        <NavLink className="join-group" to='/joingroup'>{this.state.joinText}</NavLink>
+        <NavLink 
+          className="join-group" 
+          to='/joingroup'>{this.state.joinText}
+        </NavLink>
       </div>
     );
   }
@@ -45,3 +48,8 @@ export const mapStateToProps = ( store ) => ({
 
 
 export default connect(mapStateToProps, null)(User);
+
+User.propTypes = {
+  User: PropTypes.object,
+  history: PropTypes.object
+};

@@ -25,6 +25,6 @@ const mockGroupTransactions = [
       send_name: "Deion Sanders"
     }
   ]}
-]
+];
 
 export default mockGroupTransactions;

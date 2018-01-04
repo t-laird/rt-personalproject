@@ -1,7 +1,10 @@
+/* eslint-disable max-len */
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../Actions';
 import { NavLink, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import validateGroup from '../../helpers/validateGroup';
 import './JoinGroup.css';
 import getUser from '../../helpers/fetches/getUser/getUser';
@@ -135,3 +138,13 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(JoinGroup);
+
+JoinGroup.propTypes = {
+  group: PropTypes.object,
+  user: PropTypes.object,
+  updateUser: PropTypes.func,
+  updateUserList: PropTypes.func,
+  updateGroup: PropTypes.func,
+  updateUserTransactions: PropTypes.func,
+  updateGroupTransactions: PropTypes.func
+};

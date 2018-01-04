@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './GroupData.css';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 export class GroupData extends Component {
 
@@ -15,27 +16,27 @@ export class GroupData extends Component {
     return totals;
   }
 
-	currentPoints = () => {
-	  if (this.props.GroupTransactions.length > 0) {
-	    const allCurrent = (this.props.GroupTransactions[this.props.GroupTransactions.length - 1]);			
-	    const currentTotals = allCurrent.transactions.reduce((accum, transaction) => {
-	      accum += transaction.point_value;
-	      return accum;
-	    }, 0);
+  currentPoints = () => {
+    if (this.props.GroupTransactions.length > 0) {
+      const allCurrent = (this.props.GroupTransactions[this.props.GroupTransactions.length - 1]);			
+      const currentTotals = allCurrent.transactions.reduce((accum, transaction) => {
+        accum += transaction.point_value;
+        return accum;
+      }, 0);
 
-	    return currentTotals;
-	  }
-	}
+      return currentTotals;
+    }
+  }
 
-	render() {
-	  return (
-	    <div className="group-data-component">
-	      <h2>{this.props.group.group_name || 'Group'}</h2>
-	      <h3>Group points awarded this week: <span className="group-span">{this.currentPoints()}</span></h3>
-	      <h3>Total - all time: <span className="group-span">{this.totalPoints()}</span></h3>
-	    </div>
-	  ); 
-	}
+  render() {
+    return (
+      <div className="group-data-component">
+        <h2>{this.props.group.group_name || 'Group'}</h2>
+        <h3>Group points awarded this week: <span className="group-span">{this.currentPoints()}</span></h3>
+        <h3>Total - all time: <span className="group-span">{this.totalPoints()}</span></h3>
+      </div>
+    ); 
+  }
 }
 
 export const mapStateToProps = ( store ) => ({
@@ -44,3 +45,8 @@ export const mapStateToProps = ( store ) => ({
 });
 
 export default connect(mapStateToProps, null)(GroupData);
+
+GroupData.propTypes = {
+  GroupTransactions: PropTypes.array,
+  group: PropTypes.object
+};

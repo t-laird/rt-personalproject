@@ -4,6 +4,7 @@ import GroupData from '../GroupData/GroupData';
 import GroupProfile from '../GroupProfile/GroupProfile';
 import Leaderboard from '../Leaderboard/Leaderboard';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 export class Group extends Component {
 
@@ -18,7 +19,7 @@ export class Group extends Component {
       <div className="group-component">
         <GroupData />
         <GroupProfile />
-      	<Leaderboard />
+        <Leaderboard />
       </div>
     ); 
   }
@@ -29,3 +30,8 @@ export const mapStateToProps = ( store ) => ({
 });
 
 export default connect(mapStateToProps, null)(Group);
+
+Group.propTypes = {
+  User: PropTypes.object,
+  history: PropTypes.object
+};

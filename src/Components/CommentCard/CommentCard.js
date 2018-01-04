@@ -1,5 +1,6 @@
 import React from 'react';
 import './CommentCard.css';
+import PropTypes from 'prop-types';
 
 const CommentCard = ({ displayTextIndex, value, note, sender, day }) => {
 
@@ -26,3 +27,11 @@ const CommentCard = ({ displayTextIndex, value, note, sender, day }) => {
 };
 
 export default CommentCard;
+
+CommentCard.propTypes = {
+  displayTextIndex: PropTypes.number,
+  value: PropTypes.string,
+  note: PropTypes.string,
+  sender: PropTypes.string,
+  day: PropTypes.number
+};

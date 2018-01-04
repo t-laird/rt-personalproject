@@ -4,7 +4,7 @@ const User = (state = {}, action) => {
     return action.user;
 
   case "LOGOUT_USER":
-    	return state = {};
+    return state = {};
 
   default:
     return state;
