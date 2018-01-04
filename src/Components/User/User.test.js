@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 import React from 'react';
 import { User, mapStateToProps } from './User';
 import { shallow } from 'enzyme';
@@ -9,33 +11,33 @@ describe('user tests', () => {
     const renderedApp = shallow(<User User={mockUserData} />);
 
     expect(renderedApp).toMatchSnapshot();
-  })
+  });
 
   it('should match the snapshot if user does not have a group', () => {
     const renderedApp = shallow(<User User={mockUserWithoutGroup} />);
   
     expect(renderedApp).toMatchSnapshot();
-    expect(renderedApp.state('joinText')).toEqual('JOIN A GROUP')
-  })
+    expect(renderedApp.state('joinText')).toEqual('JOIN A GROUP');
+  });
 
   it('should auto-redirect if no user is logged in', () => {
-    const renderedApp = shallow(<User User={{}} history={[]} />)
+    const renderedApp = shallow(<User User={{}} history={[]} />);
 
     expect(renderedApp.instance().props.history[0]).toEqual('/login');
-  })
+  });
   
   it('should not redirect if a user is logged in', () => {
-    const renderedApp = shallow(<User User={mockUserData} history={[]} />)
+    const renderedApp = shallow(<User User={mockUserData} history={[]} />);
 
     expect(renderedApp.instance().props.history.length).toEqual(0);
-  })
-})
+  });
+});
 
 describe('mapStateToProps tests', () => {
   it('should pull user from store', () => {
     const mockStore = { mockUserData };
     const result = mapStateToProps(mockStore);
 
-    expect(result.UserData).toEqual(mockStore.UserData)
-  })
-})
+    expect(result.UserData).toEqual(mockStore.UserData);
+  });
+});

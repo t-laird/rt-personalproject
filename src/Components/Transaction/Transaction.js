@@ -1,7 +1,10 @@
+/* eslint-disable max-len */
+
 import React, { Component } from 'react';
 import './Transaction.css';
 import getKeyFromLS from '../../helpers/getKeyFromLS';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 export class Transaction extends Component {
   constructor() {
@@ -17,8 +20,8 @@ export class Transaction extends Component {
     };
   }
 
-  handleInput = (e) => {
-    const {value, name} = e.target;
+  handleInput = (event) => {
+    const {value, name} = event.target;
 
     this.setState({[name]: value});
   }
@@ -75,7 +78,13 @@ export class Transaction extends Component {
     };
 
 
-    for (let requiredParameter of ['send_id', 'receive_id', 'group_id', 'point_value', 'recipient_name']) {
+    for (let requiredParameter of [
+      'send_id', 
+      'receive_id', 
+      'group_id', 
+      'point_value', 
+      'recipient_name'
+    ]) {
       if (!transactionInformation[requiredParameter]) {
         this.setState({
           transactionMessage: `Please send a valid ${requiredParameter}.`,
@@ -135,17 +144,17 @@ export class Transaction extends Component {
     }
   }
 
-  autoComplete = (e) => {
+  autoComplete = (event) => {
     this.setState({
-      recipient: e.target.innerText
+      recipient: event.target.innerText
     });
-    const mockEvent = {target: {value: e.target.innerText}};
+    const mockEvent = {target: {value: event.target.innerText}};
 
     this.populateSuggestions(mockEvent);
   }
 
-  populateSuggestions = (e) => {
-    const { value } = e.target;
+  populateSuggestions = (event) => {
+    const { value } = event.target;
     const query = new RegExp(value, 'gi');
 
     const userNames = this.props.UserList.map( user => user.name);
@@ -165,11 +174,10 @@ export class Transaction extends Component {
     }
   }
 
-  navigateSuggestions = (e) => {
-    if (e.key === 'ArrowDown' && 
+  navigateSuggestions = (event) => {
+    if (event.key === 'ArrowDown' && 
     this.state.suggestions.slice(0, 5)[this.state.focus + 1]) {
-      e.preventDefault();
-      console.log(this.state.suggestions);
+      event.preventDefault();
       if (this.state.focus === null) {
         this.setState({
           focus: 0, 
@@ -181,8 +189,8 @@ export class Transaction extends Component {
           recipient: this.state.suggestions[this.state.focus + 1]
         });
       }
-    } else if (e.key === 'ArrowUp' && this.state.focus !== null) {
-      e.preventDefault();
+    } else if (event.key === 'ArrowUp' && this.state.focus !== null) {
+      event.preventDefault();
       if (this.state.focus === 0) {
         this.setState({
           focus: null, 
@@ -202,7 +210,7 @@ export class Transaction extends Component {
       return (
         <li 
           className={shouldHighlight} 
-          onClick={(e) => { this.autoComplete(e); }} 
+          onClick={(event) => { this.autoComplete(event); }} 
           key={`suggestion${index}`}>{user}</li> 
       );
     });
@@ -237,7 +245,7 @@ export class Transaction extends Component {
               name="points" 
               placeholder="QTY" 
               value={this.state.points} 
-              onChange={(e) => { this.handleInput(e); }} />
+              onChange={(event) => { this.handleInput(event); }} />
             {this.pointStatus()}
             <h3 className="points-to">points to:</h3>
             <div className="recipient-input">
@@ -246,7 +254,7 @@ export class Transaction extends Component {
                 name="recipient" 
                 value={this.state.recipient} 
                 onKeyDown={this.navigateSuggestions}
-                onChange={(e) => { this.handleInput(e); this.populateSuggestions(e); }} />
+                onChange={(event) => { this.handleInput(event); this.populateSuggestions(event); }} />
               <ul>
                 {this.generateSuggestions()}
               </ul>
@@ -258,7 +266,7 @@ export class Transaction extends Component {
             name="note"
             placeholder="Add a message"
             value={this.state.note}
-            onChange={(e) => { this.handleInput(e); }}
+            onChange={(event) => { this.handleInput(event); }}
           >
           </textarea>
           <button onClick={()=> { this.handleSubmit(); }}>SEND</button>
@@ -280,3 +288,10 @@ export const mapStateToProps = ( store ) => ({
 
 
 export default connect(mapStateToProps, null)(Transaction);
+
+Transaction.propTypes = {
+  User: PropTypes.object,
+  Group: PropTypes.object,
+  UserList: PropTypes.array,
+  UserTransactions: PropTypes.array
+};

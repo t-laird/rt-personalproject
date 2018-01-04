@@ -1,4 +1,7 @@
+/* eslint-disable max-len */
+
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Login.css';
 import clearLocalStorage from '../../helpers/clearLocalStorage';
 import getUsersInGroup from '../../helpers/fetches/getUsersInGroup/getUsersInGroup';
@@ -40,22 +43,22 @@ class Login extends Component {
   }
 
   loadUser = async () => {
-  	try {
+    try {
       const user = await getUser();
       this.props.updateUser(user);
       return user;
-  	} catch (e) {
-    	window.location="https://tr-personal-proj.e1.loginrocket.com";
-    	return;
-  	}
+    } catch (error) {
+      window.location="https://tr-personal-proj.e1.loginrocket.com";
+      return;
+    }
   }
 
   loadTransactionData = async (userData) => {
     try {
       const userTransactions = await getTransactionData(userData);
       this.props.updateUserTransactions(userTransactions);
-    } catch (e) {
-    	window.location="https://tr-personal-proj.e1.loginrocket.com";
+    } catch (error) {
+      window.location="https://tr-personal-proj.e1.loginrocket.com";
       return;
     }
   }
@@ -66,7 +69,7 @@ class Login extends Component {
 
       this.props.updateUserList(usersInGroup);
     } catch (error) {
-    	window.location="https://tr-personal-proj.e1.loginrocket.com";
+      window.location="https://tr-personal-proj.e1.loginrocket.com";
       
       console.log('error: ', error);
     }
@@ -91,13 +94,13 @@ class Login extends Component {
       const groupTransactions = await getGroupTransactionData(groupData);
       this.props.updateGroupTransactions(groupTransactions);
 
-    } catch (e) {
+    } catch (error) {
       window.location="https://tr-personal-proj.e1.loginrocket.com";
       return;
     }
   }
   
-	 componentDidMount() {
+  componentDidMount() {
     this.checkForKey();    
   }
 
@@ -109,18 +112,21 @@ class Login extends Component {
     } else if (userKey) {
       return;
     } else {
-    	clearLocalStorage();
-    	window.location="https://tr-personal-proj.e1.loginrocket.com";
+      clearLocalStorage();
+      window.location="https://tr-personal-proj.e1.loginrocket.com";
     }
   }
 
   getToken () {
-  	////REGEX NEEDS TO CUT OFF WHEN THERE IS MORE ON THE END
-  	///  for ex.   &signup=true   match between = and & OR end of string
-    const tokenRegex = new RegExp(/\?token=/);
-    const parseToken = this.props.location.search.replace(tokenRegex, '');
+    ////REGEX NEEDS TO CUT OFF WHEN THERE IS MORE ON THE END
+    ///  for ex.   &signup=true   match between = and & OR end of string
+    const removeToken = new RegExp(/\?token=/);
+    const removeSignup = new RegExp(/\&signup=true/);
 
-    return parseToken;
+    const parseToken = this.props.location.search.replace(removeToken, '');
+    const parseSignup = parseToken.replace(removeSignup, '');
+
+    return parseSignup;
   }
 
 
@@ -155,3 +161,14 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(null, mapDispatchToProps)(Login);
+
+Login.propTypes = {
+  user: PropTypes.object,
+  history: PropTypes.object,
+  updateUser: PropTypes.func,
+  updateUserTransactions: PropTypes.func,
+  updateUserList: PropTypes.func,
+  updateGroupTransactions: PropTypes.func,
+  updateGroup: PropTypes.func,
+  location: PropTypes.object.func
+};

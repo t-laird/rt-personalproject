@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import CommentCard from '../CommentCard/CommentCard';
 import './Comments.css';
 import moment from 'moment';
+import PropTypes from 'prop-types';
 
 export class Comments extends Component {
 
@@ -52,3 +53,7 @@ export const mapStateToProps = ( store ) => ({
 });
 
 export default connect(mapStateToProps, null)(Comments);
+
+Comments.propTypes = {
+  UserTransactions: PropTypes.array
+};

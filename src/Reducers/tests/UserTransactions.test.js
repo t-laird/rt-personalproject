@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 import UserTransaction from '../UserTransactions';
 import * as actions from '../../Actions';
 

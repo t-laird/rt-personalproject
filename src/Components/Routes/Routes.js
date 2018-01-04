@@ -8,6 +8,7 @@ import JoinGroup from '../JoinGroup/JoinGroup';
 import CreateGroup from '../CreateGroup/CreateGroup';
 import { Route, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import PropTypes from 'prop-types';
 import './Routes.css';
 
 const Routes = ({ location }) => {
@@ -37,3 +38,7 @@ const Routes = ({ location }) => {
 };
 
 export default Routes;
+
+Routes.propTypes = {
+  location: PropTypes.object
+};

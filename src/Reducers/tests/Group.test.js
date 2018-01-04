@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 import Group from '../Group';
 import * as actions from '../../Actions';
 
