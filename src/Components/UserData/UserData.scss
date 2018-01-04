@@ -1,11 +1,17 @@
 @import '../../Variables.scss';
 
 .user-data-component {
-  background: linear-gradient(to right, rgba(227,245,253,1) 0%,rgba(241,250,254,1) 20%,rgba(241,250,254,1) 80%,rgba(227,245,253,1) 100%);
-  border-top: 7px solid #b9e5fb;
+  // background: linear-gradient(to right, rgba(227,245,253,1) 0%,rgba(241,250,254,1) 20%,rgba(241,250,254,1) 80%,rgba(227,245,253,1) 100%);
+  background: $c5;
   width: 770px;
   margin: 30px auto 0;
-  padding: 20px 25px 10px;
+  padding: 8px 25px;
+  display: flex;
+  align-items: flex-start;
+
+  h4 {
+    color: $c3;
+  }
 
 	.give-points {
 		font-weight: 900;
