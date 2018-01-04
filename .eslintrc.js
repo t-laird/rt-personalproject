@@ -23,7 +23,6 @@ module.exports = {
     "array-bracket-spacing": ["error", "never"],
     "block-spacing": ["error", "always"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
-    "camelcase": "warn",
     "comma-dangle": ["error", "never"],
     "comma-spacing": ["error", { "before": false, "after": true }],
     "comma-style": ["error", "last"],
@@ -32,8 +31,7 @@ module.exports = {
     "keyword-spacing": ["error", { "before": true, "after": true }],
     "max-len": ["warn", 80],
     "no-duplicate-imports": "error",
-    "id-length": "error",
-    "id-blacklist": ["error", "data", "err", "e", "cb", "callback", "payload", "obj", "arr"],
+    "id-blacklist": ["error", "err", "e", "cb", "callback", "payload", "obj", "arr"],
     "max-depth": ["warn", 4]
   },
   "globals": {

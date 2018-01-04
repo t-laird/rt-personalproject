@@ -7,5 +7,5 @@ describe('leaderboard display tests', () => {
     const renderedApp = shallow(<LeaderboardDisplay />);
 
     expect(renderedApp).toMatchSnapshot();
-  })
-})
+  });
+});

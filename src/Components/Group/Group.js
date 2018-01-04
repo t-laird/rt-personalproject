@@ -5,6 +5,7 @@ import GroupProfile from '../GroupProfile/GroupProfile';
 import Leaderboard from '../Leaderboard/Leaderboard';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export class Group extends Component {
 
@@ -34,3 +35,8 @@ export const mapStateToProps = ( store ) => ({
 });
 
 export default connect(mapStateToProps, null)(Group);
+
+Group.propTypes = {
+  User: PropTypes.object,
+  history: PropTypes.object
+};

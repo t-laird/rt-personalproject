@@ -1,4 +1,6 @@
-import { Transcation, mapStateToProps, Transaction } from './Transaction';
+/* eslint-disable max-len */
+
+import { mapStateToProps, Transaction } from './Transaction';
 import { shallow } from 'enzyme';
 import React from 'react';
 
@@ -9,7 +11,12 @@ describe('Transaction component tests', () => {
   beforeEach(() => {
     mockProps = {
       UserTransactions: [{sent: [], received: []}],
-      UserList: [{name: 'Ann', user_id: 1}, {name: 'Jen', user_id: 2}, {name: 'Tim', user_id: 3}, {name: 'Alan', user_id: 4}],
+      UserList: [
+        {name: 'Ann', user_id: 1}, 
+        {name: 'Jen', user_id: 2}, 
+        {name: 'Tim', user_id: 3}, 
+        {name: 'Alan', user_id: 4}
+      ],
       User: {
         authrocket_id: "usr_0vXXFrAmpjSWXnr7n2x2m8",
         created_date: "2017-11-18T18:34:30.017Z",

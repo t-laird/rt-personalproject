@@ -12,15 +12,15 @@ describe('Group tests', () => {
   });
 
   it('should not auto-redirect if a user is signed in', () => {
-    const renderedApp = shallow(<Group User={mockUserData} history={[]} />)
+    const renderedApp = shallow(<Group User={mockUserData} history={[]} />);
 
-    expect(renderedApp.instance().props.history.length).toEqual(0)
+    expect(renderedApp.instance().props.history.length).toEqual(0);
   });
 
   it('should auto-redirect to login if a user is not signed in', () => {
     const renderedApp = shallow(<Group User={{}} history={[]} />)
 
-    expect(renderedApp.instance().props.history[0]).toEqual('/login')
+    expect(renderedApp.instance().props.history[0]).toEqual('/login');
   });
 
   it('should auto-redirect to joingroup if a user does not have a group id', () => {

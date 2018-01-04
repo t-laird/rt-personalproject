@@ -1,4 +1,7 @@
-import { CreateGroup, mapStateToProps, mapDispatchToProps } from './CreateGroup';
+import { 
+  CreateGroup, 
+  mapStateToProps, 
+  mapDispatchToProps } from './CreateGroup';
 import React from 'react';
 import { shallow } from 'enzyme';
 import { mockUserData } from '../../mockData/mockUserData';
@@ -32,7 +35,12 @@ describe('Create group tests', () => {
 
     const mockUpdateGroup = jest.fn();
     const mockUpdateUser = jest.fn();
-    const renderedApp = shallow(<CreateGroup user={{}} updateUser={mockUpdateUser} updateGroup={mockUpdateGroup} />);
+    const renderedApp = shallow(
+      <CreateGroup 
+        user={{}} 
+        updateUser={mockUpdateUser} 
+        updateGroup={mockUpdateGroup} />
+    );
     const mockEvent = { preventDefault: jest.fn() };
     const mockGroupName = 'Turing';
     const mockWeeklyPoints = 50;
@@ -52,7 +60,12 @@ describe('Create group tests', () => {
 
     const mockUpdateGroup = jest.fn();
     const mockUpdateUser = jest.fn();
-    const renderedApp = shallow(<CreateGroup user={{}} updateUser={mockUpdateUser} updateGroup={mockUpdateGroup} />);
+    const renderedApp = shallow(
+      <CreateGroup 
+        user={{}} 
+        updateUser={mockUpdateUser} 
+        updateGroup={mockUpdateGroup} />
+    );
     const mockEvent = { preventDefault: jest.fn() };
     const mockGroupName = 'Turing';
     const mockWeeklyPoints = 50;
@@ -69,8 +82,8 @@ describe('mapStateToProps tests', () => {
     const mockStore = { mockUserData };
     const result = mapStateToProps(mockStore);
 
-    expect(result.UserData).toEqual(mockStore.UserData)
-  })
+    expect(result.UserData).toEqual(mockStore.UserData);
+  });
 });
 
 describe('mapDispatchToProps tests', () => {
@@ -81,7 +94,7 @@ describe('mapDispatchToProps tests', () => {
 
     result.updateGroup(mockParams);
     expect(mockDispatch).toHaveBeenCalled();
-  })
+  });
 
   it('should call dispatch when updateUser is called', () => {
     const mockDispatch = jest.fn();
@@ -90,6 +103,6 @@ describe('mapDispatchToProps tests', () => {
 
     result.updateGroup(mockParams);
     expect(mockDispatch).toHaveBeenCalled();
-  })
+  });
 });
 

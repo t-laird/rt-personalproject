@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import LeaderboardDisplay from '../LeaderboardDisplay/LeaderboardDisplay';
 import './Leaderboard.css';
+import PropTypes from 'prop-types';
 
 export class Leaderboard extends Component {
 
@@ -9,15 +10,15 @@ export class Leaderboard extends Component {
     const recentWeek = this.props.GroupTransactions[this.props.GroupTransactions.length - 1].transactions;
     const givers = recentWeek.reduce((accum, transaction) => {
       if (!accum[transaction[value]]) {
-        accum[transaction[value]] = { points: 0 }
+        accum[transaction[value]] = { points: 0 };
       }
-      accum[transaction[value]].points += transaction.point_value
+      accum[transaction[value]].points += transaction.point_value;
       return accum;
-    }, {})
+    }, {});
     const array = Object.keys(givers).map(user => {
-      return { name: user, points: givers[user].points }
-    })
-    const result = array.sort((a, b) => b.points - a.points)
+      return { name: user, points: givers[user].points };
+    });
+    const result = array.sort((a, b) => b.points - a.points);
 
     return result.slice(0, 5);
   }
@@ -31,12 +32,12 @@ export class Leaderboard extends Component {
           points={obj.points}
           key={index}
           position={index + 1}
-        />
-      })
+        />;
+      });
 
       return display;
-      }
     }
+  }
 
   render() {
     return (
@@ -50,12 +51,16 @@ export class Leaderboard extends Component {
           {this.displayLeaders('received_name')}
         </div>
       </div>
-    )
+    );
   }
 }
 
 export const mapStateToProps = ( store ) => ({
   GroupTransactions: store.GroupTransactions
-})
+});
 
 export default connect(mapStateToProps, null)(Leaderboard);
+
+Leaderboard.propTypes = {
+  GroupTransactions: PropTypes.array
+};

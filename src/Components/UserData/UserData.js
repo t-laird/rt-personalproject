@@ -1,6 +1,7 @@
 import React from 'react';
 import './UserData.css';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 export const UserData = (props) => {
 
@@ -18,3 +19,7 @@ export const mapStateToProps = store => {
 };
 
 export default connect(mapStateToProps, null)(UserData);
+
+UserData.propTypes = {
+  user: PropTypes.object
+};

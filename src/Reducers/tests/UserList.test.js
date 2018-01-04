@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 import UserList from '../UserList';
 import * as actions from '../../Actions';
 
