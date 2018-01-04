@@ -243,21 +243,23 @@ export class Transaction extends Component {
           </div>
         </div>
         <div className="points-block">
-          <h2>Award points: </h2>
+          <h4>AWARD</h4>
           <div className="award">
-            <h3>Send </h3>
-            <input 
-              type="text" 
-              name="points" 
-              placeholder="QTY" 
-              value={this.state.points} 
-              onChange={(event) => { this.handleInput(event); }} />
-            {this.pointStatus()}
-            <h3 className="points-to">points to:</h3>
+            <div className="send-input">
+              <h5>Send </h5>
+              <input 
+                type="text" 
+                name="points" 
+                placeholder="QTY" 
+                value={this.state.points} 
+                onChange={(event) => { this.handleInput(event); }} />            
+            </div>
             <div className="recipient-input">
+              <h5 className="points-to">snaps to:</h5>
               <input 
                 type="text" 
                 name="recipient" 
+                placeholder="find a teammate"
                 value={this.state.recipient} 
                 onKeyDown={this.navigateSuggestions}
                 onChange={(event) => { this.handleInput(event); this.populateSuggestions(event); }} />
