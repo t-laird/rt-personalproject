@@ -15,12 +15,12 @@ const CommentCard = ({ displayTextIndex, value, note, sender, day }) => {
   return (
     <div className="comment-card-component">
       <div className="card-header">
-        <h3>{displayText[displayTextIndex]}</h3><h5 className="day-span">{day}</h5>
+        <h6>{displayText[displayTextIndex]}</h6><h5 className="day-span">{day}</h5>
       </div>
       <p>{note}</p>
       <div className="card-footer">
         <img src={require('../Header/assets/ninja-logo.svg')} alt="ninja-icon" />
-        <h4>{sender}</h4>
+        <h6>{sender}</h6>
       </div>
     </div>
   );

@@ -50,7 +50,7 @@ export class Transaction extends Component {
         return total;
       }, 0);
       const weeklyPoints = this.props.Group.weekly_points;
-      return <h3>Remaining weekly points to award: <span className="current-span">{weeklyPoints-spentPoints}</span></h3>;
+      return <span className="points">{weeklyPoints-spentPoints}</span>;
     } 
     return <h3>login to send points!</h3>;
   }
@@ -231,27 +231,35 @@ export class Transaction extends Component {
         <div className="current-points">
           <div className="remaining-points">
             {this.getRemainingPoints()}
+            <h6>REMAINING</h6>
+          </div>
+          <div className="divider">
+            <h4>SNAPS</h4>
+            <span>THIS WEEK</span>
           </div>
           <div className="received-points">
-            <h3>Points received this week: <span className="current-span">{this.getReceivedPoints()}</span></h3>
+            <span className="points">{this.getReceivedPoints()}</span>
+            <h6>RECEIVED</h6>
           </div>
         </div>
         <div className="points-block">
-          <h2>Award points: </h2>
+          <h4>AWARD</h4>
           <div className="award">
-            <h3>Send </h3>
-            <input 
-              type="text" 
-              name="points" 
-              placeholder="QTY" 
-              value={this.state.points} 
-              onChange={(event) => { this.handleInput(event); }} />
-            {this.pointStatus()}
-            <h3 className="points-to">points to:</h3>
+            <div className="send-input">
+              <h5>Send </h5>
+              <input 
+                type="text" 
+                name="points" 
+                placeholder="QTY" 
+                value={this.state.points} 
+                onChange={(event) => { this.handleInput(event); }} />            
+            </div>
             <div className="recipient-input">
+              <h5 className="points-to">snaps to:</h5>
               <input 
                 type="text" 
                 name="recipient" 
+                placeholder="find a teammate"
                 value={this.state.recipient} 
                 onKeyDown={this.navigateSuggestions}
                 onChange={(event) => { this.handleInput(event); this.populateSuggestions(event); }} />

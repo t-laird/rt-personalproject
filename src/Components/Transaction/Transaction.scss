@@ -8,7 +8,7 @@
     font-size: 34px;
     text-align: center;
     &::placeholder{
-      color: $red-light;
+      color: $c4 ;
       font-size: 24px;
       position: relative;
       bottom: 2px;
@@ -16,20 +16,58 @@
   }
 
   .current-points {
-    background: linear-gradient(to right, rgba(227,245,253,1) 0%,rgba(241,250,254,1) 20%,rgba(241,250,254,1) 80%,rgba(227,245,253,1) 100%);
-    border-bottom: 7px solid #b9e5fb;
+    // background: linear-gradient(to right, rgba(227,245,253,1) 0%,rgba(241,250,254,1) 20%,rgba(241,250,254,1) 80%,rgba(227,245,253,1) 100%);
+    background: $c6;
     width: 770px;
     margin: 0 auto 30px;
     padding: 2px 25px 8px;
-  }
+    display: flex;
+    justify-content: center;
 
-  .current-span {
-    background-color: $blue;
-    padding: 10px 17px;
-    font-family: "semplicitapro", sans-serif;
-    font-weight: 900;
-    font-size: 24px;
-    margin-left: 5px
+    div {
+      margin: 20px 0px;
+      span.points {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60px;
+        font-family: "semplicitapro", sans-serif;
+        font-weight: 900;
+        height: 120px;
+        width: 120px;
+        background: $c3;
+        color: $c7;
+        border-bottom: 8px solid $c4;
+        margin-bottom: 3px;
+      }
+      h6 {
+        color: $c4;
+        text-align: center;
+      }
+    }
+
+    div.divider {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 170px;
+      h4 {
+        width: 100%;
+        color: $c4;
+        font-family: "semplicitapro", sans-serif;
+        font-weight: 500;
+        text-align: center; 
+      }
+      span {
+        width: 100%;
+        color: $c3;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: "semplicitapro", sans-serif;   
+        text-align: center;
+        padding-bottom: 8px;  
+      }
+    }
   }
 
   h3 {
@@ -37,13 +75,13 @@
   }
 
   button {
-    height: 60px;
-    width: 138px;
+    height: 50px;
+    width: 110px;
     background-color: $red;
     color: white;
     cursor: pointer;
-    padding: 9px 22px 8px;
-    font-size: 24px;
+    padding: 10px 15px 5px;
+    font-size: 20px;
     margin: auto;
     transition: background-color .15s ease-in-out;
     display: block;
@@ -64,60 +102,7 @@
     border: none;
   }
 
-  .award {
-    display: flex;
-
-    h3 {
-      margin-top: 13px;
-    }
-
-    .recipient-input {
-      width: 268px;
-      height: 60px;
-      margin: 0px 0px 0px 15px;
-      display: flex;
-      box-sizing: border-box;
-      flex-wrap: wrap;
-      input {
-          font-family: 'semplicitapro', sans-serif;
-          width: 100%;
-          box-sizing: border-box;
-          height: 100%;
-          margin: 0px;
-        }
-      ul {
-
-        width: 268px;
-        padding-left: 0px;
-        margin: 0px;
-        position: relative;
-        z-index: 10;
-        
-        li {
-          font-family: 'semplicitapro', sans-serif;
-          width: 100%;
-          list-style: none;
-          text-align: center;
-          color: #fe5630;
-          font-size: 34px;
-          z-index: 10;
-          background: rgba(211, 211, 211, 0.749);
-          cursor: pointer;
-
-          &:hover,
-          &.highlight {
-            background: rgba(235, 234, 234, 0.906);
-            color: darken(#fe5630, 10%);            
-          }
-
-          &.empty-suggestions {
-            color: red;
-            background-color: rgb(57, 57, 57);
-          }
-        }
-      }
-    }    
-  }
+  
   .transaction-message {
     h3 {
       margin: 0px;
@@ -130,27 +115,106 @@
     }
   }
 
-  .points-to {
-    margin-left: 0;
-  }
 
   .points-block {
     position: relative;
-    background-color: $blue;
-    border-top: 7px solid #b9e5fb;
-    border-bottom: 7px solid #b9e5fb;
-    padding: 20px 25px 5px;
+    background-color: $c6;
     width: 770px;
     margin: auto;
 
-    h2 {
+    h4 {
       margin-bottom: 13px;
+      color: $c7;
+      background: $c1;
+      text-align: center;
+      padding: 8px 0px;
     }
 
-    input {
-      width: 80px;
-      margin: 0 15px;
+    .award {
+      display: flex;
+      margin-left: 40px;
+      width: 90%;
+  
+      h5 {
+        color: $c3;
+        display: flex;
+      }
+
+      input {
+        height: 100%;
+        border-bottom: 8px solid $c5;
+        margin: 0 15px;
+      }
+
+      .send-input {
+        width: 30%;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        align-items: center;
+        h5 {
+          margin-right: 10px;
+        }
+        input {
+          width: 100px;
+        }
+      }
+  
+      .recipient-input {
+        width: 70%;
+        height: 60px;
+        // margin: 0px 0px 0px 15px;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        align-items: center;
+        h5.points-to {
+          width: 120px;
+        }
+        input {
+            font-family: 'semplicitapro', sans-serif;
+            width: calc(100% - 120px);
+            box-sizing: border-box;
+            text-align: left;
+            padding-left: 15px;
+            height: 100%;
+            margin: 0px;
+          }
+        ul {
+  
+          width: calc(100% - 120px);
+          padding-left: 0px;
+          margin: 0px 0px 0px 120px;
+          position: relative;
+          z-index: 10;
+
+          
+          li {
+            font-family: 'semplicitapro', sans-serif;
+            width: 100%;
+            list-style: none;
+            color: #fe5630;
+            font-size: 34px;
+            z-index: 10;
+            background: rgba(211, 211, 211, 0.749);
+            cursor: pointer;
+  
+            &:hover,
+            &.highlight {
+              background: rgba(235, 234, 234, 0.906);
+              color: darken(#fe5630, 10%);            
+            }
+  
+            &.empty-suggestions {
+              color: red;
+              background-color: rgb(57, 57, 57);
+            }
+          }
+        }
+      }    
     }
+
+
     .point-error {
       position: absolute;
       top: 25px;
@@ -163,18 +227,20 @@
       width: 89%;
       height: 100px;
       background-color: #fff;
+      border: none;
+      border-bottom: 8px solid $c5;
       text-align: left;
-      font-size: 24px;
+      font-size: 20px;
+      padding: 5px;
       box-sizing: border-box;
       color: $blue-text;
-      border: none;
       outline: none;
       resize: none;
       margin: 25px auto;
       
 
       &::placeholder{
-        color: $red-light ;
+        color: $c4 ;
         font-size: 24px;
       }
     }
