@@ -4,6 +4,7 @@ import GroupData from '../GroupData/GroupData';
 import GroupProfile from '../GroupProfile/GroupProfile';
 import Leaderboard from '../Leaderboard/Leaderboard';
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 export class Group extends Component {
@@ -12,6 +13,9 @@ export class Group extends Component {
     if (!this.props.User.name) {
       this.props.history.push('/login');
     }
+    if (!this.props.User.group_id) {
+      this.props.history.push('/joingroup');
+    }
   }
 
   render() {
@@ -19,7 +23,8 @@ export class Group extends Component {
       <div className="group-component">
         <GroupData />
         <GroupProfile />
-        <Leaderboard />
+      	<Leaderboard />
+        <NavLink className="join-group" to='/joingroup'>SWITCH GROUPS</NavLink>
       </div>
     ); 
   }

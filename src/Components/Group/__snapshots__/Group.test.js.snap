@@ -32,6 +32,14 @@ ShallowWrapper {
         <Connect(GroupData) />,
         <Connect(GroupProfile) />,
         <Connect(Leaderboard) />,
+        <NavLink
+          activeClassName="active"
+          ariaCurrent="true"
+          className="join-group"
+          to="/joingroup"
+>
+          SWITCH GROUPS
+</NavLink>,
       ],
       "className": "group-component",
     },
@@ -64,6 +72,21 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "ariaCurrent": "true",
+          "children": "SWITCH GROUPS",
+          "className": "join-group",
+          "to": "/joingroup",
+        },
+        "ref": null,
+        "rendered": "SWITCH GROUPS",
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -77,6 +100,14 @@ ShallowWrapper {
           <Connect(GroupData) />,
           <Connect(GroupProfile) />,
           <Connect(Leaderboard) />,
+          <NavLink
+            activeClassName="active"
+            ariaCurrent="true"
+            className="join-group"
+            to="/joingroup"
+>
+            SWITCH GROUPS
+</NavLink>,
         ],
         "className": "group-component",
       },
@@ -107,6 +138,21 @@ ShallowWrapper {
           "props": Object {},
           "ref": null,
           "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "ariaCurrent": "true",
+            "children": "SWITCH GROUPS",
+            "className": "join-group",
+            "to": "/joingroup",
+          },
+          "ref": null,
+          "rendered": "SWITCH GROUPS",
           "type": [Function],
         },
       ],

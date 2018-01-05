@@ -2,6 +2,7 @@ import { Group, mapStateToProps } from './Group';
 import React from 'react';
 import { shallow } from 'enzyme';
 import { mockUserData } from '../../mockData/mockUserData';
+import { mockUserWithoutGroup } from '../../mockData/mockUserWithoutGroup';
 
 describe('Group tests', () => {
   it('Should match the snapshot', () => {
@@ -16,11 +17,17 @@ describe('Group tests', () => {
     expect(renderedApp.instance().props.history.length).toEqual(0);
   });
 
-  it('should auto-redirect if a user is not signed in', () => {
-    const renderedApp = shallow(<Group User={{}} history={[]} />);
+  it('should auto-redirect to login if a user is not signed in', () => {
+    const renderedApp = shallow(<Group User={{}} history={[]} />)
 
     expect(renderedApp.instance().props.history[0]).toEqual('/login');
   });
+
+  it('should auto-redirect to joingroup if a user does not have a group id', () => {
+    const renderedApp = shallow(<Group User={mockUserWithoutGroup} history={[]} />)
+
+    expect(renderedApp.instance().props.history[0]).toEqual('/joingroup')
+  })
 });
 
 describe('mapStateToProps tests', () => {
