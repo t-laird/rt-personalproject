@@ -32,7 +32,7 @@ export class UserProfile extends Component {
             <VictoryClipContainer 
               clipPadding={{ top: 5, right: 10 }} />
           }
-          style={{ data: { stroke: "#df4054", strokeWidth: 10} }}
+          style={{ data: { stroke: "#7e6e7a", strokeWidth: 10} }}
           data={weeklyReceived}
         /> 
       );
@@ -70,6 +70,7 @@ export class UserProfile extends Component {
   generateChart = () => {
     return (
       <div className="user-profile-component">
+        <h4>{`Last ${this.props.UserTransactions.length} Week${this.props.UserTransactions.length === 1 ? '' : 's'}`}</h4>
         <VictoryChart>
           {this.generateReceivedLine()}
           {this.generateSentLine()}
@@ -78,12 +79,12 @@ export class UserProfile extends Component {
               {
                 name: "SNAPS GIVEN", 
                 symbol: { 
-                  fill: "#df4054", 
+                  fill: "#fff", 
                   type: "square" 
                 }, 
                 labels: {
                   fontSize: 12, 
-                  fill: "#df4054", 
+                  fill: "#fff", 
                   fontFamily: "semplicitapro", 
                   padding: 0, 
                   fontWeight: 900
@@ -92,12 +93,12 @@ export class UserProfile extends Component {
               {
                 name: "SNAPS RECEIVED", 
                 symbol: { 
-                  fill: "#fff", 
+                  fill: "#7e6e7a", 
                   type: "square" 
                 }, 
                 labels: {
                   fontSize: 12, 
-                  fill: "#fff", 
+                  fill: "#7e6e7a", 
                   fontFamily: "semplicitapro", 
                   padding: 0, 
                   fontWeight: 900
@@ -121,23 +122,7 @@ export class UserProfile extends Component {
               tickLabels: {fill: "#7e6e7a", fontFamily: "semplicitapro"}
             }}
           />
-          <VictoryLabel 
-            text={`Last 
-              ${this.props.UserTransactions.length} 
-              Week
-              ${this.props.UserTransactions.length === 1 ? '' : 's'}`
-            }
-            x={"0%"}
-            y={"4%"}
-            style={
-              {
-                fill: '#fff', 
-                fontSize: '18', 
-                fontWeight: 900, 
-                fontFamily: "semplicitapro"
-              }
-            }
-          />
+         
           <VictoryLabel 
             text={"this week"}
             x={"82%"}

@@ -272,7 +272,7 @@ export class Transaction extends Component {
             className="note-input"
             type="text"
             name="note"
-            placeholder="Add a message"
+            placeholder="add a message"
             value={this.state.note}
             onChange={(event) => { this.handleInput(event); }}
           >

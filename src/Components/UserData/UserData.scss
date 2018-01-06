@@ -1,16 +1,14 @@
 @import '../../Variables.scss';
 
 .user-data-component {
-  // background: linear-gradient(to right, rgba(227,245,253,1) 0%,rgba(241,250,254,1) 20%,rgba(241,250,254,1) 80%,rgba(227,245,253,1) 100%);
+  @include box-header;
   background: $c5;
-  width: 770px;
-  margin: 30px auto 0;
-  padding: 8px 25px;
   display: flex;
   align-items: flex-start;
 
   h4 {
     color: $c3;
+    font-weight: 900;
   }
 
 	.give-points {

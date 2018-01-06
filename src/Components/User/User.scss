@@ -6,18 +6,19 @@
   @include component-transition;
 
   .join-group {
-  	width: 770px;
+  	width: 750px;
   	margin: auto;
   	display: block;
   	padding: 0 25px;
-  	color: rgba(255,255,255,.7);
+  	color: $c1;
   	transition: color .15s ease-in-out;
   	font-weight: 900;
   	text-align: right;
+    font-size: 20px;
   }
 
   .join-group:hover {
-  	color: rgba(255,255,255,1);
+  	color: darken($c1, 12%);
   }
 }
 
@@ -27,6 +28,12 @@
 
 .user-component.fade-exit {
   @include component-exiting;
+}
+
+@media screen and (max-width: 750px) {
+  .user-component {
+    padding: 0 0 50px;
+  }
 }
 
 
