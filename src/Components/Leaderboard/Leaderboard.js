@@ -56,11 +56,11 @@ export class Leaderboard extends Component {
         </div>
         <div className="leaders-holder">
           <div className="givers">
-            <img className="ribbon" src={require('./assets/ribbon-brown.svg')} />
+            <img className="ribbon" src={require('./assets/ribbon-white.svg')} />
             {this.displayLeaders('send_name')}
           </div>
           <div className="earners">
-            <img className="ribbon" src={require('./assets/ribbon-white.svg')} />
+            <img className="ribbon" src={require('./assets/ribbon-brown.svg')} />
             {this.displayLeaders('received_name')}
           </div>
         </div>
