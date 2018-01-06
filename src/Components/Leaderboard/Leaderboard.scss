@@ -1,30 +1,87 @@
 @import '../../Variables.scss';
 
 .leaderboard-component {
-  display: flex;
-  justify-content: space-between;
-  width: 680px;
-  margin: 0 auto 40px;
-  padding: 15px 5px;
+  @include center-box;
+  background-color: $c2;
 
-
-  h2, h3 {
-    color: $blue-text;
+  
+  .leaderboard-header {
+    @include box-header;
   }
 
-  h2 {
-    /*border-bottom: 6px solid rgba(0,0,0, .2);*/
-    margin-bottom: 8px;
-    padding-bottom: 7px;
-    width: 305px;
+  h4 {
+    font-weight: 900;
+    color: $c5;
     text-align: center;
   }
 
-  .givers, .senders {
-    background-color: #fff;
-    
-    border-top: 6px solid $blue;
-    border-bottom: 6px solid $blue;
-    padding: 15px 5px;
+  .givers-heading {
+    text-align: left;
   }
+
+  .leaderboard-header {
+    @include box-header;
+    background-color: $c3;
+
+    h4 {
+      color: $c7;
+      text-align: center;
+    }
+  }
+
+  .leaderboard-subhead {
+    display: flex;
+    justify-content: space-around;
+    padding: 11px 0 4px;
+  }
+
+  .this-week-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h4 {
+      color: $c4;
+    }
+
+    h5 {
+      color: $c3;
+      font-weight: 900;
+      margin: 0 10px;
+    }
+
+    .this-week-arrows {
+      width: 22px;
+    }
+    
+  }
+
+  .leaders-holder {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 18px 18px;
+  }
+
+  .givers, .earners {
+    background-color: $c4;
+    width: 347px;
+    padding: 10px 0 20px 12px;
+    position: relative;
+  }
+
+  .givers h5 {
+    color: $c3;
+  }
+
+  .earners h5 {
+    color: $c7;
+  }
+
+  .ribbon {
+    width: 19px;
+    position: absolute;
+    top: 18px;
+    left: 8px;
+  }
+
 }

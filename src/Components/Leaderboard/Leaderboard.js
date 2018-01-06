@@ -42,13 +42,27 @@ export class Leaderboard extends Component {
   render() {
     return (
       <div className="leaderboard-component">
-        <div className="givers">
-          <h2>Top Givers this week:</h2>
-          {this.displayLeaders('send_name')}
+        <div className="leaderboard-header">
+          <h4>LEADERBOARD</h4>
         </div>
-        <div className="senders">
-          <h2>Top Earners this week:</h2>
-          {this.displayLeaders('received_name')}
+        <div className="leaderboard-subhead">
+          <h4 className="givers-heading">TOP GIVERS</h4>
+          <div className="this-week-center">
+            <img className="this-week-arrows" src={require('./assets/arrow-left.svg')} />
+            <h5>THIS WEEK</h5>
+            <img className="this-week-arrows" src={require('./assets/arrow-right.svg')} />
+          </div>
+          <h4>TOP EARNERS</h4>
+        </div>
+        <div className="leaders-holder">
+          <div className="givers">
+            <img className="ribbon" src={require('./assets/ribbon-brown.svg')} />
+            {this.displayLeaders('send_name')}
+          </div>
+          <div className="earners">
+            <img className="ribbon" src={require('./assets/ribbon-white.svg')} />
+            {this.displayLeaders('received_name')}
+          </div>
         </div>
       </div>
     );

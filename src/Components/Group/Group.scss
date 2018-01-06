@@ -1,24 +1,21 @@
 @import '../../Variables.scss';
 
 .group-component {
-  padding: 15px;
-  margin-top: 0;
-  width: 100%;
   @include component-transition;
 	
   .join-group {
-    width: 770px;
-    margin: auto;
+    @include center-box;
     display: block;
+    font-size: 20px;
     padding: 0 25px;
-    color: rgba(255,255,255,.7);
+    color: $c1;
     transition: color .15s ease-in-out;
     font-weight: 900;
     text-align: right;
   }
 
   .join-group:hover {
-    color: rgba(255,255,255,1);
+    color: darken($c1, 12%);
   }
   
 }
