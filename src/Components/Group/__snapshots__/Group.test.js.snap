@@ -30,8 +30,8 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Connect(GroupData) />,
-        <Connect(GroupProfile) />,
         <Connect(Leaderboard) />,
+        <Connect(GroupProfile) />,
         <NavLink
           activeClassName="active"
           ariaCurrent="true"
@@ -98,8 +98,8 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(GroupData) />,
-          <Connect(GroupProfile) />,
           <Connect(Leaderboard) />,
+          <Connect(GroupProfile) />,
           <NavLink
             activeClassName="active"
             ariaCurrent="true"

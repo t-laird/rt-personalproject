@@ -18,15 +18,15 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h3
+        <h5
           className="leaderboard-position"
 >
           .
-</h3>,
-        <h3
+</h5>,
+        <h5
           className="leaderboard-name"
 />,
-        <h3
+        <h5
           className="leaderboard-points"
 />,
       ],
@@ -50,7 +50,7 @@ ShallowWrapper {
           undefined,
           ".",
         ],
-        "type": "h3",
+        "type": "h5",
       },
       Object {
         "instance": null,
@@ -62,7 +62,7 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": null,
-        "type": "h3",
+        "type": "h5",
       },
       Object {
         "instance": null,
@@ -74,7 +74,7 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": null,
-        "type": "h3",
+        "type": "h5",
       },
     ],
     "type": "div",
@@ -86,15 +86,15 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h3
+          <h5
             className="leaderboard-position"
 >
             .
-</h3>,
-          <h3
+</h5>,
+          <h5
             className="leaderboard-name"
 />,
-          <h3
+          <h5
             className="leaderboard-points"
 />,
         ],
@@ -118,7 +118,7 @@ ShallowWrapper {
             undefined,
             ".",
           ],
-          "type": "h3",
+          "type": "h5",
         },
         Object {
           "instance": null,
@@ -130,7 +130,7 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": null,
-          "type": "h3",
+          "type": "h5",
         },
         Object {
           "instance": null,
@@ -142,7 +142,7 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": null,
-          "type": "h3",
+          "type": "h5",
         },
       ],
       "type": "div",

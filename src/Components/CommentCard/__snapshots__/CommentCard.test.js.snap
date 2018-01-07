@@ -21,7 +21,7 @@ ShallowWrapper {
         <div
           className="card-header"
 >
-          <h3 />
+          <h6 />
           <h5
                     className="day-span"
           />
@@ -34,7 +34,7 @@ ShallowWrapper {
                     alt="ninja-icon"
                     src="ninja-logo.svg"
           />
-          <h4 />
+          <h6 />
 </div>,
       ],
       "className": "comment-card-component",
@@ -47,7 +47,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h3 />,
+            <h6 />,
             <h5
               className="day-span"
 />,
@@ -65,7 +65,7 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": null,
-            "type": "h3",
+            "type": "h6",
           },
           Object {
             "instance": null,
@@ -103,7 +103,7 @@ ShallowWrapper {
               alt="ninja-icon"
               src="ninja-logo.svg"
 />,
-            <h4 />,
+            <h6 />,
           ],
           "className": "card-footer",
         },
@@ -130,7 +130,7 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": null,
-            "type": "h4",
+            "type": "h6",
           },
         ],
         "type": "div",
@@ -148,7 +148,7 @@ ShallowWrapper {
           <div
             className="card-header"
 >
-            <h3 />
+            <h6 />
             <h5
                         className="day-span"
             />
@@ -161,7 +161,7 @@ ShallowWrapper {
                         alt="ninja-icon"
                         src="ninja-logo.svg"
             />
-            <h4 />
+            <h6 />
 </div>,
         ],
         "className": "comment-card-component",
@@ -174,7 +174,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h3 />,
+              <h6 />,
               <h5
                 className="day-span"
 />,
@@ -192,7 +192,7 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": null,
-              "type": "h3",
+              "type": "h6",
             },
             Object {
               "instance": null,
@@ -230,7 +230,7 @@ ShallowWrapper {
                 alt="ninja-icon"
                 src="ninja-logo.svg"
 />,
-              <h4 />,
+              <h6 />,
             ],
             "className": "card-footer",
           },
@@ -257,7 +257,7 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": null,
-              "type": "h4",
+              "type": "h6",
             },
           ],
           "type": "div",

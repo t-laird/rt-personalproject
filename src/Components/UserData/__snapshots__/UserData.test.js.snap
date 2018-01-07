@@ -28,11 +28,11 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <h2>
+      "children": <h4>
         Welcome, 
         Corey Pavin
         !
-</h2>,
+</h4>,
       "className": "user-data-component",
     },
     "ref": null,
@@ -53,7 +53,7 @@ ShallowWrapper {
         "Corey Pavin",
         "!",
       ],
-      "type": "h2",
+      "type": "h4",
     },
     "type": "div",
   },
@@ -63,11 +63,11 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <h2>
+        "children": <h4>
           Welcome, 
           Corey Pavin
           !
-</h2>,
+</h4>,
         "className": "user-data-component",
       },
       "ref": null,
@@ -88,7 +88,7 @@ ShallowWrapper {
           "Corey Pavin",
           "!",
         ],
-        "type": "h2",
+        "type": "h4",
       },
       "type": "div",
     },
