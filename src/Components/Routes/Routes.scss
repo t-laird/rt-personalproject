@@ -12,3 +12,21 @@
 .switch-wrapper.fade-exit {
   @include component-exiting;
 }
+
+@media screen and (max-width: 700px) {
+  .switch-wrapper.fade-exit {
+    top: 290px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .switch-wrapper.fade-exit {
+    top: 456px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .switch-wrapper.fade-exit {
+    top: 445px;
+  }
+}
