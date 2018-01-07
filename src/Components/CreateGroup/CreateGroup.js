@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import generator from 'generate-password';
 import * as actions from '../../Actions';
 import validateGroup from '../../helpers/validateGroup';
+import getUser from '../../helpers/fetches/getUser/getUser';
 import './CreateGroup.css';
 import makeGroup from '../../helpers/fetches/makeGroup/makeGroup';
 import PropTypes from 'prop-types';
@@ -29,8 +30,9 @@ export class CreateGroup extends Component {
     const groupResponse = await makeGroup(groupName, weeklyPoints, password);
     this.props.updateGroup(groupResponse[0]);
 
-    const userResponse = await validateGroup(groupResponse[0].group_passphrase, this.props.user.user_id);
-    this.props.updateUser(userResponse[0]);
+    await validateGroup(groupResponse[0].group_passphrase, this.props.user.user_id);
+    const userResponse = await getUser();
+    this.props.updateUser(userResponse);
   }
 
   handleChange = (event) => {
