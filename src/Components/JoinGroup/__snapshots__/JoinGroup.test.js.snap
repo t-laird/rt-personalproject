@@ -44,7 +44,7 @@ ShallowWrapper {
                                         className="current-group"
                               >
                                         <h5>
-                                                  You are not current a member of a group!
+                                                  You are not currently a member of a group!
                                         </h5>
                               </div>
                               <div
@@ -105,7 +105,7 @@ ShallowWrapper {
                                           className="current-group"
                             >
                                           <h5>
-                                                        You are not current a member of a group!
+                                                        You are not currently a member of a group!
                                           </h5>
                             </div>
                             <div
@@ -168,7 +168,7 @@ ShallowWrapper {
                                     className="current-group"
                   >
                                     <h5>
-                                                      You are not current a member of a group!
+                                                      You are not currently a member of a group!
                                     </h5>
                   </div>
                   <div
@@ -206,7 +206,7 @@ ShallowWrapper {
                       className="current-group"
 >
                       <h5>
-                                            You are not current a member of a group!
+                                            You are not currently a member of a group!
                       </h5>
 </div>,
                     <div
@@ -237,7 +237,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": <h5>
-                        You are not current a member of a group!
+                        You are not currently a member of a group!
 </h5>,
                       "className": "current-group",
                     },
@@ -247,10 +247,10 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "You are not current a member of a group!",
+                        "children": "You are not currently a member of a group!",
                       },
                       "ref": null,
-                      "rendered": "You are not current a member of a group!",
+                      "rendered": "You are not currently a member of a group!",
                       "type": "h5",
                     },
                     "type": "div",
@@ -386,7 +386,7 @@ ShallowWrapper {
                                                 className="current-group"
                                     >
                                                 <h5>
-                                                            You are not current a member of a group!
+                                                            You are not currently a member of a group!
                                                 </h5>
                                     </div>
                                     <div
@@ -447,7 +447,7 @@ ShallowWrapper {
                                                 className="current-group"
                                 >
                                                 <h5>
-                                                                You are not current a member of a group!
+                                                                You are not currently a member of a group!
                                                 </h5>
                                 </div>
                                 <div
@@ -510,7 +510,7 @@ ShallowWrapper {
                                         className="current-group"
                     >
                                         <h5>
-                                                            You are not current a member of a group!
+                                                            You are not currently a member of a group!
                                         </h5>
                     </div>
                     <div
@@ -548,7 +548,7 @@ ShallowWrapper {
                         className="current-group"
 >
                         <h5>
-                                                You are not current a member of a group!
+                                                You are not currently a member of a group!
                         </h5>
 </div>,
                       <div
@@ -579,7 +579,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": <h5>
-                          You are not current a member of a group!
+                          You are not currently a member of a group!
 </h5>,
                         "className": "current-group",
                       },
@@ -589,10 +589,10 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "children": "You are not current a member of a group!",
+                          "children": "You are not currently a member of a group!",
                         },
                         "ref": null,
-                        "rendered": "You are not current a member of a group!",
+                        "rendered": "You are not currently a member of a group!",
                         "type": "h5",
                       },
                       "type": "div",

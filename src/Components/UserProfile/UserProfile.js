@@ -67,6 +67,21 @@ export class UserProfile extends Component {
     }
   }
 
+  getTickValues = () => {
+    if (this.props.UserTransactions.length && Object.keys(this.props.Group).length) {
+      const transactionCount = this.props.UserTransactions.reduce((count, week) => {
+        count += week.sent.length + week.received.length;
+        return count;
+      }, 0)
+
+      if (transactionCount > 0) {
+        return null;
+      }
+    } 
+      
+    return ['10', '20', '30', '40', '50'];
+  }
+
   generateChart = () => {
     return (
       <div className="user-profile-component">
@@ -116,6 +131,7 @@ export class UserProfile extends Component {
             }}
           />
           <VictoryAxis 
+            tickValues={this.getTickValues()}
             dependentAxis={true}
             style={{
               axis: {stroke: "#7e6e7a", strokeWidth: 6},
