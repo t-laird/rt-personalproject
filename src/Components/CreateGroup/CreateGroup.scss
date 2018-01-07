@@ -1,36 +1,47 @@
 @import '../../Variables.scss';
 
 .create-group-component {
-	background: linear-gradient(to right, rgba(227,245,253,1) 0%,rgba(241,250,254,1) 20%,rgba(241,250,254,1) 80%,rgba(227,245,253,1) 100%);
-	border-bottom: 7px solid #b9e5fb;
-	border-top: 7px solid #b9e5fb;
-	width: 770px;
-	margin: 30px auto 8px;
-	padding: 20px 25px;
+	@include center-box;
+	background-color: $c6;
 
-	h3, input, button {
-		display: block;
-	}
+	.create-group-heading {
+		@include box-header;
+		background-color: $c1;
 
-	h3 {
-		line-height: 1.3;
-
-		.join-span {
-			font-family: "semplicitapro", sans-serif;
+		h4 {
+			color: $c7;
 			font-weight: 900;
-			opacity: .3;
-			font-size: 20px;
+			text-align: center;
 		}
 	}
 
+	h5 {
+		font-weight: 900;
+		color: $c3;
+		margin-bottom: 20px;
+	}
+
+	form {
+		padding: 24px 40px;
+	}
+
+	span {
+		font-weight: 900;
+		font-family: 'semplicitapro', sans-serif;
+		font-size: 20px;
+		color: $c4;
+	}
+
 	input {
-		background-color: $red-light;
-		color: $red;
+		background-color: $c7;
+		color: $c3;
 		border: none;
+		border-bottom: 8px solid $c5;
 
 		&::placeholder {
-			font-size: 26px;
-			color: #fff;	
+			font-weight: 300;
+			font-size: 24px;
+			bottom: 2px;
 		}
 	}
 
@@ -48,6 +59,7 @@
 	.points-input {
 		width: 106px;
 		font-size: 34px;
+		margin-left: 30px;
 
 		&::placeholder {
 			position: relative;
@@ -55,18 +67,36 @@
 		};
 	}
 
+	.create-top, .create-bottom {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+
+		input {
+			outline: none;
+
+			&::placeholder {
+				color: $c4;
+				font-weight: 300;
+			};
+		}
+	}
+
 	button {
+		height: 52px;
 		width: 149px;
 		color: #fff;
-		background-color: $red;
+		background-color: $c1;
 		cursor: pointer;
 		transition: background-color .15s ease-in-out;
 		padding-top: 2px;
 		margin: auto;
 		border: none;
+		display: block;
+		font-size: 20px;
 
 		&:hover {
-      background-color: darken($red, 8%);
+      background-color: darken($c1, 12%);
     }
 	}
 }

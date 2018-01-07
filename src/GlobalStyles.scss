@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+input {
+  outline: none;
+}
+
 @mixin center-box {
   width: 750px;
   margin: 0 auto 30px;

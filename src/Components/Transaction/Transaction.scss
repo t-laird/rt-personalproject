@@ -3,8 +3,8 @@
 .Transaction {
   position: relative;
   input {
-    background-color: #fff;
-    color: $red;
+    background-color: $c7;
+    color: $c3;
     font-size: 34px;
     text-align: center;
     &::placeholder {
@@ -131,7 +131,6 @@
       color: $c7;
       background: $c1;
       text-align: center;
-      /*padding: 8px 0px;*/
     }
 
     .award {
@@ -224,7 +223,7 @@
       position: absolute;
       top: 25px;
       right: 10px;
-      color: red;
+      color: $c1;
     }
 
     .note-input {
