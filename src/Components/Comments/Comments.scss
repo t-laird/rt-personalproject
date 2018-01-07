@@ -6,3 +6,15 @@
   width: 750px;
   margin: auto;
 }
+
+@media screen and (max-width: 750px) {
+  .comments-component {
+    width: 360px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .comments-component {
+    width: 100%;
+  }
+}
