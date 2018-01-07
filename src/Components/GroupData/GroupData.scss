@@ -75,3 +75,26 @@
 	  }
 	}
 }
+
+@media screen and (max-width: 750px) {
+	.group-data-component {
+		@include media-width;
+
+		.group-header, .current-points {
+			@include media-width
+		}
+
+		.current-points {
+			flex-direction: column;
+			align-items: center;
+
+			.divider {
+				order: -1;
+			}
+		}
+
+		.current-points div {
+			margin: 10px 0;
+		}
+	}
+}
