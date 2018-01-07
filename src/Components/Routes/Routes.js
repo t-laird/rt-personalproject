@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import Homepage from '../Homepage/Homepage';
 import User from '../User/User';
 import Group from '../Group/Group';
+import Slack from '../Slack/Slack';
 import JoinGroup from '../JoinGroup/JoinGroup';
 import CreateGroup from '../CreateGroup/CreateGroup';
 import { Route, Switch } from 'react-router-dom';
@@ -12,10 +13,11 @@ import PropTypes from 'prop-types';
 import './Routes.css';
 
 const Routes = ({ location }) => {
+  console.log('looping from routes');
   return (
     <div className="routes">
-      <Route path='/' component={Header} />
       <Route path='/login' component={Login} />
+      <Route path='/' component={Header} />
       <TransitionGroup className="switch-routes">
         <CSSTransition 
           key={location.key} 
@@ -24,11 +26,12 @@ const Routes = ({ location }) => {
           <div className="switch-wrapper">
             <Switch 
               location={location}>
-              <Route exact path='/' component={Homepage} />
               <Route path='/user' component={User} />
               <Route path='/group' component={Group} />
               <Route path='/joingroup' component={JoinGroup} />
               <Route path='/creategroup' component={CreateGroup} />
+              <Route path='/slack' component={Slack} />
+              <Route path='/' component={Homepage} />
             </Switch>
           </div>
         </CSSTransition>

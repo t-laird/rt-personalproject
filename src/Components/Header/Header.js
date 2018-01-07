@@ -18,7 +18,7 @@ export const Header = (props) => {
   if (!Object.keys(props.user).length) {
     headerDisplay = (<a 
       className="login" 
-      href="https://tr-personal-proj.e1.loginrocket.com"
+      href="https://tr-personal-proj.e1.loginrocket.com/"
     >LOGIN / SIGNUP</a>);
   } else {
     headerDisplay = (
@@ -58,6 +58,7 @@ export const Header = (props) => {
       </NavLink>
       {headerDisplay}
       <div className="nav-tabs">
+        <NavLink exact to="/">HOME</NavLink>
         <NavLink to="/user">USER</NavLink>
         <NavLink to="/group">GROUP</NavLink>
         <NavLink to="/creategroup">CREATE</NavLink>
