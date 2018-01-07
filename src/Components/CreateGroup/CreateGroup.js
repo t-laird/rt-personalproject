@@ -47,7 +47,7 @@ export class CreateGroup extends Component {
           <h4>{this.state.message}</h4>
         </div>
         <form>
-          <div class="create-top">
+          <div className="create-top">
             <h5>Let's give your group a name!</h5>
             <input 
               className="group-name-input"
