@@ -51,12 +51,10 @@ export class JoinGroup extends Component {
             <img className="arrow-graphic" src={require('./assets/curved-arrow.svg')} />
           </div>
           <button
-              onClick={this.joinGroup}
-            >SUBMIT</button>
+            onClick={this.joinGroup}
+          >SUBMIT</button>
         </div>
-      )
-    } else if (!this.props.user.name) {
-      this.props.history.push('/user');
+      );
     } else if (!this.props.group.group_name) {
       return (
         <div>
@@ -73,10 +71,18 @@ export class JoinGroup extends Component {
             />
           </div>
           <button
-              onClick={this.joinGroup}
-            >SUBMIT</button>
+            onClick={this.joinGroup}
+          >SUBMIT</button>
         </div>
-      )
+      );
+    }
+
+    return null;
+  }
+
+  componentDidMount() {
+    if (!this.props.user.name) {
+      this.props.history.push('/login');
     }
   }
 
