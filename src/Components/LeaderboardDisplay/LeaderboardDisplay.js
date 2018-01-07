@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import './LeaderboardDisplay.css';
 
 const LeaderboardDisplay = ({ name, points, position }) => {
-  console.log(name, points, position)
   return (
     <div className="leaderboard-display-component">
       <h5 className="leaderboard-position">{position}.</h5>

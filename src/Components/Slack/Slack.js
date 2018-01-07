@@ -59,7 +59,7 @@ class Slack extends Component {
         <div className="slack-header">
           <h4>CONNECT TO SLACK</h4>
         </div>
-        <h5>Type /snap anywhere in Slack to get your User Id! (case sensitive)</h5>
+        <h5>Type <span>/snap</span> anywhere in Slack to get your User Id. (case sensitive)</h5>
         <input 
           type="text" 
           value={this.state.slackId} 
