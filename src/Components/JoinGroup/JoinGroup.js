@@ -112,7 +112,7 @@ export class JoinGroup extends Component {
       });
     } else {
       this.setState({
-        message: <h5>Failed to join group... please try again</h5>
+        message: <h5>Failed to join group.  Please try again.</h5>
       });
     }
   }
@@ -131,7 +131,11 @@ export class JoinGroup extends Component {
     this.props.updateGroupTransactions(groupTransactions);
 
     this.setState({
-      message: <h5>You successfully joined {groupData.group_name}! Click <Link to="/group">here</Link> to visit your group page or <Link to="/user">here</Link> to visit your user page.</h5>,
+      message: 
+        <div>
+          <h5>You successfully joined {groupData.group_name}!</h5>
+          <h5>You should check out your <Link to="/group">group page</Link> or <Link to="/user">user page.</Link></h5>
+        </div>,
       hideintro: true
     });
   }
