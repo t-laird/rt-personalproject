@@ -21,18 +21,68 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="givers"
+          className="leaderboard-header"
 >
-          <h2>
-                    Top Givers this week:
-          </h2>
+          <h4>
+                    LEADERBOARD
+          </h4>
 </div>,
         <div
-          className="senders"
+          className="leaderboard-subhead"
 >
-          <h2>
-                    Top Earners this week:
-          </h2>
+          <h4
+                    className="givers-heading"
+          >
+                    TOP GIVERS
+          </h4>
+          <div
+                    className="this-week-center"
+          >
+                    <img
+                              className="this-week-arrows"
+                              src="arrow-left.svg"
+                    />
+                    <h5>
+                              THIS WEEK
+                    </h5>
+                    <img
+                              className="this-week-arrows"
+                              src="arrow-right.svg"
+                    />
+          </div>
+          <h4>
+                    TOP EARNERS
+          </h4>
+</div>,
+        <div
+          className="leaders-holder"
+>
+          <h4
+                    className="small-only"
+          >
+                    TOP GIVERS
+          </h4>
+          <div
+                    className="givers"
+          >
+                    <img
+                              className="ribbon"
+                              src="ribbon-white.svg"
+                    />
+          </div>
+          <h4
+                    className="small-only"
+          >
+                    TOP EARNERS
+          </h4>
+          <div
+                    className="earners"
+          >
+                    <img
+                              className="ribbon"
+                              src="ribbon-brown.svg"
+                    />
+          </div>
 </div>,
       ],
       "className": "leaderboard-component",
@@ -44,13 +94,56 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": <h4>
+            LEADERBOARD
+</h4>,
+          "className": "leaderboard-header",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "LEADERBOARD",
+          },
+          "ref": null,
+          "rendered": "LEADERBOARD",
+          "type": "h4",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "children": Array [
-            <h2>
-              Top Givers this week:
-</h2>,
-            undefined,
+            <h4
+              className="givers-heading"
+>
+              TOP GIVERS
+</h4>,
+            <div
+              className="this-week-center"
+>
+              <img
+                            className="this-week-arrows"
+                            src="arrow-left.svg"
+              />
+              <h5>
+                            THIS WEEK
+              </h5>
+              <img
+                            className="this-week-arrows"
+                            src="arrow-right.svg"
+              />
+</div>,
+            <h4>
+              TOP EARNERS
+</h4>,
           ],
-          "className": "givers",
+          "className": "leaderboard-subhead",
         },
         "ref": null,
         "rendered": Array [
@@ -59,13 +152,84 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Top Givers this week:",
+              "children": "TOP GIVERS",
+              "className": "givers-heading",
             },
             "ref": null,
-            "rendered": "Top Givers this week:",
-            "type": "h2",
+            "rendered": "TOP GIVERS",
+            "type": "h4",
           },
-          undefined,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <img
+                  className="this-week-arrows"
+                  src="arrow-left.svg"
+/>,
+                <h5>
+                  THIS WEEK
+</h5>,
+                <img
+                  className="this-week-arrows"
+                  src="arrow-right.svg"
+/>,
+              ],
+              "className": "this-week-center",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "this-week-arrows",
+                  "src": "arrow-left.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "THIS WEEK",
+                },
+                "ref": null,
+                "rendered": "THIS WEEK",
+                "type": "h5",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "this-week-arrows",
+                  "src": "arrow-right.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "TOP EARNERS",
+            },
+            "ref": null,
+            "rendered": "TOP EARNERS",
+            "type": "h4",
+          },
         ],
         "type": "div",
       },
@@ -75,12 +239,34 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h2>
-              Top Earners this week:
-</h2>,
-            undefined,
+            <h4
+              className="small-only"
+>
+              TOP GIVERS
+</h4>,
+            <div
+              className="givers"
+>
+              <img
+                            className="ribbon"
+                            src="ribbon-white.svg"
+              />
+</div>,
+            <h4
+              className="small-only"
+>
+              TOP EARNERS
+</h4>,
+            <div
+              className="earners"
+>
+              <img
+                            className="ribbon"
+                            src="ribbon-brown.svg"
+              />
+</div>,
           ],
-          "className": "senders",
+          "className": "leaders-holder",
         },
         "ref": null,
         "rendered": Array [
@@ -89,13 +275,89 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Top Earners this week:",
+              "children": "TOP GIVERS",
+              "className": "small-only",
             },
             "ref": null,
-            "rendered": "Top Earners this week:",
-            "type": "h2",
+            "rendered": "TOP GIVERS",
+            "type": "h4",
           },
-          undefined,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <img
+                  className="ribbon"
+                  src="ribbon-white.svg"
+/>,
+                undefined,
+              ],
+              "className": "givers",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "ribbon",
+                  "src": "ribbon-white.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              undefined,
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "TOP EARNERS",
+              "className": "small-only",
+            },
+            "ref": null,
+            "rendered": "TOP EARNERS",
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <img
+                  className="ribbon"
+                  src="ribbon-brown.svg"
+/>,
+                undefined,
+              ],
+              "className": "earners",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "ribbon",
+                  "src": "ribbon-brown.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              undefined,
+            ],
+            "type": "div",
+          },
         ],
         "type": "div",
       },
@@ -110,18 +372,68 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="givers"
+            className="leaderboard-header"
 >
-            <h2>
-                        Top Givers this week:
-            </h2>
+            <h4>
+                        LEADERBOARD
+            </h4>
 </div>,
           <div
-            className="senders"
+            className="leaderboard-subhead"
 >
-            <h2>
-                        Top Earners this week:
-            </h2>
+            <h4
+                        className="givers-heading"
+            >
+                        TOP GIVERS
+            </h4>
+            <div
+                        className="this-week-center"
+            >
+                        <img
+                                    className="this-week-arrows"
+                                    src="arrow-left.svg"
+                        />
+                        <h5>
+                                    THIS WEEK
+                        </h5>
+                        <img
+                                    className="this-week-arrows"
+                                    src="arrow-right.svg"
+                        />
+            </div>
+            <h4>
+                        TOP EARNERS
+            </h4>
+</div>,
+          <div
+            className="leaders-holder"
+>
+            <h4
+                        className="small-only"
+            >
+                        TOP GIVERS
+            </h4>
+            <div
+                        className="givers"
+            >
+                        <img
+                                    className="ribbon"
+                                    src="ribbon-white.svg"
+                        />
+            </div>
+            <h4
+                        className="small-only"
+            >
+                        TOP EARNERS
+            </h4>
+            <div
+                        className="earners"
+            >
+                        <img
+                                    className="ribbon"
+                                    src="ribbon-brown.svg"
+                        />
+            </div>
 </div>,
         ],
         "className": "leaderboard-component",
@@ -133,13 +445,56 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": <h4>
+              LEADERBOARD
+</h4>,
+            "className": "leaderboard-header",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "LEADERBOARD",
+            },
+            "ref": null,
+            "rendered": "LEADERBOARD",
+            "type": "h4",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "children": Array [
-              <h2>
-                Top Givers this week:
-</h2>,
-              undefined,
+              <h4
+                className="givers-heading"
+>
+                TOP GIVERS
+</h4>,
+              <div
+                className="this-week-center"
+>
+                <img
+                                className="this-week-arrows"
+                                src="arrow-left.svg"
+                />
+                <h5>
+                                THIS WEEK
+                </h5>
+                <img
+                                className="this-week-arrows"
+                                src="arrow-right.svg"
+                />
+</div>,
+              <h4>
+                TOP EARNERS
+</h4>,
             ],
-            "className": "givers",
+            "className": "leaderboard-subhead",
           },
           "ref": null,
           "rendered": Array [
@@ -148,13 +503,84 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Top Givers this week:",
+                "children": "TOP GIVERS",
+                "className": "givers-heading",
               },
               "ref": null,
-              "rendered": "Top Givers this week:",
-              "type": "h2",
+              "rendered": "TOP GIVERS",
+              "type": "h4",
             },
-            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <img
+                    className="this-week-arrows"
+                    src="arrow-left.svg"
+/>,
+                  <h5>
+                    THIS WEEK
+</h5>,
+                  <img
+                    className="this-week-arrows"
+                    src="arrow-right.svg"
+/>,
+                ],
+                "className": "this-week-center",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "this-week-arrows",
+                    "src": "arrow-left.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "THIS WEEK",
+                  },
+                  "ref": null,
+                  "rendered": "THIS WEEK",
+                  "type": "h5",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "this-week-arrows",
+                    "src": "arrow-right.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "TOP EARNERS",
+              },
+              "ref": null,
+              "rendered": "TOP EARNERS",
+              "type": "h4",
+            },
           ],
           "type": "div",
         },
@@ -164,12 +590,34 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h2>
-                Top Earners this week:
-</h2>,
-              undefined,
+              <h4
+                className="small-only"
+>
+                TOP GIVERS
+</h4>,
+              <div
+                className="givers"
+>
+                <img
+                                className="ribbon"
+                                src="ribbon-white.svg"
+                />
+</div>,
+              <h4
+                className="small-only"
+>
+                TOP EARNERS
+</h4>,
+              <div
+                className="earners"
+>
+                <img
+                                className="ribbon"
+                                src="ribbon-brown.svg"
+                />
+</div>,
             ],
-            "className": "senders",
+            "className": "leaders-holder",
           },
           "ref": null,
           "rendered": Array [
@@ -178,13 +626,89 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Top Earners this week:",
+                "children": "TOP GIVERS",
+                "className": "small-only",
               },
               "ref": null,
-              "rendered": "Top Earners this week:",
-              "type": "h2",
+              "rendered": "TOP GIVERS",
+              "type": "h4",
             },
-            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <img
+                    className="ribbon"
+                    src="ribbon-white.svg"
+/>,
+                  undefined,
+                ],
+                "className": "givers",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "ribbon",
+                    "src": "ribbon-white.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                undefined,
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "TOP EARNERS",
+                "className": "small-only",
+              },
+              "ref": null,
+              "rendered": "TOP EARNERS",
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <img
+                    className="ribbon"
+                    src="ribbon-brown.svg"
+/>,
+                  undefined,
+                ],
+                "className": "earners",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "ribbon",
+                    "src": "ribbon-brown.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                undefined,
+              ],
+              "type": "div",
+            },
           ],
           "type": "div",
         },

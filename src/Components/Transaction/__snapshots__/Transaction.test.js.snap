@@ -73,57 +73,78 @@ ShallowWrapper {
           <div
                     className="remaining-points"
           >
-                    <h3>
-                              Remaining weekly points to award: 
-                              <span
-                                        className="current-span"
-                              >
-                                        1000
-                              </span>
-                    </h3>
+                    <span
+                              className="points"
+                    >
+                              1000
+                    </span>
+                    <h6>
+                              REMAINING
+                    </h6>
+          </div>
+          <div
+                    className="divider"
+          >
+                    <h4>
+                              SNAPS
+                    </h4>
+                    <span>
+                              THIS WEEK
+                    </span>
           </div>
           <div
                     className="received-points"
           >
-                    <h3>
-                              Points received this week: 
-                              <span
-                                        className="current-span"
-                              />
-                    </h3>
+                    <span
+                              className="points"
+                    />
+                    <h6>
+                              RECEIVED
+                    </h6>
           </div>
+</div>,
+        <div
+          className="award-header"
+>
+          <h4>
+                    AWARD
+          </h4>
 </div>,
         <div
           className="points-block"
 >
-          <h2>
-                    Award points: 
-          </h2>
           <div
                     className="award"
           >
-                    <h3>
-                              Send 
-                    </h3>
-                    <input
-                              name="points"
-                              onChange={[Function]}
-                              placeholder="QTY"
-                              type="text"
-                              value=""
-                    />
-                    <h3
-                              className="points-to"
+                    <div
+                              className="send-input"
                     >
-                              points to:
-                    </h3>
+                              <h5
+                                        className="send"
+                              >
+                                        Send
+                              </h5>
+                              <input
+                                        name="points"
+                                        onChange={[Function]}
+                                        placeholder="QTY"
+                                        type="text"
+                                        value=""
+                              />
+                    </div>
                     <div
                               className="recipient-input"
                     >
+                              <h5
+                                        className="snaps"
+                              >
+                                        snaps to:
+                              </h5>
                               <input
                                         name="recipient"
                                         onChange={[Function]}
                                         onKeyDown={[Function]}
+                                        placeholder="find a teammate"
                                         type="text"
                                         value=""
                               />
@@ -136,7 +157,7 @@ ShallowWrapper {
                     className="note-input"
                     name="note"
                     onChange={[Function]}
-                    placeholder="Add a message"
+                    placeholder="add a message"
                     type="text"
                     value=""
           />
@@ -165,24 +186,34 @@ ShallowWrapper {
             <div
               className="remaining-points"
 >
-              <h3>
-                            Remaining weekly points to award: 
-                            <span
-                                          className="current-span"
-                            >
-                                          1000
-                            </span>
-              </h3>
+              <span
+                            className="points"
+              >
+                            1000
+              </span>
+              <h6>
+                            REMAINING
+              </h6>
+</div>,
+            <div
+              className="divider"
+>
+              <h4>
+                            SNAPS
+              </h4>
+              <span>
+                            THIS WEEK
+              </span>
 </div>,
             <div
               className="received-points"
 >
-              <h3>
-                            Points received this week: 
-                            <span
-                                          className="current-span"
-                            />
-              </h3>
+              <span
+                            className="points"
+              />
+              <h6>
+                            RECEIVED
+              </h6>
 </div>,
           ],
           "className": "current-points",
@@ -194,49 +225,44 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <h3>
-                Remaining weekly points to award: 
+              "children": Array [
                 <span
-                                className="current-span"
-                >
-                                1000
-                </span>
-</h3>,
+                  className="points"
+>
+                  1000
+</span>,
+                <h6>
+                  REMAINING
+</h6>,
+              ],
               "className": "remaining-points",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "Remaining weekly points to award: ",
-                  <span
-                    className="current-span"
->
-                    1000
-</span>,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                "Remaining weekly points to award: ",
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": 1000,
-                    "className": "current-span",
-                  },
-                  "ref": null,
-                  "rendered": 1000,
-                  "type": "span",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 1000,
+                  "className": "points",
                 },
-              ],
-              "type": "h3",
-            },
+                "ref": null,
+                "rendered": 1000,
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "REMAINING",
+                },
+                "ref": null,
+                "rendered": "REMAINING",
+                "type": "h6",
+              },
+            ],
             "type": "div",
           },
           Object {
@@ -244,45 +270,84 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <h3>
-                Points received this week: 
+              "children": Array [
+                <h4>
+                  SNAPS
+</h4>,
+                <span>
+                  THIS WEEK
+</span>,
+              ],
+              "className": "divider",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "SNAPS",
+                },
+                "ref": null,
+                "rendered": "SNAPS",
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "THIS WEEK",
+                },
+                "ref": null,
+                "rendered": "THIS WEEK",
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
                 <span
-                                className="current-span"
-                />
-</h3>,
+                  className="points"
+/>,
+                <h6>
+                  RECEIVED
+</h6>,
+              ],
               "className": "received-points",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "Points received this week: ",
-                  <span
-                    className="current-span"
-/>,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                "Points received this week: ",
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": 0,
-                    "className": "current-span",
-                  },
-                  "ref": null,
-                  "rendered": 0,
-                  "type": "span",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 0,
+                  "className": "points",
                 },
-              ],
-              "type": "h3",
-            },
+                "ref": null,
+                "rendered": 0,
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "RECEIVED",
+                },
+                "ref": null,
+                "rendered": "RECEIVED",
+                "type": "h6",
+              },
+            ],
             "type": "div",
           },
         ],
@@ -293,35 +358,63 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": <h4>
+            AWARD
+</h4>,
+          "className": "award-header",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "AWARD",
+          },
+          "ref": null,
+          "rendered": "AWARD",
+          "type": "h4",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "children": Array [
-            <h2>
-              Award points: 
-</h2>,
             <div
               className="award"
 >
-              <h3>
-                            Send 
-              </h3>
-              <input
-                            name="points"
-                            onChange={[Function]}
-                            placeholder="QTY"
-                            type="text"
-                            value=""
-              />
-              <h3
-                            className="points-to"
+              <div
+                            className="send-input"
               >
-                            points to:
-              </h3>
+                            <h5
+                                          className="send"
+                            >
+                                          Send
+                            </h5>
+                            <input
+                                          name="points"
+                                          onChange={[Function]}
+                                          placeholder="QTY"
+                                          type="text"
+                                          value=""
+                            />
+              </div>
               <div
                             className="recipient-input"
               >
+                            <h5
+                                          className="snaps"
+                            >
+                                          snaps to:
+                            </h5>
                             <input
                                           name="recipient"
                                           onChange={[Function]}
                                           onKeyDown={[Function]}
+                                          placeholder="find a teammate"
                                           type="text"
                                           value=""
                             />
@@ -334,7 +427,7 @@ ShallowWrapper {
               className="note-input"
               name="note"
               onChange={[Function]}
-              placeholder="Add a message"
+              placeholder="add a message"
               type="text"
               value=""
 />,
@@ -358,41 +451,36 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Award points: ",
-            },
-            "ref": null,
-            "rendered": "Award points: ",
-            "type": "h2",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
               "children": Array [
-                <h3>
-                  Send 
-</h3>,
-                <input
-                  name="points"
-                  onChange={[Function]}
-                  placeholder="QTY"
-                  type="text"
-                  value=""
-/>,
-                null,
-                <h3
-                  className="points-to"
+                <div
+                  className="send-input"
 >
-                  points to:
-</h3>,
+                  <h5
+                                    className="send"
+                  >
+                                    Send
+                  </h5>
+                  <input
+                                    name="points"
+                                    onChange={[Function]}
+                                    placeholder="QTY"
+                                    type="text"
+                                    value=""
+                  />
+</div>,
                 <div
                   className="recipient-input"
 >
+                  <h5
+                                    className="snaps"
+                  >
+                                    snaps to:
+                  </h5>
                   <input
                                     name="recipient"
                                     onChange={[Function]}
                                     onKeyDown={[Function]}
+                                    placeholder="find a teammate"
                                     type="text"
                                     value=""
                   />
@@ -410,39 +498,53 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Send ",
+                  "children": Array [
+                    <h5
+                      className="send"
+>
+                      Send
+</h5>,
+                    <input
+                      name="points"
+                      onChange={[Function]}
+                      placeholder="QTY"
+                      type="text"
+                      value=""
+/>,
+                  ],
+                  "className": "send-input",
                 },
                 "ref": null,
-                "rendered": "Send ",
-                "type": "h3",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "name": "points",
-                  "onChange": [Function],
-                  "placeholder": "QTY",
-                  "type": "text",
-                  "value": "",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "input",
-              },
-              null,
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "points to:",
-                  "className": "points-to",
-                },
-                "ref": null,
-                "rendered": "points to:",
-                "type": "h3",
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Send",
+                      "className": "send",
+                    },
+                    "ref": null,
+                    "rendered": "Send",
+                    "type": "h5",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "name": "points",
+                      "onChange": [Function],
+                      "placeholder": "QTY",
+                      "type": "text",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "div",
               },
               Object {
                 "instance": null,
@@ -450,10 +552,16 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
+                    <h5
+                      className="snaps"
+>
+                      snaps to:
+</h5>,
                     <input
                       name="recipient"
                       onChange={[Function]}
                       onKeyDown={[Function]}
+                      placeholder="find a teammate"
                       type="text"
                       value=""
 />,
@@ -470,9 +578,22 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
+                      "children": "snaps to:",
+                      "className": "snaps",
+                    },
+                    "ref": null,
+                    "rendered": "snaps to:",
+                    "type": "h5",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
                       "name": "recipient",
                       "onChange": [Function],
                       "onKeyDown": [Function],
+                      "placeholder": "find a teammate",
                       "type": "text",
                       "value": "",
                     },
@@ -505,7 +626,7 @@ ShallowWrapper {
               "className": "note-input",
               "name": "note",
               "onChange": [Function],
-              "placeholder": "Add a message",
+              "placeholder": "add a message",
               "type": "text",
               "value": "",
             },
@@ -566,57 +687,78 @@ ShallowWrapper {
             <div
                         className="remaining-points"
             >
-                        <h3>
-                                    Remaining weekly points to award: 
-                                    <span
-                                                className="current-span"
-                                    >
-                                                1000
-                                    </span>
-                        </h3>
+                        <span
+                                    className="points"
+                        >
+                                    1000
+                        </span>
+                        <h6>
+                                    REMAINING
+                        </h6>
+            </div>
+            <div
+                        className="divider"
+            >
+                        <h4>
+                                    SNAPS
+                        </h4>
+                        <span>
+                                    THIS WEEK
+                        </span>
             </div>
             <div
                         className="received-points"
             >
-                        <h3>
-                                    Points received this week: 
-                                    <span
-                                                className="current-span"
-                                    />
-                        </h3>
+                        <span
+                                    className="points"
+                        />
+                        <h6>
+                                    RECEIVED
+                        </h6>
             </div>
+</div>,
+          <div
+            className="award-header"
+>
+            <h4>
+                        AWARD
+            </h4>
 </div>,
           <div
             className="points-block"
 >
-            <h2>
-                        Award points: 
-            </h2>
             <div
                         className="award"
             >
-                        <h3>
-                                    Send 
-                        </h3>
-                        <input
-                                    name="points"
-                                    onChange={[Function]}
-                                    placeholder="QTY"
-                                    type="text"
-                                    value=""
-                        />
-                        <h3
-                                    className="points-to"
+                        <div
+                                    className="send-input"
                         >
-                                    points to:
-                        </h3>
+                                    <h5
+                                                className="send"
+                                    >
+                                                Send
+                                    </h5>
+                                    <input
+                                                name="points"
+                                                onChange={[Function]}
+                                                placeholder="QTY"
+                                                type="text"
+                                                value=""
+                                    />
+                        </div>
                         <div
                                     className="recipient-input"
                         >
+                                    <h5
+                                                className="snaps"
+                                    >
+                                                snaps to:
+                                    </h5>
                                     <input
                                                 name="recipient"
                                                 onChange={[Function]}
                                                 onKeyDown={[Function]}
+                                                placeholder="find a teammate"
                                                 type="text"
                                                 value=""
                                     />
@@ -629,7 +771,7 @@ ShallowWrapper {
                         className="note-input"
                         name="note"
                         onChange={[Function]}
-                        placeholder="Add a message"
+                        placeholder="add a message"
                         type="text"
                         value=""
             />
@@ -658,24 +800,34 @@ ShallowWrapper {
               <div
                 className="remaining-points"
 >
-                <h3>
-                                Remaining weekly points to award: 
-                                <span
-                                                className="current-span"
-                                >
-                                                1000
-                                </span>
-                </h3>
+                <span
+                                className="points"
+                >
+                                1000
+                </span>
+                <h6>
+                                REMAINING
+                </h6>
+</div>,
+              <div
+                className="divider"
+>
+                <h4>
+                                SNAPS
+                </h4>
+                <span>
+                                THIS WEEK
+                </span>
 </div>,
               <div
                 className="received-points"
 >
-                <h3>
-                                Points received this week: 
-                                <span
-                                                className="current-span"
-                                />
-                </h3>
+                <span
+                                className="points"
+                />
+                <h6>
+                                RECEIVED
+                </h6>
 </div>,
             ],
             "className": "current-points",
@@ -687,49 +839,44 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <h3>
-                  Remaining weekly points to award: 
+                "children": Array [
                   <span
-                                    className="current-span"
-                  >
-                                    1000
-                  </span>
-</h3>,
+                    className="points"
+>
+                    1000
+</span>,
+                  <h6>
+                    REMAINING
+</h6>,
+                ],
                 "className": "remaining-points",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    "Remaining weekly points to award: ",
-                    <span
-                      className="current-span"
->
-                      1000
-</span>,
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  "Remaining weekly points to award: ",
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": 1000,
-                      "className": "current-span",
-                    },
-                    "ref": null,
-                    "rendered": 1000,
-                    "type": "span",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 1000,
+                    "className": "points",
                   },
-                ],
-                "type": "h3",
-              },
+                  "ref": null,
+                  "rendered": 1000,
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "REMAINING",
+                  },
+                  "ref": null,
+                  "rendered": "REMAINING",
+                  "type": "h6",
+                },
+              ],
               "type": "div",
             },
             Object {
@@ -737,45 +884,84 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <h3>
-                  Points received this week: 
+                "children": Array [
+                  <h4>
+                    SNAPS
+</h4>,
+                  <span>
+                    THIS WEEK
+</span>,
+                ],
+                "className": "divider",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "SNAPS",
+                  },
+                  "ref": null,
+                  "rendered": "SNAPS",
+                  "type": "h4",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "THIS WEEK",
+                  },
+                  "ref": null,
+                  "rendered": "THIS WEEK",
+                  "type": "span",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
                   <span
-                                    className="current-span"
-                  />
-</h3>,
+                    className="points"
+/>,
+                  <h6>
+                    RECEIVED
+</h6>,
+                ],
                 "className": "received-points",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    "Points received this week: ",
-                    <span
-                      className="current-span"
-/>,
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  "Points received this week: ",
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": 0,
-                      "className": "current-span",
-                    },
-                    "ref": null,
-                    "rendered": 0,
-                    "type": "span",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0,
+                    "className": "points",
                   },
-                ],
-                "type": "h3",
-              },
+                  "ref": null,
+                  "rendered": 0,
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "RECEIVED",
+                  },
+                  "ref": null,
+                  "rendered": "RECEIVED",
+                  "type": "h6",
+                },
+              ],
               "type": "div",
             },
           ],
@@ -786,35 +972,63 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": <h4>
+              AWARD
+</h4>,
+            "className": "award-header",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "AWARD",
+            },
+            "ref": null,
+            "rendered": "AWARD",
+            "type": "h4",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "children": Array [
-              <h2>
-                Award points: 
-</h2>,
               <div
                 className="award"
 >
-                <h3>
-                                Send 
-                </h3>
-                <input
-                                name="points"
-                                onChange={[Function]}
-                                placeholder="QTY"
-                                type="text"
-                                value=""
-                />
-                <h3
-                                className="points-to"
+                <div
+                                className="send-input"
                 >
-                                points to:
-                </h3>
+                                <h5
+                                                className="send"
+                                >
+                                                Send
+                                </h5>
+                                <input
+                                                name="points"
+                                                onChange={[Function]}
+                                                placeholder="QTY"
+                                                type="text"
+                                                value=""
+                                />
+                </div>
                 <div
                                 className="recipient-input"
                 >
+                                <h5
+                                                className="snaps"
+                                >
+                                                snaps to:
+                                </h5>
                                 <input
                                                 name="recipient"
                                                 onChange={[Function]}
                                                 onKeyDown={[Function]}
+                                                placeholder="find a teammate"
                                                 type="text"
                                                 value=""
                                 />
@@ -827,7 +1041,7 @@ ShallowWrapper {
                 className="note-input"
                 name="note"
                 onChange={[Function]}
-                placeholder="Add a message"
+                placeholder="add a message"
                 type="text"
                 value=""
 />,
@@ -851,41 +1065,36 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Award points: ",
-              },
-              "ref": null,
-              "rendered": "Award points: ",
-              "type": "h2",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
                 "children": Array [
-                  <h3>
-                    Send 
-</h3>,
-                  <input
-                    name="points"
-                    onChange={[Function]}
-                    placeholder="QTY"
-                    type="text"
-                    value=""
-/>,
-                  null,
-                  <h3
-                    className="points-to"
+                  <div
+                    className="send-input"
 >
-                    points to:
-</h3>,
+                    <h5
+                                        className="send"
+                    >
+                                        Send
+                    </h5>
+                    <input
+                                        name="points"
+                                        onChange={[Function]}
+                                        placeholder="QTY"
+                                        type="text"
+                                        value=""
+                    />
+</div>,
                   <div
                     className="recipient-input"
 >
+                    <h5
+                                        className="snaps"
+                    >
+                                        snaps to:
+                    </h5>
                     <input
                                         name="recipient"
                                         onChange={[Function]}
                                         onKeyDown={[Function]}
+                                        placeholder="find a teammate"
                                         type="text"
                                         value=""
                     />
@@ -903,39 +1112,53 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Send ",
+                    "children": Array [
+                      <h5
+                        className="send"
+>
+                        Send
+</h5>,
+                      <input
+                        name="points"
+                        onChange={[Function]}
+                        placeholder="QTY"
+                        type="text"
+                        value=""
+/>,
+                    ],
+                    "className": "send-input",
                   },
                   "ref": null,
-                  "rendered": "Send ",
-                  "type": "h3",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "name": "points",
-                    "onChange": [Function],
-                    "placeholder": "QTY",
-                    "type": "text",
-                    "value": "",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "input",
-                },
-                null,
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "points to:",
-                    "className": "points-to",
-                  },
-                  "ref": null,
-                  "rendered": "points to:",
-                  "type": "h3",
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Send",
+                        "className": "send",
+                      },
+                      "ref": null,
+                      "rendered": "Send",
+                      "type": "h5",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "name": "points",
+                        "onChange": [Function],
+                        "placeholder": "QTY",
+                        "type": "text",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "div",
                 },
                 Object {
                   "instance": null,
@@ -943,10 +1166,16 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
+                      <h5
+                        className="snaps"
+>
+                        snaps to:
+</h5>,
                       <input
                         name="recipient"
                         onChange={[Function]}
                         onKeyDown={[Function]}
+                        placeholder="find a teammate"
                         type="text"
                         value=""
 />,
@@ -963,9 +1192,22 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
+                        "children": "snaps to:",
+                        "className": "snaps",
+                      },
+                      "ref": null,
+                      "rendered": "snaps to:",
+                      "type": "h5",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
                         "name": "recipient",
                         "onChange": [Function],
                         "onKeyDown": [Function],
+                        "placeholder": "find a teammate",
                         "type": "text",
                         "value": "",
                       },
@@ -998,7 +1240,7 @@ ShallowWrapper {
                 "className": "note-input",
                 "name": "note",
                 "onChange": [Function],
-                "placeholder": "Add a message",
+                "placeholder": "add a message",
                 "type": "text",
                 "value": "",
               },

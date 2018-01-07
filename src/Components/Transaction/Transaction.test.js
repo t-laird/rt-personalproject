@@ -67,7 +67,7 @@ describe('Transaction component tests', () => {
   });
 
   it('should set the transactionMessage to appropriately when user input is not found', () => {
-    const expectedMessage = "Receiving user not found, please try again";
+    const expectedMessage = "We can't find your receiving user.  You should try again!";
 
     renderedTransaction.setState({
       recipient: 'sdkfdfsd'
@@ -124,7 +124,7 @@ describe('Transaction component tests', () => {
 
     const suggestionsResult = renderedTransaction.instance().generateSuggestions();
 
-    expect(suggestionsResult.props.children).toEqual('NO USERS FOUND');
+    expect(suggestionsResult.props.children).toEqual('no users found');
   });
 });
 

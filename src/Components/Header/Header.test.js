@@ -25,7 +25,7 @@ describe('Header component tests', () => {
     });
 
     it('With logged in user, should render with the correct components', () => {
-      const expectedNavlinks = 4;
+      const expectedNavlinks = 9;
       const expectedALinks = 0;
 
       expect(renderedHeader.find('NavLink').length).toEqual(expectedNavlinks);
@@ -46,7 +46,7 @@ describe('Header component tests', () => {
     });
 
     it('WITHOUT logged in user, should render with the correct components', () => {
-      const expectedNavlinks = 1;
+      const expectedNavlinks = 6;
       const expectedALinks = 1;
 
       expect(renderedHeader.find('NavLink').length).toEqual(expectedNavlinks);

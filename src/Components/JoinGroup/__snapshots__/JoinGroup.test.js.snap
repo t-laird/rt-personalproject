@@ -6,6 +6,11 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <JoinGroup
     group={Object {}}
+    history={
+        Array [
+            "/login",
+          ]
+    }
     user={Object {}}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -22,30 +27,46 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="join-container"
+          className="join-group-component"
 >
-          <h3>
-                    <Link
-                              replace={false}
-                              to="/login"
-                    >
-                              Login
-                    </Link>
-                     to join a group or to see your group status!
-          </h3>
-          <form>
-                    <input
-                              name="passphrase"
-                              onChange={[Function]}
-                              placeholder="passphrase"
-                              value=""
-                    />
-                    <button
-                              onClick={[Function]}
-                    >
-                              SUBMIT
-                    </button>
-          </form>
+          <div
+                    className="join-group-header"
+          >
+                    <h4>
+                              JOIN A GROUP
+                    </h4>
+          </div>
+          <div
+                    className="join-container"
+          >
+                    <div>
+                              <div
+                                        className="current-group"
+                              >
+                                        <h5>
+                                                  You are not current a member of a group!
+                                        </h5>
+                              </div>
+                              <div
+                                        className="passphrase"
+                              >
+                                        <h5>
+                                                  To join a group, enter your group passphrase
+                                        </h5>
+                                        <input
+                                                  name="passphrase"
+                                                  onChange={[Function]}
+                                                  placeholder={undefined}
+                                                  value=""
+                                        />
+                              </div>
+                              <button
+                                        onClick={[Function]}
+                              >
+                                        SUBMIT
+                              </button>
+                    </div>
+          </div>
 </div>,
         <div
           className="link-holder"
@@ -60,7 +81,6 @@ ShallowWrapper {
           </NavLink>
 </div>,
       ],
-      "className": "join-group-component",
     },
     "ref": null,
     "rendered": Array [
@@ -70,31 +90,46 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h3>
-              <Link
-                            replace={false}
-                            to="/login"
-              >
-                            Login
-              </Link>
-               to join a group or to see your group status!
-</h3>,
-            <form>
-              <input
-                            name="passphrase"
-                            onChange={[Function]}
-                            placeholder="passphrase"
-                            value=""
-              />
-              <button
-                            onClick={[Function]}
-              >
-                            SUBMIT
-              </button>
-</form>,
-            null,
+            <div
+              className="join-group-header"
+>
+              <h4>
+                            JOIN A GROUP
+              </h4>
+</div>,
+            <div
+              className="join-container"
+>
+              <div>
+                            <div
+                                          className="current-group"
+                            >
+                                          <h5>
+                                                        You are not current a member of a group!
+                                          </h5>
+                            </div>
+                            <div
+                                          className="passphrase"
+                            >
+                                          <h5>
+                                                        To join a group, enter your group passphrase
+                                          </h5>
+                                          <input
+                                                        name="passphrase"
+                                                        onChange={[Function]}
+                                                        placeholder={undefined}
+                                                        value=""
+                                          />
+                            </div>
+                            <button
+                                          onClick={[Function]}
+                            >
+                                          SUBMIT
+                            </button>
+              </div>
+</div>,
           ],
-          "className": "join-container",
+          "className": "join-group-component",
         },
         "ref": null,
         "rendered": Array [
@@ -103,34 +138,24 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                <Link
-                  replace={false}
-                  to="/login"
->
-                  Login
-</Link>,
-                " to join a group or to see your group status!",
-              ],
+              "children": <h4>
+                JOIN A GROUP
+</h4>,
+              "className": "join-group-header",
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": "Login",
-                  "replace": false,
-                  "to": "/login",
-                },
-                "ref": null,
-                "rendered": "Login",
-                "type": [Function],
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "JOIN A GROUP",
               },
-              " to join a group or to see your group status!",
-            ],
-            "type": "h3",
+              "ref": null,
+              "rendered": "JOIN A GROUP",
+              "type": "h4",
+            },
+            "type": "div",
           },
           Object {
             "instance": null,
@@ -138,18 +163,36 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <input
-                  name="passphrase"
-                  onChange={[Function]}
-                  placeholder="passphrase"
-                  value=""
-/>,
-                <button
-                  onClick={[Function]}
->
-                  SUBMIT
-</button>,
+                <div>
+                  <div
+                                    className="current-group"
+                  >
+                                    <h5>
+                                                      You are not current a member of a group!
+                                    </h5>
+                  </div>
+                  <div
+                                    className="passphrase"
+                  >
+                                    <h5>
+                                                      To join a group, enter your group passphrase
+                                    </h5>
+                                    <input
+                                                      name="passphrase"
+                                                      onChange={[Function]}
+                                                      placeholder={undefined}
+                                                      value=""
+                                    />
+                  </div>
+                  <button
+                                    onClick={[Function]}
+                  >
+                                    SUBMIT
+                  </button>
+</div>,
+                null,
               ],
+              "className": "join-container",
             },
             "ref": null,
             "rendered": Array [
@@ -158,31 +201,127 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "name": "passphrase",
-                  "onChange": [Function],
-                  "placeholder": "passphrase",
-                  "value": "",
+                  "children": Array [
+                    <div
+                      className="current-group"
+>
+                      <h5>
+                                            You are not current a member of a group!
+                      </h5>
+</div>,
+                    <div
+                      className="passphrase"
+>
+                      <h5>
+                                            To join a group, enter your group passphrase
+                      </h5>
+                      <input
+                                            name="passphrase"
+                                            onChange={[Function]}
+                                            placeholder={undefined}
+                                            value=""
+                      />
+</div>,
+                    <button
+                      onClick={[Function]}
+>
+                      SUBMIT
+</button>,
+                  ],
                 },
                 "ref": null,
-                "rendered": null,
-                "type": "input",
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <h5>
+                        You are not current a member of a group!
+</h5>,
+                      "className": "current-group",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "You are not current a member of a group!",
+                      },
+                      "ref": null,
+                      "rendered": "You are not current a member of a group!",
+                      "type": "h5",
+                    },
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h5>
+                          To join a group, enter your group passphrase
+</h5>,
+                        <input
+                          name="passphrase"
+                          onChange={[Function]}
+                          placeholder={undefined}
+                          value=""
+/>,
+                      ],
+                      "className": "passphrase",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "To join a group, enter your group passphrase",
+                        },
+                        "ref": null,
+                        "rendered": "To join a group, enter your group passphrase",
+                        "type": "h5",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "name": "passphrase",
+                          "onChange": [Function],
+                          "placeholder": undefined,
+                          "value": "",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "input",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "SUBMIT",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "SUBMIT",
+                    "type": "button",
+                  },
+                ],
+                "type": "div",
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "SUBMIT",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": "SUBMIT",
-                "type": "button",
-              },
+              null,
             ],
-            "type": "form",
+            "type": "div",
           },
-          null,
         ],
         "type": "div",
       },
@@ -230,30 +369,46 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="join-container"
+            className="join-group-component"
 >
-            <h3>
-                        <Link
-                                    replace={false}
-                                    to="/login"
-                        >
-                                    Login
-                        </Link>
-                         to join a group or to see your group status!
-            </h3>
-            <form>
-                        <input
-                                    name="passphrase"
-                                    onChange={[Function]}
-                                    placeholder="passphrase"
-                                    value=""
-                        />
-                        <button
-                                    onClick={[Function]}
-                        >
-                                    SUBMIT
-                        </button>
-            </form>
+            <div
+                        className="join-group-header"
+            >
+                        <h4>
+                                    JOIN A GROUP
+                        </h4>
+            </div>
+            <div
+                        className="join-container"
+            >
+                        <div>
+                                    <div
+                                                className="current-group"
+                                    >
+                                                <h5>
+                                                            You are not current a member of a group!
+                                                </h5>
+                                    </div>
+                                    <div
+                                                className="passphrase"
+                                    >
+                                                <h5>
+                                                            To join a group, enter your group passphrase
+                                                </h5>
+                                                <input
+                                                            name="passphrase"
+                                                            onChange={[Function]}
+                                                            placeholder={undefined}
+                                                            value=""
+                                                />
+                                    </div>
+                                    <button
+                                                onClick={[Function]}
+                                    >
+                                                SUBMIT
+                                    </button>
+                        </div>
+            </div>
 </div>,
           <div
             className="link-holder"
@@ -268,7 +423,6 @@ ShallowWrapper {
             </NavLink>
 </div>,
         ],
-        "className": "join-group-component",
       },
       "ref": null,
       "rendered": Array [
@@ -278,31 +432,46 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h3>
-                <Link
-                                replace={false}
-                                to="/login"
-                >
-                                Login
-                </Link>
-                 to join a group or to see your group status!
-</h3>,
-              <form>
-                <input
-                                name="passphrase"
-                                onChange={[Function]}
-                                placeholder="passphrase"
-                                value=""
-                />
-                <button
-                                onClick={[Function]}
-                >
-                                SUBMIT
-                </button>
-</form>,
-              null,
+              <div
+                className="join-group-header"
+>
+                <h4>
+                                JOIN A GROUP
+                </h4>
+</div>,
+              <div
+                className="join-container"
+>
+                <div>
+                                <div
+                                                className="current-group"
+                                >
+                                                <h5>
+                                                                You are not current a member of a group!
+                                                </h5>
+                                </div>
+                                <div
+                                                className="passphrase"
+                                >
+                                                <h5>
+                                                                To join a group, enter your group passphrase
+                                                </h5>
+                                                <input
+                                                                name="passphrase"
+                                                                onChange={[Function]}
+                                                                placeholder={undefined}
+                                                                value=""
+                                                />
+                                </div>
+                                <button
+                                                onClick={[Function]}
+                                >
+                                                SUBMIT
+                                </button>
+                </div>
+</div>,
             ],
-            "className": "join-container",
+            "className": "join-group-component",
           },
           "ref": null,
           "rendered": Array [
@@ -311,34 +480,24 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  <Link
-                    replace={false}
-                    to="/login"
->
-                    Login
-</Link>,
-                  " to join a group or to see your group status!",
-                ],
+                "children": <h4>
+                  JOIN A GROUP
+</h4>,
+                "className": "join-group-header",
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "Login",
-                    "replace": false,
-                    "to": "/login",
-                  },
-                  "ref": null,
-                  "rendered": "Login",
-                  "type": [Function],
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "JOIN A GROUP",
                 },
-                " to join a group or to see your group status!",
-              ],
-              "type": "h3",
+                "ref": null,
+                "rendered": "JOIN A GROUP",
+                "type": "h4",
+              },
+              "type": "div",
             },
             Object {
               "instance": null,
@@ -346,18 +505,36 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <input
-                    name="passphrase"
-                    onChange={[Function]}
-                    placeholder="passphrase"
-                    value=""
-/>,
-                  <button
-                    onClick={[Function]}
->
-                    SUBMIT
-</button>,
+                  <div>
+                    <div
+                                        className="current-group"
+                    >
+                                        <h5>
+                                                            You are not current a member of a group!
+                                        </h5>
+                    </div>
+                    <div
+                                        className="passphrase"
+                    >
+                                        <h5>
+                                                            To join a group, enter your group passphrase
+                                        </h5>
+                                        <input
+                                                            name="passphrase"
+                                                            onChange={[Function]}
+                                                            placeholder={undefined}
+                                                            value=""
+                                        />
+                    </div>
+                    <button
+                                        onClick={[Function]}
+                    >
+                                        SUBMIT
+                    </button>
+</div>,
+                  null,
                 ],
+                "className": "join-container",
               },
               "ref": null,
               "rendered": Array [
@@ -366,31 +543,127 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "name": "passphrase",
-                    "onChange": [Function],
-                    "placeholder": "passphrase",
-                    "value": "",
+                    "children": Array [
+                      <div
+                        className="current-group"
+>
+                        <h5>
+                                                You are not current a member of a group!
+                        </h5>
+</div>,
+                      <div
+                        className="passphrase"
+>
+                        <h5>
+                                                To join a group, enter your group passphrase
+                        </h5>
+                        <input
+                                                name="passphrase"
+                                                onChange={[Function]}
+                                                placeholder={undefined}
+                                                value=""
+                        />
+</div>,
+                      <button
+                        onClick={[Function]}
+>
+                        SUBMIT
+</button>,
+                    ],
                   },
                   "ref": null,
-                  "rendered": null,
-                  "type": "input",
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <h5>
+                          You are not current a member of a group!
+</h5>,
+                        "className": "current-group",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "You are not current a member of a group!",
+                        },
+                        "ref": null,
+                        "rendered": "You are not current a member of a group!",
+                        "type": "h5",
+                      },
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <h5>
+                            To join a group, enter your group passphrase
+</h5>,
+                          <input
+                            name="passphrase"
+                            onChange={[Function]}
+                            placeholder={undefined}
+                            value=""
+/>,
+                        ],
+                        "className": "passphrase",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "To join a group, enter your group passphrase",
+                          },
+                          "ref": null,
+                          "rendered": "To join a group, enter your group passphrase",
+                          "type": "h5",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "name": "passphrase",
+                            "onChange": [Function],
+                            "placeholder": undefined,
+                            "value": "",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "input",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "SUBMIT",
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": "SUBMIT",
+                      "type": "button",
+                    },
+                  ],
+                  "type": "div",
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "SUBMIT",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "SUBMIT",
-                  "type": "button",
-                },
+                null,
               ],
-              "type": "form",
+              "type": "div",
             },
-            null,
           ],
           "type": "div",
         },
@@ -456,6 +729,7 @@ ShallowWrapper {
             "weekly_points": 100,
           }
     }
+    history={Array []}
     user={
         Object {
             "authrocket_id": "usr_0vXWX9jSRkbUjLGsOb9S8r",
@@ -481,31 +755,65 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="join-container"
+          className="join-group-component"
 >
-          <h3>
-                    You are a member of: 
-                    <Link
-                              replace={false}
-                              to="/group"
-                    >
-                              Turing
-                    </Link>
-                    .  To switch groups, enter new passphrase below.
-          </h3>
-          <form>
-                    <input
-                              name="passphrase"
-                              onChange={[Function]}
-                              placeholder="passphrase"
-                              value=""
-                    />
-                    <button
-                              onClick={[Function]}
-                    >
-                              SUBMIT
-                    </button>
-          </form>
+          <div
+                    className="join-group-header"
+          >
+                    <h4>
+                              JOIN A GROUP
+                    </h4>
+          </div>
+          <div
+                    className="join-container"
+          >
+                    <div>
+                              <div
+                                        className="current-group"
+                              >
+                                        <h5>
+                                                  You are currently a member of: 
+                                        </h5>
+                                        <h4>
+                                                  <Link
+                                                            replace={false}
+                                                            to="/group"
+                                                  >
+                                                            Turing
+                                                  </Link>
+                                        </h4>
+                              </div>
+                              <div
+                                        className="passphrase"
+                              >
+                                        <h5>
+                                                  Your group's passphrase is:
+                                        </h5>
+                                        <input
+                                                  name="passphrase"
+                                                  onChange={[Function]}
+                                                  placeholder="9139z"
+                                                  value=""
+                                        />
+                              </div>
+                              <div
+                                        className="join-group-last"
+                              >
+                                        <h5>
+                                                  To switch groups, simply enter your new group's passphrase in the box.
+                                        </h5>
+                                        <img
+                                                  className="arrow-graphic"
+                                                  src="curved-arrow.svg"
+                                        />
+                              </div>
+                              <button
+                                        onClick={[Function]}
+                              >
+                                        SUBMIT
+                              </button>
+                    </div>
+          </div>
 </div>,
         <div
           className="link-holder"
@@ -520,7 +828,6 @@ ShallowWrapper {
           </NavLink>
 </div>,
       ],
-      "className": "join-group-component",
     },
     "ref": null,
     "rendered": Array [
@@ -530,32 +837,65 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h3>
-              You are a member of: 
-              <Link
-                            replace={false}
-                            to="/group"
-              >
-                            Turing
-              </Link>
-              .  To switch groups, enter new passphrase below.
-</h3>,
-            <form>
-              <input
-                            name="passphrase"
-                            onChange={[Function]}
-                            placeholder="passphrase"
-                            value=""
-              />
-              <button
-                            onClick={[Function]}
-              >
-                            SUBMIT
-              </button>
-</form>,
-            null,
+            <div
+              className="join-group-header"
+>
+              <h4>
+                            JOIN A GROUP
+              </h4>
+</div>,
+            <div
+              className="join-container"
+>
+              <div>
+                            <div
+                                          className="current-group"
+                            >
+                                          <h5>
+                                                        You are currently a member of: 
+                                          </h5>
+                                          <h4>
+                                                        <Link
+                                                                      replace={false}
+                                                                      to="/group"
+                                                        >
+                                                                      Turing
+                                                        </Link>
+                                          </h4>
+                            </div>
+                            <div
+                                          className="passphrase"
+                            >
+                                          <h5>
+                                                        Your group's passphrase is:
+                                          </h5>
+                                          <input
+                                                        name="passphrase"
+                                                        onChange={[Function]}
+                                                        placeholder="9139z"
+                                                        value=""
+                                          />
+                            </div>
+                            <div
+                                          className="join-group-last"
+                            >
+                                          <h5>
+                                                        To switch groups, simply enter your new group's passphrase in the box.
+                                          </h5>
+                                          <img
+                                                        className="arrow-graphic"
+                                                        src="curved-arrow.svg"
+                                          />
+                            </div>
+                            <button
+                                          onClick={[Function]}
+                            >
+                                          SUBMIT
+                            </button>
+              </div>
+</div>,
           ],
-          "className": "join-container",
+          "className": "join-group-component",
         },
         "ref": null,
         "rendered": Array [
@@ -564,36 +904,24 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                "You are a member of: ",
-                <Link
-                  replace={false}
-                  to="/group"
->
-                  Turing
-</Link>,
-                ".  To switch groups, enter new passphrase below.",
-              ],
+              "children": <h4>
+                JOIN A GROUP
+</h4>,
+              "className": "join-group-header",
             },
             "ref": null,
-            "rendered": Array [
-              "You are a member of: ",
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": "Turing",
-                  "replace": false,
-                  "to": "/group",
-                },
-                "ref": null,
-                "rendered": "Turing",
-                "type": [Function],
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "JOIN A GROUP",
               },
-              ".  To switch groups, enter new passphrase below.",
-            ],
-            "type": "h3",
+              "ref": null,
+              "rendered": "JOIN A GROUP",
+              "type": "h4",
+            },
+            "type": "div",
           },
           Object {
             "instance": null,
@@ -601,18 +929,55 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <input
-                  name="passphrase"
-                  onChange={[Function]}
-                  placeholder="passphrase"
-                  value=""
-/>,
-                <button
-                  onClick={[Function]}
->
-                  SUBMIT
-</button>,
+                <div>
+                  <div
+                                    className="current-group"
+                  >
+                                    <h5>
+                                                      You are currently a member of: 
+                                    </h5>
+                                    <h4>
+                                                      <Link
+                                                                        replace={false}
+                                                                        to="/group"
+                                                      >
+                                                                        Turing
+                                                      </Link>
+                                    </h4>
+                  </div>
+                  <div
+                                    className="passphrase"
+                  >
+                                    <h5>
+                                                      Your group's passphrase is:
+                                    </h5>
+                                    <input
+                                                      name="passphrase"
+                                                      onChange={[Function]}
+                                                      placeholder="9139z"
+                                                      value=""
+                                    />
+                  </div>
+                  <div
+                                    className="join-group-last"
+                  >
+                                    <h5>
+                                                      To switch groups, simply enter your new group's passphrase in the box.
+                                    </h5>
+                                    <img
+                                                      className="arrow-graphic"
+                                                      src="curved-arrow.svg"
+                                    />
+                  </div>
+                  <button
+                                    onClick={[Function]}
+                  >
+                                    SUBMIT
+                  </button>
+</div>,
+                null,
               ],
+              "className": "join-container",
             },
             "ref": null,
             "rendered": Array [
@@ -621,31 +986,230 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "name": "passphrase",
-                  "onChange": [Function],
-                  "placeholder": "passphrase",
-                  "value": "",
+                  "children": Array [
+                    <div
+                      className="current-group"
+>
+                      <h5>
+                                            You are currently a member of: 
+                      </h5>
+                      <h4>
+                                            <Link
+                                                                  replace={false}
+                                                                  to="/group"
+                                            >
+                                                                  Turing
+                                            </Link>
+                      </h4>
+</div>,
+                    <div
+                      className="passphrase"
+>
+                      <h5>
+                                            Your group's passphrase is:
+                      </h5>
+                      <input
+                                            name="passphrase"
+                                            onChange={[Function]}
+                                            placeholder="9139z"
+                                            value=""
+                      />
+</div>,
+                    <div
+                      className="join-group-last"
+>
+                      <h5>
+                                            To switch groups, simply enter your new group's passphrase in the box.
+                      </h5>
+                      <img
+                                            className="arrow-graphic"
+                                            src="curved-arrow.svg"
+                      />
+</div>,
+                    <button
+                      onClick={[Function]}
+>
+                      SUBMIT
+</button>,
+                  ],
                 },
                 "ref": null,
-                "rendered": null,
-                "type": "input",
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h5>
+                          You are currently a member of: 
+</h5>,
+                        <h4>
+                          <Link
+                                                    replace={false}
+                                                    to="/group"
+                          >
+                                                    Turing
+                          </Link>
+</h4>,
+                      ],
+                      "className": "current-group",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "You are currently a member of: ",
+                        },
+                        "ref": null,
+                        "rendered": "You are currently a member of: ",
+                        "type": "h5",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <Link
+                            replace={false}
+                            to="/group"
+>
+                            Turing
+</Link>,
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": "Turing",
+                            "replace": false,
+                            "to": "/group",
+                          },
+                          "ref": null,
+                          "rendered": "Turing",
+                          "type": [Function],
+                        },
+                        "type": "h4",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h5>
+                          Your group's passphrase is:
+</h5>,
+                        <input
+                          name="passphrase"
+                          onChange={[Function]}
+                          placeholder="9139z"
+                          value=""
+/>,
+                      ],
+                      "className": "passphrase",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Your group's passphrase is:",
+                        },
+                        "ref": null,
+                        "rendered": "Your group's passphrase is:",
+                        "type": "h5",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "name": "passphrase",
+                          "onChange": [Function],
+                          "placeholder": "9139z",
+                          "value": "",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "input",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h5>
+                          To switch groups, simply enter your new group's passphrase in the box.
+</h5>,
+                        <img
+                          className="arrow-graphic"
+                          src="curved-arrow.svg"
+/>,
+                      ],
+                      "className": "join-group-last",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "To switch groups, simply enter your new group's passphrase in the box.",
+                        },
+                        "ref": null,
+                        "rendered": "To switch groups, simply enter your new group's passphrase in the box.",
+                        "type": "h5",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "arrow-graphic",
+                          "src": "curved-arrow.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "SUBMIT",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "SUBMIT",
+                    "type": "button",
+                  },
+                ],
+                "type": "div",
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "SUBMIT",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": "SUBMIT",
-                "type": "button",
-              },
+              null,
             ],
-            "type": "form",
+            "type": "div",
           },
-          null,
         ],
         "type": "div",
       },
@@ -693,31 +1257,65 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="join-container"
+            className="join-group-component"
 >
-            <h3>
-                        You are a member of: 
-                        <Link
-                                    replace={false}
-                                    to="/group"
-                        >
-                                    Turing
-                        </Link>
-                        .  To switch groups, enter new passphrase below.
-            </h3>
-            <form>
-                        <input
-                                    name="passphrase"
-                                    onChange={[Function]}
-                                    placeholder="passphrase"
-                                    value=""
-                        />
-                        <button
-                                    onClick={[Function]}
-                        >
-                                    SUBMIT
-                        </button>
-            </form>
+            <div
+                        className="join-group-header"
+            >
+                        <h4>
+                                    JOIN A GROUP
+                        </h4>
+            </div>
+            <div
+                        className="join-container"
+            >
+                        <div>
+                                    <div
+                                                className="current-group"
+                                    >
+                                                <h5>
+                                                            You are currently a member of: 
+                                                </h5>
+                                                <h4>
+                                                            <Link
+                                                                        replace={false}
+                                                                        to="/group"
+                                                            >
+                                                                        Turing
+                                                            </Link>
+                                                </h4>
+                                    </div>
+                                    <div
+                                                className="passphrase"
+                                    >
+                                                <h5>
+                                                            Your group's passphrase is:
+                                                </h5>
+                                                <input
+                                                            name="passphrase"
+                                                            onChange={[Function]}
+                                                            placeholder="9139z"
+                                                            value=""
+                                                />
+                                    </div>
+                                    <div
+                                                className="join-group-last"
+                                    >
+                                                <h5>
+                                                            To switch groups, simply enter your new group's passphrase in the box.
+                                                </h5>
+                                                <img
+                                                            className="arrow-graphic"
+                                                            src="curved-arrow.svg"
+                                                />
+                                    </div>
+                                    <button
+                                                onClick={[Function]}
+                                    >
+                                                SUBMIT
+                                    </button>
+                        </div>
+            </div>
 </div>,
           <div
             className="link-holder"
@@ -732,7 +1330,6 @@ ShallowWrapper {
             </NavLink>
 </div>,
         ],
-        "className": "join-group-component",
       },
       "ref": null,
       "rendered": Array [
@@ -742,32 +1339,65 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h3>
-                You are a member of: 
-                <Link
-                                replace={false}
-                                to="/group"
-                >
-                                Turing
-                </Link>
-                .  To switch groups, enter new passphrase below.
-</h3>,
-              <form>
-                <input
-                                name="passphrase"
-                                onChange={[Function]}
-                                placeholder="passphrase"
-                                value=""
-                />
-                <button
-                                onClick={[Function]}
-                >
-                                SUBMIT
-                </button>
-</form>,
-              null,
+              <div
+                className="join-group-header"
+>
+                <h4>
+                                JOIN A GROUP
+                </h4>
+</div>,
+              <div
+                className="join-container"
+>
+                <div>
+                                <div
+                                                className="current-group"
+                                >
+                                                <h5>
+                                                                You are currently a member of: 
+                                                </h5>
+                                                <h4>
+                                                                <Link
+                                                                                replace={false}
+                                                                                to="/group"
+                                                                >
+                                                                                Turing
+                                                                </Link>
+                                                </h4>
+                                </div>
+                                <div
+                                                className="passphrase"
+                                >
+                                                <h5>
+                                                                Your group's passphrase is:
+                                                </h5>
+                                                <input
+                                                                name="passphrase"
+                                                                onChange={[Function]}
+                                                                placeholder="9139z"
+                                                                value=""
+                                                />
+                                </div>
+                                <div
+                                                className="join-group-last"
+                                >
+                                                <h5>
+                                                                To switch groups, simply enter your new group's passphrase in the box.
+                                                </h5>
+                                                <img
+                                                                className="arrow-graphic"
+                                                                src="curved-arrow.svg"
+                                                />
+                                </div>
+                                <button
+                                                onClick={[Function]}
+                                >
+                                                SUBMIT
+                                </button>
+                </div>
+</div>,
             ],
-            "className": "join-container",
+            "className": "join-group-component",
           },
           "ref": null,
           "rendered": Array [
@@ -776,36 +1406,24 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  "You are a member of: ",
-                  <Link
-                    replace={false}
-                    to="/group"
->
-                    Turing
-</Link>,
-                  ".  To switch groups, enter new passphrase below.",
-                ],
+                "children": <h4>
+                  JOIN A GROUP
+</h4>,
+                "className": "join-group-header",
               },
               "ref": null,
-              "rendered": Array [
-                "You are a member of: ",
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "Turing",
-                    "replace": false,
-                    "to": "/group",
-                  },
-                  "ref": null,
-                  "rendered": "Turing",
-                  "type": [Function],
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "JOIN A GROUP",
                 },
-                ".  To switch groups, enter new passphrase below.",
-              ],
-              "type": "h3",
+                "ref": null,
+                "rendered": "JOIN A GROUP",
+                "type": "h4",
+              },
+              "type": "div",
             },
             Object {
               "instance": null,
@@ -813,18 +1431,55 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <input
-                    name="passphrase"
-                    onChange={[Function]}
-                    placeholder="passphrase"
-                    value=""
-/>,
-                  <button
-                    onClick={[Function]}
->
-                    SUBMIT
-</button>,
+                  <div>
+                    <div
+                                        className="current-group"
+                    >
+                                        <h5>
+                                                            You are currently a member of: 
+                                        </h5>
+                                        <h4>
+                                                            <Link
+                                                                                replace={false}
+                                                                                to="/group"
+                                                            >
+                                                                                Turing
+                                                            </Link>
+                                        </h4>
+                    </div>
+                    <div
+                                        className="passphrase"
+                    >
+                                        <h5>
+                                                            Your group's passphrase is:
+                                        </h5>
+                                        <input
+                                                            name="passphrase"
+                                                            onChange={[Function]}
+                                                            placeholder="9139z"
+                                                            value=""
+                                        />
+                    </div>
+                    <div
+                                        className="join-group-last"
+                    >
+                                        <h5>
+                                                            To switch groups, simply enter your new group's passphrase in the box.
+                                        </h5>
+                                        <img
+                                                            className="arrow-graphic"
+                                                            src="curved-arrow.svg"
+                                        />
+                    </div>
+                    <button
+                                        onClick={[Function]}
+                    >
+                                        SUBMIT
+                    </button>
+</div>,
+                  null,
                 ],
+                "className": "join-container",
               },
               "ref": null,
               "rendered": Array [
@@ -833,31 +1488,230 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "name": "passphrase",
-                    "onChange": [Function],
-                    "placeholder": "passphrase",
-                    "value": "",
+                    "children": Array [
+                      <div
+                        className="current-group"
+>
+                        <h5>
+                                                You are currently a member of: 
+                        </h5>
+                        <h4>
+                                                <Link
+                                                                        replace={false}
+                                                                        to="/group"
+                                                >
+                                                                        Turing
+                                                </Link>
+                        </h4>
+</div>,
+                      <div
+                        className="passphrase"
+>
+                        <h5>
+                                                Your group's passphrase is:
+                        </h5>
+                        <input
+                                                name="passphrase"
+                                                onChange={[Function]}
+                                                placeholder="9139z"
+                                                value=""
+                        />
+</div>,
+                      <div
+                        className="join-group-last"
+>
+                        <h5>
+                                                To switch groups, simply enter your new group's passphrase in the box.
+                        </h5>
+                        <img
+                                                className="arrow-graphic"
+                                                src="curved-arrow.svg"
+                        />
+</div>,
+                      <button
+                        onClick={[Function]}
+>
+                        SUBMIT
+</button>,
+                    ],
                   },
                   "ref": null,
-                  "rendered": null,
-                  "type": "input",
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <h5>
+                            You are currently a member of: 
+</h5>,
+                          <h4>
+                            <Link
+                                                        replace={false}
+                                                        to="/group"
+                            >
+                                                        Turing
+                            </Link>
+</h4>,
+                        ],
+                        "className": "current-group",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "You are currently a member of: ",
+                          },
+                          "ref": null,
+                          "rendered": "You are currently a member of: ",
+                          "type": "h5",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": <Link
+                              replace={false}
+                              to="/group"
+>
+                              Turing
+</Link>,
+                          },
+                          "ref": null,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "class",
+                            "props": Object {
+                              "children": "Turing",
+                              "replace": false,
+                              "to": "/group",
+                            },
+                            "ref": null,
+                            "rendered": "Turing",
+                            "type": [Function],
+                          },
+                          "type": "h4",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <h5>
+                            Your group's passphrase is:
+</h5>,
+                          <input
+                            name="passphrase"
+                            onChange={[Function]}
+                            placeholder="9139z"
+                            value=""
+/>,
+                        ],
+                        "className": "passphrase",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Your group's passphrase is:",
+                          },
+                          "ref": null,
+                          "rendered": "Your group's passphrase is:",
+                          "type": "h5",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "name": "passphrase",
+                            "onChange": [Function],
+                            "placeholder": "9139z",
+                            "value": "",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "input",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <h5>
+                            To switch groups, simply enter your new group's passphrase in the box.
+</h5>,
+                          <img
+                            className="arrow-graphic"
+                            src="curved-arrow.svg"
+/>,
+                        ],
+                        "className": "join-group-last",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "To switch groups, simply enter your new group's passphrase in the box.",
+                          },
+                          "ref": null,
+                          "rendered": "To switch groups, simply enter your new group's passphrase in the box.",
+                          "type": "h5",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "className": "arrow-graphic",
+                            "src": "curved-arrow.svg",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "img",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "SUBMIT",
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": "SUBMIT",
+                      "type": "button",
+                    },
+                  ],
+                  "type": "div",
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "SUBMIT",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "SUBMIT",
-                  "type": "button",
-                },
+                null,
               ],
-              "type": "form",
+              "type": "div",
             },
-            null,
           ],
           "type": "div",
         },
