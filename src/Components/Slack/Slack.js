@@ -33,7 +33,6 @@ class Slack extends Component {
         message: <h5>You Slack id <span>{this.state.slackId}</span> could not be added. Are you sure you put in the right information? Type /snap in slack to get your ID!</h5>
       });
     }
-    console.log(validateInput);
   }
 
   componentDidMount() {
