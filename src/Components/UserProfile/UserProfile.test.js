@@ -19,15 +19,15 @@ describe('UserProfile tests', () => {
   it('should match the snapshot', () => {
     expect(renderedUserProfile).toMatchSnapshot();
   });
-});
 
-it('should match the snapshot if there are no transactions', () => {
-  let newProps = {
-    UserTransactions: [],
-    Group: mockGroupData
-  };
-  let renderedUserProfile = shallow(<UserProfile {...newProps} />);
-  expect(renderedUserProfile).toMatchSnapshot();
+  it('should match the snapshot if there are no transactions', () => {
+    let newProps = {
+      UserTransactions: [],
+      Group: mockGroupData
+    };
+    let renderedUserProfile = shallow(<UserProfile {...newProps} />);
+    expect(renderedUserProfile).toMatchSnapshot();
+  });
 });
 
 describe('mapStateToProps tests', () => {
