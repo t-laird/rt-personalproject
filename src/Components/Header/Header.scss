@@ -35,7 +35,7 @@
 	}
 
 	.login:hover, .logout:hover {
-		color: darken($c1, 5%);
+		color: darken($c1, 12%);
 	}
 
 	.user, .group {
@@ -154,7 +154,7 @@
 @media screen and (max-width: 400px) {
   .header-component {
     h1 {
-      font-size: 37px;
+      font-size: 35px;
     }
 
     .header-logo {

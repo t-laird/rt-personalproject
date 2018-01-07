@@ -54,6 +54,7 @@
 
 	.group-name-input {
 		margin-bottom: 15px;
+		margin-left: 10px;
 	}
 
 	.points-input {
@@ -98,5 +99,42 @@
 		&:hover {
       background-color: darken($c1, 12%);
     }
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.create-group-component {
+		@include media-width;
+
+		.create-group-heading {
+			@include media-width;
+		}
+	}
+}
+
+@media screen and (max-width: 555px) {
+	.create-group-component {
+		.create-top {
+			flex-direction: column;
+			width: 100%;
+
+			input {
+				margin-left: 0;	
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 555px) {
+	.create-group-component {
+		.create-bottom {
+			flex-direction: column;
+			width: 100%;
+
+			input {
+				width: 100%;
+				margin-left: 0;
+			}
+		}
 	}
 }
