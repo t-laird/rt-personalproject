@@ -1,6 +1,7 @@
 @import '../../Variables.scss';
 
 .Transaction {
+
   position: relative;
   input {
     background-color: $c7;
@@ -8,11 +9,13 @@
     font-size: 34px;
     text-align: center;
     &::placeholder {
+      font-family: "semplicitapro", sans-serif;
       font-weight: 300;
       color: $c4 ;
       font-size: 24px;
       position: relative;
       bottom: 2px;
+      text-align: center;
     }
   }
 
@@ -92,11 +95,6 @@
       background-color: darken($c1, 12%);
     }
   }
-  
-  hr {
-    margin: 23px 0 20px;
-    opacity: .2;
-  }
 
   input,
   button {
@@ -107,148 +105,146 @@
   
   .transaction-message {
     h3 {
+      font-size: 18px;
       margin: 0px;
       color: red;
       font-weight: 700;
       padding-top: 15px;
       text-align: center;
       transition: 1s;
-      // font-size: 800px;
     }
   }
 
+  .award-header {
+    @include box-header;
+    
+    background: $c1;
+    text-align: center;
+
+    h4 {
+      font-weight: 900;
+      color: $c7;
+    }
+  }
 
   .points-block {
     @include center-box;
 
     position: relative;
     background-color: $c6;
-
-    h4 {
-      @include box-header;
-      font-weight: 900;
-      margin-bottom: 27px;
-      color: $c7;
-      background: $c1;
-      text-align: center;
-    }
+    padding: 22px 40px;
 
     .award {
+      padding: 5px 0 0;
       display: flex;
-      margin-left: 40px;
-      width: 90%;
-  
-      h5 {
-        font-weight: 900;
+      justify-content: space-between;
+    }
+
+    .send-input {
+      display: flex;
+      align-items: center;
+
+      .send {
         color: $c3;
-        display: flex;
+        font-weight: 900;
+        margin-right: 23px;
       }
 
       input {
-        height: 100%;
-        border-bottom: 8px solid $c5;
-        margin: 0 15px;
-      }
-
-      .send-input {
-        width: 30%;
-        display: flex;
-        align-items: center;
-        box-sizing: border-box;
-        align-items: center;
-        h5 {
-          margin-right: 10px;
-        }
-        input {
-          width: 100px;
-        }
-      }
-  
-      .recipient-input {
-        width: 70%;
+        font-family: 'semplicitapro', sans-serif;
+        color: $c1;
+        font-weight: 900;
+        width: 85px;
         height: 60px;
-        // margin: 0px 0px 0px 15px;
-        display: flex;
-        flex-wrap: wrap;
-        box-sizing: border-box;
-        align-items: center;
-        h5.points-to {
-          width: 120px;
-        }
-        input {
-            font-family: 'semplicitapro', sans-serif;
-            width: calc(100% - 126px);
-            box-sizing: border-box;
-            text-align: left;
-            padding-left: 15px;
-            height: 100%;
-            margin: 0px;
-          }
-        ul {
-  
-          width: calc(100% - 120px);
-          padding-left: 0px;
-          margin: 0px 0px 0px 120px;
-          position: relative;
-          z-index: 10;
-
-          
-          li {
-            font-family: 'semplicitapro', sans-serif;
-            width: 100%;
-            list-style: none;
-            color: #fe5630;
-            font-size: 34px;
-            z-index: 10;
-            background: rgba(211, 211, 211, 0.749);
-            cursor: pointer;
-  
-            &:hover,
-            &.highlight {
-              background: rgba(235, 234, 234, 0.906);
-              color: darken(#fe5630, 10%);            
-            }
-  
-            &.empty-suggestions {
-              color: red;
-              background-color: rgb(57, 57, 57);
-            }
-          }
-        }
-      }    
-    }
-
-
-    .point-error {
-      position: absolute;
-      top: 25px;
-      right: 10px;
-      color: $c1;
-    }
-
-    .note-input {
-      font-family: 'semplicitapro', sans-serif;
-      display: block;
-      width: 89%;
-      height: 100px;
-      background-color: #fff;
-      border: none;
-      border-bottom: 8px solid $c5;
-      text-align: left;
-      font-size: 20px;
-      padding: 5px;
-      box-sizing: border-box;
-      color: $blue-text;
-      outline: none;
-      resize: none;
-      margin: 25px auto 20px;
-      
-
-      &::placeholder{
-        color: $c4 ;
-        font-size: 24px;
-        font-weight: 300;
+        border-bottom: 8px solid $c5;
       }
+    }
+
+    .recipient-input {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      .snaps {
+        font-family: 'semplicitapro', sans-serif;
+        width: 100px;
+        color: $c3;
+        margin: 0 24px;
+        font-weight: 900;
+      }
+
+      input {
+        font-family: 'semplicitapro', sans-serif;
+        height: 60px;
+        text-align: left;
+        border-bottom: 8px solid $c5;
+        width: 344px;
+        font-size: 28px;
+        padding-left: 5px;
+      }
+    }
+  
+    ul {
+      padding-left: 0px;
+      position: absolute;
+      right: 0;
+      top: 43px;
+      background-color: rgba(201, 198, 199, .7);
+    
+      li {
+        font-family: 'semplicitapro', sans-serif;
+        width: 344px;
+        list-style: none;
+        padding: 3px 5px;
+
+        color: $c3;
+        font-size: 28px;
+        cursor: pointer;
+
+        &:hover,
+        &.highlight {
+          background-color: rgba(235, 234, 234, 0.906);
+          transition: background-color .15s ease-in-out;
+          color: lighten($c3, 20%);            
+        }
+
+        &.empty-suggestions {
+          /*color: red;*/
+          /*background-color: rgb(57, 57, 57);*/
+        }
+      }
+    }
+         
+  }
+
+  .point-error {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    color: $c1;
+  }
+
+  .note-input {
+    font-family: 'semplicitapro', sans-serif;
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    border: none;
+    border-bottom: 8px solid $c5;
+    text-align: left;
+    font-size: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    color: $c3;
+    outline: none;
+    resize: none;
+    margin: 25px auto 20px;
+    
+    &::placeholder{
+      color: $c4 ;
+      font-size: 24px;
+      font-weight: 300;
     }
   }
 }
@@ -256,10 +252,70 @@
 @media screen and (max-width: 750px) {
   .Transaction {
     .current-points {
-      width: 100%;
+      @include media-width;
+    }
+
+    .award-header {
+      @include media-width;
+    }
+
+    .points-block {
+      @include media-width;
+
+      h4 {
+        @include media-width;
+      }
+
+      ul {
+        top: 80px;
+      }
+    }
+
+    .award {      
+      .send-input {
+        flex-direction: column;
+      }
+
+      .recipient-input {
+        flex-direction: column;
+      }
+
+      input {
+        margin-top: 10px;
+      }
     }
   }
 }
+
+@media screen and (max-width: 555px) {
+  .Transaction {
+    .award {
+      flex-direction: column;
+      .send-input input {
+        @include media-width;
+      }
+
+      .recipient-input .snaps {
+        margin-top: 10px;
+      }
+
+      .recipient-input input {
+        @include media-width;
+      }
+    }
+
+    .points-block {
+      ul {
+        width: 100%;
+        top: 90px;
+
+        li {
+          width: 100%;
+        }
+      }
+    }
+  }
+};
 
 @media screen and (max-width: 490px) {
   .Transaction {

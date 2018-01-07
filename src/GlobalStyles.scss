@@ -18,3 +18,7 @@ input {
   margin: 0 auto;
   padding: 10px 25px;
 }
+
+@mixin media-width {
+  width: 100%;
+}

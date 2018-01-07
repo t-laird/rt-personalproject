@@ -56,3 +56,17 @@
 		margin-right: 5px;
 	}
 }
+
+@media screen and (max-width: 750px) {
+  .comment-card-component {
+    &:nth-of-type(odd) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .comment-card-component {
+    width: 100%;
+  }
+}

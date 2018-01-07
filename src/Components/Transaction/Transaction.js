@@ -61,7 +61,7 @@ export class Transaction extends Component {
 
     if (!findReceivingUser) {
       this.setState({
-        transactionMessage: "Receiving user not found, please try again",
+        transactionMessage: "We can't find your receiving user.  You should try again!",
         suggestions: [],
         recipient: ''
       });
@@ -220,7 +220,7 @@ export class Transaction extends Component {
         onClick={
           () => this.setState({recipient: ''})
         }
-        className="empty-suggestions">NO USERS FOUND</li>;
+        className="empty-suggestions">no users found</li>;
     }
     return listItems;
   }
@@ -242,11 +242,13 @@ export class Transaction extends Component {
             <h6>RECEIVED</h6>
           </div>
         </div>
-        <div className="points-block">
+        <div className="award-header">
           <h4>AWARD</h4>
+        </div>
+        <div className="points-block">
           <div className="award">
             <div className="send-input">
-              <h5>Send </h5>
+              <h5 className="send">Send</h5>
               <input 
                 type="text" 
                 name="points" 
@@ -255,7 +257,7 @@ export class Transaction extends Component {
                 onChange={(event) => { this.handleInput(event); }} />            
             </div>
             <div className="recipient-input">
-              <h5 className="points-to">snaps to:</h5>
+              <h5 className="snaps">snaps to:</h5>
               <input 
                 type="text" 
                 name="recipient" 
