@@ -1,0 +1,83 @@
+@import '../../Variables.scss';
+
+.Slack {
+
+  @include center-box;
+  background-color: $c6;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .slack-header {
+    @include box-header;
+    background-color: $c1;
+
+    h4 {
+      color: $c7;
+      font-weight: 900;
+      text-align: center;
+    }
+  }
+
+  h5 {
+    margin: 30px 0px;
+  }
+
+	input, button {
+		overflow: visible;
+    border: none;
+    display: block;
+    height: 60px;
+    font-size: 24px;
+    margin: 0px 0px 30px;
+    text-align: center;
+	}
+
+	input {
+		width: 250px;
+		background-color: $c7;
+    border-bottom: 8px solid $c5;
+    color: $c3;
+    margin-right: 20px;
+
+		&::placeholder {
+			color: $c1;
+      font-weight: 900;
+		};
+	}
+
+  button {
+    height: 52px;
+    width: 149px;
+    color: #fff;
+    background-color: $c1;
+    cursor: pointer;
+    transition: background-color .15s ease-in-out;
+    padding-top: 2px;
+    border: none;
+    display: block;
+    font-size: 20px;
+
+    &:hover {
+      background-color: darken($c1, 12%);
+    }
+  }
+
+  h5 {
+    padding: 10px 30px 20px;
+    margin: 0px;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    span {
+      font-size: inherit;
+      font-family: inherit;
+      color: $c1;
+      padding: 0px 5px;
+    }
+  }
+
+  h6 {
+    color: $c1;
+    margin: 10px 0px 0px;
+  }
+}
