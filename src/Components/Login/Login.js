@@ -19,11 +19,15 @@ class Login extends Component {
 
   componentDidMount = async () => {
     await this.fetchUserData();
+    
+    if (this.props.location.pathname === '/login/slack') {
+      this.props.history.push('/slack');
+    }
   }
 
   fetchUserData = async () => {
     this.checkForKey();
-    
+
     const userData = await this.loadUser();
     if (userData) {
       await this.loadTransactionData(userData);
@@ -33,12 +37,6 @@ class Login extends Component {
         await this.loadGroupTransactionData(groupData);
       }
       this.props.history.push('/user');
-    }
-  }
-
-  componentWillReceiveProps = (nextProps) => {
-    if (nextProps.user.group_id > 0) {
-      this.setState({joinText: 'SWITCH GROUPS'});
     }
   }
 
@@ -72,6 +70,7 @@ class Login extends Component {
       window.location="https://tr-personal-proj.e1.loginrocket.com";
       
       console.log('error: ', error);
+      return;
     }
   }
 
@@ -85,7 +84,8 @@ class Login extends Component {
       this.props.updateGroup(groupData);
       return groupData;
     } catch (error) {
-      return 'error retrieving group data';
+      window.location="https://tr-personal-proj.e1.loginrocket.com";
+      return; 
     }
   }
 
@@ -95,13 +95,9 @@ class Login extends Component {
       this.props.updateGroupTransactions(groupTransactions);
 
     } catch (error) {
-      window.location="https://tr-personal-proj.e1.loginrocket.com";
+      window.location="https://tr-personal-proj.e1.loginrocket.com/";
       return;
     }
-  }
-  
-  componentDidMount() {
-    this.checkForKey();    
   }
 
   checkForKey() {
@@ -113,7 +109,8 @@ class Login extends Component {
       return;
     } else {
       clearLocalStorage();
-      window.location="https://tr-personal-proj.e1.loginrocket.com";
+      window.location="https://tr-personal-proj.e1.loginrocket.com/";
+      return;
     }
   }
 
