@@ -58,7 +58,7 @@ export class CreateGroup extends Component {
             />
           </div>
           <h5>With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.</h5>
-          <div class="create-bottom">
+          <div className="create-bottom">
             <h5>How many snaps will your group members be able to give away? <span className="join-span">(We recommend 50)</span></h5>
             <input
               className="points-input"
