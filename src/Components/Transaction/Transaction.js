@@ -215,6 +215,10 @@ export class Transaction extends Component {
       );
     });
 
+    if (this.state.recipient === this.state.suggestions[0] && this.state.suggestions.length === 1) {
+      return null;
+    }
+
     if (this.state.recipient.length && !this.state.suggestions.length) {
       return <li 
         onClick={
