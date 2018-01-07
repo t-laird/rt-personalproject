@@ -16,11 +16,26 @@
 
   .leaderboard-name {
     width: 227px;
+    overflow-wrap: break-word;
   }
 
   .leaderboard-points {
     font-weight: 900;
     width: 40px;
     text-align: right;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .leaderboard-display-component {
+    align-items: center;
+
+    .leaderboard-position {
+      margin-left: 0;
+    }
+
+    .leaderboard-name {
+      width: 205px;
+    }
   }
 }

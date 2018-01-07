@@ -58,6 +58,10 @@
     
   }
 
+  .small-only {
+    display: none;
+  }
+
   .leaders-holder {
     display: flex;
     justify-content: space-between;
@@ -85,5 +89,45 @@
     top: 18px;
     left: 8px;
   }
+}
 
+@media screen and (max-width: 750px) {
+  .leaderboard-component {
+    @include media-width;
+
+    .leaderboard-header {
+      @include media-width;
+    }
+
+    .leaderboard-subhead {
+      display: none;
+    }
+
+    .leaders-holder {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .small-only {
+      color: $c5;
+      display: block;
+      margin: 10px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .leaderboard-component {
+    .earners img, .givers img {
+      display: none;
+    }
+
+    .leaders-holder {
+      padding: 0 0 25px 0;
+    }
+
+    .earners, .givers {
+      @include media-width;
+    }
+  }
 }

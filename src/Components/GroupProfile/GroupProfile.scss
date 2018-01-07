@@ -10,5 +10,20 @@
     font-weight: 900;
     text-align: center;
     margin-bottom: -28px;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .group-profile-component {
+    @include media-width;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .group-profile-component {
+    h4 {
+      font-size: 16px;      
+    }
   }
 }

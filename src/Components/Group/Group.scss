@@ -28,4 +28,9 @@
   @include component-exiting;
 }
 
+@media screen and (max-width: 750px) {
+  .group-component .join-group {
+    @include media-width;
+  }
+}
 
