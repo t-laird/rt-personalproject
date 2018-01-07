@@ -4562,6 +4562,7 @@ ShallowWrapper {
                                         lineHeight={1}
                                 />
                         }
+                        tickValues={null}
                 />
                 <VictoryLabel
                         capHeight={0.71}
@@ -9073,6 +9074,7 @@ ShallowWrapper {
                                                 lineHeight={1}
                                     />
                         }
+                        tickValues={null}
             />
             <VictoryLabel
                         capHeight={0.71}
@@ -11378,6 +11380,7 @@ ShallowWrapper {
                                                 lineHeight={1}
                                 />
                 }
+                tickValues={null}
 />,
               <VictoryLabel
                 capHeight={0.71}
@@ -15834,6 +15837,7 @@ ShallowWrapper {
                   capHeight={0.71}
                   lineHeight={1}
 />,
+                "tickValues": null,
               },
               "ref": null,
               "rendered": null,
@@ -20362,6 +20366,7 @@ ShallowWrapper {
                                                   lineHeight={1}
                                         />
                               }
+                              tickValues={null}
                     />
                     <VictoryLabel
                               capHeight={0.71}
@@ -24873,6 +24878,7 @@ ShallowWrapper {
                                                         lineHeight={1}
                                           />
                             }
+                            tickValues={null}
               />
               <VictoryLabel
                             capHeight={0.71}
@@ -27178,6 +27184,7 @@ ShallowWrapper {
                                                       lineHeight={1}
                                     />
                   }
+                  tickValues={null}
 />,
                 <VictoryLabel
                   capHeight={0.71}
@@ -31634,6 +31641,7 @@ ShallowWrapper {
                     capHeight={0.71}
                     lineHeight={1}
 />,
+                  "tickValues": null,
                 },
                 "ref": null,
                 "rendered": null,
@@ -35300,6 +35308,15 @@ ShallowWrapper {
                                         lineHeight={1}
                                 />
                         }
+                        tickValues={
+                                Array [
+                                        "10",
+                                        "20",
+                                        "30",
+                                        "40",
+                                        "50",
+                                      ]
+                        }
                 />
                 <VictoryLabel
                         capHeight={0.71}
@@ -38915,6 +38932,15 @@ ShallowWrapper {
                                                 lineHeight={1}
                                     />
                         }
+                        tickValues={
+                                    Array [
+                                                "10",
+                                                "20",
+                                                "30",
+                                                "40",
+                                                "50",
+                                              ]
+                        }
             />
             <VictoryLabel
                         capHeight={0.71}
@@ -40325,6 +40351,15 @@ ShallowWrapper {
                                                 capHeight={0.71}
                                                 lineHeight={1}
                                 />
+                }
+                tickValues={
+                                Array [
+                                                "10",
+                                                "20",
+                                                "30",
+                                                "40",
+                                                "50",
+                                              ]
                 }
 />,
               <VictoryLabel
@@ -43896,6 +43931,13 @@ ShallowWrapper {
                   capHeight={0.71}
                   lineHeight={1}
 />,
+                "tickValues": Array [
+                  "10",
+                  "20",
+                  "30",
+                  "40",
+                  "50",
+                ],
               },
               "ref": null,
               "rendered": null,
@@ -47528,6 +47570,15 @@ ShallowWrapper {
                                                   lineHeight={1}
                                         />
                               }
+                              tickValues={
+                                        Array [
+                                                  "10",
+                                                  "20",
+                                                  "30",
+                                                  "40",
+                                                  "50",
+                                                ]
+                              }
                     />
                     <VictoryLabel
                               capHeight={0.71}
@@ -51143,6 +51194,15 @@ ShallowWrapper {
                                                         lineHeight={1}
                                           />
                             }
+                            tickValues={
+                                          Array [
+                                                        "10",
+                                                        "20",
+                                                        "30",
+                                                        "40",
+                                                        "50",
+                                                      ]
+                            }
               />
               <VictoryLabel
                             capHeight={0.71}
@@ -52553,6 +52613,15 @@ ShallowWrapper {
                                                       capHeight={0.71}
                                                       lineHeight={1}
                                     />
+                  }
+                  tickValues={
+                                    Array [
+                                                      "10",
+                                                      "20",
+                                                      "30",
+                                                      "40",
+                                                      "50",
+                                                    ]
                   }
 />,
                 <VictoryLabel
@@ -56124,6 +56193,13 @@ ShallowWrapper {
                     capHeight={0.71}
                     lineHeight={1}
 />,
+                  "tickValues": Array [
+                    "10",
+                    "20",
+                    "30",
+                    "40",
+                    "50",
+                  ],
                 },
                 "ref": null,
                 "rendered": null,

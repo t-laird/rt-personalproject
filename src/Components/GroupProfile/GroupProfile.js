@@ -30,6 +30,21 @@ class GroupProfile extends Component {
     }
   }
 
+  getTickValues = () => {
+    if (this.props.GroupTransactions.length && Object.keys(this.props.Group).length) {
+      const transactionCount = this.props.GroupTransactions.reduce((count, week) => {
+        count += week.transactions.length;
+        return count;
+      }, 0)
+
+      if (transactionCount > 0) {
+        return null;
+      }
+    } 
+      
+    return ['100', '200', '300', '400', '500'];
+  }
+
   generateChart = () => {
     return (
       <div className="group-profile-component">
@@ -45,6 +60,7 @@ class GroupProfile extends Component {
             }}
           />
           <VictoryAxis 
+            tickValues={this.getTickValues()}
             dependentAxis={true}
             style={{
               axis: {stroke: "#c9c6c7", strokeWidth: 6},

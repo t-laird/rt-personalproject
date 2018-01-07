@@ -59,7 +59,7 @@ export class JoinGroup extends Component {
       return (
         <div>
           <div className="current-group">
-            <h5>You are not current a member of a group!</h5>
+            <h5>You are not currently a member of a group!</h5>
           </div>
           <div className="passphrase">
             <h5>To join a group, enter your group passphrase</h5>

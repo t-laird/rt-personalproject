@@ -46,6 +46,30 @@ export const Header = (props) => {
     );
   }
 
+  let displayTabs;
+
+  if (Object.keys(props.user).length) {
+    if (Object.keys(props.group).length) {
+      displayTabs = (
+        <div className="nav-tabs">
+          <NavLink exact to="/">HOME</NavLink>
+          <NavLink to="/user">USER</NavLink>
+          <NavLink to="/group">GROUP</NavLink>
+          <NavLink to="/creategroup">CREATE</NavLink>
+          <NavLink to="/joingroup">JOIN</NavLink>
+        </div>
+      )
+    } else {
+      displayTabs = (
+        <div className="nav-tabs">
+          <NavLink exact to="/">HOME</NavLink>
+          <NavLink to="/creategroup">CREATE</NavLink>
+          <NavLink to="/joingroup">JOIN</NavLink>
+        </div>
+      )
+    }
+  }
+
   return (
     <div className="header-component">
       <NavLink 
@@ -57,13 +81,7 @@ export const Header = (props) => {
             alt="logo" />NINJA</h1>
       </NavLink>
       {headerDisplay}
-      <div className="nav-tabs">
-        <NavLink exact to="/">HOME</NavLink>
-        <NavLink to="/user">USER</NavLink>
-        <NavLink to="/group">GROUP</NavLink>
-        <NavLink to="/creategroup">CREATE</NavLink>
-        <NavLink to="/joingroup">JOIN</NavLink>
-      </div>
+      {displayTabs}
     </div>
   );
 };
