@@ -12,9 +12,11 @@ export class Group extends Component {
   componentDidMount() {
     if (!this.props.User.name) {
       this.props.history.push('/login');
+      return;
     }
     if (!this.props.User.group_id) {
       this.props.history.push('/joingroup');
+      return;
     }
   }
 
