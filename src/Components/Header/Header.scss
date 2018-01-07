@@ -4,10 +4,10 @@
 	background-color: $c6;
   padding: 21px 0;
   position: relative;
-  margin-bottom: 55px;
+  margin-bottom: 70px;
 
-	h2 {
-		margin: 0;
+	h1 {
+		margin: 0 0 7px;
 		padding: 0;
 		text-align: center;
 		color: $c1;
@@ -17,7 +17,7 @@
 	.logout {
 		position: absolute;
 		font-size: 20px;
-		top: 10px;
+		top: 12px;
 		right: 15px;
 		font-weight: 900;
     color: $c1;
@@ -29,7 +29,7 @@
 		font-weight: 900;
 		position: absolute;
 		right: 12px;
-    top: 10px;
+    top: 12px;
     color: $c1;
 		transition: opacity .15s ease-in-out;
 	}
@@ -55,17 +55,17 @@
 
 	.user {
 		right: 15px;
-		top: 40px;
+		top: 47px;
 	}
 
 	.group {
 		right: 15px;
-		top: 65px;
+		top: 73px;
 	}
 
 	.header-logo {
-		width: 60px;
-		margin: 0 10px -10px 15px;
+		width: 75px;
+		margin: 0 10px -17px 15px;
 	}
 
 	.user:hover, .group:hover {
@@ -74,7 +74,6 @@
   
   .nav-tabs {
     position: absolute;
-    display: inline-block;
     bottom: -40px;
     width: 100%;
     display: flex;
@@ -84,21 +83,27 @@
       justify-content: center;
       align-items: center;
       background-color: transparentize($color: ($c6), $amount: 0.4);
-      color: $c3;
+      color: darken($c4, 4%);
       box-sizing: initial;
       font-size: 20px;
       padding: 10px 0px;
-      margin-right: 5px;
-      width: 100px;
+      margin-right: 7px;
+      width: 130px;
+      position: relative;
+      top: 2px;
+      font-weight: 900;
+      opacity: .7;
 
       &.active {
         background-color: $c6;
+        color: $c3;
+        opacity: 1;
       }
     }
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 	.header-component {
 
 		h1 {
@@ -121,4 +126,39 @@
 			margin-top: 20px;
 		}
 	}
+}
+
+@media screen and (max-width: 550px) {
+  .header-component {
+    margin-bottom: 39px;
+    .nav-tabs {
+      flex-direction: column;
+      position: unset;
+      /*background-color: #cccbcb;*/
+      padding: 10px 0 15px;
+      margin-bottom: -34px;
+      margin-top: -9px;
+
+      a {
+        width: 100%;
+        /*background-color: $c3;*/
+        &.active {
+          color: #fff;
+          background-color: $c4;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header-component {
+    h1 {
+      font-size: 37px;
+    }
+
+    .header-logo {
+      width: 64px;
+    }
+  }
 }

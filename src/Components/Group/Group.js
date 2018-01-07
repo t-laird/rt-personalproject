@@ -22,8 +22,8 @@ export class Group extends Component {
     return (
       <div className="group-component">
         <GroupData />
-        <GroupProfile />
       	<Leaderboard />
+        <GroupProfile />
         <NavLink className="join-group" to='/joingroup'>SWITCH GROUPS</NavLink>
       </div>
     ); 

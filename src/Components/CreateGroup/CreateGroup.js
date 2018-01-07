@@ -14,7 +14,7 @@ export class CreateGroup extends Component {
     this.state = {
       groupName: '',
       weeklyPoints: '',
-      message: 'Create a new group:'
+      message: 'CREATE A GROUP'
     };
   }
 
@@ -43,26 +43,34 @@ export class CreateGroup extends Component {
   render() {
     return (
       <div className="create-group-component">
-        <h3>{this.state.message}</h3>
+        <div className="create-group-heading">
+          <h4>{this.state.message}</h4>
+        </div>
         <form>
-          <input 
-            className="group-name-input"
-            onChange={this.handleChange}
-            placeholder='group name'
-            value={this.state.groupName}
-            name='groupName'
-          />
-          <h3>How many points will group members be able to give away each week? <span className="join-span">(we recommend 50)</span></h3>
-          <input
-            className="points-input"
-            onChange={this.handleChange}
-            placeholder='points'
-            value={this.state.weeklyPoints}
-            name='weeklyPoints'
-          />
+          <div class="create-top">
+            <h5>Let's give your group a name!</h5>
+            <input 
+              className="group-name-input"
+              onChange={this.handleChange}
+              placeholder='group name'
+              value={this.state.groupName}
+              name='groupName'
+            />
+          </div>
+          <h5>With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.</h5>
+          <div class="create-bottom">
+            <h5>How many snaps will your group members be able to give away? <span className="join-span">(We recommend 50)</span></h5>
+            <input
+              className="points-input"
+              onChange={this.handleChange}
+              placeholder='QTY'
+              value={this.state.weeklyPoints}
+              name='weeklyPoints'
+            />
+          </div>
           <button
             onClick={(event) => this.createGroup(event, this.state.groupName, this.state.weeklyPoints)}
-          >SUBMIT
+          >CREATE
           </button>
         </form>
       </div>

@@ -31,9 +31,27 @@ export class GroupData extends Component {
   render() {
     return (
       <div className="group-data-component">
-        <h2>{this.props.group.group_name || 'Group'}</h2>
-        <h3>Group points awarded this week: <span className="group-span">{this.currentPoints()}</span></h3>
-        <h3>Total - all time: <span className="group-span">{this.totalPoints()}</span></h3>
+        <div className="group-header">
+          <h4>{this.props.group.group_name} group</h4>
+        </div>
+
+        <div className="current-points">
+          <div className="this-week">
+            <span className="group-span">{this.currentPoints()}</span>
+            <h6>THIS WEEK</h6>
+          </div>
+
+          <div className="divider">
+            <h4>SNAPS</h4>
+            <span>IN TOTAL</span>
+          </div>
+
+          <div className="all-time">
+            <span className="group-span">{this.totalPoints()}</span>
+            <h6>ALL TIME</h6>
+          </div>
+        </div>
+
       </div>
     ); 
   }

@@ -24,7 +24,7 @@ class GroupProfile extends Component {
       return (
         <VictoryArea 
           data={weeklyData}
-          style={{data: {fill: '#b9e5fb'}}}
+          style={{data: {fill: '#e9e9e9'}}}
         />
       );
     }
@@ -33,33 +33,29 @@ class GroupProfile extends Component {
   generateChart = () => {
     return (
       <div className="group-profile-component">
+     
+        <h4>{`${this.props.Group.group_name || 'Group'} - Snaps Awarded - LAST ${this.props.GroupTransactions.length} WEEK${this.props.GroupTransactions.length === 1 ? '' : 'S'}`}</h4>
         <VictoryChart>
           {this.generateChartArea()}
 
           <VictoryAxis 
             tickValues={['']}
             style={{
-              axis: {stroke: "#85c0de", strokeWidth: 6}
+              axis: {stroke: "#c9c6c7", strokeWidth: 6}
             }}
           />
           <VictoryAxis 
             dependentAxis={true}
             style={{
-              axis: {stroke: "#85c0de", strokeWidth: 6},
-              tickLabels: {fill: "#ffffff", fontFamily: "semplicitapro"}
+              axis: {stroke: "#c9c6c7", strokeWidth: 6},
+              tickLabels: {fill: "#c9c6c7", fontFamily: "semplicitapro"}
             }}
-          />
-          <VictoryLabel 
-            text={`${this.props.Group.group_name || 'Group'} - Points Awarded - LAST ${this.props.GroupTransactions.length} WEEK${this.props.GroupTransactions.length === 1 ? '' : 'S'}`}
-            x={"14%"}
-            y={"4%"}
-            style={{fill: '#ffffff', fontSize: '16', fontWeight: 900, fontFamily: "semplicitapro"}}
           />
           <VictoryLabel 
             text={"this week"}
             x={"82%"}
             y={"90%"}
-            style={{fill: '#ffffff', fontSize: '14', fontWeight: 500, fontFamily: "semplicitapro"}}
+            style={{fill: '#c9c6c7', fontSize: '14', fontWeight: 500, fontFamily: "semplicitapro"}}
           />
         </VictoryChart>
       </div>

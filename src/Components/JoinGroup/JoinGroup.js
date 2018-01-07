@@ -31,11 +31,52 @@ export class JoinGroup extends Component {
     }
 
     if (this.props.group.group_name) {
-      return <h3>You are a member of: <Link to="/group">{this.props.group.group_name}</Link>.  To switch groups, enter new passphrase below.</h3>;
-    } else if (this.props.user.group_id) {
-      return <h3>You are already a member of a group!  To switch groups, enter new passphrase below.</h3>;
+      return (
+        <div>
+          <div className="current-group">
+            <h5>You are currently a member of: </h5>
+            <h4><Link to="/group">{this.props.group.group_name}</Link></h4>
+          </div>
+          <div className="passphrase">
+            <h5>Your group's passphrase is:</h5>
+            <input 
+              placeholder={this.props.group.group_passphrase}
+              value={this.state.passphrase}
+              onChange={this.handleChange}
+              name='passphrase'
+            />
+          </div>
+          <div className="join-group-last">
+            <h5>To switch groups, simply enter your new group's passphrase in the box.</h5>
+            <img className="arrow-graphic" src={require('./assets/curved-arrow.svg')} />
+          </div>
+          <button
+              onClick={this.joinGroup}
+            >SUBMIT</button>
+        </div>
+      )
     } else if (!this.props.user.name) {
-      return  <h3><Link to="/login">Login</Link> to join a group or to see your group status!</h3>;
+      this.props.history.push('/user');
+    } else if (!this.props.group.group_name) {
+      return (
+        <div>
+          <div className="current-group">
+            <h5>You are not current a member of a group!</h5>
+          </div>
+          <div className="passphrase">
+            <h5>To join a group, enter your group passphrase</h5>
+            <input 
+              placeholder={this.props.group.group_passphrase}
+              value={this.state.passphrase}
+              onChange={this.handleChange}
+              name='passphrase'
+            />
+          </div>
+          <button
+              onClick={this.joinGroup}
+            >SUBMIT</button>
+        </div>
+      )
     }
   }
 
@@ -50,7 +91,7 @@ export class JoinGroup extends Component {
     event.preventDefault();
     if (this.state.passphrase === this.props.group.group_passphrase) {
       this.setState({
-        message: <h3>You're already in that group!</h3>
+        message: <h5>You're already in that group!</h5>
       });
       return;
     }
@@ -61,11 +102,11 @@ export class JoinGroup extends Component {
       return this.updateUserInfo(userResponse);
     } else if (!this.props.user.name) {
       this.setState({
-        message: <h3>You must be logged in to join a group.</h3>
+        message: <h5>You must be logged in to join a group.</h5>
       });
     } else {
       this.setState({
-        message: <h3>Failed to join group... please try again</h3>
+        message: <h5>Failed to join group... please try again</h5>
       });
     }
   }
@@ -84,27 +125,22 @@ export class JoinGroup extends Component {
     this.props.updateGroupTransactions(groupTransactions);
 
     this.setState({
-      message: <h3>You successfully joined {groupData.group_name}! Click <Link to="/group">here</Link> to visit your group page or <Link to="/user">here</Link> to visit your user page.</h3>,
+      message: <h5>You successfully joined {groupData.group_name}! Click <Link to="/group">here</Link> to visit your group page or <Link to="/user">here</Link> to visit your user page.</h5>,
       hideintro: true
     });
   }
 
   render() {
     return (
-      <div className="join-group-component">
-        <div className="join-container">
-          {this.groupPageMessage()}
-          <form>
-            <input 
-              value={this.state.passphrase}
-              onChange={this.handleChange}
-              placeholder='passphrase'
-              name='passphrase' />
-            <button
-              onClick={this.joinGroup}
-            >SUBMIT</button>
-          </form>
-          {this.state.message}
+      <div>
+        <div className="join-group-component">
+          <div className="join-group-header">
+            <h4>JOIN A GROUP</h4>
+          </div>
+          <div className="join-container">
+            {this.groupPageMessage()}
+            {this.state.message}
+          </div>
         </div>
         <div className="link-holder">
           <NavLink className="create-group-link" to='/creategroup'>CREATE NEW GROUP</NavLink>
