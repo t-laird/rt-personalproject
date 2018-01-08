@@ -19,7 +19,7 @@ describe('validate slack id tests', () => {
   it('validateSlackId is called with the correct params', async () => {
     const mockUserId = 123456;
     const expected = [
-      'http://localhost:3000/api/v1/slack',
+      'https://snapninja.herokuapp.com/api/v1/slack',
       {
         method: 'POST',
         headers: {

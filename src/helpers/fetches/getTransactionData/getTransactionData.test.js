@@ -19,7 +19,7 @@ describe('get transaction data tests', () => {
 
   it('getTransactionData is called with the correct params', async () => {
     const expected = [
-      'http://localhost:3000/api/v1/events/getuserdata/',
+      'https://snapninja.herokuapp.com/api/v1/events/getuserdata/',
       {
         method: 'POST',
         headers: { 

@@ -8,13 +8,13 @@ import { mockUserWithoutGroup } from '../../mockData/mockUserWithoutGroup';
 
 describe('user tests', () => {
   it('should match the snapshot', () => {
-    const renderedApp = shallow(<User User={mockUserData} />);
+    const renderedApp = shallow(<User User={mockUserData} history={[]} />);
 
     expect(renderedApp).toMatchSnapshot();
   });
 
   it('should match the snapshot if user does not have a group', () => {
-    const renderedApp = shallow(<User User={mockUserWithoutGroup} />);
+    const renderedApp = shallow(<User User={mockUserWithoutGroup} history={[]} />);
   
     expect(renderedApp).toMatchSnapshot();
     expect(renderedApp.state('joinText')).toEqual('JOIN A GROUP');

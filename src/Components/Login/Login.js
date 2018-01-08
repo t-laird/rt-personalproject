@@ -161,7 +161,10 @@ export default connect(null, mapDispatchToProps)(Login);
 
 Login.propTypes = {
   user: PropTypes.object,
-  history: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  history: PropTypes.oneOfType([
+    PropTypes.object, 
+    PropTypes.array
+  ]),
   updateUser: PropTypes.func,
   updateUserTransactions: PropTypes.func,
   updateUserList: PropTypes.func,

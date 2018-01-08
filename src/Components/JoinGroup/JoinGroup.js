@@ -193,5 +193,8 @@ JoinGroup.propTypes = {
   updateGroup: PropTypes.func,
   updateUserTransactions: PropTypes.func,
   updateGroupTransactions: PropTypes.func,
-  history: PropTypes.object
+  history: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object
+  ])
 };
