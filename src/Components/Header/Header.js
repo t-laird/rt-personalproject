@@ -25,7 +25,7 @@ export const Header = (props) => {
       <div>
         <NavLink 
           className="user" 
-          to='/user'>
+          to='/snap-ninja/user'>
           {props.user.name}
           <img 
             src={require('./assets/user.svg')} 
@@ -33,14 +33,14 @@ export const Header = (props) => {
         </NavLink>
         <NavLink 
           className="group" 
-          to='/group'>{props.group.group_name} group
+          to='/snap-ninja/group'>{props.group.group_name} group
           <img 
             src={require('./assets/group.svg')} 
             alt="group icon" />
         </NavLink>
         <NavLink 
           className="logout" 
-          to='/' 
+          to='/snap-ninja/' 
           onClick={logout} >LOGOUT</NavLink>
       </div>
     );
@@ -52,19 +52,19 @@ export const Header = (props) => {
     if (Object.keys(props.group).length) {
       displayTabs = (
         <div className="nav-tabs">
-          <NavLink exact to="/">HOME</NavLink>
-          <NavLink to="/user">USER</NavLink>
-          <NavLink to="/group">GROUP</NavLink>
-          <NavLink to="/creategroup">CREATE</NavLink>
-          <NavLink to="/joingroup">JOIN</NavLink>
+          <NavLink exact to="/snap-ninja/">HOME</NavLink>
+          <NavLink to="/snap-ninja/user">USER</NavLink>
+          <NavLink to="/snap-ninja/group">GROUP</NavLink>
+          <NavLink to="/snap-ninja/creategroup">CREATE</NavLink>
+          <NavLink to="/snap-ninja/joingroup">JOIN</NavLink>
         </div>
       );
     } else {
       displayTabs = (
         <div className="nav-tabs">
-          <NavLink exact to="/">HOME</NavLink>
-          <NavLink to="/creategroup">CREATE</NavLink>
-          <NavLink to="/joingroup">JOIN</NavLink>
+          <NavLink exact to="/snap-ninja/">HOME</NavLink>
+          <NavLink to="/snap-ninja/creategroup">CREATE</NavLink>
+          <NavLink to="/snap-ninja/joingroup">JOIN</NavLink>
         </div>
       );
     }
@@ -73,7 +73,7 @@ export const Header = (props) => {
   return (
     <div className="header-component">
       <NavLink 
-        exact to='/'>
+        exact to='/snap-ninja/'>
         <h1>SNAP
           <img 
             className="header-logo" 
