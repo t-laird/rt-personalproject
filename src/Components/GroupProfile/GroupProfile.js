@@ -5,7 +5,7 @@ import './GroupProfile.css';
 import PropTypes from 'prop-types';
 
 
-class GroupProfile extends Component {
+export class GroupProfile extends Component {
 
   generateChartArea = () => {
     const { GroupTransactions } = this.props;
@@ -87,7 +87,7 @@ class GroupProfile extends Component {
   }
 }
 
-const mapStateToProps = ( store ) => ({
+export const mapStateToProps = ( store ) => ({
   GroupTransactions: store.GroupTransactions,
   Group: store.Group
 });
