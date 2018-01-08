@@ -26,8 +26,26 @@ describe('UserProfile tests', () => {
       Group: mockGroupData
     };
     let renderedUserProfile = shallow(<UserProfile {...newProps} />);
+
     expect(renderedUserProfile).toMatchSnapshot();
   });
+
+  it('getTickValues should return null if there are user transactions in store', () => {
+    let renderedUserProfile = shallow(<UserProfile {...mockProps} />);
+
+    expect(renderedUserProfile.instance().getTickValues()).toEqual(null);
+  })
+
+  it('getTickValues should return an array of tick values when there are no transactions in store', () => {
+    let newProps = {
+      UserTransactions: [],
+      Group: mockGroupData
+    };
+    let renderedUserProfile = shallow(<UserProfile {...newProps} />);
+    const expected = ['10', '20', '30', '40', '50'];
+
+    expect(renderedUserProfile.instance().getTickValues()).toEqual(expected);
+  })
 });
 
 describe('mapStateToProps tests', () => {
