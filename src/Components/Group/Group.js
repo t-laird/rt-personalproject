@@ -26,7 +26,7 @@ export class Group extends Component {
         <GroupData />
         <Leaderboard />
         <GroupProfile />
-        <NavLink className="join-group" to='/joingroup'>SWITCH GROUPS</NavLink>
+        <NavLink className="join-group" to='/snap-ninja/joingroup'>SWITCH GROUPS</NavLink>
       </div>
     ); 
   }
