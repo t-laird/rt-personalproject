@@ -49,11 +49,11 @@ ShallowWrapper {
                     className="create-bottom"
           >
                     <h5>
-                              How many snaps will your group members be able to give away? 
+                              How many snaps will your group members be able to give away?
                               <span
                                         className="join-span"
                               >
-                                        (We recommend 50)
+                                        (Between 1 - 500)
                               </span>
                     </h5>
                     <input
@@ -64,6 +64,9 @@ ShallowWrapper {
                               value=""
                     />
           </div>
+          <div
+                    className="success-message"
+          />
           <button
                     onClick={[Function]}
           >
@@ -126,11 +129,11 @@ ShallowWrapper {
               className="create-bottom"
 >
               <h5>
-                            How many snaps will your group members be able to give away? 
+                            How many snaps will your group members be able to give away?
                             <span
                                           className="join-span"
                             >
-                                          (We recommend 50)
+                                          (Between 1 - 500)
                             </span>
               </h5>
               <input
@@ -141,6 +144,9 @@ ShallowWrapper {
                             value=""
               />
 </div>,
+            <div
+              className="success-message"
+/>,
             <button
               onClick={[Function]}
 >
@@ -218,11 +224,11 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <h5>
-                  How many snaps will your group members be able to give away? 
+                  How many snaps will your group members be able to give away?
                   <span
                                     className="join-span"
                   >
-                                    (We recommend 50)
+                                    (Between 1 - 500)
                   </span>
 </h5>,
                 <input
@@ -243,27 +249,27 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "How many snaps will your group members be able to give away? ",
+                    "How many snaps will your group members be able to give away?",
                     <span
                       className="join-span"
 >
-                      (We recommend 50)
+                      (Between 1 - 500)
 </span>,
                   ],
                 },
                 "ref": null,
                 "rendered": Array [
-                  "How many snaps will your group members be able to give away? ",
+                  "How many snaps will your group members be able to give away?",
                   Object {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "(We recommend 50)",
+                      "children": "(Between 1 - 500)",
                       "className": "join-span",
                     },
                     "ref": null,
-                    "rendered": "(We recommend 50)",
+                    "rendered": "(Between 1 - 500)",
                     "type": "span",
                   },
                 ],
@@ -285,6 +291,18 @@ ShallowWrapper {
                 "type": "input",
               },
             ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "",
+              "className": "success-message",
+            },
+            "ref": null,
+            "rendered": "",
             "type": "div",
           },
           Object {
@@ -341,11 +359,11 @@ ShallowWrapper {
                         className="create-bottom"
             >
                         <h5>
-                                    How many snaps will your group members be able to give away? 
+                                    How many snaps will your group members be able to give away?
                                     <span
                                                 className="join-span"
                                     >
-                                                (We recommend 50)
+                                                (Between 1 - 500)
                                     </span>
                         </h5>
                         <input
@@ -356,6 +374,9 @@ ShallowWrapper {
                                     value=""
                         />
             </div>
+            <div
+                        className="success-message"
+            />
             <button
                         onClick={[Function]}
             >
@@ -418,11 +439,11 @@ ShallowWrapper {
                 className="create-bottom"
 >
                 <h5>
-                                How many snaps will your group members be able to give away? 
+                                How many snaps will your group members be able to give away?
                                 <span
                                                 className="join-span"
                                 >
-                                                (We recommend 50)
+                                                (Between 1 - 500)
                                 </span>
                 </h5>
                 <input
@@ -433,6 +454,9 @@ ShallowWrapper {
                                 value=""
                 />
 </div>,
+              <div
+                className="success-message"
+/>,
               <button
                 onClick={[Function]}
 >
@@ -510,11 +534,11 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <h5>
-                    How many snaps will your group members be able to give away? 
+                    How many snaps will your group members be able to give away?
                     <span
                                         className="join-span"
                     >
-                                        (We recommend 50)
+                                        (Between 1 - 500)
                     </span>
 </h5>,
                   <input
@@ -535,27 +559,27 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      "How many snaps will your group members be able to give away? ",
+                      "How many snaps will your group members be able to give away?",
                       <span
                         className="join-span"
 >
-                        (We recommend 50)
+                        (Between 1 - 500)
 </span>,
                     ],
                   },
                   "ref": null,
                   "rendered": Array [
-                    "How many snaps will your group members be able to give away? ",
+                    "How many snaps will your group members be able to give away?",
                     Object {
                       "instance": null,
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "(We recommend 50)",
+                        "children": "(Between 1 - 500)",
                         "className": "join-span",
                       },
                       "ref": null,
-                      "rendered": "(We recommend 50)",
+                      "rendered": "(Between 1 - 500)",
                       "type": "span",
                     },
                   ],
@@ -577,6 +601,18 @@ ShallowWrapper {
                   "type": "input",
                 },
               ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "",
+                "className": "success-message",
+              },
+              "ref": null,
+              "rendered": "",
               "type": "div",
             },
             Object {

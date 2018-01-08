@@ -737,6 +737,7 @@ ShallowWrapper {
             "email": "cpavin@usopen.com",
             "group_id": 1,
             "name": "Corey Pavin",
+            "slack_id": "lkjsdf0234",
             "user_id": 95,
           }
     }

@@ -68,6 +68,9 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
+          className="new-user-message"
+/>,
+        <div
           className="current-points"
 >
           <div
@@ -177,6 +180,18 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "className": "new-user-message",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -682,6 +697,9 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
+            className="new-user-message"
+/>,
+          <div
             className="current-points"
 >
             <div
@@ -791,6 +809,18 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "new-user-message",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
         Object {
           "instance": null,
           "key": undefined,
