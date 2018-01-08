@@ -1,7 +1,7 @@
 import getKeyFromLS from '../../getKeyFromLS';
 
 const getUser = async () => {
-  const user = await fetch('http://localhost:3000/api/v1/users/', {
+  const user = await fetch('https://snapninja.herokuapp.com/api/v1/users/', {
     method: 'GET',
     headers: {
       "x-token": getKeyFromLS(),

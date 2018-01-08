@@ -1,7 +1,7 @@
 import getKeyFromLS from '../../getKeyFromLS';
 
 const getGroupSettings = async (userData) => {
-  const groupDataResponse = await fetch(`http://localhost:3000/api/v1/group/${userData.group_id}`, {
+  const groupDataResponse = await fetch(`https://snapninja.herokuapp.com/api/v1/group/${userData.group_id}`, {
 	  method: 'GET',
 	  headers: {
 	    'CONTENT-TYPE': 'application/json',

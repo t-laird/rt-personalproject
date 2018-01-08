@@ -2,7 +2,7 @@ import getKeyFromLS from '../../getKeyFromLS';
 
 const getTransactionData = async (userData) => {
   // userData.created_date = "2017-11-18T18:34:30.017Z";
-  const userTransactionData = await fetch('http://localhost:3000/api/v1/events/getuserdata/', {
+  const userTransactionData = await fetch('https://snapninja.herokuapp.com/api/v1/events/getuserdata/', {
 	  method: 'POST',
 	  headers: {
 	    "x-token": getKeyFromLS(),
