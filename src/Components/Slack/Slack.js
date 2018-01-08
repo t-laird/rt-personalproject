@@ -3,7 +3,7 @@ import './Slack.css';
 import { connect } from 'react-redux';
 import validateSlackId from '../../helpers/fetches/validateSlackId/validateSlackId';
 
-class Slack extends Component {
+export class Slack extends Component {
   constructor() {
     super();
     this.state = {
