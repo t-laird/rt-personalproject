@@ -11,7 +11,6 @@ import getGroupSettings from '../../helpers/fetches/getGroupSettings/getGroupSet
 import getGroupTransactionData from '../../helpers/fetches/getGroupTransactionData/getGroupTransactionData';
 import getTransactionData from '../../helpers/fetches/getTransactionData/getTransactionData';
 import getUser from '../../helpers/fetches/getUser/getUser';
-import clearLocalStorage from '../../helpers/clearLocalStorage';
 
 
 export class Transaction extends Component {
@@ -183,8 +182,6 @@ export class Transaction extends Component {
       this.props.updateUserList(usersInGroup);
     } catch (error) {
       window.location="https://tr-personal-proj.e1.loginrocket.com";
-      
-      console.log('error: ', error);
       return;
     }
   }
@@ -424,5 +421,6 @@ Transaction.propTypes = {
   updateUserTransactions: PropTypes.func,
   updateGroupTransactions: PropTypes.func,
   updateUserList: PropTypes.func,
-  updateUserGroup: PropTypes.func
+  updateUserGroup: PropTypes.func,
+  updateGroup: PropTypes.func
 };
