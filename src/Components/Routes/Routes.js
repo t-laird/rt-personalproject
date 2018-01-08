@@ -15,8 +15,8 @@ import './Routes.css';
 const Routes = ({ location }) => {
   return (
     <div className="routes">
-      <Route path='/login' component={Login} />
-      <Route path='/' component={Header} />
+      <Route path='/snap-ninja/login' component={Login} />
+      <Route path='/snap-ninja/' component={Header} />
       <TransitionGroup className="switch-routes">
         <CSSTransition 
           key={location.key} 

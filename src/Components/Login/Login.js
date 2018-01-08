@@ -16,6 +16,7 @@ import * as actions from '../../Actions/index.js';
 export class Login extends Component {
 
   componentDidMount = async () => {
+    console.log('login componentDidMount');
     await this.fetchUserData();
     if (this.props.location.pathname === '/login/slack') {
       this.props.history.push('/slack');
@@ -34,10 +35,10 @@ export class Login extends Component {
         await this.loadGroupTransactionData(groupData);
       }
       if (!userData.group_id) {
-        this.props.history.push('/joingroup');
+        this.props.history.push('/snap-ninja/joingroup');
         return;
       }
-      this.props.history.push('/user');
+      this.props.history.push('/snap-ninja/user');
     }
   }
 
@@ -115,10 +116,11 @@ export class Login extends Component {
 
   getToken () {
     const removeToken = new RegExp(/\?token=/);
-    const removeSignup = new RegExp(/\&signup=true/);
-
+    const removeSignup = new RegExp(/\&signup=true/);  
     const parseToken = this.props.location.search.replace(removeToken, '');
     const parseSignup = parseToken.replace(removeSignup, '');
+
+    console.log(parseSignup);
 
     return parseSignup;
   }

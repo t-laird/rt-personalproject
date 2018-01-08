@@ -8,6 +8,8 @@ const getUser = async () => {
       "CONTENT-TYPE": 'application/json'
     }
   });
+  console.log(getKeyFromLS());
+  console.log(user);
   const userData = await user.json();
 
   return userData[0];
