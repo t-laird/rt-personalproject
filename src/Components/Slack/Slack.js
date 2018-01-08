@@ -86,6 +86,9 @@ export const mapStateToProps = ( store ) => ({
 export default connect(mapStateToProps, null)(Slack);
 
 Slack.propTypes = {
-  User: PropTypes.array,
-  history: PropTypes.object
+  User: PropTypes.object,
+  history: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object
+  ])
 };

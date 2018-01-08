@@ -7,7 +7,7 @@ import mockGroupTransactions from '../../mockData/mockGroupTransactions';
 
 describe('leaderboard tests', () => {
   it('should match the snapshot', () => {
-    const renderedApp = shallow(<Leaderboard GroupTransactions={{}} />);
+    const renderedApp = shallow(<Leaderboard GroupTransactions={[]} />);
 
     expect(renderedApp).toMatchSnapshot();
   });

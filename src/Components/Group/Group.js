@@ -40,5 +40,8 @@ export default connect(mapStateToProps, null)(Group);
 
 Group.propTypes = {
   User: PropTypes.object,
-  history: PropTypes.object
+  history: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object
+  ])
 };

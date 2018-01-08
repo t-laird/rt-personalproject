@@ -25,7 +25,7 @@ describe('make group tests', () => {
     const mockPassword = 'f3fj8h';
     const mockPoints = 50;
     const expected = [
-      'http://localhost:3000/api/v1/group/new',
+      'https://snapninja.herokuapp.com/api/v1/group/new',
       {
         method: 'POST',
         body: JSON.stringify({

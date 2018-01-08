@@ -18,7 +18,7 @@ describe('get user tests', () => {
 
   it('getUser is called with the correct params', async () => {
     const expected = [
-      'http://localhost:3000/api/v1/users/',
+      'https://snapninja.herokuapp.com/api/v1/users/',
       {
         method: 'GET',
         headers: { 

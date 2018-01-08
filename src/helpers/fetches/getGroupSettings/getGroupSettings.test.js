@@ -19,7 +19,7 @@ describe('get group settings tests', () => {
 
   it('getGroupSettings is called with the correct params', async () => {
     const expected = [
-      'http://localhost:3000/api/v1/group/1',
+      'https://snapninja.herokuapp.com/api/v1/group/1',
       {
         method: 'GET',
         headers: { 

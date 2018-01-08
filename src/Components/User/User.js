@@ -51,5 +51,8 @@ export default connect(mapStateToProps, null)(User);
 
 User.propTypes = {
   User: PropTypes.object,
-  history: PropTypes.oneOf(['object', 'array'])
+  history: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object
+  ])
 };

@@ -16,6 +16,7 @@ ShallowWrapper {
             "user_id": 95,
           }
     }
+    history={Array []}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -205,6 +206,7 @@ ShallowWrapper {
             "user_id": 95,
           }
     }
+    history={Array []}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

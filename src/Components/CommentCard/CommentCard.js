@@ -29,9 +29,9 @@ const CommentCard = ({ displayTextIndex, value, note, sender, day }) => {
 export default CommentCard;
 
 CommentCard.propTypes = {
-  displayTextIndex: PropTypes.string,
-  value: PropTypes.string,
+  displayTextIndex: PropTypes.number,
+  value: PropTypes.number,
   note: PropTypes.string,
   sender: PropTypes.string,
-  day: PropTypes.number
+  day: PropTypes.string
 };
