@@ -14,9 +14,6 @@ import { connect } from 'react-redux';
 import * as actions from '../../Actions/index.js';
 
 export class Login extends Component {
-  constructor() {
-    super();
-  }
 
   componentDidMount = async () => {
     await this.fetchUserData();

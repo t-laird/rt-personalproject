@@ -804,6 +804,7 @@ ShallowWrapper {
                                                   To switch groups, simply enter your new group's passphrase in the box.
                                         </h5>
                                         <img
+                                                  alt="arrow"
                                                   className="arrow-graphic"
                                                   src="curved-arrow.svg"
                                         />
@@ -884,6 +885,7 @@ ShallowWrapper {
                                                         To switch groups, simply enter your new group's passphrase in the box.
                                           </h5>
                                           <img
+                                                        alt="arrow"
                                                         className="arrow-graphic"
                                                         src="curved-arrow.svg"
                                           />
@@ -966,6 +968,7 @@ ShallowWrapper {
                                                       To switch groups, simply enter your new group's passphrase in the box.
                                     </h5>
                                     <img
+                                                      alt="arrow"
                                                       className="arrow-graphic"
                                                       src="curved-arrow.svg"
                                     />
@@ -1023,6 +1026,7 @@ ShallowWrapper {
                                             To switch groups, simply enter your new group's passphrase in the box.
                       </h5>
                       <img
+                                            alt="arrow"
                                             className="arrow-graphic"
                                             src="curved-arrow.svg"
                       />
@@ -1158,6 +1162,7 @@ ShallowWrapper {
                           To switch groups, simply enter your new group's passphrase in the box.
 </h5>,
                         <img
+                          alt="arrow"
                           className="arrow-graphic"
                           src="curved-arrow.svg"
 />,
@@ -1182,6 +1187,7 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
+                          "alt": "arrow",
                           "className": "arrow-graphic",
                           "src": "curved-arrow.svg",
                         },
@@ -1306,6 +1312,7 @@ ShallowWrapper {
                                                             To switch groups, simply enter your new group's passphrase in the box.
                                                 </h5>
                                                 <img
+                                                            alt="arrow"
                                                             className="arrow-graphic"
                                                             src="curved-arrow.svg"
                                                 />
@@ -1386,6 +1393,7 @@ ShallowWrapper {
                                                                 To switch groups, simply enter your new group's passphrase in the box.
                                                 </h5>
                                                 <img
+                                                                alt="arrow"
                                                                 className="arrow-graphic"
                                                                 src="curved-arrow.svg"
                                                 />
@@ -1468,6 +1476,7 @@ ShallowWrapper {
                                                             To switch groups, simply enter your new group's passphrase in the box.
                                         </h5>
                                         <img
+                                                            alt="arrow"
                                                             className="arrow-graphic"
                                                             src="curved-arrow.svg"
                                         />
@@ -1525,6 +1534,7 @@ ShallowWrapper {
                                                 To switch groups, simply enter your new group's passphrase in the box.
                         </h5>
                         <img
+                                                alt="arrow"
                                                 className="arrow-graphic"
                                                 src="curved-arrow.svg"
                         />
@@ -1660,6 +1670,7 @@ ShallowWrapper {
                             To switch groups, simply enter your new group's passphrase in the box.
 </h5>,
                           <img
+                            alt="arrow"
                             className="arrow-graphic"
                             src="curved-arrow.svg"
 />,
@@ -1684,6 +1695,7 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
+                            "alt": "arrow",
                             "className": "arrow-graphic",
                             "src": "curved-arrow.svg",
                           },

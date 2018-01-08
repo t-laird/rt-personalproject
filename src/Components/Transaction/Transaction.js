@@ -35,7 +35,7 @@ export class Transaction extends Component {
 
   pointStatus() {
     const { points } = this.state;
-    const parsePoints = parseInt(points);
+    const parsePoints = parseInt(points, 10);
 
     if (
       (isNaN(parsePoints) || 
@@ -79,7 +79,7 @@ export class Transaction extends Component {
       send_id: this.props.User.user_id,
       receive_id: findReceivingUser.user_id,
       group_id: this.props.User.group_id,
-      point_value: parseInt(this.state.points),
+      point_value: parseInt(this.state.points, 10),
       recipient_name: findReceivingUser.name,
       note: this.state.note
     };
