@@ -48,7 +48,7 @@ export class JoinGroup extends Component {
           </div>
           <div className="join-group-last">
             <h5>{'To switch groups, simply enter your new group\'s passphrase in the box.'}</h5>
-            <img className="arrow-graphic" src={require('./assets/curved-arrow.svg')} />
+            <img className="arrow-graphic" alt="arrow" src={require('./assets/curved-arrow.svg')} />
           </div>
           <button
             onClick={this.joinGroup}

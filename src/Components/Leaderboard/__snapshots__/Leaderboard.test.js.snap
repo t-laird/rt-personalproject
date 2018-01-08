@@ -39,6 +39,7 @@ ShallowWrapper {
                     className="this-week-center"
           >
                     <img
+                              alt="arrow-left"
                               className="this-week-arrows"
                               src="arrow-left.svg"
                     />
@@ -46,6 +47,7 @@ ShallowWrapper {
                               THIS WEEK
                     </h5>
                     <img
+                              alt="arrow-right"
                               className="this-week-arrows"
                               src="arrow-right.svg"
                     />
@@ -66,6 +68,7 @@ ShallowWrapper {
                     className="givers"
           >
                     <img
+                              alt="ribbon-white"
                               className="ribbon"
                               src="ribbon-white.svg"
                     />
@@ -79,6 +82,7 @@ ShallowWrapper {
                     className="earners"
           >
                     <img
+                              alt="ribbon-brown"
                               className="ribbon"
                               src="ribbon-brown.svg"
                     />
@@ -128,6 +132,7 @@ ShallowWrapper {
               className="this-week-center"
 >
               <img
+                            alt="arrow-left"
                             className="this-week-arrows"
                             src="arrow-left.svg"
               />
@@ -135,6 +140,7 @@ ShallowWrapper {
                             THIS WEEK
               </h5>
               <img
+                            alt="arrow-right"
                             className="this-week-arrows"
                             src="arrow-right.svg"
               />
@@ -166,6 +172,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <img
+                  alt="arrow-left"
                   className="this-week-arrows"
                   src="arrow-left.svg"
 />,
@@ -173,6 +180,7 @@ ShallowWrapper {
                   THIS WEEK
 </h5>,
                 <img
+                  alt="arrow-right"
                   className="this-week-arrows"
                   src="arrow-right.svg"
 />,
@@ -186,6 +194,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "alt": "arrow-left",
                   "className": "this-week-arrows",
                   "src": "arrow-left.svg",
                 },
@@ -209,6 +218,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "alt": "arrow-right",
                   "className": "this-week-arrows",
                   "src": "arrow-right.svg",
                 },
@@ -248,6 +258,7 @@ ShallowWrapper {
               className="givers"
 >
               <img
+                            alt="ribbon-white"
                             className="ribbon"
                             src="ribbon-white.svg"
               />
@@ -261,6 +272,7 @@ ShallowWrapper {
               className="earners"
 >
               <img
+                            alt="ribbon-brown"
                             className="ribbon"
                             src="ribbon-brown.svg"
               />
@@ -289,6 +301,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <img
+                  alt="ribbon-white"
                   className="ribbon"
                   src="ribbon-white.svg"
 />,
@@ -303,6 +316,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "alt": "ribbon-white",
                   "className": "ribbon",
                   "src": "ribbon-white.svg",
                 },
@@ -333,6 +347,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <img
+                  alt="ribbon-brown"
                   className="ribbon"
                   src="ribbon-brown.svg"
 />,
@@ -347,6 +362,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "alt": "ribbon-brown",
                   "className": "ribbon",
                   "src": "ribbon-brown.svg",
                 },
@@ -390,6 +406,7 @@ ShallowWrapper {
                         className="this-week-center"
             >
                         <img
+                                    alt="arrow-left"
                                     className="this-week-arrows"
                                     src="arrow-left.svg"
                         />
@@ -397,6 +414,7 @@ ShallowWrapper {
                                     THIS WEEK
                         </h5>
                         <img
+                                    alt="arrow-right"
                                     className="this-week-arrows"
                                     src="arrow-right.svg"
                         />
@@ -417,6 +435,7 @@ ShallowWrapper {
                         className="givers"
             >
                         <img
+                                    alt="ribbon-white"
                                     className="ribbon"
                                     src="ribbon-white.svg"
                         />
@@ -430,6 +449,7 @@ ShallowWrapper {
                         className="earners"
             >
                         <img
+                                    alt="ribbon-brown"
                                     className="ribbon"
                                     src="ribbon-brown.svg"
                         />
@@ -479,6 +499,7 @@ ShallowWrapper {
                 className="this-week-center"
 >
                 <img
+                                alt="arrow-left"
                                 className="this-week-arrows"
                                 src="arrow-left.svg"
                 />
@@ -486,6 +507,7 @@ ShallowWrapper {
                                 THIS WEEK
                 </h5>
                 <img
+                                alt="arrow-right"
                                 className="this-week-arrows"
                                 src="arrow-right.svg"
                 />
@@ -517,6 +539,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <img
+                    alt="arrow-left"
                     className="this-week-arrows"
                     src="arrow-left.svg"
 />,
@@ -524,6 +547,7 @@ ShallowWrapper {
                     THIS WEEK
 </h5>,
                   <img
+                    alt="arrow-right"
                     className="this-week-arrows"
                     src="arrow-right.svg"
 />,
@@ -537,6 +561,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "alt": "arrow-left",
                     "className": "this-week-arrows",
                     "src": "arrow-left.svg",
                   },
@@ -560,6 +585,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "alt": "arrow-right",
                     "className": "this-week-arrows",
                     "src": "arrow-right.svg",
                   },
@@ -599,6 +625,7 @@ ShallowWrapper {
                 className="givers"
 >
                 <img
+                                alt="ribbon-white"
                                 className="ribbon"
                                 src="ribbon-white.svg"
                 />
@@ -612,6 +639,7 @@ ShallowWrapper {
                 className="earners"
 >
                 <img
+                                alt="ribbon-brown"
                                 className="ribbon"
                                 src="ribbon-brown.svg"
                 />
@@ -640,6 +668,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <img
+                    alt="ribbon-white"
                     className="ribbon"
                     src="ribbon-white.svg"
 />,
@@ -654,6 +683,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "alt": "ribbon-white",
                     "className": "ribbon",
                     "src": "ribbon-white.svg",
                   },
@@ -684,6 +714,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <img
+                    alt="ribbon-brown"
                     className="ribbon"
                     src="ribbon-brown.svg"
 />,
@@ -698,6 +729,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "alt": "ribbon-brown",
                     "className": "ribbon",
                     "src": "ribbon-brown.svg",
                   },

@@ -50,21 +50,29 @@ export class Leaderboard extends Component {
         <div className="leaderboard-subhead">
           <h4 className="givers-heading">TOP GIVERS</h4>
           <div className="this-week-center">
-            <img className="this-week-arrows" src={require('./assets/arrow-left.svg')} />
+            <img 
+              className="this-week-arrows" 
+              alt="arrow-left" 
+              src={require('./assets/arrow-left.svg')} 
+            />
             <h5>THIS WEEK</h5>
-            <img className="this-week-arrows" src={require('./assets/arrow-right.svg')} />
+            <img 
+              className="this-week-arrows" 
+              alt="arrow-right" 
+              src={require('./assets/arrow-right.svg')} 
+            />
           </div>
           <h4>TOP EARNERS</h4>
         </div>
         <div className="leaders-holder">
           <h4 className="small-only">TOP GIVERS</h4>
           <div className="givers">
-            <img className="ribbon" src={require('./assets/ribbon-white.svg')} />
+            <img className="ribbon" alt="ribbon-white" src={require('./assets/ribbon-white.svg')} />
             {this.displayLeaders('send_name')}
           </div>
           <h4 className="small-only">TOP EARNERS</h4>
           <div className="earners">
-            <img className="ribbon" src={require('./assets/ribbon-brown.svg')} />
+            <img className="ribbon" alt="ribbon-brown" src={require('./assets/ribbon-brown.svg')} />
             {this.displayLeaders('received_name')}
           </div>
         </div>
