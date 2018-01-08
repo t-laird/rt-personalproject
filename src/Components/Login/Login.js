@@ -12,14 +12,13 @@ import getUser from '../../helpers/fetches/getUser/getUser';
 import { connect } from 'react-redux';
 import * as actions from '../../Actions/index.js';
 
-class Login extends Component {
+export class Login extends Component {
   constructor() {
     super();
   }
 
   componentDidMount = async () => {
     await this.fetchUserData();
-    
     if (this.props.location.pathname === '/login/slack') {
       this.props.history.push('/slack');
     }
@@ -35,6 +34,10 @@ class Login extends Component {
         await this.loadUsersInGroup(userData);
         const groupData = await this.loadGroupSettings(userData);
         await this.loadGroupTransactionData(groupData);
+      }
+      if (!userData.group_id) {
+        this.props.history.push('/joingroup');
+        return;
       }
       this.props.history.push('/user');
     }
@@ -136,7 +139,7 @@ class Login extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   logoutUser: () => {
     dispatch(actions.logoutUser());
   },
@@ -161,11 +164,11 @@ export default connect(null, mapDispatchToProps)(Login);
 
 Login.propTypes = {
   user: PropTypes.object,
-  history: PropTypes.object,
+  history: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   updateUser: PropTypes.func,
   updateUserTransactions: PropTypes.func,
   updateUserList: PropTypes.func,
   updateGroupTransactions: PropTypes.func,
   updateGroup: PropTypes.func,
-  location: PropTypes.object.func
+  location: PropTypes.object
 };

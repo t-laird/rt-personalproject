@@ -4,6 +4,7 @@ export const mockUserData = {
   email: "cpavin@usopen.com",
   group_id: 1,
   name: "Corey Pavin",
-  user_id: 95
+  user_id: 95,
+  slack_id: 'lkjsdf0234'
 };
 
