@@ -105,7 +105,7 @@ export class Transaction extends Component {
       return;
     }
 
-    const submitEvent = await fetch('http://localhost:3000/api/v1/eventtracking/new', {
+    const submitEvent = await fetch('https://snapninja.herokuapp.com/api/v1/eventtracking/new', {
       method: 'POST',
       headers: {
         'CONTENT-TYPE': 'application/json',
