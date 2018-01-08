@@ -5,6 +5,14 @@ import './Transaction.css';
 import getKeyFromLS from '../../helpers/getKeyFromLS';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import * as actions from '../../Actions';
+import getUsersInGroup from '../../helpers/fetches/getUsersInGroup/getUsersInGroup';
+import getGroupSettings from '../../helpers/fetches/getGroupSettings/getGroupSettings';
+import getGroupTransactionData from '../../helpers/fetches/getGroupTransactionData/getGroupTransactionData';
+import getTransactionData from '../../helpers/fetches/getTransactionData/getTransactionData';
+import getUser from '../../helpers/fetches/getUser/getUser';
+import clearLocalStorage from '../../helpers/clearLocalStorage';
+
 
 export class Transaction extends Component {
   constructor() {
@@ -122,6 +130,9 @@ export class Transaction extends Component {
         transactionMessage: `Successfully sent ${this.state.points} points to ${transactionInformation.recipient_name}.`,
         points: ''
       });
+
+      this.fetchUserData();
+
     } else if (submitResponse.status === 'failure') {
       this.setState({
         recipient: '',
@@ -130,6 +141,78 @@ export class Transaction extends Component {
       });
     }
 
+  }
+
+  fetchUserData = async () => {
+    const userData = await this.loadUser();
+    if (userData) {
+      await this.loadTransactionData(userData);
+      if (userData.group_id !== null) {
+        await this.loadUsersInGroup(userData);
+        const groupData = await this.loadGroupSettings(userData);
+        await this.loadGroupTransactionData(groupData);
+      }
+    }
+  }
+
+  loadUser = async () => {
+    try {
+      const user = await getUser();
+      this.props.updateUser(user);
+      return user;
+    } catch (error) {
+      window.location="https://tr-personal-proj.e1.loginrocket.com";
+      return;
+    }
+  }
+
+  loadTransactionData = async (userData) => {
+    try {
+      const userTransactions = await getTransactionData(userData);
+      this.props.updateUserTransactions(userTransactions);
+    } catch (error) {
+      window.location="https://tr-personal-proj.e1.loginrocket.com";
+      return;
+    }
+  }
+
+  loadUsersInGroup = async (userData) => {
+    try {
+      const usersInGroup = await getUsersInGroup(userData);
+
+      this.props.updateUserList(usersInGroup);
+    } catch (error) {
+      window.location="https://tr-personal-proj.e1.loginrocket.com";
+      
+      console.log('error: ', error);
+      return;
+    }
+  }
+
+  loadGroupSettings = async (userData) => {
+    try {
+      if (!userData.group_id) {
+        throw new Error('user not in group');
+      }
+      const groupData = await getGroupSettings(userData);
+
+      this.props.updateGroup(groupData);
+      return groupData;
+    } catch (error) {
+      window.location="https://tr-personal-proj.e1.loginrocket.com";
+      return; 
+    }
+  }
+
+  loadGroupTransactionData = async (groupData) => {
+    try {
+      const groupTransactions = await getGroupTransactionData(groupData);
+      this.props.updateGroupTransactions(groupTransactions);
+
+    } catch (error) {
+      window.location="https://tr-personal-proj.e1.loginrocket.com/";
+      return;
+    }
   }
 
   getReceivedPoints = () => {
@@ -311,12 +394,35 @@ export const mapStateToProps = ( store ) => ({
   Group: store.Group
 });
 
+export const mapDispatchToProps = ( dispatch ) => ({
+  updateUser: user => {
+    dispatch(actions.updateUser(user));
+  },
+  updateUserTransactions: transactions => {
+    dispatch(actions.updateUserTransactions(transactions));
+  },
+  updateGroupTransactions: groupTransactions => {
+    dispatch(actions.updateGroupTransactions(groupTransactions));
+  },
+  updateUserList: users => {
+    dispatch(actions.updateUserList(users));
+  },
+  updateGroup: group => {
+    dispatch(actions.updateGroup(group));
+  }
+});
 
-export default connect(mapStateToProps, null)(Transaction);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Transaction);
 
 Transaction.propTypes = {
   User: PropTypes.object,
   Group: PropTypes.object,
   UserList: PropTypes.array,
-  UserTransactions: PropTypes.array
+  UserTransactions: PropTypes.array,
+  updateUser: PropTypes.func,
+  updateUserTransactions: PropTypes.func,
+  updateGroupTransactions: PropTypes.func,
+  updateUserList: PropTypes.func,
+  updateUserGroup: PropTypes.func
 };
