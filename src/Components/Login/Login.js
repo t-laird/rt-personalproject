@@ -16,17 +16,17 @@ import * as actions from '../../Actions/index.js';
 export class Login extends Component {
 
   componentDidMount = async () => {
-    console.log('login componentDidMount');
     await this.fetchUserData();
     if (this.props.location.pathname === '/login/slack') {
       this.props.history.push('/slack');
     }
   }
 
-  fetchUserData = async () => {
+  fetchUserData = async () => {    
     this.checkForKey();
 
     const userData = await this.loadUser();
+
     if (userData) {
       await this.loadTransactionData(userData);
       if (userData.group_id !== null) {
@@ -119,8 +119,6 @@ export class Login extends Component {
     const removeSignup = new RegExp(/\&signup=true/);  
     const parseToken = this.props.location.search.replace(removeToken, '');
     const parseSignup = parseToken.replace(removeSignup, '');
-
-    console.log(parseSignup);
 
     return parseSignup;
   }
