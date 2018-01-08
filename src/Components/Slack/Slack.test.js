@@ -31,7 +31,7 @@ describe('Slack component tests', () => {
     expect(renderedSlack.instance().props.history).toContain(expectedHistory);
   });
 
-  it('should show a message indicating that the user has already linked their slack account when appropriate', () => {
+  it('should indicate thatuser has already linked slack account when appropriate', () => {
     renderedSlack.setProps({
       User: {name: 'test', slack_id: 'truthystring'}
     });

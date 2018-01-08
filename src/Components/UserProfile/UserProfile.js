@@ -72,7 +72,7 @@ export class UserProfile extends Component {
       const transactionCount = this.props.UserTransactions.reduce((count, week) => {
         count += week.sent.length + week.received.length;
         return count;
-      }, 0)
+      }, 0);
 
       if (transactionCount > 0) {
         return null;
@@ -85,7 +85,12 @@ export class UserProfile extends Component {
   generateChart = () => {
     return (
       <div className="user-profile-component">
-        <h4>{`Last ${this.props.UserTransactions.length} Week${this.props.UserTransactions.length === 1 ? '' : 's'}`}</h4>
+        <h4>
+          {
+            `Last ${this.props.UserTransactions.length} 
+            Week${this.props.UserTransactions.length === 1 ? '' : 's'}`
+          }
+        </h4>
         <VictoryChart>
           {this.generateReceivedLine()}
           {this.generateSentLine()}

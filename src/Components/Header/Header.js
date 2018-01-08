@@ -58,7 +58,7 @@ export const Header = (props) => {
           <NavLink to="/creategroup">CREATE</NavLink>
           <NavLink to="/joingroup">JOIN</NavLink>
         </div>
-      )
+      );
     } else {
       displayTabs = (
         <div className="nav-tabs">
@@ -66,7 +66,7 @@ export const Header = (props) => {
           <NavLink to="/creategroup">CREATE</NavLink>
           <NavLink to="/joingroup">JOIN</NavLink>
         </div>
-      )
+      );
     }
   }
 

@@ -1,10 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import {
-  Header,
-  mapDispatchToProps,
-  mapStateToProps
-} from './Header';
+import { Header } from './Header';
 
 
 describe('Header component tests', () => {

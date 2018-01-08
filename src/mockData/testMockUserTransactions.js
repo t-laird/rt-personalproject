@@ -1,5 +1,3 @@
-import { mockUserData } from "./mockUserData";
-
 const mockUserTransactions = [
   {
     received: [
