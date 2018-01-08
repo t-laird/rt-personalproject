@@ -2,7 +2,7 @@ import getKeyFromLS from '../../getKeyFromLS';
 
 const makeGroup = async (groupName, weeklyPoints, password) => {
 
-  const response = await fetch('http://localhost:3000/api/v1/group/new', {
+  const response = await fetch('https://snapninja.herokuapp.com/api/v1/group/new', {
     method: 'POST',
     body: JSON.stringify({
       group_name: groupName,
