@@ -19,12 +19,30 @@
     }
   }
 
+  .new-user-message {
+    display: block;
+    margin: auto;
+    background-color: $c6;
+    width: 750px;
+    padding-top: 15px;
+
+    h5 {
+      color: $c1;
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: -16px;
+    }
+  }
+
   .current-points {
     @include center-box;
     background: $c6;
     padding: 14px 25px 8px;
     display: flex;
     justify-content: center;
+
+
+
 
     div {
       margin: 20px 0px;
@@ -251,6 +269,10 @@
 
 @media screen and (max-width: 750px) {
   .Transaction {
+    .new-user-message {
+      @include media-width;
+    }
+
     .current-points {
       @include media-width;
     }

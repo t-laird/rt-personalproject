@@ -52,7 +52,7 @@ export class Transaction extends Component {
       const weeklyPoints = this.props.Group.weekly_points;
       return <span className="points">{weeklyPoints-spentPoints}</span>;
     } 
-    return <h3>login to send points!</h3>;
+    return <span className="points">0</span>;
   }
 
   async handleSubmit() {
@@ -141,6 +141,8 @@ export class Transaction extends Component {
         return total;
       }, 0);
       return receivedPoints;
+    } else {
+      return 0;
     }
   }
 
@@ -229,9 +231,18 @@ export class Transaction extends Component {
     return listItems;
   }
 
+  newUserMessage = () => {
+    if (!Object.keys(this.props.Group).length) {
+      return <h5>Join a group to send and receive snaps.</h5>
+    }
+  }
+
   render() {
     return (
       <div className="Transaction">
+        <div className="new-user-message">
+          {this.newUserMessage()}
+        </div>
         <div className="current-points">
           <div className="remaining-points">
             {this.getRemainingPoints()}
