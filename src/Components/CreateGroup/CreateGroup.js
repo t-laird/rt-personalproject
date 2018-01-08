@@ -15,12 +15,12 @@ export class CreateGroup extends Component {
     this.state = {
       groupName: '',
       weeklyPoints: '',
-      message: 'CREATE A GROUP'
+      message: 'CREATE A GROUP',
+      successMessage: ''
     };
   }
 
-  createGroup = async (event, groupName, weeklyPoints) => {
-    event.preventDefault();
+  createGroup = async (groupName, weeklyPoints) => {
 
     const password = generator.generate({
       length: 6,
@@ -29,6 +29,8 @@ export class CreateGroup extends Component {
 
     const groupResponse = await makeGroup(groupName, weeklyPoints, password);
     this.props.updateGroup(groupResponse[0]);
+
+    this.setState({successMessage: <h5>Congrats!  You've created: <span className="success-span">{groupResponse[0].group_name}</span><br />Your group passphrase is: <span className="success-span">{groupResponse[0].group_passphrase}</span></h5>})
 
     await validateGroup(groupResponse[0].group_passphrase, this.props.user.user_id);
     const userResponse = await getUser();
@@ -40,6 +42,15 @@ export class CreateGroup extends Component {
     const { name, value } = target;
 
     this.setState({[name]: value});
+  }
+
+  validatePointValue = (event, groupName, weeklyPoints) => {
+    event.preventDefault()
+    if (weeklyPoints > 0 && weeklyPoints <= 500) {
+      this.createGroup(groupName, weeklyPoints)
+    } else {
+      this.setState({successMessage: <h5>'Invalid point value.  Please choose a number between 1 - 500.  We recommend 50!'</h5>})
+    }
   }
 
   render() {
@@ -61,7 +72,7 @@ export class CreateGroup extends Component {
           </div>
           <h5>With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.</h5>
           <div className="create-bottom">
-            <h5>How many snaps will your group members be able to give away? <span className="join-span">(We recommend 50)</span></h5>
+            <h5>How many snaps will your group members be able to give away? <span className="join-span">(Between 1 - 500)</span></h5>
             <input
               className="points-input"
               onChange={this.handleChange}
@@ -70,8 +81,9 @@ export class CreateGroup extends Component {
               name='weeklyPoints'
             />
           </div>
+          <div className="success-message">{this.state.successMessage}</div>
           <button
-            onClick={(event) => this.createGroup(event, this.state.groupName, this.state.weeklyPoints)}
+            onClick={(event) => this.validatePointValue(event, this.state.groupName, this.state.weeklyPoints)}
           >CREATE
           </button>
         </form>

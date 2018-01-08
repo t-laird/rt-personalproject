@@ -25,6 +25,8 @@ export class GroupData extends Component {
       }, 0);
 
       return currentTotals;
+    } else {
+      return 0;
     }
   }
 
