@@ -32,7 +32,9 @@ describe('actions tests', () => {
   });
 
   it('should return an action with type UPDATE_TRANSACTIONS and expected payload', () => {
-    const mockTransactions = [{sent: [{send_id: 1, receive_id: 5}], received: [{send_id: 5, receive_id: 1}]}];
+    const mockTransactions = [
+      {sent: [{send_id: 1, receive_id: 5}], received: [{send_id: 5, receive_id: 1}]}
+    ];
     const expectedResponse = {
       type: 'UPDATE_TRANSACTIONS',
       transactions: mockTransactions

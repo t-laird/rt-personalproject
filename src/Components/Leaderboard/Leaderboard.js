@@ -7,7 +7,9 @@ import PropTypes from 'prop-types';
 export class Leaderboard extends Component {
 
   getData = (value) => {
-    const recentWeek = this.props.GroupTransactions[this.props.GroupTransactions.length - 1].transactions;
+    const recentWeek = (
+      this.props.GroupTransactions[this.props.GroupTransactions.length - 1].transactions
+    );
     const givers = recentWeek.reduce((accum, transaction) => {
       if (!accum[transaction[value]]) {
         accum[transaction[value]] = { points: 0 };
@@ -26,10 +28,10 @@ export class Leaderboard extends Component {
   displayLeaders = (dataSet) => {
     if (this.props.GroupTransactions.length) {
       const data = this.getData(dataSet);
-      const display = data.map((obj, index) => {
+      const display = data.map((object, index) => {
         return <LeaderboardDisplay 
-          name={obj.name}
-          points={obj.points}
+          name={object.name}
+          points={object.points}
           key={index}
           position={index + 1}
         />;

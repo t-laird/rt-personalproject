@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+/* eslint-disable no-useless-escape */
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -6,7 +6,8 @@ import './Login.css';
 import clearLocalStorage from '../../helpers/clearLocalStorage';
 import getUsersInGroup from '../../helpers/fetches/getUsersInGroup/getUsersInGroup';
 import getGroupSettings from '../../helpers/fetches/getGroupSettings/getGroupSettings';
-import getGroupTransactionData from '../../helpers/fetches/getGroupTransactionData/getGroupTransactionData';
+import getGroupTransactionData from 
+  '../../helpers/fetches/getGroupTransactionData/getGroupTransactionData';
 import getTransactionData from '../../helpers/fetches/getTransactionData/getTransactionData';
 import getUser from '../../helpers/fetches/getUser/getUser';
 import { connect } from 'react-redux';
@@ -71,8 +72,6 @@ export class Login extends Component {
       this.props.updateUserList(usersInGroup);
     } catch (error) {
       window.location="https://tr-personal-proj.e1.loginrocket.com";
-      
-      console.log('error: ', error);
       return;
     }
   }
@@ -118,8 +117,6 @@ export class Login extends Component {
   }
 
   getToken () {
-    ////REGEX NEEDS TO CUT OFF WHEN THERE IS MORE ON THE END
-    ///  for ex.   &signup=true   match between = and & OR end of string
     const removeToken = new RegExp(/\?token=/);
     const removeSignup = new RegExp(/\&signup=true/);
 

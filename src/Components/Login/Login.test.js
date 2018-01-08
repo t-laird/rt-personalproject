@@ -50,7 +50,7 @@ describe('Login component tests', () => {
     await expect(renderedLogin.instance().props.history).toContain(expectedHistory);
   });
 
-  it.skip('should redirect to the loginrocket site if there is no key in localStorage or in location.search', () => {
+  it.skip('should redirect to loginrocket if no key in localStorage or location.search', () => {
     window.location = '';
     global.localStorage = {
       getItem: () => null,

@@ -38,7 +38,7 @@ export class JoinGroup extends Component {
             <h4><Link to="/group">{this.props.group.group_name}</Link></h4>
           </div>
           <div className="passphrase">
-            <h5>Your group's passphrase is:</h5>
+            <h5>{'Your group\'s passphrase is:'}</h5>
             <input 
               placeholder={this.props.group.group_passphrase}
               value={this.state.passphrase}
@@ -47,7 +47,7 @@ export class JoinGroup extends Component {
             />
           </div>
           <div className="join-group-last">
-            <h5>To switch groups, simply enter your new group's passphrase in the box.</h5>
+            <h5>{'To switch groups, simply enter your new group\'s passphrase in the box.'}</h5>
             <img className="arrow-graphic" src={require('./assets/curved-arrow.svg')} />
           </div>
           <button
@@ -97,7 +97,7 @@ export class JoinGroup extends Component {
     event.preventDefault();
     if (this.state.passphrase === this.props.group.group_passphrase) {
       this.setState({
-        message: <h5>You're already in that group!</h5>
+        message: <h5>{'You\'re already in that group!'}</h5>
       });
       return;
     }
@@ -192,5 +192,6 @@ JoinGroup.propTypes = {
   updateUserList: PropTypes.func,
   updateGroup: PropTypes.func,
   updateUserTransactions: PropTypes.func,
-  updateGroupTransactions: PropTypes.func
+  updateGroupTransactions: PropTypes.func,
+  history: PropTypes.object
 };

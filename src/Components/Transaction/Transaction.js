@@ -233,7 +233,7 @@ export class Transaction extends Component {
 
   newUserMessage = () => {
     if (!Object.keys(this.props.Group).length) {
-      return <h5>Join a group to send and receive snaps.</h5>
+      return <h5>Join a group to send and receive snaps.</h5>;
     }
   }
 

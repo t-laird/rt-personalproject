@@ -35,7 +35,7 @@ export class GroupProfile extends Component {
       const transactionCount = this.props.GroupTransactions.reduce((count, week) => {
         count += week.transactions.length;
         return count;
-      }, 0)
+      }, 0);
 
       if (transactionCount > 0) {
         return null;
@@ -49,7 +49,13 @@ export class GroupProfile extends Component {
     return (
       <div className="group-profile-component">
      
-        <h4>{`${this.props.Group.group_name || 'Group'} - Snaps Awarded - LAST ${this.props.GroupTransactions.length} WEEK${this.props.GroupTransactions.length === 1 ? '' : 'S'}`}</h4>
+        <h4>
+          {
+            `${this.props.Group.group_name || 'Group'} - Snaps Awarded - LAST 
+             ${this.props.GroupTransactions.length} WEEK
+             ${this.props.GroupTransactions.length === 1 ? '' : 'S'}`
+          }
+        </h4>
         <VictoryChart>
           {this.generateChartArea()}
 

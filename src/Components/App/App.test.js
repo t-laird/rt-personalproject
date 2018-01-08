@@ -19,7 +19,6 @@ describe('app tests', () => {
   });
 
   it.skip('should render with the correct default elements', () => {
-    console.log(renderedApp.debug());
     expect(renderedApp.find('App').length).toEqual(1);
   });
 

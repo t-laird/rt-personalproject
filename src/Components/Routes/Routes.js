@@ -13,7 +13,6 @@ import PropTypes from 'prop-types';
 import './Routes.css';
 
 const Routes = ({ location }) => {
-  console.log('looping from routes');
   return (
     <div className="routes">
       <Route path='/login' component={Login} />

@@ -7,5 +7,5 @@ describe('homepage tests', () => {
     const renderedApp = shallow(<Homepage />);
 
     expect(renderedApp).toMatchSnapshot();
-  })
-})
+  });
+});

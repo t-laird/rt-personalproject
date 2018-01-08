@@ -1,7 +1,9 @@
+/* eslint-disable max-len */
 import React, { Component } from 'react';
 import './Slack.css';
 import { connect } from 'react-redux';
 import validateSlackId from '../../helpers/fetches/validateSlackId/validateSlackId';
+import PropTypes from 'prop-types';
 
 export class Slack extends Component {
   constructor() {
@@ -12,8 +14,8 @@ export class Slack extends Component {
     };
   }
 
-  handleInput = (e) => {
-    const {name, value} = e.target;
+  handleInput = (event) => {
+    const {name, value} = event.target;
     
     this.setState({
       [name]: value
@@ -64,7 +66,7 @@ export class Slack extends Component {
           type="text" 
           value={this.state.slackId} 
           placeholder="Slack ID"
-          onChange={(e) => {this.handleInput(e)}}
+          onChange={(event) => { this.handleInput(event); }}
           name="slackId" /> <br/>
         <button onClick={this.handleSubmit}>UPDATE</button>
         {this.state.message}
@@ -81,5 +83,9 @@ export const mapStateToProps = ( store ) => ({
   User: store.User
 });
 
-
 export default connect(mapStateToProps, null)(Slack);
+
+Slack.propTypes = {
+  User: PropTypes.array,
+  history: PropTypes.object
+};

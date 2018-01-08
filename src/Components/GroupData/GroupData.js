@@ -18,7 +18,9 @@ export class GroupData extends Component {
 
   currentPoints = () => {
     if (this.props.GroupTransactions.length > 0) {
-      const allCurrent = (this.props.GroupTransactions[this.props.GroupTransactions.length - 1]);			
+      const allCurrent = (
+        this.props.GroupTransactions[this.props.GroupTransactions.length - 1]
+      );			
       const currentTotals = allCurrent.transactions.reduce((accum, transaction) => {
         accum += transaction.point_value;
         return accum;
