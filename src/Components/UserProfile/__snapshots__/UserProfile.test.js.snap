@@ -78,7 +78,8 @@ ShallowWrapper {
         className="user-profile-component"
 >
         <h4>
-                Last 1 Week
+                Last 1 
+                            Week
         </h4>
         <VictoryChart
                 containerComponent={
@@ -4590,7 +4591,8 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h4>
-            Last 1 Week
+            Last 1 
+                        Week
 </h4>,
           <VictoryChart
             containerComponent={
@@ -9102,10 +9104,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Last 1 Week",
+            "children": "Last 1 
+            Week",
           },
           "ref": null,
-          "rendered": "Last 1 Week",
+          "rendered": "Last 1 
+            Week",
           "type": "h4",
         },
         Object {
@@ -15882,7 +15886,8 @@ ShallowWrapper {
           className="user-profile-component"
 >
           <h4>
-                    Last 1 Week
+                    Last 1 
+                                Week
           </h4>
           <VictoryChart
                     containerComponent={
@@ -20394,7 +20399,8 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <h4>
-              Last 1 Week
+              Last 1 
+                          Week
 </h4>,
             <VictoryChart
               containerComponent={
@@ -24906,10 +24912,12 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Last 1 Week",
+              "children": "Last 1 
+            Week",
             },
             "ref": null,
-            "rendered": "Last 1 Week",
+            "rendered": "Last 1 
+            Week",
             "type": "h4",
           },
           Object {
@@ -31720,7 +31728,8 @@ ShallowWrapper {
         className="user-profile-component"
 >
         <h4>
-                Last 0 Weeks
+                Last 0 
+                            Weeks
         </h4>
         <VictoryChart
                 containerComponent={
@@ -35344,7 +35353,8 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h4>
-            Last 0 Weeks
+            Last 0 
+                        Weeks
 </h4>,
           <VictoryChart
             containerComponent={
@@ -38968,10 +38978,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Last 0 Weeks",
+            "children": "Last 0 
+            Weeks",
           },
           "ref": null,
-          "rendered": "Last 0 Weeks",
+          "rendered": "Last 0 
+            Weeks",
           "type": "h4",
         },
         Object {
@@ -43982,7 +43994,8 @@ ShallowWrapper {
           className="user-profile-component"
 >
           <h4>
-                    Last 0 Weeks
+                    Last 0 
+                                Weeks
           </h4>
           <VictoryChart
                     containerComponent={
@@ -47606,7 +47619,8 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <h4>
-              Last 0 Weeks
+              Last 0 
+                          Weeks
 </h4>,
             <VictoryChart
               containerComponent={
@@ -51230,10 +51244,12 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Last 0 Weeks",
+              "children": "Last 0 
+            Weeks",
             },
             "ref": null,
-            "rendered": "Last 0 Weeks",
+            "rendered": "Last 0 
+            Weeks",
             "type": "h4",
           },
           Object {

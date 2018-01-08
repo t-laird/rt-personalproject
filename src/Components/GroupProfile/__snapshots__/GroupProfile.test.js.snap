@@ -64,7 +64,9 @@ ShallowWrapper {
         className="group-profile-component"
 >
         <h4>
-                Turing - Snaps Awarded - LAST 1 WEEK
+                Turing - Snaps Awarded - LAST 
+                             1 WEEK
+                             
         </h4>
         <VictoryChart
                 containerComponent={
@@ -3666,7 +3668,9 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h4>
-            Turing - Snaps Awarded - LAST 1 WEEK
+            Turing - Snaps Awarded - LAST 
+                         1 WEEK
+                         
 </h4>,
           <VictoryChart
             containerComponent={
@@ -7268,10 +7272,14 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Turing - Snaps Awarded - LAST 1 WEEK",
+            "children": "Turing - Snaps Awarded - LAST 
+             1 WEEK
+             ",
           },
           "ref": null,
-          "rendered": "Turing - Snaps Awarded - LAST 1 WEEK",
+          "rendered": "Turing - Snaps Awarded - LAST 
+             1 WEEK
+             ",
           "type": "h4",
         },
         Object {
@@ -12232,7 +12240,9 @@ ShallowWrapper {
           className="group-profile-component"
 >
           <h4>
-                    Turing - Snaps Awarded - LAST 1 WEEK
+                    Turing - Snaps Awarded - LAST 
+                                 1 WEEK
+                                 
           </h4>
           <VictoryChart
                     containerComponent={
@@ -15834,7 +15844,9 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <h4>
-              Turing - Snaps Awarded - LAST 1 WEEK
+              Turing - Snaps Awarded - LAST 
+                           1 WEEK
+                           
 </h4>,
             <VictoryChart
               containerComponent={
@@ -19436,10 +19448,14 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Turing - Snaps Awarded - LAST 1 WEEK",
+              "children": "Turing - Snaps Awarded - LAST 
+             1 WEEK
+             ",
             },
             "ref": null,
-            "rendered": "Turing - Snaps Awarded - LAST 1 WEEK",
+            "rendered": "Turing - Snaps Awarded - LAST 
+             1 WEEK
+             ",
             "type": "h4",
           },
           Object {
@@ -24434,7 +24450,9 @@ ShallowWrapper {
         className="group-profile-component"
 >
         <h4>
-                Turing - Snaps Awarded - LAST 0 WEEKS
+                Turing - Snaps Awarded - LAST 
+                             0 WEEK
+                             S
         </h4>
         <VictoryChart
                 containerComponent={
@@ -27599,7 +27617,9 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h4>
-            Turing - Snaps Awarded - LAST 0 WEEKS
+            Turing - Snaps Awarded - LAST 
+                         0 WEEK
+                         S
 </h4>,
           <VictoryChart
             containerComponent={
@@ -30764,10 +30784,14 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Turing - Snaps Awarded - LAST 0 WEEKS",
+            "children": "Turing - Snaps Awarded - LAST 
+             0 WEEK
+             S",
           },
           "ref": null,
-          "rendered": "Turing - Snaps Awarded - LAST 0 WEEKS",
+          "rendered": "Turing - Snaps Awarded - LAST 
+             0 WEEK
+             S",
           "type": "h4",
         },
         Object {
@@ -34860,7 +34884,9 @@ ShallowWrapper {
           className="group-profile-component"
 >
           <h4>
-                    Turing - Snaps Awarded - LAST 0 WEEKS
+                    Turing - Snaps Awarded - LAST 
+                                 0 WEEK
+                                 S
           </h4>
           <VictoryChart
                     containerComponent={
@@ -38025,7 +38051,9 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <h4>
-              Turing - Snaps Awarded - LAST 0 WEEKS
+              Turing - Snaps Awarded - LAST 
+                           0 WEEK
+                           S
 </h4>,
             <VictoryChart
               containerComponent={
@@ -41190,10 +41218,14 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Turing - Snaps Awarded - LAST 0 WEEKS",
+              "children": "Turing - Snaps Awarded - LAST 
+             0 WEEK
+             S",
             },
             "ref": null,
-            "rendered": "Turing - Snaps Awarded - LAST 0 WEEKS",
+            "rendered": "Turing - Snaps Awarded - LAST 
+             0 WEEK
+             S",
             "type": "h4",
           },
           Object {
