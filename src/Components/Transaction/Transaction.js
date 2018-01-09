@@ -227,7 +227,7 @@ export class Transaction extends Component {
     );
   }
 }
-``
+
 export const mapStateToProps = ( store ) => ({
   UserList: store.UserList,
   User: store.User
