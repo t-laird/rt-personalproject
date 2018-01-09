@@ -82,7 +82,7 @@ export class JoinGroup extends Component {
 
   componentDidMount() {
     if (!this.props.user.name) {
-      this.props.history.push('/login');
+      this.props.history.push('/snap-ninja/login');
     }
   }
 

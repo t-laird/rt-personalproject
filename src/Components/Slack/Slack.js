@@ -39,7 +39,7 @@ export class Slack extends Component {
 
   componentDidMount() {
     if (!this.props.User.name) {
-      this.props.history.push('/login');
+      this.props.history.push('/snap-ninja/login');
     }
   }
 

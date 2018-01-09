@@ -17,8 +17,8 @@ export class Login extends Component {
 
   componentDidMount = async () => {
     await this.fetchUserData();
-    if (this.props.location.pathname === '/login/slack') {
-      this.props.history.push('/slack');
+    if (this.props.location.pathname === '/snap-ninja/login/slack') {
+      this.props.history.push('/snap-ninja/slack');
     }
   }
 

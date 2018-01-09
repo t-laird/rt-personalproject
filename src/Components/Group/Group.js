@@ -11,11 +11,11 @@ export class Group extends Component {
 
   componentDidMount() {
     if (!this.props.User.name) {
-      this.props.history.push('/login');
+      this.props.history.push('/snap-ninja/login');
       return;
     }
     if (!this.props.User.group_id) {
-      this.props.history.push('/joingroup');
+      this.props.history.push('/snap-ninja/joingroup');
       return;
     }
   }
