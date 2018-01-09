@@ -18,19 +18,20 @@
       text-align: center;
     }
   }
-
-  .new-user-message {
-    display: block;
-    margin: auto;
-    background-color: $c6;
-    width: 750px;
-    padding-top: 15px;
-
-    h5 {
-      color: $c1;
-      font-weight: 900;
-      text-align: center;
-      margin-bottom: -16px;
+  .PointsInformation {
+    .new-user-message {
+      display: block;
+      margin: auto;
+      background-color: $c6;
+      width: 750px;
+      padding-top: 15px;
+  
+      h5 {
+        color: $c1;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: -16px;
+      }
     }
   }
 
@@ -178,7 +179,7 @@
       }
     }
 
-    .recipient-input {
+    .RecipientInput {
       display: flex;
       align-items: center;
       position: relative;
