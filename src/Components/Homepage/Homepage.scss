@@ -1,1 +1,151 @@
 @import '../../Variables.scss';
+
+.homepage-component {
+  min-height: 100vh;
+  background: url('homepage-assets/home-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 90% 50%;
+  margin-top: -70px;
+  background-attachment: fixed;
+
+  .bg-holder {
+    min-height: 100vh;
+    padding-top: 158px;
+    padding-bottom: 50px;
+    background: linear-gradient(to bottom, rgba(50,50,50,.8) 0%,rgba(50,50,50,.5) 100%);
+  }
+
+  h1 {
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    margin: 0 5px 142px;
+    margin-bottom: 142px;
+    line-height: 1.3;
+  }
+
+  h4 {
+    font-size: 24px;
+    font-weight: 900;
+    color: $c3;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-family: 'semplicitapro', sans-serif;
+    font-weight: 500;
+    color: $c3;
+    font-size: 16px;
+    opacity: .7;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .no-wrap {
+    font-family: 'semplicitapro', 'sans-serif';
+    font-size: 46px;
+    font-weight: 300;
+    white-space: nowrap;
+  }
+
+  .homepage-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1076px;
+    margin: auto;
+  }
+
+  .info-box {
+    background-color: $c5;
+    border-left: 60px solid $c6;
+    margin: 20px;
+    padding: 24px 45px;
+    position: relative;
+    width: 498px;
+    height: 437px;
+  }
+
+  .homepage-icon {
+    width: 60px;
+    position: absolute;
+    top: 185px;
+    left: -30px;
+  }
+
+  .homepage-logo {
+    width: 50px;
+    position: relative;
+    top: 6px;
+    left: 1px;
+  }
+
+  button {
+    background-color: $c1;
+    padding: 16px 23px 15px;
+    border: 0;
+    display: block;
+    margin: 20px auto 0;
+    cursor: pointer;
+    transition: background-color .15s ease-in-out;
+
+    a {
+      color: #fff;
+      }
+  }
+
+  button:hover {
+    background-color: darken($c1, 12%);
+  }
+
+}
+
+@media screen and (max-width: 1075px) {
+  .homepage-component {
+    .homepage-container {
+      width: 538px;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .homepage-component {
+    h1, .no-wrap {
+      font-size: 30px;
+    }
+
+    .homepage-logo {
+      width: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: 537px) {
+  .homepage-component {
+
+    h1 {
+      margin-bottom: 110px;
+    }
+
+    .homepage-container {
+      width: 100%;
+    }
+
+    .info-box {
+      background-color: $c5;
+      border-left: 0;
+      border-top: 60px solid $c6;
+      margin: 20px 0;
+      width: 100%;
+      height: unset;
+    }
+
+    .homepage-icon {
+      width: 60px;
+      position: static;
+      display: block;
+      margin: -54px auto 0;
+    }
+  }
+}

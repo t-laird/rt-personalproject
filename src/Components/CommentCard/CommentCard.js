@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 const CommentCard = ({ displayTextIndex, value, note, sender, day }) => {
 
   const displayText = [
-    `${value} points for you!`, 
-    `You get ${value} points!`, 
-    `Blam! ${value} points!`, 
-    `${value} points!  Yeah!`, 
-    `${value} big ole points!`
+    `${value} snaps for you!`, 
+    `You get ${value} snaps!`, 
+    `Blam! ${value} snaps!`, 
+    `${value} snaps!  Oh snap!`, 
+    `${value} big ole snap!`
   ];
 
   return (
