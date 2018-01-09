@@ -19,7 +19,7 @@ export class User extends Component {
 
   componentDidMount() {
     if (!this.props.User.name) {
-      this.props.history.push('/login');
+      this.props.history.push('/snap-ninja/login');
     }
     if (this.props.User.group_id > 0) {
       this.setState({joinText: 'SWITCH GROUPS'});

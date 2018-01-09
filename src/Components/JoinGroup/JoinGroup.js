@@ -35,7 +35,7 @@ export class JoinGroup extends Component {
         <div>
           <div className="current-group">
             <h5>You are currently a member of: </h5>
-            <h4><Link to="/group">{this.props.group.group_name}</Link></h4>
+            <h4><Link to="/snap-ninja/group">{this.props.group.group_name}</Link></h4>
           </div>
           <div className="passphrase">
             <h5>{'Your group\'s passphrase is:'}</h5>
@@ -82,7 +82,7 @@ export class JoinGroup extends Component {
 
   componentDidMount() {
     if (!this.props.user.name) {
-      this.props.history.push('/login');
+      this.props.history.push('/snap-ninja/login');
     }
   }
 
@@ -134,7 +134,7 @@ export class JoinGroup extends Component {
       message: 
         <div>
           <h5>You successfully joined {groupData.group_name}!</h5>
-          <h5>You should check out your <Link to="/group">group page</Link> or <Link to="/user">user page.</Link></h5>
+          <h5>You should check out your <Link to="/snap-ninja/group">group page</Link> or <Link to="/snap-ninja/user">user page.</Link></h5>
         </div>,
       hideintro: true
     });
@@ -153,7 +153,7 @@ export class JoinGroup extends Component {
           </div>
         </div>
         <div className="link-holder">
-          <NavLink className="create-group-link" to='/creategroup'>CREATE NEW GROUP</NavLink>
+          <NavLink className="create-group-link" to='/snap-ninja/creategroup'>CREATE NEW GROUP</NavLink>
         </div>
       </div>
     ); 

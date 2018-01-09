@@ -15,8 +15,8 @@ import './Routes.css';
 const Routes = ({ location }) => {
   return (
     <div className="routes">
-      <Route path='/login' component={Login} />
-      <Route path='/' component={Header} />
+      <Route path='/snap-ninja/login' component={Login} />
+      <Route path='/snap-ninja/' component={Header} />
       <TransitionGroup className="switch-routes">
         <CSSTransition 
           key={location.key} 
@@ -25,12 +25,12 @@ const Routes = ({ location }) => {
           <div className="switch-wrapper">
             <Switch 
               location={location}>
-              <Route path='/user' component={User} />
-              <Route path='/group' component={Group} />
-              <Route path='/joingroup' component={JoinGroup} />
-              <Route path='/creategroup' component={CreateGroup} />
-              <Route path='/slack' component={Slack} />
-              <Route path='/' component={Homepage} />
+              <Route path='/snap-ninja/user' component={User} />
+              <Route path='/snap-ninja/group' component={Group} />
+              <Route path='/snap-ninja/joingroup' component={JoinGroup} />
+              <Route path='/snap-ninja/creategroup' component={CreateGroup} />
+              <Route path='/snap-ninja/slack' component={Slack} />
+              <Route path='/snap-ninja/' component={Homepage} />
             </Switch>
           </div>
         </CSSTransition>

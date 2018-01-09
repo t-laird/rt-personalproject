@@ -17,15 +17,16 @@ export class Login extends Component {
 
   componentDidMount = async () => {
     await this.fetchUserData();
-    if (this.props.location.pathname === '/login/slack') {
-      this.props.history.push('/slack');
+    if (this.props.location.pathname === '/snap-ninja/login/slack') {
+      this.props.history.push('/snap-ninja/slack');
     }
   }
 
-  fetchUserData = async () => {
+  fetchUserData = async () => {    
     this.checkForKey();
 
     const userData = await this.loadUser();
+
     if (userData) {
       await this.loadTransactionData(userData);
       if (userData.group_id !== null) {
@@ -34,10 +35,10 @@ export class Login extends Component {
         await this.loadGroupTransactionData(groupData);
       }
       if (!userData.group_id) {
-        this.props.history.push('/joingroup');
+        this.props.history.push('/snap-ninja/joingroup');
         return;
       }
-      this.props.history.push('/user');
+      this.props.history.push('/snap-ninja/user');
     }
   }
 
@@ -115,8 +116,7 @@ export class Login extends Component {
 
   getToken () {
     const removeToken = new RegExp(/\?token=/);
-    const removeSignup = new RegExp(/\&signup=true/);
-
+    const removeSignup = new RegExp(/\&signup=true/);  
     const parseToken = this.props.location.search.replace(removeToken, '');
     const parseSignup = parseToken.replace(removeSignup, '');
 
