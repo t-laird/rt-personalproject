@@ -52,8 +52,8 @@ export class GroupProfile extends Component {
         <h4>
           {
             `${this.props.Group.group_name || 'Group'} - Snaps Awarded - LAST 
-             ${this.props.GroupTransactions.length} WEEK
-             ${this.props.GroupTransactions.length === 1 ? '' : 'S'}`
+             ${this.props.GroupTransactions.length} 
+             WEEK${this.props.GroupTransactions.length === 1 ? '' : 'S'}`
           }
         </h4>
         <VictoryChart>
