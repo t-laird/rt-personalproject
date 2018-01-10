@@ -132,27 +132,28 @@ class Routes extends Component {
   }
 
   componentWillReceiveProps = async (nextProps) => {
+    const { pathname } = this.props.location;
     if (
-      this.props.location.pathname !== nextProps.location.pathname ||
+      pathname !== nextProps.location.pathname ||
       nextProps.initialLoad
     ) {
-      if (this.props.location.pathname.includes('/snap-ninja/login/slack')) {
+      if (pathname.includes('/snap-ninja/login/slack')) {
         await this.fetchUserData();
         this.props.history.push('/snap-ninja/slack');
         return;
       } else if (
-        this.props.location.pathname.includes('/snap-ninja/login') ||
-        this.props.location.pathname.includes('/snap-ninja/user') ||
-        this.props.location.pathname.includes('/snap-ninja/group') ||
+        pathname.includes('/snap-ninja/login') ||
+        pathname.includes('/snap-ninja/user') ||
+        pathname.includes('/snap-ninja/group') ||
         (
-          this.props.location.pathname.includes('/snap-ninja/creategroup') && 
+          pathname.includes('/snap-ninja/creategroup') && 
           nextProps.initialLoad
         ) ||
         (
-          this.props.location.pathname.includes('/snap-ninja/joingroup') && 
+          pathname.includes('/snap-ninja/joingroup') && 
           nextProps.initialLoad) ||
         (
-          this.props.location.pathname.includes('/snap-ninja/slack') && 
+          pathname.includes('/snap-ninja/slack') && 
           nextProps.initialLoad
         )
       ) {
