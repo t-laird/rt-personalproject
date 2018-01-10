@@ -1,12 +1,12 @@
 import React from 'react';
 import Routes from '../Routes/Routes';
 import './App.css';
-import { withRouter } from 'react-router';
+import { Route } from 'react-router';
 
-const App = withRouter(({ location }) => (
+const App = () => (
   <div className="App">
-    <Routes location={location}/>
+    <Route to="/" component={Routes} />
   </div>
-));
+);
 
 export default App;
