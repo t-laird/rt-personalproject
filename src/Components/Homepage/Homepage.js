@@ -8,7 +8,7 @@ const Homepage = () => {
       <div className="bg-holder">
 			  <h1>WHERE STUDENTS <span className="no-wrap">ADV<img className='homepage-logo' alt="homepage-logo" src={require('./homepage-assets/logo.svg')} />CATE</span> STUDENTS</h1>
         <button className="header-button-top">
-          <a href="https://tr-personal-proj.e1.loginrocket.com/">start SNAP NINJA now</a>
+          <Link to='/snap-ninja/login'>start SNAP NINJA now</Link>
         </button>
 
         <div className="homepage-container">
@@ -42,7 +42,7 @@ const Homepage = () => {
         </div>
 
         <button>
-          <a href="https://tr-personal-proj.e1.loginrocket.com/">start SNAP NINJA now</a>
+          <Link to='/snap-ninja/login'>start SNAP NINJA now</Link>
         </button>
       </div>
     </div>
