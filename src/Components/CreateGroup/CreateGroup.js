@@ -89,7 +89,7 @@ export class CreateGroup extends Component {
           <div className="create-bottom">
             <h5>
               How many snaps will your group members be able to give away? 
-              <span className="join-span">(Between 1 - 500)</span>
+              <span className="join-span"> (Between 1 - 500)</span>
             </h5>
             <input
               className="points-input"

@@ -26,7 +26,6 @@ export class Comments extends Component {
 
   displayComments = () => {
     const commentsArray = this.getReceivedData();
-    console.log(commentsArray)
     const display = commentsArray.reverse().map((comment, index) => {
       return <CommentCard 
         displayTextIndex={this.randomNum()}

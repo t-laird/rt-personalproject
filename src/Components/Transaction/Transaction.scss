@@ -209,6 +209,7 @@
       right: 0;
       top: 43px;
       background-color: rgba(201, 198, 199, .7);
+      z-index: 10;
     
       li {
         font-family: 'semplicitapro', sans-serif;
@@ -251,7 +252,6 @@
       position: absolute;
       bottom: 10px;
       right: 5px;
-      z-index: 1;
       font-weight: 900;
       color: $c1;
       font-size: 16px;
@@ -306,9 +306,7 @@
       .RecipientInput {
         flex-direction: column;
 
-        input {
-          @include media-width;
-        }
+        
       }
 
       h4 {
@@ -330,6 +328,7 @@
       }
 
       input {
+
         margin-top: 10px;
       }
     }
@@ -347,16 +346,18 @@
       .recipient-input .snaps {
         margin-top: 10px;
       }
-
-      .recipient-input input {
-        @include media-width;
-      }
     }
 
     .points-block {
+      .RecipientInput {
+        input {
+          @include media-width;
+        }
+      }
+
       ul {
         width: 100%;
-        top: 90px;
+        top: 81px;
 
         li {
           width: 100%;
