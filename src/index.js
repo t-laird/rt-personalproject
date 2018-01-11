@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './Reducers';
 import thunk from 'redux-thunk';
-import logger from 'redux-logger'; 
+// import logger from 'redux-logger'; 
 import App from './Components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import './normalize.css';
@@ -13,7 +13,7 @@ import './normalize.css';
 
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 
-const store = createStore(rootReducer, devTools, applyMiddleware(thunk, logger));
+const store = createStore(rootReducer, devTools, applyMiddleware(thunk));
 const router = (
   <Provider store={store} >
     <BrowserRouter>
