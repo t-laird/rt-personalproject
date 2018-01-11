@@ -13,16 +13,28 @@ import getGroupSettings from '../../helpers/fetches/getGroupSettings/getGroupSet
 import getGroupTransactionData from '../../helpers/fetches/getGroupTransactionData/getGroupTransactionData';
 import getTransactionData from '../../helpers/fetches/getTransactionData/getTransactionData';
 
-
 export class JoinGroup extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       passphrase: '',
       message: null,
-      hideintro: false
+      hideintro: false,
+      placeholder: this.props.group.group_passphrase
     };
+  }
+
+  replacePlaceholder = () => {
+    this.setState({
+      placeholder: ''
+    });
+  }
+
+  restorePlaceholder = () => {
+    this.setState({
+      placeholder: this.props.group.group_passphrase
+    });
   }
 
   groupPageMessage = () => {
@@ -40,9 +52,11 @@ export class JoinGroup extends Component {
           <div className="passphrase">
             <h5>{'Your group\'s passphrase is:'}</h5>
             <input 
-              placeholder={this.props.group.group_passphrase}
+              placeholder={this.state.placeholder}
               value={this.state.passphrase}
               onChange={this.handleChange}
+              onFocus={() => { this.replacePlaceholder() }}  
+              onBlur={() => { this.restorePlaceholder() }}            
               name='passphrase'
             />
           </div>
@@ -64,7 +78,7 @@ export class JoinGroup extends Component {
           <div className="passphrase">
             <h5>To join a group, enter your group passphrase</h5>
             <input 
-              placeholder={this.props.group.group_passphrase}
+              placeholder=''
               value={this.state.passphrase}
               onChange={this.handleChange}
               name='passphrase'

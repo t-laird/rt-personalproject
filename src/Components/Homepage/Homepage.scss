@@ -11,7 +11,7 @@
 
   .bg-holder {
     min-height: 100vh;
-    padding-top: 158px;
+    padding-top: 255px;
     padding-bottom: 50px;
     background: linear-gradient(to bottom, rgba(50,50,50,.8) 0%,rgba(50,50,50,.5) 100%);
   }
@@ -21,7 +21,7 @@
     color: #fff;
     text-align: center;
     margin: 0 5px 142px;
-    margin-bottom: 142px;
+    margin-bottom: 30px;
     line-height: 1.3;
   }
 
@@ -81,6 +81,11 @@
     left: 1px;
   }
 
+  .header-button-top {
+    margin-top: 30px;
+    margin-bottom: 200px;
+  }
+
   button {
     background-color: $c1;
     padding: 16px 23px 15px;
@@ -123,10 +128,6 @@
 
 @media screen and (max-width: 537px) {
   .homepage-component {
-
-    h1 {
-      margin-bottom: 110px;
-    }
 
     .homepage-container {
       width: 100%;

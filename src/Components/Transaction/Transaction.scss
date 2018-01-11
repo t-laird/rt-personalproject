@@ -270,8 +270,10 @@
 
 @media screen and (max-width: 750px) {
   .Transaction {
-    .new-user-message {
-      @include media-width;
+    .PointsInformation {
+      .new-user-message {
+        @include media-width;
+      }
     }
 
     .current-points {
@@ -284,6 +286,14 @@
 
     .points-block {
       @include media-width;
+
+      .RecipientInput {
+        flex-direction: column;
+
+        input {
+          @include media-width;
+        }
+      }
 
       h4 {
         @include media-width;

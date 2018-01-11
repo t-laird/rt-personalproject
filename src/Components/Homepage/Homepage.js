@@ -1,6 +1,5 @@
 import React from 'react';
 import './Homepage.css';
-import { NavLink } from 'react-router-dom';
 
 const Homepage = () => {
 
@@ -8,7 +7,10 @@ const Homepage = () => {
     <div className="homepage-component">
       <div className="bg-holder">
 			  <h1>WHERE STUDENTS <span className="no-wrap">ADV<img className='homepage-logo' alt="homepage-logo" src={require('./homepage-assets/logo.svg')} />CATE</span> STUDENTS</h1>
-        
+        <button className="header-button-top">
+          <a href="https://tr-personal-proj.e1.loginrocket.com/">start SNAP NINJA now</a>
+        </button>
+
         <div className="homepage-container">
           <div className="info-box">
             <img className='homepage-icon' alt="homepage-icon" src={require('./homepage-assets/handshake.svg')} />
@@ -40,7 +42,7 @@ const Homepage = () => {
         </div>
 
         <button>
-          <NavLink to="/user">start SNAP NINJA now</NavLink>
+          <a href="https://tr-personal-proj.e1.loginrocket.com/">start SNAP NINJA now</a>
         </button>
       </div>
     </div>

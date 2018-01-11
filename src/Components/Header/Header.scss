@@ -93,12 +93,19 @@
       top: 2px;
       font-weight: 900;
       opacity: .7;
+      transition: all .15s ease-in-out;
 
       &.active {
         background-color: $c6;
         color: $c3;
         opacity: 1;
       }
+
+      &:hover {
+        background-color: #c6;
+        color: #c3;
+        opacity: 1;
+      };
     }
   }
 }
