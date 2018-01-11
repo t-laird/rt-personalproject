@@ -30,6 +30,9 @@ export class Transaction extends Component {
   handleInput = (event) => {
     const {value, name} = event.target;
 
+    if (name === 'note' && value.length > 140) {
+      return;
+    }
     this.setState({[name]: value});
   }
 
@@ -189,6 +192,10 @@ export class Transaction extends Component {
     this.setState({recipient});
   }
 
+  displayChars = () => {
+    return 140 - this.state.note.length;
+  }
+
   render() {
     return (
       <div className="Transaction">
@@ -205,19 +212,22 @@ export class Transaction extends Component {
                 name="points" 
                 placeholder="QTY" 
                 value={this.state.points} 
-                onChange={(event) => { this.handleInput(event); }} />            
+                onChange={(event) => { this.handleInput(event); }} />
             </div>
             <RecipientInput recipient={this.state.recipient} updateRecipient={this.updateRecipient}/>
           </div>
-          <textarea
-            className="note-input"
-            type="text"
-            name="note"
-            placeholder="add a message"
-            value={this.state.note}
-            onChange={(event) => { this.handleInput(event); }}
-          >
-          </textarea>
+          <div className="input-container">
+            <h6 className="char-display">{this.displayChars()}</h6>           
+            <textarea
+              className="note-input"
+              type="text"
+              name="note"
+              placeholder="add a message"
+              value={this.state.note}
+              onChange={(event) => { this.handleInput(event); }}
+            >
+            </textarea>
+          </div>
           <button onClick={()=> { this.handleSubmit(); }}>SEND</button>
           <div className="transaction-message">
             <h3>{this.state.transactionMessage}</h3>

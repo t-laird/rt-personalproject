@@ -67,45 +67,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <div
-          className="new-user-message"
-/>,
-        <div
-          className="current-points"
->
-          <div
-                    className="remaining-points"
-          >
-                    <span
-                              className="points"
-                    >
-                              1000
-                    </span>
-                    <h6>
-                              REMAINING
-                    </h6>
-          </div>
-          <div
-                    className="divider"
-          >
-                    <h4>
-                              SNAPS
-                    </h4>
-                    <span>
-                              THIS WEEK
-                    </span>
-          </div>
-          <div
-                    className="received-points"
-          >
-                    <span
-                              className="points"
-                    />
-                    <h6>
-                              RECEIVED
-                    </h6>
-          </div>
-</div>,
+        <Connect(PointsInformation) />,
         <div
           className="award-header"
 >
@@ -135,26 +97,10 @@ ShallowWrapper {
                                         value=""
                               />
                     </div>
-                    <div
-                              className="recipient-input"
-                    >
-                              <h5
-                                        className="snaps"
-                              >
-                                        snaps to:
-                              </h5>
-                              <input
-                                        name="recipient"
-                                        onChange={[Function]}
-                                        onKeyDown={[Function]}
-                                        placeholder="find a teammate"
-                                        type="text"
-                                        value=""
-                              />
-                              <ul>
-                                        
-                              </ul>
-                    </div>
+                    <Connect(RecipientInput)
+                              recipient=""
+                              updateRecipient={[Function]}
+                    />
           </div>
           <textarea
                     className="note-input"
@@ -183,190 +129,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": undefined,
-          "className": "new-user-message",
-        },
+        "nodeType": "class",
+        "props": Object {},
         "ref": null,
         "rendered": null,
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              className="remaining-points"
->
-              <span
-                            className="points"
-              >
-                            1000
-              </span>
-              <h6>
-                            REMAINING
-              </h6>
-</div>,
-            <div
-              className="divider"
->
-              <h4>
-                            SNAPS
-              </h4>
-              <span>
-                            THIS WEEK
-              </span>
-</div>,
-            <div
-              className="received-points"
->
-              <span
-                            className="points"
-              />
-              <h6>
-                            RECEIVED
-              </h6>
-</div>,
-          ],
-          "className": "current-points",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <span
-                  className="points"
->
-                  1000
-</span>,
-                <h6>
-                  REMAINING
-</h6>,
-              ],
-              "className": "remaining-points",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": 1000,
-                  "className": "points",
-                },
-                "ref": null,
-                "rendered": 1000,
-                "type": "span",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "REMAINING",
-                },
-                "ref": null,
-                "rendered": "REMAINING",
-                "type": "h6",
-              },
-            ],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <h4>
-                  SNAPS
-</h4>,
-                <span>
-                  THIS WEEK
-</span>,
-              ],
-              "className": "divider",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "SNAPS",
-                },
-                "ref": null,
-                "rendered": "SNAPS",
-                "type": "h4",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "THIS WEEK",
-                },
-                "ref": null,
-                "rendered": "THIS WEEK",
-                "type": "span",
-              },
-            ],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <span
-                  className="points"
-/>,
-                <h6>
-                  RECEIVED
-</h6>,
-              ],
-              "className": "received-points",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": 0,
-                  "className": "points",
-                },
-                "ref": null,
-                "rendered": 0,
-                "type": "span",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "RECEIVED",
-                },
-                "ref": null,
-                "rendered": "RECEIVED",
-                "type": "h6",
-              },
-            ],
-            "type": "div",
-          },
-        ],
-        "type": "div",
+        "type": [Function],
       },
       Object {
         "instance": null,
@@ -417,26 +184,10 @@ ShallowWrapper {
                                           value=""
                             />
               </div>
-              <div
-                            className="recipient-input"
-              >
-                            <h5
-                                          className="snaps"
-                            >
-                                          snaps to:
-                            </h5>
-                            <input
-                                          name="recipient"
-                                          onChange={[Function]}
-                                          onKeyDown={[Function]}
-                                          placeholder="find a teammate"
-                                          type="text"
-                                          value=""
-                            />
-                            <ul>
-                                          
-                            </ul>
-              </div>
+              <Connect(RecipientInput)
+                            recipient=""
+                            updateRecipient={[Function]}
+              />
 </div>,
             <textarea
               className="note-input"
@@ -483,26 +234,10 @@ ShallowWrapper {
                                     value=""
                   />
 </div>,
-                <div
-                  className="recipient-input"
->
-                  <h5
-                                    className="snaps"
-                  >
-                                    snaps to:
-                  </h5>
-                  <input
-                                    name="recipient"
-                                    onChange={[Function]}
-                                    onKeyDown={[Function]}
-                                    placeholder="find a teammate"
-                                    type="text"
-                                    value=""
-                  />
-                  <ul>
-                                    
-                  </ul>
-</div>,
+                <Connect(RecipientInput)
+                  recipient=""
+                  updateRecipient={[Function]}
+/>,
               ],
               "className": "award",
             },
@@ -564,71 +299,14 @@ ShallowWrapper {
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "host",
+                "nodeType": "class",
                 "props": Object {
-                  "children": Array [
-                    <h5
-                      className="snaps"
->
-                      snaps to:
-</h5>,
-                    <input
-                      name="recipient"
-                      onChange={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="find a teammate"
-                      type="text"
-                      value=""
-/>,
-                    <ul>
-                      
-</ul>,
-                  ],
-                  "className": "recipient-input",
+                  "recipient": "",
+                  "updateRecipient": [Function],
                 },
                 "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "snaps to:",
-                      "className": "snaps",
-                    },
-                    "ref": null,
-                    "rendered": "snaps to:",
-                    "type": "h5",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "name": "recipient",
-                      "onChange": [Function],
-                      "onKeyDown": [Function],
-                      "placeholder": "find a teammate",
-                      "type": "text",
-                      "value": "",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "input",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": Array [],
-                    },
-                    "ref": null,
-                    "rendered": Array [],
-                    "type": "ul",
-                  },
-                ],
-                "type": "div",
+                "rendered": null,
+                "type": [Function],
               },
             ],
             "type": "div",
@@ -696,45 +374,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <div
-            className="new-user-message"
-/>,
-          <div
-            className="current-points"
->
-            <div
-                        className="remaining-points"
-            >
-                        <span
-                                    className="points"
-                        >
-                                    1000
-                        </span>
-                        <h6>
-                                    REMAINING
-                        </h6>
-            </div>
-            <div
-                        className="divider"
-            >
-                        <h4>
-                                    SNAPS
-                        </h4>
-                        <span>
-                                    THIS WEEK
-                        </span>
-            </div>
-            <div
-                        className="received-points"
-            >
-                        <span
-                                    className="points"
-                        />
-                        <h6>
-                                    RECEIVED
-                        </h6>
-            </div>
-</div>,
+          <Connect(PointsInformation) />,
           <div
             className="award-header"
 >
@@ -764,26 +404,10 @@ ShallowWrapper {
                                                 value=""
                                     />
                         </div>
-                        <div
-                                    className="recipient-input"
-                        >
-                                    <h5
-                                                className="snaps"
-                                    >
-                                                snaps to:
-                                    </h5>
-                                    <input
-                                                name="recipient"
-                                                onChange={[Function]}
-                                                onKeyDown={[Function]}
-                                                placeholder="find a teammate"
-                                                type="text"
-                                                value=""
-                                    />
-                                    <ul>
-                                                
-                                    </ul>
-                        </div>
+                        <Connect(RecipientInput)
+                                    recipient=""
+                                    updateRecipient={[Function]}
+                        />
             </div>
             <textarea
                         className="note-input"
@@ -812,190 +436,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": undefined,
-            "className": "new-user-message",
-          },
+          "nodeType": "class",
+          "props": Object {},
           "ref": null,
           "rendered": null,
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <div
-                className="remaining-points"
->
-                <span
-                                className="points"
-                >
-                                1000
-                </span>
-                <h6>
-                                REMAINING
-                </h6>
-</div>,
-              <div
-                className="divider"
->
-                <h4>
-                                SNAPS
-                </h4>
-                <span>
-                                THIS WEEK
-                </span>
-</div>,
-              <div
-                className="received-points"
->
-                <span
-                                className="points"
-                />
-                <h6>
-                                RECEIVED
-                </h6>
-</div>,
-            ],
-            "className": "current-points",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <span
-                    className="points"
->
-                    1000
-</span>,
-                  <h6>
-                    REMAINING
-</h6>,
-                ],
-                "className": "remaining-points",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": 1000,
-                    "className": "points",
-                  },
-                  "ref": null,
-                  "rendered": 1000,
-                  "type": "span",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "REMAINING",
-                  },
-                  "ref": null,
-                  "rendered": "REMAINING",
-                  "type": "h6",
-                },
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <h4>
-                    SNAPS
-</h4>,
-                  <span>
-                    THIS WEEK
-</span>,
-                ],
-                "className": "divider",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "SNAPS",
-                  },
-                  "ref": null,
-                  "rendered": "SNAPS",
-                  "type": "h4",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "THIS WEEK",
-                  },
-                  "ref": null,
-                  "rendered": "THIS WEEK",
-                  "type": "span",
-                },
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <span
-                    className="points"
-/>,
-                  <h6>
-                    RECEIVED
-</h6>,
-                ],
-                "className": "received-points",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": 0,
-                    "className": "points",
-                  },
-                  "ref": null,
-                  "rendered": 0,
-                  "type": "span",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "RECEIVED",
-                  },
-                  "ref": null,
-                  "rendered": "RECEIVED",
-                  "type": "h6",
-                },
-              ],
-              "type": "div",
-            },
-          ],
-          "type": "div",
+          "type": [Function],
         },
         Object {
           "instance": null,
@@ -1046,26 +491,10 @@ ShallowWrapper {
                                                 value=""
                                 />
                 </div>
-                <div
-                                className="recipient-input"
-                >
-                                <h5
-                                                className="snaps"
-                                >
-                                                snaps to:
-                                </h5>
-                                <input
-                                                name="recipient"
-                                                onChange={[Function]}
-                                                onKeyDown={[Function]}
-                                                placeholder="find a teammate"
-                                                type="text"
-                                                value=""
-                                />
-                                <ul>
-                                                
-                                </ul>
-                </div>
+                <Connect(RecipientInput)
+                                recipient=""
+                                updateRecipient={[Function]}
+                />
 </div>,
               <textarea
                 className="note-input"
@@ -1112,26 +541,10 @@ ShallowWrapper {
                                         value=""
                     />
 </div>,
-                  <div
-                    className="recipient-input"
->
-                    <h5
-                                        className="snaps"
-                    >
-                                        snaps to:
-                    </h5>
-                    <input
-                                        name="recipient"
-                                        onChange={[Function]}
-                                        onKeyDown={[Function]}
-                                        placeholder="find a teammate"
-                                        type="text"
-                                        value=""
-                    />
-                    <ul>
-                                        
-                    </ul>
-</div>,
+                  <Connect(RecipientInput)
+                    recipient=""
+                    updateRecipient={[Function]}
+/>,
                 ],
                 "className": "award",
               },
@@ -1193,71 +606,14 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "host",
+                  "nodeType": "class",
                   "props": Object {
-                    "children": Array [
-                      <h5
-                        className="snaps"
->
-                        snaps to:
-</h5>,
-                      <input
-                        name="recipient"
-                        onChange={[Function]}
-                        onKeyDown={[Function]}
-                        placeholder="find a teammate"
-                        type="text"
-                        value=""
-/>,
-                      <ul>
-                        
-</ul>,
-                    ],
-                    "className": "recipient-input",
+                    "recipient": "",
+                    "updateRecipient": [Function],
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "snaps to:",
-                        "className": "snaps",
-                      },
-                      "ref": null,
-                      "rendered": "snaps to:",
-                      "type": "h5",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "name": "recipient",
-                        "onChange": [Function],
-                        "onKeyDown": [Function],
-                        "placeholder": "find a teammate",
-                        "type": "text",
-                        "value": "",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "input",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": Array [],
-                      },
-                      "ref": null,
-                      "rendered": Array [],
-                      "type": "ul",
-                    },
-                  ],
-                  "type": "div",
+                  "rendered": null,
+                  "type": [Function],
                 },
               ],
               "type": "div",

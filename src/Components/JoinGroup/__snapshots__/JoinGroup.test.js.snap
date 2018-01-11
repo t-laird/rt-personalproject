@@ -8,7 +8,7 @@ ShallowWrapper {
     group={Object {}}
     history={
         Array [
-            "/login",
+            "/snap-ninja/login",
           ]
     }
     user={Object {}}
@@ -56,7 +56,7 @@ ShallowWrapper {
                                         <input
                                                   name="passphrase"
                                                   onChange={[Function]}
-                                                  placeholder={undefined}
+                                                  placeholder=""
                                                   value=""
                                         />
                               </div>
@@ -75,7 +75,7 @@ ShallowWrapper {
                     activeClassName="active"
                     ariaCurrent="true"
                     className="create-group-link"
-                    to="/creategroup"
+                    to="/snap-ninja/creategroup"
           >
                     CREATE NEW GROUP
           </NavLink>
@@ -117,7 +117,7 @@ ShallowWrapper {
                                           <input
                                                         name="passphrase"
                                                         onChange={[Function]}
-                                                        placeholder={undefined}
+                                                        placeholder=""
                                                         value=""
                                           />
                             </div>
@@ -180,7 +180,7 @@ ShallowWrapper {
                                     <input
                                                       name="passphrase"
                                                       onChange={[Function]}
-                                                      placeholder={undefined}
+                                                      placeholder=""
                                                       value=""
                                     />
                   </div>
@@ -218,7 +218,7 @@ ShallowWrapper {
                       <input
                                             name="passphrase"
                                             onChange={[Function]}
-                                            placeholder={undefined}
+                                            placeholder=""
                                             value=""
                       />
 </div>,
@@ -267,7 +267,7 @@ ShallowWrapper {
                         <input
                           name="passphrase"
                           onChange={[Function]}
-                          placeholder={undefined}
+                          placeholder=""
                           value=""
 />,
                       ],
@@ -293,7 +293,7 @@ ShallowWrapper {
                         "props": Object {
                           "name": "passphrase",
                           "onChange": [Function],
-                          "placeholder": undefined,
+                          "placeholder": "",
                           "value": "",
                         },
                         "ref": null,
@@ -334,7 +334,7 @@ ShallowWrapper {
             activeClassName="active"
             ariaCurrent="true"
             className="create-group-link"
-            to="/creategroup"
+            to="/snap-ninja/creategroup"
 >
             CREATE NEW GROUP
 </NavLink>,
@@ -350,7 +350,7 @@ ShallowWrapper {
             "ariaCurrent": "true",
             "children": "CREATE NEW GROUP",
             "className": "create-group-link",
-            "to": "/creategroup",
+            "to": "/snap-ninja/creategroup",
           },
           "ref": null,
           "rendered": "CREATE NEW GROUP",
@@ -398,7 +398,7 @@ ShallowWrapper {
                                                 <input
                                                             name="passphrase"
                                                             onChange={[Function]}
-                                                            placeholder={undefined}
+                                                            placeholder=""
                                                             value=""
                                                 />
                                     </div>
@@ -417,7 +417,7 @@ ShallowWrapper {
                         activeClassName="active"
                         ariaCurrent="true"
                         className="create-group-link"
-                        to="/creategroup"
+                        to="/snap-ninja/creategroup"
             >
                         CREATE NEW GROUP
             </NavLink>
@@ -459,7 +459,7 @@ ShallowWrapper {
                                                 <input
                                                                 name="passphrase"
                                                                 onChange={[Function]}
-                                                                placeholder={undefined}
+                                                                placeholder=""
                                                                 value=""
                                                 />
                                 </div>
@@ -522,7 +522,7 @@ ShallowWrapper {
                                         <input
                                                             name="passphrase"
                                                             onChange={[Function]}
-                                                            placeholder={undefined}
+                                                            placeholder=""
                                                             value=""
                                         />
                     </div>
@@ -560,7 +560,7 @@ ShallowWrapper {
                         <input
                                                 name="passphrase"
                                                 onChange={[Function]}
-                                                placeholder={undefined}
+                                                placeholder=""
                                                 value=""
                         />
 </div>,
@@ -609,7 +609,7 @@ ShallowWrapper {
                           <input
                             name="passphrase"
                             onChange={[Function]}
-                            placeholder={undefined}
+                            placeholder=""
                             value=""
 />,
                         ],
@@ -635,7 +635,7 @@ ShallowWrapper {
                           "props": Object {
                             "name": "passphrase",
                             "onChange": [Function],
-                            "placeholder": undefined,
+                            "placeholder": "",
                             "value": "",
                           },
                           "ref": null,
@@ -676,7 +676,7 @@ ShallowWrapper {
               activeClassName="active"
               ariaCurrent="true"
               className="create-group-link"
-              to="/creategroup"
+              to="/snap-ninja/creategroup"
 >
               CREATE NEW GROUP
 </NavLink>,
@@ -692,7 +692,7 @@ ShallowWrapper {
               "ariaCurrent": "true",
               "children": "CREATE NEW GROUP",
               "className": "create-group-link",
-              "to": "/creategroup",
+              "to": "/snap-ninja/creategroup",
             },
             "ref": null,
             "rendered": "CREATE NEW GROUP",
@@ -778,7 +778,7 @@ ShallowWrapper {
                                         <h4>
                                                   <Link
                                                             replace={false}
-                                                            to="/group"
+                                                            to="/snap-ninja/group"
                                                   >
                                                             Turing
                                                   </Link>
@@ -792,7 +792,9 @@ ShallowWrapper {
                                         </h5>
                                         <input
                                                   name="passphrase"
+                                                  onBlur={[Function]}
                                                   onChange={[Function]}
+                                                  onFocus={[Function]}
                                                   placeholder="9139z"
                                                   value=""
                                         />
@@ -824,7 +826,7 @@ ShallowWrapper {
                     activeClassName="active"
                     ariaCurrent="true"
                     className="create-group-link"
-                    to="/creategroup"
+                    to="/snap-ninja/creategroup"
           >
                     CREATE NEW GROUP
           </NavLink>
@@ -859,7 +861,7 @@ ShallowWrapper {
                                           <h4>
                                                         <Link
                                                                       replace={false}
-                                                                      to="/group"
+                                                                      to="/snap-ninja/group"
                                                         >
                                                                       Turing
                                                         </Link>
@@ -873,7 +875,9 @@ ShallowWrapper {
                                           </h5>
                                           <input
                                                         name="passphrase"
+                                                        onBlur={[Function]}
                                                         onChange={[Function]}
+                                                        onFocus={[Function]}
                                                         placeholder="9139z"
                                                         value=""
                                           />
@@ -942,7 +946,7 @@ ShallowWrapper {
                                     <h4>
                                                       <Link
                                                                         replace={false}
-                                                                        to="/group"
+                                                                        to="/snap-ninja/group"
                                                       >
                                                                         Turing
                                                       </Link>
@@ -956,7 +960,9 @@ ShallowWrapper {
                                     </h5>
                                     <input
                                                       name="passphrase"
+                                                      onBlur={[Function]}
                                                       onChange={[Function]}
+                                                      onFocus={[Function]}
                                                       placeholder="9139z"
                                                       value=""
                                     />
@@ -1000,7 +1006,7 @@ ShallowWrapper {
                       <h4>
                                             <Link
                                                                   replace={false}
-                                                                  to="/group"
+                                                                  to="/snap-ninja/group"
                                             >
                                                                   Turing
                                             </Link>
@@ -1014,7 +1020,9 @@ ShallowWrapper {
                       </h5>
                       <input
                                             name="passphrase"
+                                            onBlur={[Function]}
                                             onChange={[Function]}
+                                            onFocus={[Function]}
                                             placeholder="9139z"
                                             value=""
                       />
@@ -1052,7 +1060,7 @@ ShallowWrapper {
                         <h4>
                           <Link
                                                     replace={false}
-                                                    to="/group"
+                                                    to="/snap-ninja/group"
                           >
                                                     Turing
                           </Link>
@@ -1080,7 +1088,7 @@ ShallowWrapper {
                         "props": Object {
                           "children": <Link
                             replace={false}
-                            to="/group"
+                            to="/snap-ninja/group"
 >
                             Turing
 </Link>,
@@ -1093,7 +1101,7 @@ ShallowWrapper {
                           "props": Object {
                             "children": "Turing",
                             "replace": false,
-                            "to": "/group",
+                            "to": "/snap-ninja/group",
                           },
                           "ref": null,
                           "rendered": "Turing",
@@ -1115,7 +1123,9 @@ ShallowWrapper {
 </h5>,
                         <input
                           name="passphrase"
+                          onBlur={[Function]}
                           onChange={[Function]}
+                          onFocus={[Function]}
                           placeholder="9139z"
                           value=""
 />,
@@ -1141,7 +1151,9 @@ ShallowWrapper {
                         "nodeType": "host",
                         "props": Object {
                           "name": "passphrase",
+                          "onBlur": [Function],
                           "onChange": [Function],
+                          "onFocus": [Function],
                           "placeholder": "9139z",
                           "value": "",
                         },
@@ -1229,7 +1241,7 @@ ShallowWrapper {
             activeClassName="active"
             ariaCurrent="true"
             className="create-group-link"
-            to="/creategroup"
+            to="/snap-ninja/creategroup"
 >
             CREATE NEW GROUP
 </NavLink>,
@@ -1245,7 +1257,7 @@ ShallowWrapper {
             "ariaCurrent": "true",
             "children": "CREATE NEW GROUP",
             "className": "create-group-link",
-            "to": "/creategroup",
+            "to": "/snap-ninja/creategroup",
           },
           "ref": null,
           "rendered": "CREATE NEW GROUP",
@@ -1286,7 +1298,7 @@ ShallowWrapper {
                                                 <h4>
                                                             <Link
                                                                         replace={false}
-                                                                        to="/group"
+                                                                        to="/snap-ninja/group"
                                                             >
                                                                         Turing
                                                             </Link>
@@ -1300,7 +1312,9 @@ ShallowWrapper {
                                                 </h5>
                                                 <input
                                                             name="passphrase"
+                                                            onBlur={[Function]}
                                                             onChange={[Function]}
+                                                            onFocus={[Function]}
                                                             placeholder="9139z"
                                                             value=""
                                                 />
@@ -1332,7 +1346,7 @@ ShallowWrapper {
                         activeClassName="active"
                         ariaCurrent="true"
                         className="create-group-link"
-                        to="/creategroup"
+                        to="/snap-ninja/creategroup"
             >
                         CREATE NEW GROUP
             </NavLink>
@@ -1367,7 +1381,7 @@ ShallowWrapper {
                                                 <h4>
                                                                 <Link
                                                                                 replace={false}
-                                                                                to="/group"
+                                                                                to="/snap-ninja/group"
                                                                 >
                                                                                 Turing
                                                                 </Link>
@@ -1381,7 +1395,9 @@ ShallowWrapper {
                                                 </h5>
                                                 <input
                                                                 name="passphrase"
+                                                                onBlur={[Function]}
                                                                 onChange={[Function]}
+                                                                onFocus={[Function]}
                                                                 placeholder="9139z"
                                                                 value=""
                                                 />
@@ -1450,7 +1466,7 @@ ShallowWrapper {
                                         <h4>
                                                             <Link
                                                                                 replace={false}
-                                                                                to="/group"
+                                                                                to="/snap-ninja/group"
                                                             >
                                                                                 Turing
                                                             </Link>
@@ -1464,7 +1480,9 @@ ShallowWrapper {
                                         </h5>
                                         <input
                                                             name="passphrase"
+                                                            onBlur={[Function]}
                                                             onChange={[Function]}
+                                                            onFocus={[Function]}
                                                             placeholder="9139z"
                                                             value=""
                                         />
@@ -1508,7 +1526,7 @@ ShallowWrapper {
                         <h4>
                                                 <Link
                                                                         replace={false}
-                                                                        to="/group"
+                                                                        to="/snap-ninja/group"
                                                 >
                                                                         Turing
                                                 </Link>
@@ -1522,7 +1540,9 @@ ShallowWrapper {
                         </h5>
                         <input
                                                 name="passphrase"
+                                                onBlur={[Function]}
                                                 onChange={[Function]}
+                                                onFocus={[Function]}
                                                 placeholder="9139z"
                                                 value=""
                         />
@@ -1560,7 +1580,7 @@ ShallowWrapper {
                           <h4>
                             <Link
                                                         replace={false}
-                                                        to="/group"
+                                                        to="/snap-ninja/group"
                             >
                                                         Turing
                             </Link>
@@ -1588,7 +1608,7 @@ ShallowWrapper {
                           "props": Object {
                             "children": <Link
                               replace={false}
-                              to="/group"
+                              to="/snap-ninja/group"
 >
                               Turing
 </Link>,
@@ -1601,7 +1621,7 @@ ShallowWrapper {
                             "props": Object {
                               "children": "Turing",
                               "replace": false,
-                              "to": "/group",
+                              "to": "/snap-ninja/group",
                             },
                             "ref": null,
                             "rendered": "Turing",
@@ -1623,7 +1643,9 @@ ShallowWrapper {
 </h5>,
                           <input
                             name="passphrase"
+                            onBlur={[Function]}
                             onChange={[Function]}
+                            onFocus={[Function]}
                             placeholder="9139z"
                             value=""
 />,
@@ -1649,7 +1671,9 @@ ShallowWrapper {
                           "nodeType": "host",
                           "props": Object {
                             "name": "passphrase",
+                            "onBlur": [Function],
                             "onChange": [Function],
+                            "onFocus": [Function],
                             "placeholder": "9139z",
                             "value": "",
                           },
@@ -1737,7 +1761,7 @@ ShallowWrapper {
               activeClassName="active"
               ariaCurrent="true"
               className="create-group-link"
-              to="/creategroup"
+              to="/snap-ninja/creategroup"
 >
               CREATE NEW GROUP
 </NavLink>,
@@ -1753,7 +1777,7 @@ ShallowWrapper {
               "ariaCurrent": "true",
               "children": "CREATE NEW GROUP",
               "className": "create-group-link",
-              "to": "/creategroup",
+              "to": "/snap-ninja/creategroup",
             },
             "ref": null,
             "rendered": "CREATE NEW GROUP",

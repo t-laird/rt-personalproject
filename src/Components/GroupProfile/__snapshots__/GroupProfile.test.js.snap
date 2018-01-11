@@ -65,8 +65,7 @@ ShallowWrapper {
 >
         <h4>
                 Turing - Snaps Awarded - LAST 
-                             1 WEEK
-                             
+                             1 WEEKS
         </h4>
         <VictoryChart
                 containerComponent={
@@ -3669,8 +3668,7 @@ ShallowWrapper {
         "children": Array [
           <h4>
             Turing - Snaps Awarded - LAST 
-                         1 WEEK
-                         
+                         1 WEEKS
 </h4>,
           <VictoryChart
             containerComponent={
@@ -7273,13 +7271,11 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Turing - Snaps Awarded - LAST 
-             1 WEEK
-             ",
+             1 WEEKS",
           },
           "ref": null,
           "rendered": "Turing - Snaps Awarded - LAST 
-             1 WEEK
-             ",
+             1 WEEKS",
           "type": "h4",
         },
         Object {
@@ -12241,8 +12237,7 @@ ShallowWrapper {
 >
           <h4>
                     Turing - Snaps Awarded - LAST 
-                                 1 WEEK
-                                 
+                                 1 WEEKS
           </h4>
           <VictoryChart
                     containerComponent={
@@ -15845,8 +15840,7 @@ ShallowWrapper {
           "children": Array [
             <h4>
               Turing - Snaps Awarded - LAST 
-                           1 WEEK
-                           
+                           1 WEEKS
 </h4>,
             <VictoryChart
               containerComponent={
@@ -19449,13 +19443,11 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Turing - Snaps Awarded - LAST 
-             1 WEEK
-             ",
+             1 WEEKS",
             },
             "ref": null,
             "rendered": "Turing - Snaps Awarded - LAST 
-             1 WEEK
-             ",
+             1 WEEKS",
             "type": "h4",
           },
           Object {
@@ -24451,8 +24443,7 @@ ShallowWrapper {
 >
         <h4>
                 Turing - Snaps Awarded - LAST 
-                             0 WEEK
-                             S
+                             0 WEEKS
         </h4>
         <VictoryChart
                 containerComponent={
@@ -27618,8 +27609,7 @@ ShallowWrapper {
         "children": Array [
           <h4>
             Turing - Snaps Awarded - LAST 
-                         0 WEEK
-                         S
+                         0 WEEKS
 </h4>,
           <VictoryChart
             containerComponent={
@@ -30785,13 +30775,11 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Turing - Snaps Awarded - LAST 
-             0 WEEK
-             S",
+             0 WEEKS",
           },
           "ref": null,
           "rendered": "Turing - Snaps Awarded - LAST 
-             0 WEEK
-             S",
+             0 WEEKS",
           "type": "h4",
         },
         Object {
@@ -34885,8 +34873,7 @@ ShallowWrapper {
 >
           <h4>
                     Turing - Snaps Awarded - LAST 
-                                 0 WEEK
-                                 S
+                                 0 WEEKS
           </h4>
           <VictoryChart
                     containerComponent={
@@ -38052,8 +38039,7 @@ ShallowWrapper {
           "children": Array [
             <h4>
               Turing - Snaps Awarded - LAST 
-                           0 WEEK
-                           S
+                           0 WEEKS
 </h4>,
             <VictoryChart
               containerComponent={
@@ -41219,13 +41205,11 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Turing - Snaps Awarded - LAST 
-             0 WEEK
-             S",
+             0 WEEKS",
             },
             "ref": null,
             "rendered": "Turing - Snaps Awarded - LAST 
-             0 WEEK
-             S",
+             0 WEEKS",
             "type": "h4",
           },
           Object {
