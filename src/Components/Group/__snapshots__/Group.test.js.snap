@@ -37,7 +37,7 @@ ShallowWrapper {
           activeClassName="active"
           ariaCurrent="true"
           className="join-group"
-          to="/joingroup"
+          to="/snap-ninja/joingroup"
 >
           SWITCH GROUPS
 </NavLink>,
@@ -82,7 +82,7 @@ ShallowWrapper {
           "ariaCurrent": "true",
           "children": "SWITCH GROUPS",
           "className": "join-group",
-          "to": "/joingroup",
+          "to": "/snap-ninja/joingroup",
         },
         "ref": null,
         "rendered": "SWITCH GROUPS",
@@ -105,7 +105,7 @@ ShallowWrapper {
             activeClassName="active"
             ariaCurrent="true"
             className="join-group"
-            to="/joingroup"
+            to="/snap-ninja/joingroup"
 >
             SWITCH GROUPS
 </NavLink>,
@@ -150,7 +150,7 @@ ShallowWrapper {
             "ariaCurrent": "true",
             "children": "SWITCH GROUPS",
             "className": "join-group",
-            "to": "/joingroup",
+            "to": "/snap-ninja/joingroup",
           },
           "ref": null,
           "rendered": "SWITCH GROUPS",
