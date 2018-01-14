@@ -1,0 +1,12 @@
+@import '../../Variables.scss';
+
+.member-component {
+  width: 250px;
+  padding: 7px 20px;
+  word-wrap: break-word;
+   
+  h5 {
+    font-weight: 500;
+    color: $c7;
+  }
+}

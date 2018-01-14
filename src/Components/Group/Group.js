@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './Group.css';
 import GroupData from '../GroupData/GroupData';
 import GroupProfile from '../GroupProfile/GroupProfile';
+import GroupMembers from '../GroupMembers/GroupMembers';
 import Leaderboard from '../Leaderboard/Leaderboard';
 import { connect } from 'react-redux';
-import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 export class Group extends Component {
@@ -26,7 +26,7 @@ export class Group extends Component {
         <GroupData />
         <Leaderboard />
         <GroupProfile />
-        <NavLink className="join-group" to='/snap-ninja/joingroup'>SWITCH GROUPS</NavLink>
+        <GroupMembers />
       </div>
     ); 
   }
