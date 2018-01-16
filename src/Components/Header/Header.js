@@ -55,8 +55,8 @@ export const Header = (props) => {
           <NavLink exact to="/snap-ninja/">HOME</NavLink>
           <NavLink to="/snap-ninja/user">USER</NavLink>
           <NavLink to="/snap-ninja/group">GROUP</NavLink>
-          <NavLink to="/snap-ninja/creategroup">CREATE</NavLink>
-          <NavLink to="/snap-ninja/joingroup">JOIN</NavLink>
+          <NavLink to="/snap-ninja/send">SEND</NavLink>
+          <NavLink to="/snap-ninja/account">ACCOUNT</NavLink>
         </div>
       );
     } else {
