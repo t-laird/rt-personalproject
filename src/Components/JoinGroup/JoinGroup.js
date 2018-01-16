@@ -167,7 +167,7 @@ export class JoinGroup extends Component {
           </div>
         </div>
         <div className="link-holder">
-          <NavLink className="create-group-link" to='/snap-ninja/creategroup'>CREATE NEW GROUP</NavLink>
+          <NavLink className="create-group-link" to='/snap-ninja/account'>BACK TO ACCOUNT</NavLink>
         </div>
       </div>
     ); 

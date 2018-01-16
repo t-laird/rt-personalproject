@@ -118,6 +118,10 @@
 	}
 }
 
+.link-holder .create-group-link {
+	margin-bottom: 60px;
+}
+
 @media screen and (max-width: 768px) {
 	.create-group-component {
 		@include media-width;
