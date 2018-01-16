@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import './PointsInformation.css';
 
 class PointsInformation extends Component {
   getReceivedPoints = () => {
