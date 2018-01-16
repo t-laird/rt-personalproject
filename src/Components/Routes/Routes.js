@@ -7,6 +7,7 @@ import User from '../User/User';
 import Group from '../Group/Group';
 import Slack from '../Slack/Slack';
 import JoinGroup from '../JoinGroup/JoinGroup';
+import Transaction from '../Transaction/Transaction';
 import CreateGroup from '../CreateGroup/CreateGroup';
 import { Route, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
@@ -145,6 +146,8 @@ class Routes extends Component {
         pathname.includes('/snap-ninja/login') ||
         pathname.includes('/snap-ninja/user') ||
         pathname.includes('/snap-ninja/group') ||
+        pathname.includes('/snap-ninja/send') ||
+        pathname.includes('/snap-ninja/account') ||
         (
           pathname.includes('/snap-ninja/creategroup') && 
           nextProps.initialLoad
@@ -181,6 +184,7 @@ class Routes extends Component {
                 location={this.props.location}>
                 <Route path='/snap-ninja/user' component={User} />
                 <Route path='/snap-ninja/group' component={Group} />
+                <Route path='/snap-ninja/send' component={Transaction} />
                 <Route path='/snap-ninja/joingroup' component={JoinGroup} />
                 <Route path='/snap-ninja/creategroup' component={CreateGroup} />
                 <Route path='/snap-ninja/slack' component={Slack} />
