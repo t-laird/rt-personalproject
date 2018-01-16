@@ -120,12 +120,13 @@
 
 .link-holder {
   @include center-box;
-  padding-right: 25px;
+  padding-left: 25px;
+  margin-bottom: 40px;
 
 	.create-group-link {
 		color: $c1;
 		font-weight: 900;
-		text-align: right;
+		text-align: left;
 		display: block;
 		transition: color .15s ease-in-out;
     font-size: 20px;
