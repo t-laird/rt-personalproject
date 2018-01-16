@@ -27,7 +27,7 @@ class RecipientInput extends Component {
     const userNames = this.props.UserList.map( user => user.name);
     const filterSelf = userNames.filter( user => user !== this.props.User.name);
 
-    const filterUsers = filterSelf.filter( user => query.test(user));
+    const filterUsers = filterSelf.filter( user => query.test(user)).sort();
     const firstFive = filterUsers.slice(0, 5);
 
     if (value.length) {

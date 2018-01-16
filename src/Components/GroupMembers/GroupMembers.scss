@@ -1,0 +1,42 @@
+@import '../../Variables.scss';
+
+.group-members-component {
+  @include center-box;
+  background-color: $c3;
+
+  button {
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'semplicitapro', sans-serif;
+    color: $c1;
+    background-color: $c7;
+    height: 52px;
+    border: none;
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+    display: block;
+    margin: 0 auto 10px;
+    width: 100%;
+  }
+
+  button:hover {
+    background-color: $c6;
+    color: darken($c1, 12%);
+  }
+
+  .list-hidden {
+    display: none;
+  }
+
+  .list-active {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 14px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .group-members-component {
+    @include media-width;
+  }
+}
