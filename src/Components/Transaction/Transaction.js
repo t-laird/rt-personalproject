@@ -199,6 +199,7 @@ export class Transaction extends Component {
   render() {
     return (
       <div className="Transaction">
+        <h4 className="heading">SEND POINTS</h4>
         <PointsInformation />
         <div className="award-header">
           <h4>AWARD</h4>
