@@ -49,6 +49,26 @@ class Account extends Component {
     }
   }
 
+  slackConnectText = () => {
+    if (this.props.User.slack_id) {
+      return (
+        <div className="slack-header">
+          <h5>Your Slack ID is: </h5>
+          <span className="passphrase-span">{this.props.User.slack_id}</span>
+          
+        </div>
+      );
+    } else {
+      return (
+        <div className="slack-header">
+          <h5>Link your Snap Ninja account to Slack: </h5>
+          <div className="link-container"><Link to="/snap-ninja/slack">Link to Slack<img src={require('./assets/slack-icon.svg')} alt="slack logo" /></Link></div>
+        </div>
+      );
+
+    }
+  }
+
   render() {
     return (
       <div className="account-component">
@@ -59,9 +79,10 @@ class Account extends Component {
 
         <div className="account-container">
           {this.currentGroupText()}
+          {this.slackConnectText()}
           <div className="account-links">
-            <button><Link to="/snap-ninja/account/creategroup">CREATE GROUP</Link></button>
-            <button><Link to="/snap-ninja/account/joingroup">{this.joinButtonText()}</Link></button>
+            <div className="link-container"><Link to="/snap-ninja/account/creategroup">CREATE GROUP</Link></div>
+            <div className="link-container"><Link to="/snap-ninja/account/joingroup">{this.joinButtonText()}</Link></div>
           </div>
         </div>
 
