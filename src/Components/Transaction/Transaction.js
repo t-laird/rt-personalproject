@@ -11,9 +11,9 @@ import getGroupTransactionData from '../../helpers/fetches/getGroupTransactionDa
 import getTransactionData from '../../helpers/fetches/getTransactionData/getTransactionData';
 import getUser from '../../helpers/fetches/getUser/getUser';
 import PointsInformation from '../PointsInformation/PointsInformation';
+import GroupMembers from '../GroupMembers/GroupMembers';
 import RecipientInput from '../RecipientInput/RecipientInput';
-
-
+ 
 export class Transaction extends Component {
   constructor() {
     super();
@@ -199,7 +199,7 @@ export class Transaction extends Component {
   render() {
     return (
       <div className="Transaction">
-        <h4 className="heading">SEND POINTS</h4>
+        <h4 className="heading">SEND SNAPS</h4>
         <PointsInformation />
         <div className="award-header">
           <h4>AWARD</h4>
@@ -234,6 +234,7 @@ export class Transaction extends Component {
             <h3>{this.state.transactionMessage}</h3>
           </div>
         </div>
+        <GroupMembers updateRecipient={this.updateRecipient}/>
       </div>
     );
   }

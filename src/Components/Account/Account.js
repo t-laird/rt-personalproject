@@ -47,7 +47,7 @@ class Account extends Component {
         </div>
       )
     }
-  }
+  }   
 
   slackConnectText = () => {
     if (this.props.User.slack_id) {

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './Group.css';
 import GroupData from '../GroupData/GroupData';
 import GroupProfile from '../GroupProfile/GroupProfile';
-import GroupMembers from '../GroupMembers/GroupMembers';
 import Leaderboard from '../Leaderboard/Leaderboard';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -26,7 +25,6 @@ export class Group extends Component {
         <GroupData />
         <Leaderboard />
         <GroupProfile />
-        <GroupMembers />
       </div>
     ); 
   }

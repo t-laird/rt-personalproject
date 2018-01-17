@@ -7,6 +7,18 @@
    
   h5 {
     font-weight: 500;
-    color: $c7;
+    color: $c3;
+    cursor: pointer;
+    background-image: url('assets/send-arrow-icon.svg');
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 0% 450%;
+    transition: all .10s ease-in-out;
+    padding-left: 18px;
+  }
+
+  h5:hover {
+    background-position: 0% 26%;
+    color: $c1;
   }
 }
