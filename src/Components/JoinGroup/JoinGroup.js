@@ -114,6 +114,11 @@ export class JoinGroup extends Component {
         message: <h5>{'You\'re already in that group!'}</h5>
       });
       return;
+    } else if (!this.state.passphrase.length) {
+      this.setState({
+        message: <h5>{'Please enter a new passphrase.'}</h5>
+      })
+      return;
     }
     const response = await validateGroup(this.state.passphrase, this.props.user.user_id);
 
@@ -163,7 +168,9 @@ export class JoinGroup extends Component {
           </div>
           <div className="join-container">
             {this.groupPageMessage()}
-            {this.state.message}
+            <div className="join-message">
+              {this.state.message}
+            </div>
           </div>
         </div>
         <div className="link-holder">

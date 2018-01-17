@@ -121,7 +121,7 @@
 
 @media screen and (max-width: 530px) {
   .account-component {
-    .current-group, .passphrase {
+    .current-group, .passphrase, .slack-header {
       flex-direction: column;
 
       h4, .passphrase-span {

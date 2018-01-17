@@ -54,15 +54,22 @@ export class CreateGroup extends Component {
 
   validatePointValue = (event, groupName, weeklyPoints) => {
     event.preventDefault();
-    if (weeklyPoints > 0 && weeklyPoints <= 500) {
+    if ((weeklyPoints > 0 && weeklyPoints <= 500) && (groupName.length)) {
       this.createGroup(groupName, weeklyPoints);
-    } else {
+    } else if ((weeklyPoints <= 0 || weeklyPoints > 500) && (groupName.length)) {
       this.setState({
         successMessage: 
         <h5>
           {'Invalid point value.  Please choose a number between 1 - 500.  We recommend 50!'}
         </h5>
       });
+    } else if ((weeklyPoints <= 0 || weeklyPoints > 500) || (!groupName.length)) {
+      this.setState({
+        successMessage:
+          <h5>
+            {'Please enter a group name!'}
+          </h5>
+      })
     }
   }
 
