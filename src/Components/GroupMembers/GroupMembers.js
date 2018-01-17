@@ -4,14 +4,6 @@ import Member from '../Member/Member';
 import './GroupMembers.css';
 
 class GroupMembers extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      display: 'list-hidden',
-      buttonText: `SHOW ALL MEMBERS - ${this.props.Group.group_name}`
-    }
-  }
 
   displayGroupMembers = () => {
     if (this.props.UserList.length) {
@@ -31,6 +23,7 @@ class GroupMembers extends Component {
 
       const display = sorted.map((user) => {
         return <Member 
+          updateRecipient={this.props.updateRecipient}
           name={user.name}
           key={user.user_id}
         />
@@ -40,28 +33,13 @@ class GroupMembers extends Component {
     }
   }
 
-  toggleDisplay = () => {
-    if (this.state.display === 'list-hidden') {
-      this.setState({
-        display: 'list-active',
-        buttonText: 'HIDE'
-      })
-    } else {
-      this.setState({
-        display: 'list-hidden',
-        buttonText: `SHOW ALL MEMBERS - ${this.props.Group.group_name}`
-      })
-    }
-  }
-
   render() {
     return (
       <div className="group-members-component">
-        <button
-          onClick={() => this.toggleDisplay()}
-        >{this.state.buttonText}
-        </button>
-        <div className={this.state.display} >
+        <div className="group-members-header">
+          <h4>ALL {this.props.Group.group_name} MEMBERS</h4>
+        </div>
+        <div className="members-container">
           {this.displayGroupMembers()}
         </div>
       </div>

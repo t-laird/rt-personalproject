@@ -11,6 +11,10 @@ class RecipientInput extends Component {
     };
   }
 
+  componentWillReceiveProps = (nextProps) => {
+    this.populateSuggestions({target: {value: nextProps.recipient} })
+  }
+
   handleInput = (event) => {
     const { value } = event.target;
     this.setState({
@@ -22,7 +26,7 @@ class RecipientInput extends Component {
 
   populateSuggestions = (event) => {
     const { value } = event.target;
-    const query = new RegExp(value, 'gi');
+    const query = new RegExp(value, 'i');
 
     const userNames = this.props.UserList.map( user => user.name);
     const filterSelf = userNames.filter( user => user !== this.props.User.name);
@@ -52,11 +56,11 @@ class RecipientInput extends Component {
       );
     });
 
-    if (this.state.recipient === this.state.suggestions[0] && this.state.suggestions.length === 1) {
+    if (this.props.recipient === this.state.suggestions[0] && this.state.suggestions.length === 1) {
       return null;
     }
 
-    if (this.state.recipient.length && !this.state.suggestions.length) {
+    if (this.props.recipient.length && !this.state.suggestions.length) {
       return <li 
         onClick={
           () => this.setState({recipient: ''})
@@ -127,7 +131,7 @@ class RecipientInput extends Component {
         <input 
           type="text" 
           placeholder="find a teammate"
-          value={this.state.recipient}
+          value={this.props.recipient}
           onKeyDown={(event) => { 
             this.navigateSuggestions(event);
           }}

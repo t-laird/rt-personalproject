@@ -2,41 +2,33 @@
 
 .group-members-component {
   @include center-box;
-  background-color: $c3;
+  background-color: $c6;
+  margin-bottom: 60px;
 
-  button {
-    font-size: 20px;
-    font-weight: 900;
-    font-family: 'semplicitapro', sans-serif;
-    color: $c1;
-    background-color: $c7;
-    height: 52px;
-    border: none;
-    cursor: pointer;
-    transition: all .15s ease-in-out;
-    display: block;
-    margin: 0 auto 10px;
-    width: 100%;
+  .group-members-header {
+    @include box-header;
+    background-color: $c5;
+
+    h4 {
+      color: $c3;
+      font-weight: 900;
+      text-align: center;
+    }
   }
 
-  button:hover {
-    background-color: $c6;
-    color: darken($c1, 12%);
-  }
-
-  .list-hidden {
-    display: none;
-  }
-
-  .list-active {
+  .members-container {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 14px;
+    padding: 10px 0;
   }
 }
 
 @media screen and (max-width: 750px) {
   .group-members-component {
     @include media-width;
+
+    .group-members-header {
+      @include media-width;
+    }
   }
 }

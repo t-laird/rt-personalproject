@@ -47,7 +47,7 @@ class Account extends Component {
         </div>
       )
     }
-  }
+  }   
 
   render() {
     return (
