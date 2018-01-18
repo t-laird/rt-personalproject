@@ -58,14 +58,33 @@
 
   
   .transaction-message {
-    h3 {
+    position: relative;
+    height: 33px;
+    overflow: hidden;
+
+    .t-message-0, .t-message-1, .t-message-2 {
       font-size: 18px;
       margin: 0px;
       color: red;
       font-weight: 700;
-      padding-top: 15px;
       text-align: center;
-      transition: 1s;
+      width: 320px;
+      position: absolute;
+      top: 4px;
+    }
+
+    .t-message-0 {
+      left: -320px;
+    }
+
+    .t-message-1 {
+      left: calc((670px / 2) - 160px);
+      transition: all 0.4s ease-in-out;
+    }
+
+    .t-message-2 {
+      left: 770px;
+      transition: all 0.4s ease-in-out;
     }
   }
 
@@ -86,7 +105,7 @@
 
     position: relative;
     background-color: $c6;
-    padding: 22px 40px;
+    padding: 22px 40px 6px;
 
     .award {
       padding: 5px 0 0;
@@ -224,6 +243,17 @@
     .heading {
       @include media-width;
     }
+
+    .transaction-message {
+      .t-message-1 {
+        left: calc(((100vw - 80px) / 2) - 160px);
+      }
+
+      .t-message-2 {
+        left: calc(100vw - 80px);
+      }
+    }
+
     .PointsInformation {
       .new-user-message {
         @include media-width;
