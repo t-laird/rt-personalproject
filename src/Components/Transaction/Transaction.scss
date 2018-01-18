@@ -56,6 +56,33 @@
     border: none;
   }
 
+  .warning-icon {
+    width: 20px;
+    margin-right: 4px;
+    position: relative;
+    top: 4px;
+  }
+
+  .success-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 4px;
+    position: relative;
+    top: 6px;
+  }
+
+  .success-icon {
+    -webkit-animation: rotation 1s infinite linear;
+  }
+
+  @-webkit-keyframes rotation {
+      from {
+          -webkit-transform: rotate(0deg);
+      }
+      to {
+          -webkit-transform: rotate(359deg);
+      }
+  }
   
   .transaction-message {
     position: relative;
