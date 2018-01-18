@@ -23,7 +23,8 @@ export class Transaction extends Component {
       note: '',
       validInput: true,
       suggestions: [],
-      transactionMessage: null
+      transactionMessage: null,
+      messageClass: 't-message-1'
     };
   }
 
@@ -57,7 +58,7 @@ export class Transaction extends Component {
 
     if (!findReceivingUser) {
       this.setState({
-        transactionMessage: "We can't find your receiving user.  You should try again!",
+        transactionMessage: "Can't locate receiving user.",
         suggestions: [],
       });
       return;
@@ -111,13 +112,15 @@ export class Transaction extends Component {
     const submitResponse = await submitEvent.json();
 
     if (submitResponse.status === 'success') {
+      this.successMessage(this.state.points, transactionInformation.recipient_name);
+
       this.setState({
         recipient: '',
         suggestions: [],
-        transactionMessage: `Successfully sent ${this.state.points} points to ${transactionInformation.recipient_name}.`,
         points: '',
         note: ''
       });
+
 
       this.fetchUserData();
 
@@ -127,7 +130,21 @@ export class Transaction extends Component {
         transactionMessage: submitResponse.error
       });
     }
+  }
 
+  successMessage = (points, recipient) => {
+    document.querySelector('.t-message-1').className = 't-message-0';
+    this.setState({transactionMessage: `You sent ${points} snaps to ${recipient}!`})
+    setTimeout(() => {
+      document.querySelector('.t-message-0').className = 't-message-1';
+    }, 10)
+    setTimeout(() => {
+      document.querySelector('.t-message-1').className = 't-message-2';
+    }, 4010)
+    setTimeout(() => {
+      this.setState({transactionMessage: null});
+      document.querySelector('.t-message-2').className = 't-message-1';
+    }, 4410);
   }
 
   fetchUserData = async () => {
@@ -231,7 +248,7 @@ export class Transaction extends Component {
           </div>
           <button onClick={()=> { this.handleSubmit(); }}>SEND</button>
           <div className="transaction-message">
-            <h3>{this.state.transactionMessage}</h3>
+            <h3 className="t-message-1">{this.state.transactionMessage}</h3>
           </div>
         </div>
         <GroupMembers updateRecipient={this.updateRecipient}/>
