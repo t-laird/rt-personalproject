@@ -1,19 +1,16 @@
 @import '../../Variables.scss';
 
 .homepage-component {
-  min-height: 100vh;
-  background: url('homepage-assets/home-bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 90% 50%;
+  background: linear-gradient(to bottom, rgba(85,70,90,1) 0%, rgba(244,244,244,1) 100%);
   margin-top: -70px;
-  background-attachment: fixed;
 
   .bg-holder {
-    min-height: 100vh;
-    padding-top: 255px;
-    padding-bottom: 50px;
-    background: linear-gradient(to bottom, rgba(50,50,50,.8) 0%,rgba(50,50,50,.5) 100%);
+    padding-top: calc(100vh * .38);
+    background-image: url('homepage-assets/ninja-bg.svg');
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    padding-bottom: calc(100vw / 2.6);
   }
 
   h1 {
@@ -25,12 +22,32 @@
     line-height: 1.3;
   }
 
+  h2 {
+    font-size: 34px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+  }
+
+  .title-bar-span {
+    font-size: 34px;
+    font-weight: 900;
+    font-family: 'semplicitapro', sans-serif;
+    text-align: center;
+  }
+
+  .homepage-title-bar {
+    background-color: $c4;
+    width: 100%;
+    padding: 32px 10px;
+  }
+
   h4 {
     font-size: 24px;
     font-weight: 900;
     color: $c3;
     line-height: 1.3;
-    margin-bottom: 10px;
+    text-align: center;
   }
 
   p {
@@ -43,6 +60,118 @@
     margin-bottom: 10px;
   }
 
+  .banners-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1320px;
+    margin: auto;
+  }
+
+  .home-banner {
+    background-color: $c7;
+    width: 300px;
+    position: relative;
+  }
+
+  .banner-top {
+    background-color: $c6;
+    height: 120px;
+    padding-top: 19px;
+  }
+
+  .banner-bottom {
+    padding: 39px 20px 20px;
+    position: relative;
+  }
+
+  .banner-bottom-graphic {
+    width: 300px;
+    position: absolute;
+    top: 275px;
+    left: 0px;
+  }
+
+  .home-bottom-container {
+    width: 900px;
+    margin: 180px auto 100px;
+  }
+
+  .bottom-section-1, .bottom-section-2, .bottom-section-3 {
+    background-color: $c2;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 200px;
+
+  }
+
+  .section-1-text, .section-2-text, .section-3-text {
+    background-color: $c3;
+    width: 364px;
+    padding: 30px 25px;
+
+    h4, p {
+      color: $c7;
+    }
+
+    h4 {
+      margin-bottom: 10px;
+    }
+  }
+
+  .bottom-section-1 {
+    height: 261px;
+  }
+
+  .section-1-text {
+    height: 301px;
+    position: relative;
+    bottom: 20px;
+  }
+
+  .bottom-section-1-graphic {
+    width: 248px;
+  }
+
+  .bottom-section-2 {
+    height: 261px;
+  }
+
+  .section-2-text {
+    height: 301px;
+    position: relative;
+    bottom: 20px;
+  }
+
+  .bottom-section-2-graphic {
+    width: 250px;
+    height: 411px;
+    position: relative;
+    bottom: 73px;
+  }
+
+  .bottom-section-3 {
+    height: 261px;
+    margin-bottom: 0px;
+  }
+
+  .section-3-text {
+    height: 301px;
+    position: relative;
+    bottom: 20px;
+  }
+
+  .slack-graphic {
+    width: 160px;
+    position: relative;
+    left: 20px;
+  }
+
+  .github-graphic {
+    width: 180px;
+    position: relative;
+    right: 20px;
+  }
+
   .no-wrap {
     font-family: 'semplicitapro', 'sans-serif';
     font-size: 46px;
@@ -50,28 +179,11 @@
     white-space: nowrap;
   }
 
-  .homepage-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 1076px;
-    margin: auto;
-  }
-
-  .info-box {
-    background-color: $c5;
-    border-left: 60px solid $c6;
-    margin: 20px;
-    padding: 24px 45px;
-    position: relative;
-    width: 498px;
-    height: 437px;
-  }
-
   .homepage-icon {
     width: 60px;
     position: absolute;
-    top: 185px;
-    left: -30px;
+    top: 89px;
+    left: 118px;
   }
 
   .homepage-logo {
@@ -83,7 +195,7 @@
 
   .header-button-top {
     margin-top: 30px;
-    margin-bottom: 200px;
+    margin-bottom: calc(100vh * .37);
   }
 
   button {
@@ -91,7 +203,7 @@
     padding: 16px 23px 15px;
     border: 0;
     display: block;
-    margin: 20px auto 0;
+    margin: auto;
     cursor: pointer;
     transition: background-color .15s ease-in-out;
 
@@ -106,10 +218,79 @@
 
 }
 
-@media screen and (max-width: 1075px) {
+@media screen and (max-width: 1319px) {
   .homepage-component {
-    .homepage-container {
-      width: 538px;
+    .banners-container {
+      flex-wrap: wrap;
+      width: 647px;
+    }
+
+    .banner-bottom img {
+      display: none;
+    }
+
+    .home-banner {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .homepage-component {
+
+    /*.bg-holder {
+      padding-bottom: 350px;
+    }*/
+
+    .bottom-section-1, .bottom-section-2, .bottom-section-3 {
+      flex-direction: column;
+      height: unset;
+      width: 324px;
+      margin: 0 auto 50px;
+    }
+
+    .home-bottom-container {
+      width: unset;
+      margin-top: 20px;
+    }
+
+    .bottom-section-1 {
+      padding-bottom: 40px;
+
+      img {
+        order: 1;
+      }
+    }
+
+    .bottom-section-3 {
+      .slack-graphic, .github-graphic {
+        order: 1;
+        position: static;
+        margin: 20px auto;
+      }
+
+      .github-graphic {
+        margin-bottom: 40px;
+      }
+    }
+
+    .section-1-text, .section-2-text, .section-3-text {
+      margin: auto;
+      position: relative;
+      right: 20px;
+    }
+
+    .bottom-section-1-graphic, .bottom-section-2-graphic {
+      margin: 20px auto;
+    }
+
+    .bottom-section-1-graphic {
+      width: 280px;  
+    }
+
+    .bottom-section-2-graphic {
+      bottom: 119px;
+      margin-bottom: -93px;
     }
   }
 }
@@ -126,27 +307,63 @@
   }
 }
 
+@media screen and (max-width: 665px) {
+  .homepage-component {
+    .banners-container {
+      width: 300px;
+    }
+  }
+}
+
 @media screen and (max-width: 537px) {
   .homepage-component {
 
-    .homepage-container {
-      width: 100%;
+    .homepage-icon {
+      
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .homepage-component {
+
+    .bottom-section-1, .bottom-section-2, .bottom-section-3 {
+      @include media-width;
     }
 
-    .info-box {
-      background-color: $c5;
-      border-left: 0;
-      border-top: 60px solid $c6;
-      margin: 20px 0;
-      width: 100%;
+    .section-1-text, .section-2-text, .section-3-text {
+      position: static;
+      @include media-width;
+    }
+
+    .section-1-text, .section-3-text {
       height: unset;
     }
 
-    .homepage-icon {
-      width: 60px;
-      position: static;
-      display: block;
-      margin: -54px auto 0;
+    .section-2-text {
+      height: 325px;
+    }
+
+    .bottom-section-1-graphic {
+      margin-top: 43px;
+    }
+
+    .bottom-section-3 {
+      .slack-graphic {
+        margin-top: 35px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .homepage-component {
+    .banners-container {
+      @include media-width;
+    }
+
+    .home-banner {
+      @include media-width;
     }
   }
 }
