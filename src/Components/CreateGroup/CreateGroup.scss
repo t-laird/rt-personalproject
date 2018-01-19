@@ -15,6 +15,34 @@
 		}
 	}
 
+	.warning-icon {
+    width: 20px;
+    margin-right: 4px;
+    position: relative;
+    top: 4px;
+  }
+
+  .success-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 4px;
+    position: relative;
+    top: 6px;
+  }
+
+  .success-icon {
+    -webkit-animation: rotation 1s infinite linear;
+  }
+
+  @-webkit-keyframes rotation {
+      from {
+          -webkit-transform: rotate(0deg);
+      }
+      to {
+          -webkit-transform: rotate(359deg);
+      }
+  }
+
 	h5 {
 		font-weight: 900;
 		color: $c3;
@@ -22,9 +50,39 @@
 		margin-bottom: 20px;
 	}
 
+	.create-group-text {
+		margin: 10px 0;
+	}
+
 	.success-message {
-		margin-top: -19px;
-		margin-bottom: 26px;
+		position: relative;
+	  height: 33px;
+	  overflow: hidden;
+
+		.c-message-0, .c-message-1, .c-message-2 {
+		  font-size: 18px;
+		  margin: 0px;
+		  color: $c1;
+		  font-weight: 700;
+		  text-align: center;
+		  width: 320px;
+		  position: absolute;
+		  top: 4px;
+		}
+
+		.c-message-0 {
+		  left: -320px;
+		}
+
+		.c-message-1 {
+		  left: calc((670px / 2) - 160px);
+		  transition: all 0.4s ease-in-out;
+		}
+
+		.c-message-2 {
+		  left: 770px;
+		  transition: all 0.4s ease-in-out;
+		}
 		
 		h5 {
 			color: $c1;
@@ -36,10 +94,19 @@
 			font-size: 28px;
 			margin-left: 5px;
 		}
+
+		.c-message-1-new {
+			width: unset;
+			position: static;
+		}
+	}
+
+	.success-message-new {
+		height: unset;
 	}
 
 	form {
-		padding: 24px 40px;
+		padding: 24px 40px 6px;
 	}
 
 	span {
@@ -88,7 +155,6 @@
 	.create-top, .create-bottom {
 		display: flex;
 		justify-content: space-between;
-		margin-bottom: 20px;
 
 		input {
 			outline: none;
@@ -100,6 +166,10 @@
 		}
 	}
 
+	.create-top {
+		margin-bottom: 20px;
+	}
+
 	button {
 		height: 52px;
 		width: 149px;
@@ -108,7 +178,7 @@
 		cursor: pointer;
 		transition: background-color .15s ease-in-out;
 		padding-top: 2px;
-		margin: 41px auto 0;
+		margin: auto;
 		border: none;
 		display: block;
 		font-size: 20px;
@@ -127,6 +197,16 @@
 	.create-group-component {
 		@include media-width;
 
+		.success-message {
+		  .c-message-1 {
+		    left: calc(((100vw - 80px) / 2) - 160px);
+		  }
+
+		  .c-message-2 {
+		    left: calc(100vw - 80px);
+		  }
+		}
+
 		.create-group-heading {
 			@include media-width;
 		}
@@ -142,6 +222,10 @@
 			input {
 				margin-left: 0;	
 			}
+		}
+
+		button {
+			margin-top: 20px;
 		}
 	}
 }

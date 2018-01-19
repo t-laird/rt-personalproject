@@ -110,14 +110,10 @@ export class JoinGroup extends Component {
   joinGroup = async (event) => {
     event.preventDefault();
     if (this.state.passphrase === this.props.group.group_passphrase) {
-      this.setState({
-        message: <h5>{'You\'re already in that group!'}</h5>
-      });
+      this.errorMessage("You're already in that group!");
       return;
     } else if (!this.state.passphrase.length) {
-      this.setState({
-        message: <h5>{'Please enter a new passphrase.'}</h5>
-      })
+      this.errorMessage('Please enter a new passphrase.');
       return;
     }
     const response = await validateGroup(this.state.passphrase, this.props.user.user_id);
@@ -126,13 +122,9 @@ export class JoinGroup extends Component {
       const userResponse = await getUser();
       return this.updateUserInfo(userResponse);
     } else if (!this.props.user.name) {
-      this.setState({
-        message: <h5>You must be logged in to join a group.</h5>
-      });
+      this.errorMessage('You must be logged in to join a group.');
     } else {
-      this.setState({
-        message: <h5>Failed to join group.  Please try again.</h5>
-      });
+      this.errorMessage('Failed to join group.  Please try again.');
     }
   }
 
@@ -149,14 +141,39 @@ export class JoinGroup extends Component {
     this.props.updateUserTransactions(userTransactions);
     this.props.updateGroupTransactions(groupTransactions);
 
+    document.querySelector('.j-message-1').className = 'j-message-1 j-message-1-new';
+    document.querySelector('.join-message').className = 'join-message join-message-new';
+    document.querySelector('.join-container').className = 'join-container join-container-new';
+
     this.setState({
       message: 
         <div>
-          <h5>You successfully joined {groupData.group_name}!</h5>
-          <h5>You should check out your <Link to="/snap-ninja/group">group page</Link> or <Link to="/snap-ninja/user">user page.</Link></h5>
+          <h5 className="success-adj">You successfully joined {groupData.group_name}!</h5>
+          <h5 className="success-adj">You should check out your <Link to="/snap-ninja/group">group page</Link> or <Link to="/snap-ninja/user">user page.</Link></h5>
         </div>,
       hideintro: true
     });
+  }
+
+  errorMessage = (message) => {
+    if (document.querySelector('.j-message-1')) {
+      document.querySelector('.j-message-1').className = 'j-message-0';
+      this.setState({message: <div><img className="warning-icon" src={require('./assets/warning.svg')} alt="warning" />{message}</div> })
+      setTimeout(() => {
+        document.querySelector('.j-message-0').className = 'j-message-1';
+      }, 10)
+      setTimeout(() => {
+        if (document.querySelector('.j-message-1')) {
+          document.querySelector('.j-message-1').className = 'j-message-2';
+        }
+      }, 4010)
+      setTimeout(() => {
+        if (document.querySelector('.j-message-2')) {
+          this.setState({message: null});
+          document.querySelector('.j-message-2').className = 'j-message-1';
+        }
+      }, 4410);
+    }
   }
 
   render() {
@@ -169,7 +186,7 @@ export class JoinGroup extends Component {
           <div className="join-container">
             {this.groupPageMessage()}
             <div className="join-message">
-              {this.state.message}
+              <h5 className="j-message-1">{this.state.message}</h5>
             </div>
           </div>
         </div>

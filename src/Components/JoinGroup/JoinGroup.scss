@@ -17,7 +17,7 @@
   }
 
   .join-container {
-    padding: 24px 40px;
+    padding: 24px 40px 6px;
 
     a {
       font-size: 24px;
@@ -35,11 +35,84 @@
       color: $c3;
       font-weight: 900;
     }
-    .join-message h5 {
-      color: $c1;
-      margin-top: 16px;
-      font-size: 18px;
+
+    .warning-icon {
+      width: 20px;
+      margin-right: 4px;
+      position: relative;
+      top: 4px;
     }
+
+    .success-icon {
+      width: 25px;
+      height: 25px;
+      margin-right: 4px;
+      position: relative;
+      top: 6px;
+    }
+
+    .success-icon {
+      -webkit-animation: rotation 1s infinite linear;
+    }
+
+    @-webkit-keyframes rotation {
+        from {
+            -webkit-transform: rotate(0deg);
+        }
+        to {
+            -webkit-transform: rotate(359deg);
+        }
+    }
+    
+    .join-message {
+      position: relative;
+      height: 33px;
+      overflow: hidden;
+
+      .success-adj {
+        margin-bottom: 13px;
+      }
+
+      .j-message-0, .j-message-1, .j-message-2 {
+        font-size: 18px;
+        margin: 0px;
+        color: $c1;
+        font-weight: 700;
+        text-align: center;
+        width: 320px;
+        position: absolute;
+        top: 4px;
+      }
+
+      .j-message-0 {
+        left: -320px;
+      }
+
+      .j-message-1 {
+        left: calc((670px / 2) - 160px);
+        transition: all 0.4s ease-in-out;
+      }
+
+      .j-message-1-new {
+        text-align: left;
+        width: unset;
+        position: static;
+      }
+
+      .j-message-2 {
+        left: 770px;
+        transition: all 0.4s ease-in-out;
+      }
+    }
+
+    .join-message-new {
+      height: unset;
+    }
+
+  }
+
+  .join-container-new {
+    padding: 24px 40px 15px;
   }
 
   .current-group, .passphrase {
@@ -148,6 +221,23 @@
 
     .join-container h5 {
       width: calc(100vw - 331px);
+    }
+
+    .join-container {
+      .join-message {
+
+        .success-adj {
+          width: 100%;
+        }
+
+        .j-message-1 {
+          left: calc(((100vw - 80px) / 2) - 160px);
+        }
+
+        .j-message-2 {
+          left: calc(100vw - 80px);
+        }
+      }
     }
 
     .join-group-header {

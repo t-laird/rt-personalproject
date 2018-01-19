@@ -55,11 +55,11 @@ export class Transaction extends Component {
   async handleSubmit() {
     const recipient = new RegExp(this.state.recipient, 'gi');
     const findReceivingUser = this.props.UserList.find( user => recipient.test(user.name) );
-
+ 
     if (!findReceivingUser) {
+      this.errorMessage("Can't locate receiving user.");
       this.setState({
-        transactionMessage: "Can't locate receiving user.",
-        suggestions: [],
+        suggestions: []
       });
       return;
     }
@@ -82,8 +82,9 @@ export class Transaction extends Component {
       'recipient_name'
     ]) {
       if (!transactionInformation[requiredParameter]) {
+
+        this.errorMessage(`Please send a valid ${requiredParameter}.`)
         this.setState({
-          transactionMessage: `Please send a valid ${requiredParameter}.`,
           suggestions: [],
           recipient: ''
         });
@@ -125,26 +126,54 @@ export class Transaction extends Component {
       this.fetchUserData();
 
     } else if (submitResponse.status === 'failure') {
+
+      this.errorMessage(submitResponse.error);
       this.setState({
-        suggestions: [],
-        transactionMessage: submitResponse.error
+        suggestions: []
       });
     }
   }
 
+  errorMessage = (message) => {
+    if (document.querySelector('.t-message-1')) {
+      document.querySelector('.t-message-1').className = 't-message-0';
+      this.setState({transactionMessage: <div><img className="warning-icon" src={require('./assets/warning.svg')} alt="warning" />{message}</div> })
+      setTimeout(() => {
+        document.querySelector('.t-message-0').className = 't-message-1';
+      }, 10)
+      setTimeout(() => {
+        if (document.querySelector('.t-message-1')) {
+          document.querySelector('.t-message-1').className = 't-message-2';
+        }
+      }, 4010)
+      setTimeout(() => {
+        if (document.querySelector('.t-message-2')) {
+          this.setState({transactionMessage: null});
+          document.querySelector('.t-message-2').className = 't-message-1';
+        }
+      }, 4410);
+    }
+  }
+
   successMessage = (points, recipient) => {
-    document.querySelector('.t-message-1').className = 't-message-0';
-    this.setState({transactionMessage: `You sent ${points} snaps to ${recipient}!`})
-    setTimeout(() => {
-      document.querySelector('.t-message-0').className = 't-message-1';
-    }, 10)
-    setTimeout(() => {
-      document.querySelector('.t-message-1').className = 't-message-2';
-    }, 4010)
-    setTimeout(() => {
-      this.setState({transactionMessage: null});
-      document.querySelector('.t-message-2').className = 't-message-1';
-    }, 4410);
+    if (document.querySelector('.t-message-1')) {
+      document.querySelector('.t-message-1').className = 't-message-0';
+      this.setState({transactionMessage: <div><img className="success-icon" src={require('./assets/success.svg')} alt="success" />You sent {points} snaps to {recipient}!</div> })
+      setTimeout(() => {
+        document.querySelector('.t-message-0').className = 't-message-1';
+      }, 10)
+      setTimeout(() => {
+        if (document.querySelector('.t-message-1')) {
+          document.querySelector('.t-message-1').className = 't-message-2';
+        }
+      }, 4010)
+      setTimeout(() => {
+        if (document.querySelector('.t-message-2')) {
+          this.setState({transactionMessage: null});
+          document.querySelector('.t-message-2').className = 't-message-1';
+        }
+      }, 4410);
+    }
   }
 
   fetchUserData = async () => {
@@ -276,7 +305,6 @@ export const mapDispatchToProps = ( dispatch ) => ({
     dispatch(actions.updateGroup(group));
   }
 });
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Transaction);
 
