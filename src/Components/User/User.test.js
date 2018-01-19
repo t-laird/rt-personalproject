@@ -17,13 +17,12 @@ describe('user tests', () => {
     const renderedApp = shallow(<User User={mockUserWithoutGroup} history={[]} />);
   
     expect(renderedApp).toMatchSnapshot();
-    expect(renderedApp.state('joinText')).toEqual('JOIN A GROUP');
   });
 
   it('should auto-redirect if no user is logged in', () => {
     const renderedApp = shallow(<User User={{}} history={[]} />);
 
-    expect(renderedApp.instance().props.history[0]).toEqual('/login');
+    expect(renderedApp.instance().props.history[0]).toEqual('/snap-ninja/login');
   });
   
   it('should not redirect if a user is logged in', () => {

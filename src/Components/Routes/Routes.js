@@ -224,5 +224,15 @@ export const mapDispatchToProps = dispatch => ({
 export default connect(null, mapDispatchToProps)(Routes);
 
 Routes.propTypes = {
-  location: PropTypes.object
+  location: PropTypes.object,
+  history: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object
+  ]),
+  updateUser: PropTypes.func,
+  updateUserTransactions: PropTypes.func,
+  updateUserList: PropTypes.func,
+  updateGroup: PropTypes.func,
+  updateGroupTransactions: PropTypes.func,
+  initialLoad: PropTypes.func
 };

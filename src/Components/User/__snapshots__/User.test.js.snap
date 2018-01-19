@@ -32,17 +32,9 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Connect(Component) />,
-        <Connect(Transaction) />,
+        <Connect(PointsInformation) />,
         <Connect(Comments) />,
         <Connect(UserProfile) />,
-        <NavLink
-          activeClassName="active"
-          ariaCurrent="true"
-          className="join-group"
-          to="/joingroup"
->
-          SWITCH GROUPS
-</NavLink>,
       ],
       "className": "user-component",
     },
@@ -84,21 +76,6 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "activeClassName": "active",
-          "ariaCurrent": "true",
-          "children": "SWITCH GROUPS",
-          "className": "join-group",
-          "to": "/joingroup",
-        },
-        "ref": null,
-        "rendered": "SWITCH GROUPS",
-        "type": [Function],
-      },
     ],
     "type": "div",
   },
@@ -110,17 +87,9 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(Component) />,
-          <Connect(Transaction) />,
+          <Connect(PointsInformation) />,
           <Connect(Comments) />,
           <Connect(UserProfile) />,
-          <NavLink
-            activeClassName="active"
-            ariaCurrent="true"
-            className="join-group"
-            to="/joingroup"
->
-            SWITCH GROUPS
-</NavLink>,
         ],
         "className": "user-component",
       },
@@ -160,21 +129,6 @@ ShallowWrapper {
           "props": Object {},
           "ref": null,
           "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "activeClassName": "active",
-            "ariaCurrent": "true",
-            "children": "SWITCH GROUPS",
-            "className": "join-group",
-            "to": "/joingroup",
-          },
-          "ref": null,
-          "rendered": "SWITCH GROUPS",
           "type": [Function],
         },
       ],
@@ -222,17 +176,9 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Connect(Component) />,
-        <Connect(Transaction) />,
+        <Connect(PointsInformation) />,
         <Connect(Comments) />,
         <Connect(UserProfile) />,
-        <NavLink
-          activeClassName="active"
-          ariaCurrent="true"
-          className="join-group"
-          to="/joingroup"
->
-          JOIN A GROUP
-</NavLink>,
       ],
       "className": "user-component",
     },
@@ -274,21 +220,6 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "activeClassName": "active",
-          "ariaCurrent": "true",
-          "children": "JOIN A GROUP",
-          "className": "join-group",
-          "to": "/joingroup",
-        },
-        "ref": null,
-        "rendered": "JOIN A GROUP",
-        "type": [Function],
-      },
     ],
     "type": "div",
   },
@@ -300,17 +231,9 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(Component) />,
-          <Connect(Transaction) />,
+          <Connect(PointsInformation) />,
           <Connect(Comments) />,
           <Connect(UserProfile) />,
-          <NavLink
-            activeClassName="active"
-            ariaCurrent="true"
-            className="join-group"
-            to="/joingroup"
->
-            JOIN A GROUP
-</NavLink>,
         ],
         "className": "user-component",
       },
@@ -350,21 +273,6 @@ ShallowWrapper {
           "props": Object {},
           "ref": null,
           "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "activeClassName": "active",
-            "ariaCurrent": "true",
-            "children": "JOIN A GROUP",
-            "className": "join-group",
-            "to": "/joingroup",
-          },
-          "ref": null,
-          "rendered": "JOIN A GROUP",
           "type": [Function],
         },
       ],

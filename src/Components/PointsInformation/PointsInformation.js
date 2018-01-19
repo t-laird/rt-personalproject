@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './PointsInformation.css';
+import PropTypes from 'prop-types';
 
 class PointsInformation extends Component {
   getReceivedPoints = () => {
@@ -60,7 +61,7 @@ class PointsInformation extends Component {
       </div>
     );
   }
-};
+}
 
 export const mapStateToProps = ( store ) => ({
   UserTransactions: store.UserTransactions,
@@ -69,3 +70,8 @@ export const mapStateToProps = ( store ) => ({
 
 
 export default connect(mapStateToProps, null)(PointsInformation);
+
+PointsInformation.propTypes = {
+  UserTransactions: PropTypes.object,
+  Group: PropTypes. object
+};

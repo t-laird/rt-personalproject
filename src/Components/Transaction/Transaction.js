@@ -83,7 +83,7 @@ export class Transaction extends Component {
     ]) {
       if (!transactionInformation[requiredParameter]) {
 
-        this.errorMessage(`Please send a valid ${requiredParameter}.`)
+        this.errorMessage(`Please send a valid ${requiredParameter}.`);
         this.setState({
           suggestions: [],
           recipient: ''
@@ -137,15 +137,21 @@ export class Transaction extends Component {
   errorMessage = (message) => {
     if (document.querySelector('.t-message-1')) {
       document.querySelector('.t-message-1').className = 't-message-0';
-      this.setState({transactionMessage: <div><img className="warning-icon" src={require('./assets/warning.svg')} alt="warning" />{message}</div> })
+      this.setState({
+        transactionMessage: 
+          <div>
+            <img className="warning-icon" src={require('./assets/warning.svg')} alt="warning" />
+            {message}
+          </div>
+      });
       setTimeout(() => {
         document.querySelector('.t-message-0').className = 't-message-1';
-      }, 10)
+      }, 10);
       setTimeout(() => {
         if (document.querySelector('.t-message-1')) {
           document.querySelector('.t-message-1').className = 't-message-2';
         }
-      }, 4010)
+      }, 4010);
       setTimeout(() => {
         if (document.querySelector('.t-message-2')) {
           this.setState({transactionMessage: null});
@@ -158,15 +164,21 @@ export class Transaction extends Component {
   successMessage = (points, recipient) => {
     if (document.querySelector('.t-message-1')) {
       document.querySelector('.t-message-1').className = 't-message-0';
-      this.setState({transactionMessage: <div><img className="success-icon" src={require('./assets/success.svg')} alt="success" />You sent {points} snaps to {recipient}!</div> })
+      this.setState({
+        transactionMessage: 
+          <div>
+            <img className="success-icon" src={require('./assets/success.svg')} alt="success" />
+            You sent {points} snaps to {recipient}!
+          </div>
+      });
       setTimeout(() => {
         document.querySelector('.t-message-0').className = 't-message-1';
-      }, 10)
+      }, 10);
       setTimeout(() => {
         if (document.querySelector('.t-message-1')) {
           document.querySelector('.t-message-1').className = 't-message-2';
         }
-      }, 4010)
+      }, 4010);
       setTimeout(() => {
         if (document.querySelector('.t-message-2')) {
           this.setState({transactionMessage: null});

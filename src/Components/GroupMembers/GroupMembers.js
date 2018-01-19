@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Member from '../Member/Member';
 import './GroupMembers.css';
+import PropTypes from 'prop-types';
 
 class GroupMembers extends Component {
 
@@ -19,15 +20,15 @@ class GroupMembers extends Component {
           return 1;
         }
         return 0;
-      })
+      });
 
       const display = sorted.map((user) => {
         return <Member 
           updateRecipient={this.props.updateRecipient}
           name={user.name}
           key={user.user_id}
-        />
-      })
+        />;
+      });
 
       return display;
     }
@@ -43,13 +44,19 @@ class GroupMembers extends Component {
           {this.displayGroupMembers()}
         </div>
       </div>
-    )
+    );
   }
 }
 
 const mapStateToProps = store => ({
   UserList: store.UserList,
   Group: store.Group
-})
+});
 
 export default connect(mapStateToProps, null)(GroupMembers);
+
+GroupMembers.propTypes = {
+  UserList: PropTypes.array,
+  Group: PropTypes.object,
+  updateRecipient: PropTypes.func
+};

@@ -21,60 +21,79 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="create-group-heading"
+          className="create-group-component"
 >
-          <h4>
-                    CREATE A GROUP
-          </h4>
+          <div
+                    className="create-group-heading"
+          >
+                    <h4>
+                              CREATE A GROUP
+                    </h4>
+          </div>
+          <form>
+                    <div
+                              className="create-top"
+                    >
+                              <h5>
+                                        Let's give your group a name!
+                              </h5>
+                              <input
+                                        className="group-name-input"
+                                        name="groupName"
+                                        onChange={[Function]}
+                                        placeholder="group name"
+                                        value=""
+                              />
+                    </div>
+                    <h5>
+                              With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.
+                    </h5>
+                    <div
+                              className="create-bottom"
+                    >
+                              <h5>
+                                        How many snaps will your group members be able to give away?
+                                        <span
+                                                  className="join-span"
+                                        >
+                                                   (Between 1 - 500)
+                                        </span>
+                              </h5>
+                              <input
+                                        className="points-input"
+                                        name="weeklyPoints"
+                                        onChange={[Function]}
+                                        placeholder="QTY"
+                                        value=""
+                              />
+                    </div>
+                    <button
+                              onClick={[Function]}
+                    >
+                              CREATE
+                    </button>
+                    <div
+                              className="success-message"
+                    >
+                              <h5
+                                        className="c-message-1"
+                              />
+                    </div>
+          </form>
 </div>,
-        <form>
-          <div
-                    className="create-top"
+        <div
+          className="link-holder"
+>
+          <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    className="create-group-link"
+                    to="/snap-ninja/account"
           >
-                    <h5>
-                              Let's give your group a name!
-                    </h5>
-                    <input
-                              className="group-name-input"
-                              name="groupName"
-                              onChange={[Function]}
-                              placeholder="group name"
-                              value=""
-                    />
-          </div>
-          <h5>
-                    With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.
-          </h5>
-          <div
-                    className="create-bottom"
-          >
-                    <h5>
-                              How many snaps will your group members be able to give away?
-                              <span
-                                        className="join-span"
-                              >
-                                        (Between 1 - 500)
-                              </span>
-                    </h5>
-                    <input
-                              className="points-input"
-                              name="weeklyPoints"
-                              onChange={[Function]}
-                              placeholder="QTY"
-                              value=""
-                    />
-          </div>
-          <div
-                    className="success-message"
-          />
-          <button
-                    onClick={[Function]}
-          >
-                    CREATE
-          </button>
-</form>,
+                    BACK TO ACCOUNT
+          </NavLink>
+</div>,
       ],
-      "className": "create-group-component",
     },
     "ref": null,
     "rendered": Array [
@@ -83,76 +102,66 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <h4>
-            CREATE A GROUP
-</h4>,
-          "className": "create-group-heading",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "CREATE A GROUP",
-          },
-          "ref": null,
-          "rendered": "CREATE A GROUP",
-          "type": "h4",
-        },
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
           "children": Array [
             <div
-              className="create-top"
+              className="create-group-heading"
 >
-              <h5>
-                            Let's give your group a name!
-              </h5>
-              <input
-                            className="group-name-input"
-                            name="groupName"
-                            onChange={[Function]}
-                            placeholder="group name"
-                            value=""
-              />
+              <h4>
+                            CREATE A GROUP
+              </h4>
 </div>,
-            <h5>
-              With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.
-</h5>,
-            <div
-              className="create-bottom"
->
+            <form>
+              <div
+                            className="create-top"
+              >
+                            <h5>
+                                          Let's give your group a name!
+                            </h5>
+                            <input
+                                          className="group-name-input"
+                                          name="groupName"
+                                          onChange={[Function]}
+                                          placeholder="group name"
+                                          value=""
+                            />
+              </div>
               <h5>
-                            How many snaps will your group members be able to give away?
-                            <span
-                                          className="join-span"
-                            >
-                                          (Between 1 - 500)
-                            </span>
+                            With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.
               </h5>
-              <input
-                            className="points-input"
-                            name="weeklyPoints"
-                            onChange={[Function]}
-                            placeholder="QTY"
-                            value=""
-              />
-</div>,
-            <div
-              className="success-message"
-/>,
-            <button
-              onClick={[Function]}
->
-              CREATE
-</button>,
+              <div
+                            className="create-bottom"
+              >
+                            <h5>
+                                          How many snaps will your group members be able to give away?
+                                          <span
+                                                        className="join-span"
+                                          >
+                                                         (Between 1 - 500)
+                                          </span>
+                            </h5>
+                            <input
+                                          className="points-input"
+                                          name="weeklyPoints"
+                                          onChange={[Function]}
+                                          placeholder="QTY"
+                                          value=""
+                            />
+              </div>
+              <button
+                            onClick={[Function]}
+              >
+                            CREATE
+              </button>
+              <div
+                            className="success-message"
+              >
+                            <h5
+                                          className="c-message-1"
+                            />
+              </div>
+</form>,
           ],
+          "className": "create-group-component",
         },
         "ref": null,
         "rendered": Array [
@@ -161,49 +170,23 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                <h5>
-                  Let's give your group a name!
-</h5>,
-                <input
-                  className="group-name-input"
-                  name="groupName"
-                  onChange={[Function]}
-                  placeholder="group name"
-                  value=""
-/>,
-              ],
-              "className": "create-top",
+              "children": <h4>
+                CREATE A GROUP
+</h4>,
+              "className": "create-group-heading",
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Let's give your group a name!",
-                },
-                "ref": null,
-                "rendered": "Let's give your group a name!",
-                "type": "h5",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "CREATE A GROUP",
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "className": "group-name-input",
-                  "name": "groupName",
-                  "onChange": [Function],
-                  "placeholder": "group name",
-                  "value": "",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "input",
-              },
-            ],
+              "ref": null,
+              "rendered": "CREATE A GROUP",
+              "type": "h4",
+            },
             "type": "div",
           },
           Object {
@@ -211,35 +194,56 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.",
-            },
-            "ref": null,
-            "rendered": "With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.",
-            "type": "h5",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
               "children": Array [
+                <div
+                  className="create-top"
+>
+                  <h5>
+                                    Let's give your group a name!
+                  </h5>
+                  <input
+                                    className="group-name-input"
+                                    name="groupName"
+                                    onChange={[Function]}
+                                    placeholder="group name"
+                                    value=""
+                  />
+</div>,
                 <h5>
-                  How many snaps will your group members be able to give away?
-                  <span
-                                    className="join-span"
-                  >
-                                    (Between 1 - 500)
-                  </span>
+                  With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.
 </h5>,
-                <input
-                  className="points-input"
-                  name="weeklyPoints"
-                  onChange={[Function]}
-                  placeholder="QTY"
-                  value=""
-/>,
+                <div
+                  className="create-bottom"
+>
+                  <h5>
+                                    How many snaps will your group members be able to give away?
+                                    <span
+                                                      className="join-span"
+                                    >
+                                                       (Between 1 - 500)
+                                    </span>
+                  </h5>
+                  <input
+                                    className="points-input"
+                                    name="weeklyPoints"
+                                    onChange={[Function]}
+                                    placeholder="QTY"
+                                    value=""
+                  />
+</div>,
+                <button
+                  onClick={[Function]}
+>
+                  CREATE
+</button>,
+                <div
+                  className="success-message"
+>
+                  <h5
+                                    className="c-message-1"
+                  />
+</div>,
               ],
-              "className": "create-bottom",
             },
             "ref": null,
             "rendered": Array [
@@ -249,30 +253,59 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "How many snaps will your group members be able to give away?",
-                    <span
-                      className="join-span"
->
-                      (Between 1 - 500)
-</span>,
+                    <h5>
+                      Let's give your group a name!
+</h5>,
+                    <input
+                      className="group-name-input"
+                      name="groupName"
+                      onChange={[Function]}
+                      placeholder="group name"
+                      value=""
+/>,
                   ],
+                  "className": "create-top",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "How many snaps will your group members be able to give away?",
                   Object {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "(Between 1 - 500)",
-                      "className": "join-span",
+                      "children": "Let's give your group a name!",
                     },
                     "ref": null,
-                    "rendered": "(Between 1 - 500)",
-                    "type": "span",
+                    "rendered": "Let's give your group a name!",
+                    "type": "h5",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "group-name-input",
+                      "name": "groupName",
+                      "onChange": [Function],
+                      "placeholder": "group name",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
                   },
                 ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.",
+                },
+                "ref": null,
+                "rendered": "With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.",
                 "type": "h5",
               },
               Object {
@@ -280,45 +313,152 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "className": "points-input",
-                  "name": "weeklyPoints",
-                  "onChange": [Function],
-                  "placeholder": "QTY",
-                  "value": "",
+                  "children": Array [
+                    <h5>
+                      How many snaps will your group members be able to give away?
+                      <span
+                                            className="join-span"
+                      >
+                                             (Between 1 - 500)
+                      </span>
+</h5>,
+                    <input
+                      className="points-input"
+                      name="weeklyPoints"
+                      onChange={[Function]}
+                      placeholder="QTY"
+                      value=""
+/>,
+                  ],
+                  "className": "create-bottom",
                 },
                 "ref": null,
-                "rendered": null,
-                "type": "input",
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "How many snaps will your group members be able to give away?",
+                        <span
+                          className="join-span"
+>
+                           (Between 1 - 500)
+</span>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "How many snaps will your group members be able to give away?",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": " (Between 1 - 500)",
+                          "className": "join-span",
+                        },
+                        "ref": null,
+                        "rendered": " (Between 1 - 500)",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "h5",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "points-input",
+                      "name": "weeklyPoints",
+                      "onChange": [Function],
+                      "placeholder": "QTY",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "CREATE",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "CREATE",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <h5
+                    className="c-message-1"
+/>,
+                  "className": "success-message",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "",
+                    "className": "c-message-1",
+                  },
+                  "ref": null,
+                  "rendered": "",
+                  "type": "h5",
+                },
+                "type": "div",
               },
             ],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "",
-              "className": "success-message",
-            },
-            "ref": null,
-            "rendered": "",
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "CREATE",
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": "CREATE",
-            "type": "button",
+            "type": "form",
           },
         ],
-        "type": "form",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <NavLink
+            activeClassName="active"
+            ariaCurrent="true"
+            className="create-group-link"
+            to="/snap-ninja/account"
+>
+            BACK TO ACCOUNT
+</NavLink>,
+          "className": "link-holder",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "ariaCurrent": "true",
+            "children": "BACK TO ACCOUNT",
+            "className": "create-group-link",
+            "to": "/snap-ninja/account",
+          },
+          "ref": null,
+          "rendered": "BACK TO ACCOUNT",
+          "type": [Function],
+        },
+        "type": "div",
       },
     ],
     "type": "div",
@@ -331,60 +471,79 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="create-group-heading"
+            className="create-group-component"
 >
-            <h4>
-                        CREATE A GROUP
-            </h4>
+            <div
+                        className="create-group-heading"
+            >
+                        <h4>
+                                    CREATE A GROUP
+                        </h4>
+            </div>
+            <form>
+                        <div
+                                    className="create-top"
+                        >
+                                    <h5>
+                                                Let's give your group a name!
+                                    </h5>
+                                    <input
+                                                className="group-name-input"
+                                                name="groupName"
+                                                onChange={[Function]}
+                                                placeholder="group name"
+                                                value=""
+                                    />
+                        </div>
+                        <h5>
+                                    With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.
+                        </h5>
+                        <div
+                                    className="create-bottom"
+                        >
+                                    <h5>
+                                                How many snaps will your group members be able to give away?
+                                                <span
+                                                            className="join-span"
+                                                >
+                                                             (Between 1 - 500)
+                                                </span>
+                                    </h5>
+                                    <input
+                                                className="points-input"
+                                                name="weeklyPoints"
+                                                onChange={[Function]}
+                                                placeholder="QTY"
+                                                value=""
+                                    />
+                        </div>
+                        <button
+                                    onClick={[Function]}
+                        >
+                                    CREATE
+                        </button>
+                        <div
+                                    className="success-message"
+                        >
+                                    <h5
+                                                className="c-message-1"
+                                    />
+                        </div>
+            </form>
 </div>,
-          <form>
-            <div
-                        className="create-top"
+          <div
+            className="link-holder"
+>
+            <NavLink
+                        activeClassName="active"
+                        ariaCurrent="true"
+                        className="create-group-link"
+                        to="/snap-ninja/account"
             >
-                        <h5>
-                                    Let's give your group a name!
-                        </h5>
-                        <input
-                                    className="group-name-input"
-                                    name="groupName"
-                                    onChange={[Function]}
-                                    placeholder="group name"
-                                    value=""
-                        />
-            </div>
-            <h5>
-                        With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.
-            </h5>
-            <div
-                        className="create-bottom"
-            >
-                        <h5>
-                                    How many snaps will your group members be able to give away?
-                                    <span
-                                                className="join-span"
-                                    >
-                                                (Between 1 - 500)
-                                    </span>
-                        </h5>
-                        <input
-                                    className="points-input"
-                                    name="weeklyPoints"
-                                    onChange={[Function]}
-                                    placeholder="QTY"
-                                    value=""
-                        />
-            </div>
-            <div
-                        className="success-message"
-            />
-            <button
-                        onClick={[Function]}
-            >
-                        CREATE
-            </button>
-</form>,
+                        BACK TO ACCOUNT
+            </NavLink>
+</div>,
         ],
-        "className": "create-group-component",
       },
       "ref": null,
       "rendered": Array [
@@ -393,76 +552,66 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <h4>
-              CREATE A GROUP
-</h4>,
-            "className": "create-group-heading",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "CREATE A GROUP",
-            },
-            "ref": null,
-            "rendered": "CREATE A GROUP",
-            "type": "h4",
-          },
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
             "children": Array [
               <div
-                className="create-top"
+                className="create-group-heading"
 >
-                <h5>
-                                Let's give your group a name!
-                </h5>
-                <input
-                                className="group-name-input"
-                                name="groupName"
-                                onChange={[Function]}
-                                placeholder="group name"
-                                value=""
-                />
+                <h4>
+                                CREATE A GROUP
+                </h4>
 </div>,
-              <h5>
-                With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.
-</h5>,
-              <div
-                className="create-bottom"
->
+              <form>
+                <div
+                                className="create-top"
+                >
+                                <h5>
+                                                Let's give your group a name!
+                                </h5>
+                                <input
+                                                className="group-name-input"
+                                                name="groupName"
+                                                onChange={[Function]}
+                                                placeholder="group name"
+                                                value=""
+                                />
+                </div>
                 <h5>
-                                How many snaps will your group members be able to give away?
-                                <span
-                                                className="join-span"
-                                >
-                                                (Between 1 - 500)
-                                </span>
+                                With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.
                 </h5>
-                <input
-                                className="points-input"
-                                name="weeklyPoints"
-                                onChange={[Function]}
-                                placeholder="QTY"
-                                value=""
-                />
-</div>,
-              <div
-                className="success-message"
-/>,
-              <button
-                onClick={[Function]}
->
-                CREATE
-</button>,
+                <div
+                                className="create-bottom"
+                >
+                                <h5>
+                                                How many snaps will your group members be able to give away?
+                                                <span
+                                                                className="join-span"
+                                                >
+                                                                 (Between 1 - 500)
+                                                </span>
+                                </h5>
+                                <input
+                                                className="points-input"
+                                                name="weeklyPoints"
+                                                onChange={[Function]}
+                                                placeholder="QTY"
+                                                value=""
+                                />
+                </div>
+                <button
+                                onClick={[Function]}
+                >
+                                CREATE
+                </button>
+                <div
+                                className="success-message"
+                >
+                                <h5
+                                                className="c-message-1"
+                                />
+                </div>
+</form>,
             ],
+            "className": "create-group-component",
           },
           "ref": null,
           "rendered": Array [
@@ -471,49 +620,23 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  <h5>
-                    Let's give your group a name!
-</h5>,
-                  <input
-                    className="group-name-input"
-                    name="groupName"
-                    onChange={[Function]}
-                    placeholder="group name"
-                    value=""
-/>,
-                ],
-                "className": "create-top",
+                "children": <h4>
+                  CREATE A GROUP
+</h4>,
+                "className": "create-group-heading",
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Let's give your group a name!",
-                  },
-                  "ref": null,
-                  "rendered": "Let's give your group a name!",
-                  "type": "h5",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "CREATE A GROUP",
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "className": "group-name-input",
-                    "name": "groupName",
-                    "onChange": [Function],
-                    "placeholder": "group name",
-                    "value": "",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "input",
-                },
-              ],
+                "ref": null,
+                "rendered": "CREATE A GROUP",
+                "type": "h4",
+              },
               "type": "div",
             },
             Object {
@@ -521,35 +644,56 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.",
-              },
-              "ref": null,
-              "rendered": "With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.",
-              "type": "h5",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
                 "children": Array [
+                  <div
+                    className="create-top"
+>
+                    <h5>
+                                        Let's give your group a name!
+                    </h5>
+                    <input
+                                        className="group-name-input"
+                                        name="groupName"
+                                        onChange={[Function]}
+                                        placeholder="group name"
+                                        value=""
+                    />
+</div>,
                   <h5>
-                    How many snaps will your group members be able to give away?
-                    <span
-                                        className="join-span"
-                    >
-                                        (Between 1 - 500)
-                    </span>
+                    With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.
 </h5>,
-                  <input
-                    className="points-input"
-                    name="weeklyPoints"
-                    onChange={[Function]}
-                    placeholder="QTY"
-                    value=""
-/>,
+                  <div
+                    className="create-bottom"
+>
+                    <h5>
+                                        How many snaps will your group members be able to give away?
+                                        <span
+                                                            className="join-span"
+                                        >
+                                                             (Between 1 - 500)
+                                        </span>
+                    </h5>
+                    <input
+                                        className="points-input"
+                                        name="weeklyPoints"
+                                        onChange={[Function]}
+                                        placeholder="QTY"
+                                        value=""
+                    />
+</div>,
+                  <button
+                    onClick={[Function]}
+>
+                    CREATE
+</button>,
+                  <div
+                    className="success-message"
+>
+                    <h5
+                                        className="c-message-1"
+                    />
+</div>,
                 ],
-                "className": "create-bottom",
               },
               "ref": null,
               "rendered": Array [
@@ -559,30 +703,59 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      "How many snaps will your group members be able to give away?",
-                      <span
-                        className="join-span"
->
-                        (Between 1 - 500)
-</span>,
+                      <h5>
+                        Let's give your group a name!
+</h5>,
+                      <input
+                        className="group-name-input"
+                        name="groupName"
+                        onChange={[Function]}
+                        placeholder="group name"
+                        value=""
+/>,
                     ],
+                    "className": "create-top",
                   },
                   "ref": null,
                   "rendered": Array [
-                    "How many snaps will your group members be able to give away?",
                     Object {
                       "instance": null,
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "(Between 1 - 500)",
-                        "className": "join-span",
+                        "children": "Let's give your group a name!",
                       },
                       "ref": null,
-                      "rendered": "(Between 1 - 500)",
-                      "type": "span",
+                      "rendered": "Let's give your group a name!",
+                      "type": "h5",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "group-name-input",
+                        "name": "groupName",
+                        "onChange": [Function],
+                        "placeholder": "group name",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
                     },
                   ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.",
+                  },
+                  "ref": null,
+                  "rendered": "With SNAP NINJA, your group members get a bucket of snaps each week to give away to deserving teammates.",
                   "type": "h5",
                 },
                 Object {
@@ -590,45 +763,152 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "className": "points-input",
-                    "name": "weeklyPoints",
-                    "onChange": [Function],
-                    "placeholder": "QTY",
-                    "value": "",
+                    "children": Array [
+                      <h5>
+                        How many snaps will your group members be able to give away?
+                        <span
+                                                className="join-span"
+                        >
+                                                 (Between 1 - 500)
+                        </span>
+</h5>,
+                      <input
+                        className="points-input"
+                        name="weeklyPoints"
+                        onChange={[Function]}
+                        placeholder="QTY"
+                        value=""
+/>,
+                    ],
+                    "className": "create-bottom",
                   },
                   "ref": null,
-                  "rendered": null,
-                  "type": "input",
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "How many snaps will your group members be able to give away?",
+                          <span
+                            className="join-span"
+>
+                             (Between 1 - 500)
+</span>,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "How many snaps will your group members be able to give away?",
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": " (Between 1 - 500)",
+                            "className": "join-span",
+                          },
+                          "ref": null,
+                          "rendered": " (Between 1 - 500)",
+                          "type": "span",
+                        },
+                      ],
+                      "type": "h5",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "points-input",
+                        "name": "weeklyPoints",
+                        "onChange": [Function],
+                        "placeholder": "QTY",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "CREATE",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "CREATE",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <h5
+                      className="c-message-1"
+/>,
+                    "className": "success-message",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "",
+                      "className": "c-message-1",
+                    },
+                    "ref": null,
+                    "rendered": "",
+                    "type": "h5",
+                  },
+                  "type": "div",
                 },
               ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "",
-                "className": "success-message",
-              },
-              "ref": null,
-              "rendered": "",
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "CREATE",
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": "CREATE",
-              "type": "button",
+              "type": "form",
             },
           ],
-          "type": "form",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <NavLink
+              activeClassName="active"
+              ariaCurrent="true"
+              className="create-group-link"
+              to="/snap-ninja/account"
+>
+              BACK TO ACCOUNT
+</NavLink>,
+            "className": "link-holder",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "ariaCurrent": "true",
+              "children": "BACK TO ACCOUNT",
+              "className": "create-group-link",
+              "to": "/snap-ninja/account",
+            },
+            "ref": null,
+            "rendered": "BACK TO ACCOUNT",
+            "type": [Function],
+          },
+          "type": "div",
         },
       ],
       "type": "div",

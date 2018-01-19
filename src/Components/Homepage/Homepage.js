@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 import React from 'react';
 import './Homepage.css';
 import { Link } from 'react-router-dom';
@@ -7,7 +9,7 @@ const Homepage = () => {
   return (
     <div className="homepage-component">
       <div className="bg-holder">
-			  <h1>WHERE STUDENTS <span className="no-wrap">ADV<img className='homepage-logo' alt="homepage-logo" src={require('./homepage-assets/logo.svg')} />CATE</span> STUDENTS</h1>
+        <h1>WHERE STUDENTS <span className="no-wrap">ADV<img className='homepage-logo' alt="homepage-logo" src={require('./homepage-assets/logo.svg')} />CATE</span> STUDENTS</h1>
         <button className="header-button-top">
           <Link to='/snap-ninja/user'>start SNAP NINJA now</Link>
         </button>

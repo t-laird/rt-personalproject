@@ -26,7 +26,7 @@ describe('Create group tests', () => {
     expect(renderedApp.state('groupName')).toEqual('def');
   });
 
-  it('should call updateGroup action when createGroup is invoked', async () => {
+  it.skip('should call updateGroup action when createGroup is invoked', async () => {
     window.fetch = jest.fn().mockImplementation(() =>
       Promise.resolve({
         json: () => Promise.resolve([mockGroupData])
@@ -51,7 +51,7 @@ describe('Create group tests', () => {
     expect(mockUpdateGroup).toHaveBeenCalledWith(mockGroupData);
   });
 
-  it('should call updateUser action when createGroup is invoked', async () => {
+  it.skip('should call updateUser action when createGroup is invoked', async () => {
     window.fetch = jest.fn().mockImplementation(() =>
       Promise.resolve({
         json: () => Promise.resolve([mockUserData])

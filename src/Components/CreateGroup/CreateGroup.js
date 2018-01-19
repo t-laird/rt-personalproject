@@ -32,7 +32,7 @@ export class CreateGroup extends Component {
     this.props.updateGroup(groupResponse[0]);
 
     document.querySelector('.success-message').className = 'success-message success-message-new';
-    document.querySelector('.c-message-1').className = 'c-message-1 c-message-1-new'
+    document.querySelector('.c-message-1').className = 'c-message-1 c-message-1-new';
 
     this.setState({
       successMessage: 
@@ -69,15 +69,21 @@ export class CreateGroup extends Component {
   errorMessage = (message) => {
     if (document.querySelector('.c-message-1')) {
       document.querySelector('.c-message-1').className = 'c-message-0';
-      this.setState({successMessage: <div><img className="warning-icon" src={require('./assets/warning.svg')} alt="warning" />{message}</div> })
+      this.setState({
+        successMessage: 
+          <div>
+            <img className="warning-icon" src={require('./assets/warning.svg')} alt="warning" />
+            {message}
+          </div> 
+      });
       setTimeout(() => {
         document.querySelector('.c-message-0').className = 'c-message-1';
-      }, 10)
+      }, 10);
       setTimeout(() => {
         if (document.querySelector('.c-message-1')) {
           document.querySelector('.c-message-1').className = 'c-message-2';
         }
-      }, 4010)
+      }, 4010);
       setTimeout(() => {
         if (document.querySelector('.c-message-2')) {
           this.setState({successMessage: null});
