@@ -31,9 +31,12 @@ export class CreateGroup extends Component {
     const groupResponse = await makeGroup(groupName, weeklyPoints, password);
     this.props.updateGroup(groupResponse[0]);
 
+    document.querySelector('.success-message').className = 'success-message success-message-new';
+    document.querySelector('.c-message-1').className = 'c-message-1 c-message-1-new'
+
     this.setState({
       successMessage: 
-        <h5>{'Congrats!  You\'ve created: '}
+        <h5 className="create-group-text">{'Congrats!  You\'ve created: '}
           <span className="success-span">{groupResponse[0].group_name}</span>
           <br />Your group passphrase is: 
           <span className="success-span">{groupResponse[0].group_passphrase}</span>
@@ -57,19 +60,30 @@ export class CreateGroup extends Component {
     if ((weeklyPoints > 0 && weeklyPoints <= 500) && (groupName.length)) {
       this.createGroup(groupName, weeklyPoints);
     } else if ((weeklyPoints <= 0 || weeklyPoints > 500) && (groupName.length)) {
-      this.setState({
-        successMessage: 
-        <h5>
-          {'Invalid point value.  Please choose a number between 1 - 500.  We recommend 50!'}
-        </h5>
-      });
+      this.errorMessage('Please choose value between 1 - 500!');
     } else if ((weeklyPoints <= 0 || weeklyPoints > 500) || (!groupName.length)) {
-      this.setState({
-        successMessage:
-          <h5>
-            {'Please enter a group name!'}
-          </h5>
-      })
+      this.errorMessage('Please enter a group name!');
+    }
+  }
+
+  errorMessage = (message) => {
+    if (document.querySelector('.c-message-1')) {
+      document.querySelector('.c-message-1').className = 'c-message-0';
+      this.setState({successMessage: <div><img className="warning-icon" src={require('./assets/warning.svg')} alt="warning" />{message}</div> })
+      setTimeout(() => {
+        document.querySelector('.c-message-0').className = 'c-message-1';
+      }, 10)
+      setTimeout(() => {
+        if (document.querySelector('.c-message-1')) {
+          document.querySelector('.c-message-1').className = 'c-message-2';
+        }
+      }, 4010)
+      setTimeout(() => {
+        if (document.querySelector('.c-message-2')) {
+          this.setState({successMessage: null});
+          document.querySelector('.c-message-2').className = 'c-message-1';
+        }
+      }, 4410);
     }
   }
 
@@ -108,7 +122,6 @@ export class CreateGroup extends Component {
                 name='weeklyPoints'
               />
             </div>
-            <div className="success-message">{this.state.successMessage}</div>
             <button
               onClick={(event) => this.validatePointValue(
                 event, 
@@ -117,6 +130,9 @@ export class CreateGroup extends Component {
               )}
             >CREATE
             </button>
+            <div className="success-message">
+              <h5 className="c-message-1">{this.state.successMessage}</h5>
+            </div>
           </form>
         </div>
         <div className="link-holder">

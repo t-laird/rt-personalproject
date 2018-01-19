@@ -135,33 +135,45 @@ export class Transaction extends Component {
   }
 
   errorMessage = (message) => {
-    document.querySelector('.t-message-1').className = 't-message-0';
-    this.setState({transactionMessage: <div><img className="warning-icon" src={require('./assets/warning.svg')} alt="warning" />{message}</div> })
-    setTimeout(() => {
-      document.querySelector('.t-message-0').className = 't-message-1';
-    }, 10)
-    setTimeout(() => {
-      document.querySelector('.t-message-1').className = 't-message-2';
-    }, 4010)
-    setTimeout(() => {
-      this.setState({transactionMessage: null});
-      document.querySelector('.t-message-2').className = 't-message-1';
-    }, 4410);
+    if (document.querySelector('.t-message-1')) {
+      document.querySelector('.t-message-1').className = 't-message-0';
+      this.setState({transactionMessage: <div><img className="warning-icon" src={require('./assets/warning.svg')} alt="warning" />{message}</div> })
+      setTimeout(() => {
+        document.querySelector('.t-message-0').className = 't-message-1';
+      }, 10)
+      setTimeout(() => {
+        if (document.querySelector('.t-message-1')) {
+          document.querySelector('.t-message-1').className = 't-message-2';
+        }
+      }, 4010)
+      setTimeout(() => {
+        if (document.querySelector('.t-message-2')) {
+          this.setState({transactionMessage: null});
+          document.querySelector('.t-message-2').className = 't-message-1';
+        }
+      }, 4410);
+    }
   }
 
   successMessage = (points, recipient) => {
-    document.querySelector('.t-message-1').className = 't-message-0';
-    this.setState({transactionMessage: <div><img className="success-icon" src={require('./assets/success.svg')} alt="success" />You sent {points} snaps to {recipient}!</div> })
-    setTimeout(() => {
-      document.querySelector('.t-message-0').className = 't-message-1';
-    }, 10)
-    setTimeout(() => {
-      document.querySelector('.t-message-1').className = 't-message-2';
-    }, 4010)
-    setTimeout(() => {
-      this.setState({transactionMessage: null});
-      document.querySelector('.t-message-2').className = 't-message-1';
-    }, 4410);
+    if (document.querySelector('.t-message-1')) {
+      document.querySelector('.t-message-1').className = 't-message-0';
+      this.setState({transactionMessage: <div><img className="success-icon" src={require('./assets/success.svg')} alt="success" />You sent {points} snaps to {recipient}!</div> })
+      setTimeout(() => {
+        document.querySelector('.t-message-0').className = 't-message-1';
+      }, 10)
+      setTimeout(() => {
+        if (document.querySelector('.t-message-1')) {
+          document.querySelector('.t-message-1').className = 't-message-2';
+        }
+      }, 4010)
+      setTimeout(() => {
+        if (document.querySelector('.t-message-2')) {
+          this.setState({transactionMessage: null});
+          document.querySelector('.t-message-2').className = 't-message-1';
+        }
+      }, 4410);
+    }
   }
 
   fetchUserData = async () => {
@@ -293,7 +305,6 @@ export const mapDispatchToProps = ( dispatch ) => ({
     dispatch(actions.updateGroup(group));
   }
 });
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Transaction);
 
