@@ -67,6 +67,11 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <h4
+          className="heading"
+>
+          SEND SNAPS
+</h4>,
         <Connect(PointsInformation) />,
         <div
           className="award-header"
@@ -102,14 +107,23 @@ ShallowWrapper {
                               updateRecipient={[Function]}
                     />
           </div>
-          <textarea
-                    className="note-input"
-                    name="note"
-                    onChange={[Function]}
-                    placeholder="add a message"
-                    type="text"
-                    value=""
-          />
+          <div
+                    className="input-container"
+          >
+                    <h6
+                              className="char-display"
+                    >
+                              140
+                    </h6>
+                    <textarea
+                              className="note-input"
+                              name="note"
+                              onChange={[Function]}
+                              placeholder="add a message"
+                              type="text"
+                              value=""
+                    />
+          </div>
           <button
                     onClick={[Function]}
           >
@@ -118,14 +132,31 @@ ShallowWrapper {
           <div
                     className="transaction-message"
           >
-                    <h3 />
+                    <h3
+                              className="t-message-1"
+                    />
           </div>
 </div>,
+        <Connect(GroupMembers)
+          updateRecipient={[Function]}
+/>,
       ],
       "className": "Transaction",
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "SEND SNAPS",
+          "className": "heading",
+        },
+        "ref": null,
+        "rendered": "SEND SNAPS",
+        "type": "h4",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -189,14 +220,23 @@ ShallowWrapper {
                             updateRecipient={[Function]}
               />
 </div>,
-            <textarea
-              className="note-input"
-              name="note"
-              onChange={[Function]}
-              placeholder="add a message"
-              type="text"
-              value=""
-/>,
+            <div
+              className="input-container"
+>
+              <h6
+                            className="char-display"
+              >
+                            140
+              </h6>
+              <textarea
+                            className="note-input"
+                            name="note"
+                            onChange={[Function]}
+                            placeholder="add a message"
+                            type="text"
+                            value=""
+              />
+</div>,
             <button
               onClick={[Function]}
 >
@@ -205,7 +245,9 @@ ShallowWrapper {
             <div
               className="transaction-message"
 >
-              <h3 />
+              <h3
+                            className="t-message-1"
+              />
 </div>,
           ],
           "className": "points-block",
@@ -316,16 +358,55 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": "note-input",
-              "name": "note",
-              "onChange": [Function],
-              "placeholder": "add a message",
-              "type": "text",
-              "value": "",
+              "children": Array [
+                <h6
+                  className="char-display"
+>
+                  140
+</h6>,
+                <textarea
+                  className="note-input"
+                  name="note"
+                  onChange={[Function]}
+                  placeholder="add a message"
+                  type="text"
+                  value=""
+/>,
+              ],
+              "className": "input-container",
             },
             "ref": null,
-            "rendered": null,
-            "type": "textarea",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 140,
+                  "className": "char-display",
+                },
+                "ref": null,
+                "rendered": 140,
+                "type": "h6",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "note-input",
+                  "name": "note",
+                  "onChange": [Function],
+                  "placeholder": "add a message",
+                  "type": "text",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "textarea",
+              },
+            ],
+            "type": "div",
           },
           Object {
             "instance": null,
@@ -344,7 +425,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <h3 />,
+              "children": <h3
+                className="t-message-1"
+/>,
               "className": "transaction-message",
             },
             "ref": null,
@@ -354,6 +437,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": null,
+                "className": "t-message-1",
               },
               "ref": null,
               "rendered": null,
@@ -363,6 +447,17 @@ ShallowWrapper {
           },
         ],
         "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "updateRecipient": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
       },
     ],
     "type": "div",
@@ -374,6 +469,11 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <h4
+            className="heading"
+>
+            SEND SNAPS
+</h4>,
           <Connect(PointsInformation) />,
           <div
             className="award-header"
@@ -409,14 +509,23 @@ ShallowWrapper {
                                     updateRecipient={[Function]}
                         />
             </div>
-            <textarea
-                        className="note-input"
-                        name="note"
-                        onChange={[Function]}
-                        placeholder="add a message"
-                        type="text"
-                        value=""
-            />
+            <div
+                        className="input-container"
+            >
+                        <h6
+                                    className="char-display"
+                        >
+                                    140
+                        </h6>
+                        <textarea
+                                    className="note-input"
+                                    name="note"
+                                    onChange={[Function]}
+                                    placeholder="add a message"
+                                    type="text"
+                                    value=""
+                        />
+            </div>
             <button
                         onClick={[Function]}
             >
@@ -425,14 +534,31 @@ ShallowWrapper {
             <div
                         className="transaction-message"
             >
-                        <h3 />
+                        <h3
+                                    className="t-message-1"
+                        />
             </div>
 </div>,
+          <Connect(GroupMembers)
+            updateRecipient={[Function]}
+/>,
         ],
         "className": "Transaction",
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "SEND SNAPS",
+            "className": "heading",
+          },
+          "ref": null,
+          "rendered": "SEND SNAPS",
+          "type": "h4",
+        },
         Object {
           "instance": null,
           "key": undefined,
@@ -496,14 +622,23 @@ ShallowWrapper {
                                 updateRecipient={[Function]}
                 />
 </div>,
-              <textarea
-                className="note-input"
-                name="note"
-                onChange={[Function]}
-                placeholder="add a message"
-                type="text"
-                value=""
-/>,
+              <div
+                className="input-container"
+>
+                <h6
+                                className="char-display"
+                >
+                                140
+                </h6>
+                <textarea
+                                className="note-input"
+                                name="note"
+                                onChange={[Function]}
+                                placeholder="add a message"
+                                type="text"
+                                value=""
+                />
+</div>,
               <button
                 onClick={[Function]}
 >
@@ -512,7 +647,9 @@ ShallowWrapper {
               <div
                 className="transaction-message"
 >
-                <h3 />
+                <h3
+                                className="t-message-1"
+                />
 </div>,
             ],
             "className": "points-block",
@@ -623,16 +760,55 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": "note-input",
-                "name": "note",
-                "onChange": [Function],
-                "placeholder": "add a message",
-                "type": "text",
-                "value": "",
+                "children": Array [
+                  <h6
+                    className="char-display"
+>
+                    140
+</h6>,
+                  <textarea
+                    className="note-input"
+                    name="note"
+                    onChange={[Function]}
+                    placeholder="add a message"
+                    type="text"
+                    value=""
+/>,
+                ],
+                "className": "input-container",
               },
               "ref": null,
-              "rendered": null,
-              "type": "textarea",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 140,
+                    "className": "char-display",
+                  },
+                  "ref": null,
+                  "rendered": 140,
+                  "type": "h6",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "note-input",
+                    "name": "note",
+                    "onChange": [Function],
+                    "placeholder": "add a message",
+                    "type": "text",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "textarea",
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
@@ -651,7 +827,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <h3 />,
+                "children": <h3
+                  className="t-message-1"
+/>,
                 "className": "transaction-message",
               },
               "ref": null,
@@ -661,6 +839,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": null,
+                  "className": "t-message-1",
                 },
                 "ref": null,
                 "rendered": null,
@@ -670,6 +849,17 @@ ShallowWrapper {
             },
           ],
           "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "updateRecipient": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
       ],
       "type": "div",

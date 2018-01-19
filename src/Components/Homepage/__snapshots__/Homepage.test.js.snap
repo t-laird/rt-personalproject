@@ -38,102 +38,235 @@ ShallowWrapper {
         <button
                 className="header-button-top"
         >
-                <a
-                        href="https://tr-personal-proj.e1.loginrocket.com/"
+                <Link
+                        replace={false}
+                        to="/snap-ninja/user"
                 >
                         start SNAP NINJA now
-                </a>
+                </Link>
         </button>
         <div
-                className="homepage-container"
+                className="homepage-title-bar"
+        >
+                <h2>
+                        You want your students to look out for each other.  
+                        <span
+                                className="title-bar-span"
+                        >
+                                We can help.
+                        </span>
+                </h2>
+        </div>
+        <div
+                className="banners-container"
         >
                 <div
-                        className="info-box"
+                        className="home-banner"
                 >
-                        <img
-                                alt="homepage-icon"
-                                className="homepage-icon"
-                                src="handshake.svg"
-                        />
-                        <h4>
-                                Encourage student-to-student mentorship
-                        </h4>
-                        <p>
-                                Receiving a little bit of recognition is powerful.  In Snap Ninja, students reward other students by giving each other snaps for helping them out.  Students receive weekly performance charts, providing a constant reminder of the importance of mentoring others.
-                        </p>
-                        <img
-                                alt="homepage-graphic"
-                                className="homepage-graphic"
-                                src="award-ss.svg"
-                        />
+                        <div
+                                className="banner-top"
+                        >
+                                <h4>
+                                        Encourage
+                                </h4>
+                                <h4>
+                                        Mentorship
+                                </h4>
+                                <img
+                                        alt="homepage-icon"
+                                        className="homepage-icon"
+                                        src="handshake.svg"
+                                />
+                        </div>
+                        <div
+                                className="banner-bottom"
+                        >
+                                <p>
+                                        SNAP NINJA is a web-based classroom tool that makes recognition between students easy and fun
+                                </p>
+                                <p>
+                                        Students reward each other for being helpful and otherwise awesome, and then receive instant performance updates, providing a constant reminder of the importance of mentoring others
+                                </p>
+                                <img
+                                        alt="banner-bottom-graphic"
+                                        className="banner-bottom-graphic"
+                                        src="banner-bottom.svg"
+                                />
+                        </div>
                 </div>
                 <div
-                        className="info-box"
+                        className="home-banner"
                 >
-                        <img
-                                alt="homepage-icon"
-                                className="homepage-icon"
-                                src="ribbon.svg"
-                        />
-                        <h4>
-                                Reward collaboration
-                        </h4>
-                        <p>
-                                Rather than just walking away after working with others, Snap Ninja provides students an easy way to give helpful feedback.  Collaboration is both encouraged and rewarded, as it should be.
-                        </p>
-                        <img
-                                alt="homepage-graphic"
-                                className="homepage-graphic"
-                                src="welcome-ss.svg"
-                        />
+                        <div
+                                className="banner-top"
+                        >
+                                <h4>
+                                        Develop
+                                </h4>
+                                <h4>
+                                        Collaboration
+                                </h4>
+                                <img
+                                        alt="homepage-icon"
+                                        className="homepage-icon"
+                                        src="ribbon.svg"
+                                />
+                        </div>
+                        <div
+                                className="banner-bottom"
+                        >
+                                <p>
+                                        Rather than just walking away after working with others, SNAP NINJA provides students an easy way to say thanks and give feedback.  Collaboration is both encouraged and rewarded, as it should be.
+                                </p>
+                                <img
+                                        alt="banner-bottom-graphic"
+                                        className="banner-bottom-graphic"
+                                        src="banner-bottom.svg"
+                                />
+                        </div>
                 </div>
                 <div
-                        className="info-box"
+                        className="home-banner"
                 >
-                        <img
-                                alt="homepage-icon"
-                                className="homepage-icon"
-                                src="mega.svg"
-                        />
-                        <h4>
-                                Make shout-outs digital
-                        </h4>
-                        <p>
-                                Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
-                        </p>
-                        <img
-                                alt="homepage-graphic"
-                                className="homepage-graphic"
-                                src="notes-ss.svg"
-                        />
+                        <div
+                                className="banner-top"
+                        >
+                                <h4>
+                                        Recognize
+                                </h4>
+                                <h4>
+                                        Awesomeness
+                                </h4>
+                                <img
+                                        alt="homepage-icon"
+                                        className="homepage-icon"
+                                        src="mega.svg"
+                                />
+                        </div>
+                        <div
+                                className="banner-bottom"
+                        >
+                                <p>
+                                        Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
+                                </p>
+                                <img
+                                        alt="banner-bottom-graphic"
+                                        className="banner-bottom-graphic"
+                                        src="banner-bottom.svg"
+                                />
+                        </div>
                 </div>
                 <div
-                        className="info-box"
+                        className="home-banner"
+                >
+                        <div
+                                className="banner-top"
+                        >
+                                <h4>
+                                        Build
+                                </h4>
+                                <h4>
+                                        Relationships
+                                </h4>
+                                <img
+                                        alt="homepage-icon"
+                                        className="homepage-icon"
+                                        src="people.svg"
+                                />
+                        </div>
+                        <div
+                                className="banner-bottom"
+                        >
+                                <p>
+                                        Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
+                                </p>
+                                <img
+                                        alt="banner-bottom-graphic"
+                                        className="banner-bottom-graphic"
+                                        src="banner-bottom.svg"
+                                />
+                        </div>
+                </div>
+        </div>
+        <div
+                className="home-bottom-container"
+        >
+                <div
+                        className="bottom-section-1"
                 >
                         <img
-                                alt="homepage-icon"
-                                className="homepage-icon"
-                                src="people.svg"
-                        />
-                        <h4>
-                                Build intra-cohort relationships
-                        </h4>
-                        <p>
-                                Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
-                        </p>
-                        <img
-                                alt="homepage-graphic"
-                                className="homepage-graphic"
+                                alt="group-graphic"
+                                className="bottom-section-1-graphic"
                                 src="group-ss.svg"
+                        />
+                        <div
+                                className="section-1-text"
+                        >
+                                <h4>
+                                        Build a Cohesive Classroom
+                                </h4>
+                                <p>
+                                        Since SNAP NINJA is for teams and groups, you’ll find an entire group page dedicated to showing off group accomplishments.  Your group page includes weekly, and long-term group data, along with leaderboards and an easy-to-understand graph.
+                                </p>
+                                <p>
+                                        Students will see how their individual success is tied to the success of everyone.
+                                </p>
+                        </div>
+                </div>
+                <div
+                        className="bottom-section-2"
+                >
+                        <div
+                                className="section-2-text"
+                        >
+                                <h4>
+                                        Make Shout-outs Digital
+                                </h4>
+                                <p>
+                                        Each user will own their own page.  As teammates award them snaps, they’ll find encouraging comments and a visual record of what they have done for others.
+                                </p>
+                        </div>
+                        <img
+                                alt="phone-graphic"
+                                className="bottom-section-2-graphic"
+                                src="phone-ss.png"
+                        />
+                </div>
+                <div
+                        className="bottom-section-3"
+                >
+                        <img
+                                alt="slack-graphic"
+                                className="slack-graphic"
+                                src="slack.svg"
+                        />
+                        <div
+                                className="section-3-text"
+                        >
+                                <h4>
+                                        Use Tools You Already Know
+                                </h4>
+                                <p>
+                                        Use your existing Github credentials for a pain free signup and login.
+                                </p>
+                                <p>
+                                        After your initial sign in, snaps can be sent or received in-app or via Slack using slash commands.
+                                </p>
+                        </div>
+                        <img
+                                alt="github-graphic"
+                                className="github-graphic"
+                                src="github.svg"
                         />
                 </div>
         </div>
         <button>
-                <a
-                        href="https://tr-personal-proj.e1.loginrocket.com/"
+                <Link
+                        replace={false}
+                        to="/snap-ninja/user"
                 >
                         start SNAP NINJA now
-                </a>
+                </Link>
         </button>
 </div>,
       "className": "homepage-component",
@@ -163,102 +296,235 @@ ShallowWrapper {
           <button
             className="header-button-top"
 >
-            <a
-                        href="https://tr-personal-proj.e1.loginrocket.com/"
+            <Link
+                        replace={false}
+                        to="/snap-ninja/user"
             >
                         start SNAP NINJA now
-            </a>
+            </Link>
 </button>,
           <div
-            className="homepage-container"
+            className="homepage-title-bar"
+>
+            <h2>
+                        You want your students to look out for each other.  
+                        <span
+                                    className="title-bar-span"
+                        >
+                                    We can help.
+                        </span>
+            </h2>
+</div>,
+          <div
+            className="banners-container"
 >
             <div
-                        className="info-box"
+                        className="home-banner"
             >
-                        <img
-                                    alt="homepage-icon"
-                                    className="homepage-icon"
-                                    src="handshake.svg"
-                        />
-                        <h4>
-                                    Encourage student-to-student mentorship
-                        </h4>
-                        <p>
-                                    Receiving a little bit of recognition is powerful.  In Snap Ninja, students reward other students by giving each other snaps for helping them out.  Students receive weekly performance charts, providing a constant reminder of the importance of mentoring others.
-                        </p>
-                        <img
-                                    alt="homepage-graphic"
-                                    className="homepage-graphic"
-                                    src="award-ss.svg"
-                        />
+                        <div
+                                    className="banner-top"
+                        >
+                                    <h4>
+                                                Encourage
+                                    </h4>
+                                    <h4>
+                                                Mentorship
+                                    </h4>
+                                    <img
+                                                alt="homepage-icon"
+                                                className="homepage-icon"
+                                                src="handshake.svg"
+                                    />
+                        </div>
+                        <div
+                                    className="banner-bottom"
+                        >
+                                    <p>
+                                                SNAP NINJA is a web-based classroom tool that makes recognition between students easy and fun
+                                    </p>
+                                    <p>
+                                                Students reward each other for being helpful and otherwise awesome, and then receive instant performance updates, providing a constant reminder of the importance of mentoring others
+                                    </p>
+                                    <img
+                                                alt="banner-bottom-graphic"
+                                                className="banner-bottom-graphic"
+                                                src="banner-bottom.svg"
+                                    />
+                        </div>
             </div>
             <div
-                        className="info-box"
+                        className="home-banner"
             >
-                        <img
-                                    alt="homepage-icon"
-                                    className="homepage-icon"
-                                    src="ribbon.svg"
-                        />
-                        <h4>
-                                    Reward collaboration
-                        </h4>
-                        <p>
-                                    Rather than just walking away after working with others, Snap Ninja provides students an easy way to give helpful feedback.  Collaboration is both encouraged and rewarded, as it should be.
-                        </p>
-                        <img
-                                    alt="homepage-graphic"
-                                    className="homepage-graphic"
-                                    src="welcome-ss.svg"
-                        />
+                        <div
+                                    className="banner-top"
+                        >
+                                    <h4>
+                                                Develop
+                                    </h4>
+                                    <h4>
+                                                Collaboration
+                                    </h4>
+                                    <img
+                                                alt="homepage-icon"
+                                                className="homepage-icon"
+                                                src="ribbon.svg"
+                                    />
+                        </div>
+                        <div
+                                    className="banner-bottom"
+                        >
+                                    <p>
+                                                Rather than just walking away after working with others, SNAP NINJA provides students an easy way to say thanks and give feedback.  Collaboration is both encouraged and rewarded, as it should be.
+                                    </p>
+                                    <img
+                                                alt="banner-bottom-graphic"
+                                                className="banner-bottom-graphic"
+                                                src="banner-bottom.svg"
+                                    />
+                        </div>
             </div>
             <div
-                        className="info-box"
+                        className="home-banner"
             >
-                        <img
-                                    alt="homepage-icon"
-                                    className="homepage-icon"
-                                    src="mega.svg"
-                        />
-                        <h4>
-                                    Make shout-outs digital
-                        </h4>
-                        <p>
-                                    Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
-                        </p>
-                        <img
-                                    alt="homepage-graphic"
-                                    className="homepage-graphic"
-                                    src="notes-ss.svg"
-                        />
+                        <div
+                                    className="banner-top"
+                        >
+                                    <h4>
+                                                Recognize
+                                    </h4>
+                                    <h4>
+                                                Awesomeness
+                                    </h4>
+                                    <img
+                                                alt="homepage-icon"
+                                                className="homepage-icon"
+                                                src="mega.svg"
+                                    />
+                        </div>
+                        <div
+                                    className="banner-bottom"
+                        >
+                                    <p>
+                                                Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
+                                    </p>
+                                    <img
+                                                alt="banner-bottom-graphic"
+                                                className="banner-bottom-graphic"
+                                                src="banner-bottom.svg"
+                                    />
+                        </div>
             </div>
             <div
-                        className="info-box"
+                        className="home-banner"
+            >
+                        <div
+                                    className="banner-top"
+                        >
+                                    <h4>
+                                                Build
+                                    </h4>
+                                    <h4>
+                                                Relationships
+                                    </h4>
+                                    <img
+                                                alt="homepage-icon"
+                                                className="homepage-icon"
+                                                src="people.svg"
+                                    />
+                        </div>
+                        <div
+                                    className="banner-bottom"
+                        >
+                                    <p>
+                                                Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
+                                    </p>
+                                    <img
+                                                alt="banner-bottom-graphic"
+                                                className="banner-bottom-graphic"
+                                                src="banner-bottom.svg"
+                                    />
+                        </div>
+            </div>
+</div>,
+          <div
+            className="home-bottom-container"
+>
+            <div
+                        className="bottom-section-1"
             >
                         <img
-                                    alt="homepage-icon"
-                                    className="homepage-icon"
-                                    src="people.svg"
-                        />
-                        <h4>
-                                    Build intra-cohort relationships
-                        </h4>
-                        <p>
-                                    Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
-                        </p>
-                        <img
-                                    alt="homepage-graphic"
-                                    className="homepage-graphic"
+                                    alt="group-graphic"
+                                    className="bottom-section-1-graphic"
                                     src="group-ss.svg"
+                        />
+                        <div
+                                    className="section-1-text"
+                        >
+                                    <h4>
+                                                Build a Cohesive Classroom
+                                    </h4>
+                                    <p>
+                                                Since SNAP NINJA is for teams and groups, you’ll find an entire group page dedicated to showing off group accomplishments.  Your group page includes weekly, and long-term group data, along with leaderboards and an easy-to-understand graph.
+                                    </p>
+                                    <p>
+                                                Students will see how their individual success is tied to the success of everyone.
+                                    </p>
+                        </div>
+            </div>
+            <div
+                        className="bottom-section-2"
+            >
+                        <div
+                                    className="section-2-text"
+                        >
+                                    <h4>
+                                                Make Shout-outs Digital
+                                    </h4>
+                                    <p>
+                                                Each user will own their own page.  As teammates award them snaps, they’ll find encouraging comments and a visual record of what they have done for others.
+                                    </p>
+                        </div>
+                        <img
+                                    alt="phone-graphic"
+                                    className="bottom-section-2-graphic"
+                                    src="phone-ss.png"
+                        />
+            </div>
+            <div
+                        className="bottom-section-3"
+            >
+                        <img
+                                    alt="slack-graphic"
+                                    className="slack-graphic"
+                                    src="slack.svg"
+                        />
+                        <div
+                                    className="section-3-text"
+                        >
+                                    <h4>
+                                                Use Tools You Already Know
+                                    </h4>
+                                    <p>
+                                                Use your existing Github credentials for a pain free signup and login.
+                                    </p>
+                                    <p>
+                                                After your initial sign in, snaps can be sent or received in-app or via Slack using slash commands.
+                                    </p>
+                        </div>
+                        <img
+                                    alt="github-graphic"
+                                    className="github-graphic"
+                                    src="github.svg"
                         />
             </div>
 </div>,
           <button>
-            <a
-                        href="https://tr-personal-proj.e1.loginrocket.com/"
+            <Link
+                        replace={false}
+                        to="/snap-ninja/user"
             >
                         start SNAP NINJA now
-            </a>
+            </Link>
 </button>,
         ],
         "className": "bg-holder",
@@ -334,25 +600,27 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <a
-              href="https://tr-personal-proj.e1.loginrocket.com/"
+            "children": <Link
+              replace={false}
+              to="/snap-ninja/user"
 >
               start SNAP NINJA now
-</a>,
+</Link>,
             "className": "header-button-top",
           },
           "ref": null,
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "class",
             "props": Object {
               "children": "start SNAP NINJA now",
-              "href": "https://tr-personal-proj.e1.loginrocket.com/",
+              "replace": false,
+              "to": "/snap-ninja/user",
             },
             "ref": null,
             "rendered": "start SNAP NINJA now",
-            "type": "a",
+            "type": [Function],
           },
           "type": "button",
         },
@@ -361,89 +629,873 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": <h2>
+              You want your students to look out for each other.  
+              <span
+                            className="title-bar-span"
+              >
+                            We can help.
+              </span>
+</h2>,
+            "className": "homepage-title-bar",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "You want your students to look out for each other.  ",
+                <span
+                  className="title-bar-span"
+>
+                  We can help.
+</span>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "You want your students to look out for each other.  ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "We can help.",
+                  "className": "title-bar-span",
+                },
+                "ref": null,
+                "rendered": "We can help.",
+                "type": "span",
+              },
+            ],
+            "type": "h2",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "children": Array [
               <div
-                className="info-box"
+                className="home-banner"
 >
-                <img
-                                alt="homepage-icon"
-                                className="homepage-icon"
-                                src="handshake.svg"
-                />
-                <h4>
-                                Encourage student-to-student mentorship
-                </h4>
-                <p>
-                                Receiving a little bit of recognition is powerful.  In Snap Ninja, students reward other students by giving each other snaps for helping them out.  Students receive weekly performance charts, providing a constant reminder of the importance of mentoring others.
-                </p>
-                <img
-                                alt="homepage-graphic"
-                                className="homepage-graphic"
-                                src="award-ss.svg"
-                />
+                <div
+                                className="banner-top"
+                >
+                                <h4>
+                                                Encourage
+                                </h4>
+                                <h4>
+                                                Mentorship
+                                </h4>
+                                <img
+                                                alt="homepage-icon"
+                                                className="homepage-icon"
+                                                src="handshake.svg"
+                                />
+                </div>
+                <div
+                                className="banner-bottom"
+                >
+                                <p>
+                                                SNAP NINJA is a web-based classroom tool that makes recognition between students easy and fun
+                                </p>
+                                <p>
+                                                Students reward each other for being helpful and otherwise awesome, and then receive instant performance updates, providing a constant reminder of the importance of mentoring others
+                                </p>
+                                <img
+                                                alt="banner-bottom-graphic"
+                                                className="banner-bottom-graphic"
+                                                src="banner-bottom.svg"
+                                />
+                </div>
 </div>,
               <div
-                className="info-box"
+                className="home-banner"
 >
-                <img
-                                alt="homepage-icon"
-                                className="homepage-icon"
-                                src="ribbon.svg"
-                />
-                <h4>
-                                Reward collaboration
-                </h4>
-                <p>
-                                Rather than just walking away after working with others, Snap Ninja provides students an easy way to give helpful feedback.  Collaboration is both encouraged and rewarded, as it should be.
-                </p>
-                <img
-                                alt="homepage-graphic"
-                                className="homepage-graphic"
-                                src="welcome-ss.svg"
-                />
+                <div
+                                className="banner-top"
+                >
+                                <h4>
+                                                Develop
+                                </h4>
+                                <h4>
+                                                Collaboration
+                                </h4>
+                                <img
+                                                alt="homepage-icon"
+                                                className="homepage-icon"
+                                                src="ribbon.svg"
+                                />
+                </div>
+                <div
+                                className="banner-bottom"
+                >
+                                <p>
+                                                Rather than just walking away after working with others, SNAP NINJA provides students an easy way to say thanks and give feedback.  Collaboration is both encouraged and rewarded, as it should be.
+                                </p>
+                                <img
+                                                alt="banner-bottom-graphic"
+                                                className="banner-bottom-graphic"
+                                                src="banner-bottom.svg"
+                                />
+                </div>
 </div>,
               <div
-                className="info-box"
+                className="home-banner"
 >
-                <img
-                                alt="homepage-icon"
-                                className="homepage-icon"
-                                src="mega.svg"
-                />
-                <h4>
-                                Make shout-outs digital
-                </h4>
-                <p>
-                                Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
-                </p>
-                <img
-                                alt="homepage-graphic"
-                                className="homepage-graphic"
-                                src="notes-ss.svg"
-                />
+                <div
+                                className="banner-top"
+                >
+                                <h4>
+                                                Recognize
+                                </h4>
+                                <h4>
+                                                Awesomeness
+                                </h4>
+                                <img
+                                                alt="homepage-icon"
+                                                className="homepage-icon"
+                                                src="mega.svg"
+                                />
+                </div>
+                <div
+                                className="banner-bottom"
+                >
+                                <p>
+                                                Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
+                                </p>
+                                <img
+                                                alt="banner-bottom-graphic"
+                                                className="banner-bottom-graphic"
+                                                src="banner-bottom.svg"
+                                />
+                </div>
 </div>,
               <div
-                className="info-box"
+                className="home-banner"
+>
+                <div
+                                className="banner-top"
+                >
+                                <h4>
+                                                Build
+                                </h4>
+                                <h4>
+                                                Relationships
+                                </h4>
+                                <img
+                                                alt="homepage-icon"
+                                                className="homepage-icon"
+                                                src="people.svg"
+                                />
+                </div>
+                <div
+                                className="banner-bottom"
+                >
+                                <p>
+                                                Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
+                                </p>
+                                <img
+                                                alt="banner-bottom-graphic"
+                                                className="banner-bottom-graphic"
+                                                src="banner-bottom.svg"
+                                />
+                </div>
+</div>,
+            ],
+            "className": "banners-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="banner-top"
+>
+                    <h4>
+                                        Encourage
+                    </h4>
+                    <h4>
+                                        Mentorship
+                    </h4>
+                    <img
+                                        alt="homepage-icon"
+                                        className="homepage-icon"
+                                        src="handshake.svg"
+                    />
+</div>,
+                  <div
+                    className="banner-bottom"
+>
+                    <p>
+                                        SNAP NINJA is a web-based classroom tool that makes recognition between students easy and fun
+                    </p>
+                    <p>
+                                        Students reward each other for being helpful and otherwise awesome, and then receive instant performance updates, providing a constant reminder of the importance of mentoring others
+                    </p>
+                    <img
+                                        alt="banner-bottom-graphic"
+                                        className="banner-bottom-graphic"
+                                        src="banner-bottom.svg"
+                    />
+</div>,
+                ],
+                "className": "home-banner",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h4>
+                        Encourage
+</h4>,
+                      <h4>
+                        Mentorship
+</h4>,
+                      <img
+                        alt="homepage-icon"
+                        className="homepage-icon"
+                        src="handshake.svg"
+/>,
+                    ],
+                    "className": "banner-top",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Encourage",
+                      },
+                      "ref": null,
+                      "rendered": "Encourage",
+                      "type": "h4",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Mentorship",
+                      },
+                      "ref": null,
+                      "rendered": "Mentorship",
+                      "type": "h4",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "homepage-icon",
+                        "className": "homepage-icon",
+                        "src": "handshake.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p>
+                        SNAP NINJA is a web-based classroom tool that makes recognition between students easy and fun
+</p>,
+                      <p>
+                        Students reward each other for being helpful and otherwise awesome, and then receive instant performance updates, providing a constant reminder of the importance of mentoring others
+</p>,
+                      <img
+                        alt="banner-bottom-graphic"
+                        className="banner-bottom-graphic"
+                        src="banner-bottom.svg"
+/>,
+                    ],
+                    "className": "banner-bottom",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "SNAP NINJA is a web-based classroom tool that makes recognition between students easy and fun",
+                      },
+                      "ref": null,
+                      "rendered": "SNAP NINJA is a web-based classroom tool that makes recognition between students easy and fun",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Students reward each other for being helpful and otherwise awesome, and then receive instant performance updates, providing a constant reminder of the importance of mentoring others",
+                      },
+                      "ref": null,
+                      "rendered": "Students reward each other for being helpful and otherwise awesome, and then receive instant performance updates, providing a constant reminder of the importance of mentoring others",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "banner-bottom-graphic",
+                        "className": "banner-bottom-graphic",
+                        "src": "banner-bottom.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="banner-top"
+>
+                    <h4>
+                                        Develop
+                    </h4>
+                    <h4>
+                                        Collaboration
+                    </h4>
+                    <img
+                                        alt="homepage-icon"
+                                        className="homepage-icon"
+                                        src="ribbon.svg"
+                    />
+</div>,
+                  <div
+                    className="banner-bottom"
+>
+                    <p>
+                                        Rather than just walking away after working with others, SNAP NINJA provides students an easy way to say thanks and give feedback.  Collaboration is both encouraged and rewarded, as it should be.
+                    </p>
+                    <img
+                                        alt="banner-bottom-graphic"
+                                        className="banner-bottom-graphic"
+                                        src="banner-bottom.svg"
+                    />
+</div>,
+                ],
+                "className": "home-banner",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h4>
+                        Develop
+</h4>,
+                      <h4>
+                        Collaboration
+</h4>,
+                      <img
+                        alt="homepage-icon"
+                        className="homepage-icon"
+                        src="ribbon.svg"
+/>,
+                    ],
+                    "className": "banner-top",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Develop",
+                      },
+                      "ref": null,
+                      "rendered": "Develop",
+                      "type": "h4",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Collaboration",
+                      },
+                      "ref": null,
+                      "rendered": "Collaboration",
+                      "type": "h4",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "homepage-icon",
+                        "className": "homepage-icon",
+                        "src": "ribbon.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p>
+                        Rather than just walking away after working with others, SNAP NINJA provides students an easy way to say thanks and give feedback.  Collaboration is both encouraged and rewarded, as it should be.
+</p>,
+                      <img
+                        alt="banner-bottom-graphic"
+                        className="banner-bottom-graphic"
+                        src="banner-bottom.svg"
+/>,
+                    ],
+                    "className": "banner-bottom",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Rather than just walking away after working with others, SNAP NINJA provides students an easy way to say thanks and give feedback.  Collaboration is both encouraged and rewarded, as it should be.",
+                      },
+                      "ref": null,
+                      "rendered": "Rather than just walking away after working with others, SNAP NINJA provides students an easy way to say thanks and give feedback.  Collaboration is both encouraged and rewarded, as it should be.",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "banner-bottom-graphic",
+                        "className": "banner-bottom-graphic",
+                        "src": "banner-bottom.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="banner-top"
+>
+                    <h4>
+                                        Recognize
+                    </h4>
+                    <h4>
+                                        Awesomeness
+                    </h4>
+                    <img
+                                        alt="homepage-icon"
+                                        className="homepage-icon"
+                                        src="mega.svg"
+                    />
+</div>,
+                  <div
+                    className="banner-bottom"
+>
+                    <p>
+                                        Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
+                    </p>
+                    <img
+                                        alt="banner-bottom-graphic"
+                                        className="banner-bottom-graphic"
+                                        src="banner-bottom.svg"
+                    />
+</div>,
+                ],
+                "className": "home-banner",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h4>
+                        Recognize
+</h4>,
+                      <h4>
+                        Awesomeness
+</h4>,
+                      <img
+                        alt="homepage-icon"
+                        className="homepage-icon"
+                        src="mega.svg"
+/>,
+                    ],
+                    "className": "banner-top",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Recognize",
+                      },
+                      "ref": null,
+                      "rendered": "Recognize",
+                      "type": "h4",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Awesomeness",
+                      },
+                      "ref": null,
+                      "rendered": "Awesomeness",
+                      "type": "h4",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "homepage-icon",
+                        "className": "homepage-icon",
+                        "src": "mega.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p>
+                        Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
+</p>,
+                      <img
+                        alt="banner-bottom-graphic"
+                        className="banner-bottom-graphic"
+                        src="banner-bottom.svg"
+/>,
+                    ],
+                    "className": "banner-bottom",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.",
+                      },
+                      "ref": null,
+                      "rendered": "Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "banner-bottom-graphic",
+                        "className": "banner-bottom-graphic",
+                        "src": "banner-bottom.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="banner-top"
+>
+                    <h4>
+                                        Build
+                    </h4>
+                    <h4>
+                                        Relationships
+                    </h4>
+                    <img
+                                        alt="homepage-icon"
+                                        className="homepage-icon"
+                                        src="people.svg"
+                    />
+</div>,
+                  <div
+                    className="banner-bottom"
+>
+                    <p>
+                                        Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
+                    </p>
+                    <img
+                                        alt="banner-bottom-graphic"
+                                        className="banner-bottom-graphic"
+                                        src="banner-bottom.svg"
+                    />
+</div>,
+                ],
+                "className": "home-banner",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h4>
+                        Build
+</h4>,
+                      <h4>
+                        Relationships
+</h4>,
+                      <img
+                        alt="homepage-icon"
+                        className="homepage-icon"
+                        src="people.svg"
+/>,
+                    ],
+                    "className": "banner-top",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Build",
+                      },
+                      "ref": null,
+                      "rendered": "Build",
+                      "type": "h4",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Relationships",
+                      },
+                      "ref": null,
+                      "rendered": "Relationships",
+                      "type": "h4",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "homepage-icon",
+                        "className": "homepage-icon",
+                        "src": "people.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p>
+                        Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
+</p>,
+                      <img
+                        alt="banner-bottom-graphic"
+                        className="banner-bottom-graphic"
+                        src="banner-bottom.svg"
+/>,
+                    ],
+                    "className": "banner-bottom",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.",
+                      },
+                      "ref": null,
+                      "rendered": "Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "banner-bottom-graphic",
+                        "className": "banner-bottom-graphic",
+                        "src": "banner-bottom.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="bottom-section-1"
 >
                 <img
-                                alt="homepage-icon"
-                                className="homepage-icon"
-                                src="people.svg"
-                />
-                <h4>
-                                Build intra-cohort relationships
-                </h4>
-                <p>
-                                Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
-                </p>
-                <img
-                                alt="homepage-graphic"
-                                className="homepage-graphic"
+                                alt="group-graphic"
+                                className="bottom-section-1-graphic"
                                 src="group-ss.svg"
+                />
+                <div
+                                className="section-1-text"
+                >
+                                <h4>
+                                                Build a Cohesive Classroom
+                                </h4>
+                                <p>
+                                                Since SNAP NINJA is for teams and groups, you’ll find an entire group page dedicated to showing off group accomplishments.  Your group page includes weekly, and long-term group data, along with leaderboards and an easy-to-understand graph.
+                                </p>
+                                <p>
+                                                Students will see how their individual success is tied to the success of everyone.
+                                </p>
+                </div>
+</div>,
+              <div
+                className="bottom-section-2"
+>
+                <div
+                                className="section-2-text"
+                >
+                                <h4>
+                                                Make Shout-outs Digital
+                                </h4>
+                                <p>
+                                                Each user will own their own page.  As teammates award them snaps, they’ll find encouraging comments and a visual record of what they have done for others.
+                                </p>
+                </div>
+                <img
+                                alt="phone-graphic"
+                                className="bottom-section-2-graphic"
+                                src="phone-ss.png"
+                />
+</div>,
+              <div
+                className="bottom-section-3"
+>
+                <img
+                                alt="slack-graphic"
+                                className="slack-graphic"
+                                src="slack.svg"
+                />
+                <div
+                                className="section-3-text"
+                >
+                                <h4>
+                                                Use Tools You Already Know
+                                </h4>
+                                <p>
+                                                Use your existing Github credentials for a pain free signup and login.
+                                </p>
+                                <p>
+                                                After your initial sign in, snaps can be sent or received in-app or via Slack using slash commands.
+                                </p>
+                </div>
+                <img
+                                alt="github-graphic"
+                                className="github-graphic"
+                                src="github.svg"
                 />
 </div>,
             ],
-            "className": "homepage-container",
+            "className": "home-bottom-container",
           },
           "ref": null,
           "rendered": Array [
@@ -454,257 +1506,25 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <img
-                    alt="homepage-icon"
-                    className="homepage-icon"
-                    src="handshake.svg"
-/>,
-                  <h4>
-                    Encourage student-to-student mentorship
-</h4>,
-                  <p>
-                    Receiving a little bit of recognition is powerful.  In Snap Ninja, students reward other students by giving each other snaps for helping them out.  Students receive weekly performance charts, providing a constant reminder of the importance of mentoring others.
-</p>,
-                  <img
-                    alt="homepage-graphic"
-                    className="homepage-graphic"
-                    src="award-ss.svg"
-/>,
-                ],
-                "className": "info-box",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "alt": "homepage-icon",
-                    "className": "homepage-icon",
-                    "src": "handshake.svg",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "img",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Encourage student-to-student mentorship",
-                  },
-                  "ref": null,
-                  "rendered": "Encourage student-to-student mentorship",
-                  "type": "h4",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Receiving a little bit of recognition is powerful.  In Snap Ninja, students reward other students by giving each other snaps for helping them out.  Students receive weekly performance charts, providing a constant reminder of the importance of mentoring others.",
-                  },
-                  "ref": null,
-                  "rendered": "Receiving a little bit of recognition is powerful.  In Snap Ninja, students reward other students by giving each other snaps for helping them out.  Students receive weekly performance charts, providing a constant reminder of the importance of mentoring others.",
-                  "type": "p",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "alt": "homepage-graphic",
-                    "className": "homepage-graphic",
-                    "src": "award-ss.svg",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "img",
-                },
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <img
-                    alt="homepage-icon"
-                    className="homepage-icon"
-                    src="ribbon.svg"
-/>,
-                  <h4>
-                    Reward collaboration
-</h4>,
-                  <p>
-                    Rather than just walking away after working with others, Snap Ninja provides students an easy way to give helpful feedback.  Collaboration is both encouraged and rewarded, as it should be.
-</p>,
-                  <img
-                    alt="homepage-graphic"
-                    className="homepage-graphic"
-                    src="welcome-ss.svg"
-/>,
-                ],
-                "className": "info-box",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "alt": "homepage-icon",
-                    "className": "homepage-icon",
-                    "src": "ribbon.svg",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "img",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Reward collaboration",
-                  },
-                  "ref": null,
-                  "rendered": "Reward collaboration",
-                  "type": "h4",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Rather than just walking away after working with others, Snap Ninja provides students an easy way to give helpful feedback.  Collaboration is both encouraged and rewarded, as it should be.",
-                  },
-                  "ref": null,
-                  "rendered": "Rather than just walking away after working with others, Snap Ninja provides students an easy way to give helpful feedback.  Collaboration is both encouraged and rewarded, as it should be.",
-                  "type": "p",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "alt": "homepage-graphic",
-                    "className": "homepage-graphic",
-                    "src": "welcome-ss.svg",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "img",
-                },
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <img
-                    alt="homepage-icon"
-                    className="homepage-icon"
-                    src="mega.svg"
-/>,
-                  <h4>
-                    Make shout-outs digital
-</h4>,
-                  <p>
-                    Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
-</p>,
-                  <img
-                    alt="homepage-graphic"
-                    className="homepage-graphic"
-                    src="notes-ss.svg"
-/>,
-                ],
-                "className": "info-box",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "alt": "homepage-icon",
-                    "className": "homepage-icon",
-                    "src": "mega.svg",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "img",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Make shout-outs digital",
-                  },
-                  "ref": null,
-                  "rendered": "Make shout-outs digital",
-                  "type": "h4",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.",
-                  },
-                  "ref": null,
-                  "rendered": "Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.",
-                  "type": "p",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "alt": "homepage-graphic",
-                    "className": "homepage-graphic",
-                    "src": "notes-ss.svg",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "img",
-                },
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <img
-                    alt="homepage-icon"
-                    className="homepage-icon"
-                    src="people.svg"
-/>,
-                  <h4>
-                    Build intra-cohort relationships
-</h4>,
-                  <p>
-                    Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
-</p>,
-                  <img
-                    alt="homepage-graphic"
-                    className="homepage-graphic"
+                    alt="group-graphic"
+                    className="bottom-section-1-graphic"
                     src="group-ss.svg"
 />,
+                  <div
+                    className="section-1-text"
+>
+                    <h4>
+                                        Build a Cohesive Classroom
+                    </h4>
+                    <p>
+                                        Since SNAP NINJA is for teams and groups, you’ll find an entire group page dedicated to showing off group accomplishments.  Your group page includes weekly, and long-term group data, along with leaderboards and an easy-to-understand graph.
+                    </p>
+                    <p>
+                                        Students will see how their individual success is tied to the success of everyone.
+                    </p>
+</div>,
                 ],
-                "className": "info-box",
+                "className": "bottom-section-1",
               },
               "ref": null,
               "rendered": Array [
@@ -713,9 +1533,9 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "alt": "homepage-icon",
-                    "className": "homepage-icon",
-                    "src": "people.svg",
+                    "alt": "group-graphic",
+                    "className": "bottom-section-1-graphic",
+                    "src": "group-ss.svg",
                   },
                   "ref": null,
                   "rendered": null,
@@ -726,31 +1546,255 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Build intra-cohort relationships",
+                    "children": Array [
+                      <h4>
+                        Build a Cohesive Classroom
+</h4>,
+                      <p>
+                        Since SNAP NINJA is for teams and groups, you’ll find an entire group page dedicated to showing off group accomplishments.  Your group page includes weekly, and long-term group data, along with leaderboards and an easy-to-understand graph.
+</p>,
+                      <p>
+                        Students will see how their individual success is tied to the success of everyone.
+</p>,
+                    ],
+                    "className": "section-1-text",
                   },
                   "ref": null,
-                  "rendered": "Build intra-cohort relationships",
-                  "type": "h4",
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Build a Cohesive Classroom",
+                      },
+                      "ref": null,
+                      "rendered": "Build a Cohesive Classroom",
+                      "type": "h4",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Since SNAP NINJA is for teams and groups, you’ll find an entire group page dedicated to showing off group accomplishments.  Your group page includes weekly, and long-term group data, along with leaderboards and an easy-to-understand graph.",
+                      },
+                      "ref": null,
+                      "rendered": "Since SNAP NINJA is for teams and groups, you’ll find an entire group page dedicated to showing off group accomplishments.  Your group page includes weekly, and long-term group data, along with leaderboards and an easy-to-understand graph.",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Students will see how their individual success is tied to the success of everyone.",
+                      },
+                      "ref": null,
+                      "rendered": "Students will see how their individual success is tied to the success of everyone.",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="section-2-text"
+>
+                    <h4>
+                                        Make Shout-outs Digital
+                    </h4>
+                    <p>
+                                        Each user will own their own page.  As teammates award them snaps, they’ll find encouraging comments and a visual record of what they have done for others.
+                    </p>
+</div>,
+                  <img
+                    alt="phone-graphic"
+                    className="bottom-section-2-graphic"
+                    src="phone-ss.png"
+/>,
+                ],
+                "className": "bottom-section-2",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h4>
+                        Make Shout-outs Digital
+</h4>,
+                      <p>
+                        Each user will own their own page.  As teammates award them snaps, they’ll find encouraging comments and a visual record of what they have done for others.
+</p>,
+                    ],
+                    "className": "section-2-text",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Make Shout-outs Digital",
+                      },
+                      "ref": null,
+                      "rendered": "Make Shout-outs Digital",
+                      "type": "h4",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Each user will own their own page.  As teammates award them snaps, they’ll find encouraging comments and a visual record of what they have done for others.",
+                      },
+                      "ref": null,
+                      "rendered": "Each user will own their own page.  As teammates award them snaps, they’ll find encouraging comments and a visual record of what they have done for others.",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.",
+                    "alt": "phone-graphic",
+                    "className": "bottom-section-2-graphic",
+                    "src": "phone-ss.png",
                   },
                   "ref": null,
-                  "rendered": "Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.",
-                  "type": "p",
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <img
+                    alt="slack-graphic"
+                    className="slack-graphic"
+                    src="slack.svg"
+/>,
+                  <div
+                    className="section-3-text"
+>
+                    <h4>
+                                        Use Tools You Already Know
+                    </h4>
+                    <p>
+                                        Use your existing Github credentials for a pain free signup and login.
+                    </p>
+                    <p>
+                                        After your initial sign in, snaps can be sent or received in-app or via Slack using slash commands.
+                    </p>
+</div>,
+                  <img
+                    alt="github-graphic"
+                    className="github-graphic"
+                    src="github.svg"
+/>,
+                ],
+                "className": "bottom-section-3",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "slack-graphic",
+                    "className": "slack-graphic",
+                    "src": "slack.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "alt": "homepage-graphic",
-                    "className": "homepage-graphic",
-                    "src": "group-ss.svg",
+                    "children": Array [
+                      <h4>
+                        Use Tools You Already Know
+</h4>,
+                      <p>
+                        Use your existing Github credentials for a pain free signup and login.
+</p>,
+                      <p>
+                        After your initial sign in, snaps can be sent or received in-app or via Slack using slash commands.
+</p>,
+                    ],
+                    "className": "section-3-text",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Use Tools You Already Know",
+                      },
+                      "ref": null,
+                      "rendered": "Use Tools You Already Know",
+                      "type": "h4",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Use your existing Github credentials for a pain free signup and login.",
+                      },
+                      "ref": null,
+                      "rendered": "Use your existing Github credentials for a pain free signup and login.",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "After your initial sign in, snaps can be sent or received in-app or via Slack using slash commands.",
+                      },
+                      "ref": null,
+                      "rendered": "After your initial sign in, snaps can be sent or received in-app or via Slack using slash commands.",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "github-graphic",
+                    "className": "github-graphic",
+                    "src": "github.svg",
                   },
                   "ref": null,
                   "rendered": null,
@@ -767,24 +1811,26 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <a
-              href="https://tr-personal-proj.e1.loginrocket.com/"
+            "children": <Link
+              replace={false}
+              to="/snap-ninja/user"
 >
               start SNAP NINJA now
-</a>,
+</Link>,
           },
           "ref": null,
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "class",
             "props": Object {
               "children": "start SNAP NINJA now",
-              "href": "https://tr-personal-proj.e1.loginrocket.com/",
+              "replace": false,
+              "to": "/snap-ninja/user",
             },
             "ref": null,
             "rendered": "start SNAP NINJA now",
-            "type": "a",
+            "type": [Function],
           },
           "type": "button",
         },
@@ -820,102 +1866,235 @@ ShallowWrapper {
           <button
                     className="header-button-top"
           >
-                    <a
-                              href="https://tr-personal-proj.e1.loginrocket.com/"
+                    <Link
+                              replace={false}
+                              to="/snap-ninja/user"
                     >
                               start SNAP NINJA now
-                    </a>
+                    </Link>
           </button>
           <div
-                    className="homepage-container"
+                    className="homepage-title-bar"
+          >
+                    <h2>
+                              You want your students to look out for each other.  
+                              <span
+                                        className="title-bar-span"
+                              >
+                                        We can help.
+                              </span>
+                    </h2>
+          </div>
+          <div
+                    className="banners-container"
           >
                     <div
-                              className="info-box"
+                              className="home-banner"
                     >
-                              <img
-                                        alt="homepage-icon"
-                                        className="homepage-icon"
-                                        src="handshake.svg"
-                              />
-                              <h4>
-                                        Encourage student-to-student mentorship
-                              </h4>
-                              <p>
-                                        Receiving a little bit of recognition is powerful.  In Snap Ninja, students reward other students by giving each other snaps for helping them out.  Students receive weekly performance charts, providing a constant reminder of the importance of mentoring others.
-                              </p>
-                              <img
-                                        alt="homepage-graphic"
-                                        className="homepage-graphic"
-                                        src="award-ss.svg"
-                              />
+                              <div
+                                        className="banner-top"
+                              >
+                                        <h4>
+                                                  Encourage
+                                        </h4>
+                                        <h4>
+                                                  Mentorship
+                                        </h4>
+                                        <img
+                                                  alt="homepage-icon"
+                                                  className="homepage-icon"
+                                                  src="handshake.svg"
+                                        />
+                              </div>
+                              <div
+                                        className="banner-bottom"
+                              >
+                                        <p>
+                                                  SNAP NINJA is a web-based classroom tool that makes recognition between students easy and fun
+                                        </p>
+                                        <p>
+                                                  Students reward each other for being helpful and otherwise awesome, and then receive instant performance updates, providing a constant reminder of the importance of mentoring others
+                                        </p>
+                                        <img
+                                                  alt="banner-bottom-graphic"
+                                                  className="banner-bottom-graphic"
+                                                  src="banner-bottom.svg"
+                                        />
+                              </div>
                     </div>
                     <div
-                              className="info-box"
+                              className="home-banner"
                     >
-                              <img
-                                        alt="homepage-icon"
-                                        className="homepage-icon"
-                                        src="ribbon.svg"
-                              />
-                              <h4>
-                                        Reward collaboration
-                              </h4>
-                              <p>
-                                        Rather than just walking away after working with others, Snap Ninja provides students an easy way to give helpful feedback.  Collaboration is both encouraged and rewarded, as it should be.
-                              </p>
-                              <img
-                                        alt="homepage-graphic"
-                                        className="homepage-graphic"
-                                        src="welcome-ss.svg"
-                              />
+                              <div
+                                        className="banner-top"
+                              >
+                                        <h4>
+                                                  Develop
+                                        </h4>
+                                        <h4>
+                                                  Collaboration
+                                        </h4>
+                                        <img
+                                                  alt="homepage-icon"
+                                                  className="homepage-icon"
+                                                  src="ribbon.svg"
+                                        />
+                              </div>
+                              <div
+                                        className="banner-bottom"
+                              >
+                                        <p>
+                                                  Rather than just walking away after working with others, SNAP NINJA provides students an easy way to say thanks and give feedback.  Collaboration is both encouraged and rewarded, as it should be.
+                                        </p>
+                                        <img
+                                                  alt="banner-bottom-graphic"
+                                                  className="banner-bottom-graphic"
+                                                  src="banner-bottom.svg"
+                                        />
+                              </div>
                     </div>
                     <div
-                              className="info-box"
+                              className="home-banner"
                     >
-                              <img
-                                        alt="homepage-icon"
-                                        className="homepage-icon"
-                                        src="mega.svg"
-                              />
-                              <h4>
-                                        Make shout-outs digital
-                              </h4>
-                              <p>
-                                        Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
-                              </p>
-                              <img
-                                        alt="homepage-graphic"
-                                        className="homepage-graphic"
-                                        src="notes-ss.svg"
-                              />
+                              <div
+                                        className="banner-top"
+                              >
+                                        <h4>
+                                                  Recognize
+                                        </h4>
+                                        <h4>
+                                                  Awesomeness
+                                        </h4>
+                                        <img
+                                                  alt="homepage-icon"
+                                                  className="homepage-icon"
+                                                  src="mega.svg"
+                                        />
+                              </div>
+                              <div
+                                        className="banner-bottom"
+                              >
+                                        <p>
+                                                  Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
+                                        </p>
+                                        <img
+                                                  alt="banner-bottom-graphic"
+                                                  className="banner-bottom-graphic"
+                                                  src="banner-bottom.svg"
+                                        />
+                              </div>
                     </div>
                     <div
-                              className="info-box"
+                              className="home-banner"
+                    >
+                              <div
+                                        className="banner-top"
+                              >
+                                        <h4>
+                                                  Build
+                                        </h4>
+                                        <h4>
+                                                  Relationships
+                                        </h4>
+                                        <img
+                                                  alt="homepage-icon"
+                                                  className="homepage-icon"
+                                                  src="people.svg"
+                                        />
+                              </div>
+                              <div
+                                        className="banner-bottom"
+                              >
+                                        <p>
+                                                  Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
+                                        </p>
+                                        <img
+                                                  alt="banner-bottom-graphic"
+                                                  className="banner-bottom-graphic"
+                                                  src="banner-bottom.svg"
+                                        />
+                              </div>
+                    </div>
+          </div>
+          <div
+                    className="home-bottom-container"
+          >
+                    <div
+                              className="bottom-section-1"
                     >
                               <img
-                                        alt="homepage-icon"
-                                        className="homepage-icon"
-                                        src="people.svg"
-                              />
-                              <h4>
-                                        Build intra-cohort relationships
-                              </h4>
-                              <p>
-                                        Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
-                              </p>
-                              <img
-                                        alt="homepage-graphic"
-                                        className="homepage-graphic"
+                                        alt="group-graphic"
+                                        className="bottom-section-1-graphic"
                                         src="group-ss.svg"
+                              />
+                              <div
+                                        className="section-1-text"
+                              >
+                                        <h4>
+                                                  Build a Cohesive Classroom
+                                        </h4>
+                                        <p>
+                                                  Since SNAP NINJA is for teams and groups, you’ll find an entire group page dedicated to showing off group accomplishments.  Your group page includes weekly, and long-term group data, along with leaderboards and an easy-to-understand graph.
+                                        </p>
+                                        <p>
+                                                  Students will see how their individual success is tied to the success of everyone.
+                                        </p>
+                              </div>
+                    </div>
+                    <div
+                              className="bottom-section-2"
+                    >
+                              <div
+                                        className="section-2-text"
+                              >
+                                        <h4>
+                                                  Make Shout-outs Digital
+                                        </h4>
+                                        <p>
+                                                  Each user will own their own page.  As teammates award them snaps, they’ll find encouraging comments and a visual record of what they have done for others.
+                                        </p>
+                              </div>
+                              <img
+                                        alt="phone-graphic"
+                                        className="bottom-section-2-graphic"
+                                        src="phone-ss.png"
+                              />
+                    </div>
+                    <div
+                              className="bottom-section-3"
+                    >
+                              <img
+                                        alt="slack-graphic"
+                                        className="slack-graphic"
+                                        src="slack.svg"
+                              />
+                              <div
+                                        className="section-3-text"
+                              >
+                                        <h4>
+                                                  Use Tools You Already Know
+                                        </h4>
+                                        <p>
+                                                  Use your existing Github credentials for a pain free signup and login.
+                                        </p>
+                                        <p>
+                                                  After your initial sign in, snaps can be sent or received in-app or via Slack using slash commands.
+                                        </p>
+                              </div>
+                              <img
+                                        alt="github-graphic"
+                                        className="github-graphic"
+                                        src="github.svg"
                               />
                     </div>
           </div>
           <button>
-                    <a
-                              href="https://tr-personal-proj.e1.loginrocket.com/"
+                    <Link
+                              replace={false}
+                              to="/snap-ninja/user"
                     >
                               start SNAP NINJA now
-                    </a>
+                    </Link>
           </button>
 </div>,
         "className": "homepage-component",
@@ -945,102 +2124,235 @@ ShallowWrapper {
             <button
               className="header-button-top"
 >
-              <a
-                            href="https://tr-personal-proj.e1.loginrocket.com/"
+              <Link
+                            replace={false}
+                            to="/snap-ninja/user"
               >
                             start SNAP NINJA now
-              </a>
+              </Link>
 </button>,
             <div
-              className="homepage-container"
+              className="homepage-title-bar"
+>
+              <h2>
+                            You want your students to look out for each other.  
+                            <span
+                                          className="title-bar-span"
+                            >
+                                          We can help.
+                            </span>
+              </h2>
+</div>,
+            <div
+              className="banners-container"
 >
               <div
-                            className="info-box"
+                            className="home-banner"
               >
-                            <img
-                                          alt="homepage-icon"
-                                          className="homepage-icon"
-                                          src="handshake.svg"
-                            />
-                            <h4>
-                                          Encourage student-to-student mentorship
-                            </h4>
-                            <p>
-                                          Receiving a little bit of recognition is powerful.  In Snap Ninja, students reward other students by giving each other snaps for helping them out.  Students receive weekly performance charts, providing a constant reminder of the importance of mentoring others.
-                            </p>
-                            <img
-                                          alt="homepage-graphic"
-                                          className="homepage-graphic"
-                                          src="award-ss.svg"
-                            />
+                            <div
+                                          className="banner-top"
+                            >
+                                          <h4>
+                                                        Encourage
+                                          </h4>
+                                          <h4>
+                                                        Mentorship
+                                          </h4>
+                                          <img
+                                                        alt="homepage-icon"
+                                                        className="homepage-icon"
+                                                        src="handshake.svg"
+                                          />
+                            </div>
+                            <div
+                                          className="banner-bottom"
+                            >
+                                          <p>
+                                                        SNAP NINJA is a web-based classroom tool that makes recognition between students easy and fun
+                                          </p>
+                                          <p>
+                                                        Students reward each other for being helpful and otherwise awesome, and then receive instant performance updates, providing a constant reminder of the importance of mentoring others
+                                          </p>
+                                          <img
+                                                        alt="banner-bottom-graphic"
+                                                        className="banner-bottom-graphic"
+                                                        src="banner-bottom.svg"
+                                          />
+                            </div>
               </div>
               <div
-                            className="info-box"
+                            className="home-banner"
               >
-                            <img
-                                          alt="homepage-icon"
-                                          className="homepage-icon"
-                                          src="ribbon.svg"
-                            />
-                            <h4>
-                                          Reward collaboration
-                            </h4>
-                            <p>
-                                          Rather than just walking away after working with others, Snap Ninja provides students an easy way to give helpful feedback.  Collaboration is both encouraged and rewarded, as it should be.
-                            </p>
-                            <img
-                                          alt="homepage-graphic"
-                                          className="homepage-graphic"
-                                          src="welcome-ss.svg"
-                            />
+                            <div
+                                          className="banner-top"
+                            >
+                                          <h4>
+                                                        Develop
+                                          </h4>
+                                          <h4>
+                                                        Collaboration
+                                          </h4>
+                                          <img
+                                                        alt="homepage-icon"
+                                                        className="homepage-icon"
+                                                        src="ribbon.svg"
+                                          />
+                            </div>
+                            <div
+                                          className="banner-bottom"
+                            >
+                                          <p>
+                                                        Rather than just walking away after working with others, SNAP NINJA provides students an easy way to say thanks and give feedback.  Collaboration is both encouraged and rewarded, as it should be.
+                                          </p>
+                                          <img
+                                                        alt="banner-bottom-graphic"
+                                                        className="banner-bottom-graphic"
+                                                        src="banner-bottom.svg"
+                                          />
+                            </div>
               </div>
               <div
-                            className="info-box"
+                            className="home-banner"
               >
-                            <img
-                                          alt="homepage-icon"
-                                          className="homepage-icon"
-                                          src="mega.svg"
-                            />
-                            <h4>
-                                          Make shout-outs digital
-                            </h4>
-                            <p>
-                                          Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
-                            </p>
-                            <img
-                                          alt="homepage-graphic"
-                                          className="homepage-graphic"
-                                          src="notes-ss.svg"
-                            />
+                            <div
+                                          className="banner-top"
+                            >
+                                          <h4>
+                                                        Recognize
+                                          </h4>
+                                          <h4>
+                                                        Awesomeness
+                                          </h4>
+                                          <img
+                                                        alt="homepage-icon"
+                                                        className="homepage-icon"
+                                                        src="mega.svg"
+                                          />
+                            </div>
+                            <div
+                                          className="banner-bottom"
+                            >
+                                          <p>
+                                                        Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
+                                          </p>
+                                          <img
+                                                        alt="banner-bottom-graphic"
+                                                        className="banner-bottom-graphic"
+                                                        src="banner-bottom.svg"
+                                          />
+                            </div>
               </div>
               <div
-                            className="info-box"
+                            className="home-banner"
+              >
+                            <div
+                                          className="banner-top"
+                            >
+                                          <h4>
+                                                        Build
+                                          </h4>
+                                          <h4>
+                                                        Relationships
+                                          </h4>
+                                          <img
+                                                        alt="homepage-icon"
+                                                        className="homepage-icon"
+                                                        src="people.svg"
+                                          />
+                            </div>
+                            <div
+                                          className="banner-bottom"
+                            >
+                                          <p>
+                                                        Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
+                                          </p>
+                                          <img
+                                                        alt="banner-bottom-graphic"
+                                                        className="banner-bottom-graphic"
+                                                        src="banner-bottom.svg"
+                                          />
+                            </div>
+              </div>
+</div>,
+            <div
+              className="home-bottom-container"
+>
+              <div
+                            className="bottom-section-1"
               >
                             <img
-                                          alt="homepage-icon"
-                                          className="homepage-icon"
-                                          src="people.svg"
-                            />
-                            <h4>
-                                          Build intra-cohort relationships
-                            </h4>
-                            <p>
-                                          Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
-                            </p>
-                            <img
-                                          alt="homepage-graphic"
-                                          className="homepage-graphic"
+                                          alt="group-graphic"
+                                          className="bottom-section-1-graphic"
                                           src="group-ss.svg"
+                            />
+                            <div
+                                          className="section-1-text"
+                            >
+                                          <h4>
+                                                        Build a Cohesive Classroom
+                                          </h4>
+                                          <p>
+                                                        Since SNAP NINJA is for teams and groups, you’ll find an entire group page dedicated to showing off group accomplishments.  Your group page includes weekly, and long-term group data, along with leaderboards and an easy-to-understand graph.
+                                          </p>
+                                          <p>
+                                                        Students will see how their individual success is tied to the success of everyone.
+                                          </p>
+                            </div>
+              </div>
+              <div
+                            className="bottom-section-2"
+              >
+                            <div
+                                          className="section-2-text"
+                            >
+                                          <h4>
+                                                        Make Shout-outs Digital
+                                          </h4>
+                                          <p>
+                                                        Each user will own their own page.  As teammates award them snaps, they’ll find encouraging comments and a visual record of what they have done for others.
+                                          </p>
+                            </div>
+                            <img
+                                          alt="phone-graphic"
+                                          className="bottom-section-2-graphic"
+                                          src="phone-ss.png"
+                            />
+              </div>
+              <div
+                            className="bottom-section-3"
+              >
+                            <img
+                                          alt="slack-graphic"
+                                          className="slack-graphic"
+                                          src="slack.svg"
+                            />
+                            <div
+                                          className="section-3-text"
+                            >
+                                          <h4>
+                                                        Use Tools You Already Know
+                                          </h4>
+                                          <p>
+                                                        Use your existing Github credentials for a pain free signup and login.
+                                          </p>
+                                          <p>
+                                                        After your initial sign in, snaps can be sent or received in-app or via Slack using slash commands.
+                                          </p>
+                            </div>
+                            <img
+                                          alt="github-graphic"
+                                          className="github-graphic"
+                                          src="github.svg"
                             />
               </div>
 </div>,
             <button>
-              <a
-                            href="https://tr-personal-proj.e1.loginrocket.com/"
+              <Link
+                            replace={false}
+                            to="/snap-ninja/user"
               >
                             start SNAP NINJA now
-              </a>
+              </Link>
 </button>,
           ],
           "className": "bg-holder",
@@ -1116,25 +2428,27 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <a
-                href="https://tr-personal-proj.e1.loginrocket.com/"
+              "children": <Link
+                replace={false}
+                to="/snap-ninja/user"
 >
                 start SNAP NINJA now
-</a>,
+</Link>,
               "className": "header-button-top",
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "class",
               "props": Object {
                 "children": "start SNAP NINJA now",
-                "href": "https://tr-personal-proj.e1.loginrocket.com/",
+                "replace": false,
+                "to": "/snap-ninja/user",
               },
               "ref": null,
               "rendered": "start SNAP NINJA now",
-              "type": "a",
+              "type": [Function],
             },
             "type": "button",
           },
@@ -1143,89 +2457,873 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "children": <h2>
+                You want your students to look out for each other.  
+                <span
+                                className="title-bar-span"
+                >
+                                We can help.
+                </span>
+</h2>,
+              "className": "homepage-title-bar",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "You want your students to look out for each other.  ",
+                  <span
+                    className="title-bar-span"
+>
+                    We can help.
+</span>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "You want your students to look out for each other.  ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "We can help.",
+                    "className": "title-bar-span",
+                  },
+                  "ref": null,
+                  "rendered": "We can help.",
+                  "type": "span",
+                },
+              ],
+              "type": "h2",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
               "children": Array [
                 <div
-                  className="info-box"
+                  className="home-banner"
 >
-                  <img
-                                    alt="homepage-icon"
-                                    className="homepage-icon"
-                                    src="handshake.svg"
-                  />
-                  <h4>
-                                    Encourage student-to-student mentorship
-                  </h4>
-                  <p>
-                                    Receiving a little bit of recognition is powerful.  In Snap Ninja, students reward other students by giving each other snaps for helping them out.  Students receive weekly performance charts, providing a constant reminder of the importance of mentoring others.
-                  </p>
-                  <img
-                                    alt="homepage-graphic"
-                                    className="homepage-graphic"
-                                    src="award-ss.svg"
-                  />
+                  <div
+                                    className="banner-top"
+                  >
+                                    <h4>
+                                                      Encourage
+                                    </h4>
+                                    <h4>
+                                                      Mentorship
+                                    </h4>
+                                    <img
+                                                      alt="homepage-icon"
+                                                      className="homepage-icon"
+                                                      src="handshake.svg"
+                                    />
+                  </div>
+                  <div
+                                    className="banner-bottom"
+                  >
+                                    <p>
+                                                      SNAP NINJA is a web-based classroom tool that makes recognition between students easy and fun
+                                    </p>
+                                    <p>
+                                                      Students reward each other for being helpful and otherwise awesome, and then receive instant performance updates, providing a constant reminder of the importance of mentoring others
+                                    </p>
+                                    <img
+                                                      alt="banner-bottom-graphic"
+                                                      className="banner-bottom-graphic"
+                                                      src="banner-bottom.svg"
+                                    />
+                  </div>
 </div>,
                 <div
-                  className="info-box"
+                  className="home-banner"
 >
-                  <img
-                                    alt="homepage-icon"
-                                    className="homepage-icon"
-                                    src="ribbon.svg"
-                  />
-                  <h4>
-                                    Reward collaboration
-                  </h4>
-                  <p>
-                                    Rather than just walking away after working with others, Snap Ninja provides students an easy way to give helpful feedback.  Collaboration is both encouraged and rewarded, as it should be.
-                  </p>
-                  <img
-                                    alt="homepage-graphic"
-                                    className="homepage-graphic"
-                                    src="welcome-ss.svg"
-                  />
+                  <div
+                                    className="banner-top"
+                  >
+                                    <h4>
+                                                      Develop
+                                    </h4>
+                                    <h4>
+                                                      Collaboration
+                                    </h4>
+                                    <img
+                                                      alt="homepage-icon"
+                                                      className="homepage-icon"
+                                                      src="ribbon.svg"
+                                    />
+                  </div>
+                  <div
+                                    className="banner-bottom"
+                  >
+                                    <p>
+                                                      Rather than just walking away after working with others, SNAP NINJA provides students an easy way to say thanks and give feedback.  Collaboration is both encouraged and rewarded, as it should be.
+                                    </p>
+                                    <img
+                                                      alt="banner-bottom-graphic"
+                                                      className="banner-bottom-graphic"
+                                                      src="banner-bottom.svg"
+                                    />
+                  </div>
 </div>,
                 <div
-                  className="info-box"
+                  className="home-banner"
 >
-                  <img
-                                    alt="homepage-icon"
-                                    className="homepage-icon"
-                                    src="mega.svg"
-                  />
-                  <h4>
-                                    Make shout-outs digital
-                  </h4>
-                  <p>
-                                    Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
-                  </p>
-                  <img
-                                    alt="homepage-graphic"
-                                    className="homepage-graphic"
-                                    src="notes-ss.svg"
-                  />
+                  <div
+                                    className="banner-top"
+                  >
+                                    <h4>
+                                                      Recognize
+                                    </h4>
+                                    <h4>
+                                                      Awesomeness
+                                    </h4>
+                                    <img
+                                                      alt="homepage-icon"
+                                                      className="homepage-icon"
+                                                      src="mega.svg"
+                                    />
+                  </div>
+                  <div
+                                    className="banner-bottom"
+                  >
+                                    <p>
+                                                      Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
+                                    </p>
+                                    <img
+                                                      alt="banner-bottom-graphic"
+                                                      className="banner-bottom-graphic"
+                                                      src="banner-bottom.svg"
+                                    />
+                  </div>
 </div>,
                 <div
-                  className="info-box"
+                  className="home-banner"
+>
+                  <div
+                                    className="banner-top"
+                  >
+                                    <h4>
+                                                      Build
+                                    </h4>
+                                    <h4>
+                                                      Relationships
+                                    </h4>
+                                    <img
+                                                      alt="homepage-icon"
+                                                      className="homepage-icon"
+                                                      src="people.svg"
+                                    />
+                  </div>
+                  <div
+                                    className="banner-bottom"
+                  >
+                                    <p>
+                                                      Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
+                                    </p>
+                                    <img
+                                                      alt="banner-bottom-graphic"
+                                                      className="banner-bottom-graphic"
+                                                      src="banner-bottom.svg"
+                                    />
+                  </div>
+</div>,
+              ],
+              "className": "banners-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="banner-top"
+>
+                      <h4>
+                                            Encourage
+                      </h4>
+                      <h4>
+                                            Mentorship
+                      </h4>
+                      <img
+                                            alt="homepage-icon"
+                                            className="homepage-icon"
+                                            src="handshake.svg"
+                      />
+</div>,
+                    <div
+                      className="banner-bottom"
+>
+                      <p>
+                                            SNAP NINJA is a web-based classroom tool that makes recognition between students easy and fun
+                      </p>
+                      <p>
+                                            Students reward each other for being helpful and otherwise awesome, and then receive instant performance updates, providing a constant reminder of the importance of mentoring others
+                      </p>
+                      <img
+                                            alt="banner-bottom-graphic"
+                                            className="banner-bottom-graphic"
+                                            src="banner-bottom.svg"
+                      />
+</div>,
+                  ],
+                  "className": "home-banner",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h4>
+                          Encourage
+</h4>,
+                        <h4>
+                          Mentorship
+</h4>,
+                        <img
+                          alt="homepage-icon"
+                          className="homepage-icon"
+                          src="handshake.svg"
+/>,
+                      ],
+                      "className": "banner-top",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Encourage",
+                        },
+                        "ref": null,
+                        "rendered": "Encourage",
+                        "type": "h4",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Mentorship",
+                        },
+                        "ref": null,
+                        "rendered": "Mentorship",
+                        "type": "h4",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "homepage-icon",
+                          "className": "homepage-icon",
+                          "src": "handshake.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <p>
+                          SNAP NINJA is a web-based classroom tool that makes recognition between students easy and fun
+</p>,
+                        <p>
+                          Students reward each other for being helpful and otherwise awesome, and then receive instant performance updates, providing a constant reminder of the importance of mentoring others
+</p>,
+                        <img
+                          alt="banner-bottom-graphic"
+                          className="banner-bottom-graphic"
+                          src="banner-bottom.svg"
+/>,
+                      ],
+                      "className": "banner-bottom",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "SNAP NINJA is a web-based classroom tool that makes recognition between students easy and fun",
+                        },
+                        "ref": null,
+                        "rendered": "SNAP NINJA is a web-based classroom tool that makes recognition between students easy and fun",
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Students reward each other for being helpful and otherwise awesome, and then receive instant performance updates, providing a constant reminder of the importance of mentoring others",
+                        },
+                        "ref": null,
+                        "rendered": "Students reward each other for being helpful and otherwise awesome, and then receive instant performance updates, providing a constant reminder of the importance of mentoring others",
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "banner-bottom-graphic",
+                          "className": "banner-bottom-graphic",
+                          "src": "banner-bottom.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="banner-top"
+>
+                      <h4>
+                                            Develop
+                      </h4>
+                      <h4>
+                                            Collaboration
+                      </h4>
+                      <img
+                                            alt="homepage-icon"
+                                            className="homepage-icon"
+                                            src="ribbon.svg"
+                      />
+</div>,
+                    <div
+                      className="banner-bottom"
+>
+                      <p>
+                                            Rather than just walking away after working with others, SNAP NINJA provides students an easy way to say thanks and give feedback.  Collaboration is both encouraged and rewarded, as it should be.
+                      </p>
+                      <img
+                                            alt="banner-bottom-graphic"
+                                            className="banner-bottom-graphic"
+                                            src="banner-bottom.svg"
+                      />
+</div>,
+                  ],
+                  "className": "home-banner",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h4>
+                          Develop
+</h4>,
+                        <h4>
+                          Collaboration
+</h4>,
+                        <img
+                          alt="homepage-icon"
+                          className="homepage-icon"
+                          src="ribbon.svg"
+/>,
+                      ],
+                      "className": "banner-top",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Develop",
+                        },
+                        "ref": null,
+                        "rendered": "Develop",
+                        "type": "h4",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Collaboration",
+                        },
+                        "ref": null,
+                        "rendered": "Collaboration",
+                        "type": "h4",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "homepage-icon",
+                          "className": "homepage-icon",
+                          "src": "ribbon.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <p>
+                          Rather than just walking away after working with others, SNAP NINJA provides students an easy way to say thanks and give feedback.  Collaboration is both encouraged and rewarded, as it should be.
+</p>,
+                        <img
+                          alt="banner-bottom-graphic"
+                          className="banner-bottom-graphic"
+                          src="banner-bottom.svg"
+/>,
+                      ],
+                      "className": "banner-bottom",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Rather than just walking away after working with others, SNAP NINJA provides students an easy way to say thanks and give feedback.  Collaboration is both encouraged and rewarded, as it should be.",
+                        },
+                        "ref": null,
+                        "rendered": "Rather than just walking away after working with others, SNAP NINJA provides students an easy way to say thanks and give feedback.  Collaboration is both encouraged and rewarded, as it should be.",
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "banner-bottom-graphic",
+                          "className": "banner-bottom-graphic",
+                          "src": "banner-bottom.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="banner-top"
+>
+                      <h4>
+                                            Recognize
+                      </h4>
+                      <h4>
+                                            Awesomeness
+                      </h4>
+                      <img
+                                            alt="homepage-icon"
+                                            className="homepage-icon"
+                                            src="mega.svg"
+                      />
+</div>,
+                    <div
+                      className="banner-bottom"
+>
+                      <p>
+                                            Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
+                      </p>
+                      <img
+                                            alt="banner-bottom-graphic"
+                                            className="banner-bottom-graphic"
+                                            src="banner-bottom.svg"
+                      />
+</div>,
+                  ],
+                  "className": "home-banner",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h4>
+                          Recognize
+</h4>,
+                        <h4>
+                          Awesomeness
+</h4>,
+                        <img
+                          alt="homepage-icon"
+                          className="homepage-icon"
+                          src="mega.svg"
+/>,
+                      ],
+                      "className": "banner-top",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Recognize",
+                        },
+                        "ref": null,
+                        "rendered": "Recognize",
+                        "type": "h4",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Awesomeness",
+                        },
+                        "ref": null,
+                        "rendered": "Awesomeness",
+                        "type": "h4",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "homepage-icon",
+                          "className": "homepage-icon",
+                          "src": "mega.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <p>
+                          Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
+</p>,
+                        <img
+                          alt="banner-bottom-graphic"
+                          className="banner-bottom-graphic"
+                          src="banner-bottom.svg"
+/>,
+                      ],
+                      "className": "banner-bottom",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.",
+                        },
+                        "ref": null,
+                        "rendered": "Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.",
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "banner-bottom-graphic",
+                          "className": "banner-bottom-graphic",
+                          "src": "banner-bottom.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="banner-top"
+>
+                      <h4>
+                                            Build
+                      </h4>
+                      <h4>
+                                            Relationships
+                      </h4>
+                      <img
+                                            alt="homepage-icon"
+                                            className="homepage-icon"
+                                            src="people.svg"
+                      />
+</div>,
+                    <div
+                      className="banner-bottom"
+>
+                      <p>
+                                            Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
+                      </p>
+                      <img
+                                            alt="banner-bottom-graphic"
+                                            className="banner-bottom-graphic"
+                                            src="banner-bottom.svg"
+                      />
+</div>,
+                  ],
+                  "className": "home-banner",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h4>
+                          Build
+</h4>,
+                        <h4>
+                          Relationships
+</h4>,
+                        <img
+                          alt="homepage-icon"
+                          className="homepage-icon"
+                          src="people.svg"
+/>,
+                      ],
+                      "className": "banner-top",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Build",
+                        },
+                        "ref": null,
+                        "rendered": "Build",
+                        "type": "h4",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Relationships",
+                        },
+                        "ref": null,
+                        "rendered": "Relationships",
+                        "type": "h4",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "homepage-icon",
+                          "className": "homepage-icon",
+                          "src": "people.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <p>
+                          Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
+</p>,
+                        <img
+                          alt="banner-bottom-graphic"
+                          className="banner-bottom-graphic"
+                          src="banner-bottom.svg"
+/>,
+                      ],
+                      "className": "banner-bottom",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.",
+                        },
+                        "ref": null,
+                        "rendered": "Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.",
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "banner-bottom-graphic",
+                          "className": "banner-bottom-graphic",
+                          "src": "banner-bottom.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="bottom-section-1"
 >
                   <img
-                                    alt="homepage-icon"
-                                    className="homepage-icon"
-                                    src="people.svg"
-                  />
-                  <h4>
-                                    Build intra-cohort relationships
-                  </h4>
-                  <p>
-                                    Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
-                  </p>
-                  <img
-                                    alt="homepage-graphic"
-                                    className="homepage-graphic"
+                                    alt="group-graphic"
+                                    className="bottom-section-1-graphic"
                                     src="group-ss.svg"
+                  />
+                  <div
+                                    className="section-1-text"
+                  >
+                                    <h4>
+                                                      Build a Cohesive Classroom
+                                    </h4>
+                                    <p>
+                                                      Since SNAP NINJA is for teams and groups, you’ll find an entire group page dedicated to showing off group accomplishments.  Your group page includes weekly, and long-term group data, along with leaderboards and an easy-to-understand graph.
+                                    </p>
+                                    <p>
+                                                      Students will see how their individual success is tied to the success of everyone.
+                                    </p>
+                  </div>
+</div>,
+                <div
+                  className="bottom-section-2"
+>
+                  <div
+                                    className="section-2-text"
+                  >
+                                    <h4>
+                                                      Make Shout-outs Digital
+                                    </h4>
+                                    <p>
+                                                      Each user will own their own page.  As teammates award them snaps, they’ll find encouraging comments and a visual record of what they have done for others.
+                                    </p>
+                  </div>
+                  <img
+                                    alt="phone-graphic"
+                                    className="bottom-section-2-graphic"
+                                    src="phone-ss.png"
+                  />
+</div>,
+                <div
+                  className="bottom-section-3"
+>
+                  <img
+                                    alt="slack-graphic"
+                                    className="slack-graphic"
+                                    src="slack.svg"
+                  />
+                  <div
+                                    className="section-3-text"
+                  >
+                                    <h4>
+                                                      Use Tools You Already Know
+                                    </h4>
+                                    <p>
+                                                      Use your existing Github credentials for a pain free signup and login.
+                                    </p>
+                                    <p>
+                                                      After your initial sign in, snaps can be sent or received in-app or via Slack using slash commands.
+                                    </p>
+                  </div>
+                  <img
+                                    alt="github-graphic"
+                                    className="github-graphic"
+                                    src="github.svg"
                   />
 </div>,
               ],
-              "className": "homepage-container",
+              "className": "home-bottom-container",
             },
             "ref": null,
             "rendered": Array [
@@ -1236,257 +3334,25 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <img
-                      alt="homepage-icon"
-                      className="homepage-icon"
-                      src="handshake.svg"
-/>,
-                    <h4>
-                      Encourage student-to-student mentorship
-</h4>,
-                    <p>
-                      Receiving a little bit of recognition is powerful.  In Snap Ninja, students reward other students by giving each other snaps for helping them out.  Students receive weekly performance charts, providing a constant reminder of the importance of mentoring others.
-</p>,
-                    <img
-                      alt="homepage-graphic"
-                      className="homepage-graphic"
-                      src="award-ss.svg"
-/>,
-                  ],
-                  "className": "info-box",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "alt": "homepage-icon",
-                      "className": "homepage-icon",
-                      "src": "handshake.svg",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "img",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Encourage student-to-student mentorship",
-                    },
-                    "ref": null,
-                    "rendered": "Encourage student-to-student mentorship",
-                    "type": "h4",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Receiving a little bit of recognition is powerful.  In Snap Ninja, students reward other students by giving each other snaps for helping them out.  Students receive weekly performance charts, providing a constant reminder of the importance of mentoring others.",
-                    },
-                    "ref": null,
-                    "rendered": "Receiving a little bit of recognition is powerful.  In Snap Ninja, students reward other students by giving each other snaps for helping them out.  Students receive weekly performance charts, providing a constant reminder of the importance of mentoring others.",
-                    "type": "p",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "alt": "homepage-graphic",
-                      "className": "homepage-graphic",
-                      "src": "award-ss.svg",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "img",
-                  },
-                ],
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <img
-                      alt="homepage-icon"
-                      className="homepage-icon"
-                      src="ribbon.svg"
-/>,
-                    <h4>
-                      Reward collaboration
-</h4>,
-                    <p>
-                      Rather than just walking away after working with others, Snap Ninja provides students an easy way to give helpful feedback.  Collaboration is both encouraged and rewarded, as it should be.
-</p>,
-                    <img
-                      alt="homepage-graphic"
-                      className="homepage-graphic"
-                      src="welcome-ss.svg"
-/>,
-                  ],
-                  "className": "info-box",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "alt": "homepage-icon",
-                      "className": "homepage-icon",
-                      "src": "ribbon.svg",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "img",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Reward collaboration",
-                    },
-                    "ref": null,
-                    "rendered": "Reward collaboration",
-                    "type": "h4",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Rather than just walking away after working with others, Snap Ninja provides students an easy way to give helpful feedback.  Collaboration is both encouraged and rewarded, as it should be.",
-                    },
-                    "ref": null,
-                    "rendered": "Rather than just walking away after working with others, Snap Ninja provides students an easy way to give helpful feedback.  Collaboration is both encouraged and rewarded, as it should be.",
-                    "type": "p",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "alt": "homepage-graphic",
-                      "className": "homepage-graphic",
-                      "src": "welcome-ss.svg",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "img",
-                  },
-                ],
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <img
-                      alt="homepage-icon"
-                      className="homepage-icon"
-                      src="mega.svg"
-/>,
-                    <h4>
-                      Make shout-outs digital
-</h4>,
-                    <p>
-                      Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.
-</p>,
-                    <img
-                      alt="homepage-graphic"
-                      className="homepage-graphic"
-                      src="notes-ss.svg"
-/>,
-                  ],
-                  "className": "info-box",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "alt": "homepage-icon",
-                      "className": "homepage-icon",
-                      "src": "mega.svg",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "img",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Make shout-outs digital",
-                    },
-                    "ref": null,
-                    "rendered": "Make shout-outs digital",
-                    "type": "h4",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.",
-                    },
-                    "ref": null,
-                    "rendered": "Shoutouts are done the 2018 way, using easy-to-understand technology.  Thank yous are easily passed and long-term data is automatically tracked, giving students a personal record of the most important kind of achievement: Helping others succeed.",
-                    "type": "p",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "alt": "homepage-graphic",
-                      "className": "homepage-graphic",
-                      "src": "notes-ss.svg",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "img",
-                  },
-                ],
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <img
-                      alt="homepage-icon"
-                      className="homepage-icon"
-                      src="people.svg"
-/>,
-                    <h4>
-                      Build intra-cohort relationships
-</h4>,
-                    <p>
-                      Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.
-</p>,
-                    <img
-                      alt="homepage-graphic"
-                      className="homepage-graphic"
+                      alt="group-graphic"
+                      className="bottom-section-1-graphic"
                       src="group-ss.svg"
 />,
+                    <div
+                      className="section-1-text"
+>
+                      <h4>
+                                            Build a Cohesive Classroom
+                      </h4>
+                      <p>
+                                            Since SNAP NINJA is for teams and groups, you’ll find an entire group page dedicated to showing off group accomplishments.  Your group page includes weekly, and long-term group data, along with leaderboards and an easy-to-understand graph.
+                      </p>
+                      <p>
+                                            Students will see how their individual success is tied to the success of everyone.
+                      </p>
+</div>,
                   ],
-                  "className": "info-box",
+                  "className": "bottom-section-1",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -1495,9 +3361,9 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "alt": "homepage-icon",
-                      "className": "homepage-icon",
-                      "src": "people.svg",
+                      "alt": "group-graphic",
+                      "className": "bottom-section-1-graphic",
+                      "src": "group-ss.svg",
                     },
                     "ref": null,
                     "rendered": null,
@@ -1508,31 +3374,255 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Build intra-cohort relationships",
+                      "children": Array [
+                        <h4>
+                          Build a Cohesive Classroom
+</h4>,
+                        <p>
+                          Since SNAP NINJA is for teams and groups, you’ll find an entire group page dedicated to showing off group accomplishments.  Your group page includes weekly, and long-term group data, along with leaderboards and an easy-to-understand graph.
+</p>,
+                        <p>
+                          Students will see how their individual success is tied to the success of everyone.
+</p>,
+                      ],
+                      "className": "section-1-text",
                     },
                     "ref": null,
-                    "rendered": "Build intra-cohort relationships",
-                    "type": "h4",
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Build a Cohesive Classroom",
+                        },
+                        "ref": null,
+                        "rendered": "Build a Cohesive Classroom",
+                        "type": "h4",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Since SNAP NINJA is for teams and groups, you’ll find an entire group page dedicated to showing off group accomplishments.  Your group page includes weekly, and long-term group data, along with leaderboards and an easy-to-understand graph.",
+                        },
+                        "ref": null,
+                        "rendered": "Since SNAP NINJA is for teams and groups, you’ll find an entire group page dedicated to showing off group accomplishments.  Your group page includes weekly, and long-term group data, along with leaderboards and an easy-to-understand graph.",
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Students will see how their individual success is tied to the success of everyone.",
+                        },
+                        "ref": null,
+                        "rendered": "Students will see how their individual success is tied to the success of everyone.",
+                        "type": "p",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="section-2-text"
+>
+                      <h4>
+                                            Make Shout-outs Digital
+                      </h4>
+                      <p>
+                                            Each user will own their own page.  As teammates award them snaps, they’ll find encouraging comments and a visual record of what they have done for others.
+                      </p>
+</div>,
+                    <img
+                      alt="phone-graphic"
+                      className="bottom-section-2-graphic"
+                      src="phone-ss.png"
+/>,
+                  ],
+                  "className": "bottom-section-2",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h4>
+                          Make Shout-outs Digital
+</h4>,
+                        <p>
+                          Each user will own their own page.  As teammates award them snaps, they’ll find encouraging comments and a visual record of what they have done for others.
+</p>,
+                      ],
+                      "className": "section-2-text",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Make Shout-outs Digital",
+                        },
+                        "ref": null,
+                        "rendered": "Make Shout-outs Digital",
+                        "type": "h4",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Each user will own their own page.  As teammates award them snaps, they’ll find encouraging comments and a visual record of what they have done for others.",
+                        },
+                        "ref": null,
+                        "rendered": "Each user will own their own page.  As teammates award them snaps, they’ll find encouraging comments and a visual record of what they have done for others.",
+                        "type": "p",
+                      },
+                    ],
+                    "type": "div",
                   },
                   Object {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.",
+                      "alt": "phone-graphic",
+                      "className": "bottom-section-2-graphic",
+                      "src": "phone-ss.png",
                     },
                     "ref": null,
-                    "rendered": "Relationship-building is paramount.  Students are rewarded for getting to know others, without being punished for a slow day or week.  Group stats are tracked so students know they’re in it together.",
-                    "type": "p",
+                    "rendered": null,
+                    "type": "img",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <img
+                      alt="slack-graphic"
+                      className="slack-graphic"
+                      src="slack.svg"
+/>,
+                    <div
+                      className="section-3-text"
+>
+                      <h4>
+                                            Use Tools You Already Know
+                      </h4>
+                      <p>
+                                            Use your existing Github credentials for a pain free signup and login.
+                      </p>
+                      <p>
+                                            After your initial sign in, snaps can be sent or received in-app or via Slack using slash commands.
+                      </p>
+</div>,
+                    <img
+                      alt="github-graphic"
+                      className="github-graphic"
+                      src="github.svg"
+/>,
+                  ],
+                  "className": "bottom-section-3",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "slack-graphic",
+                      "className": "slack-graphic",
+                      "src": "slack.svg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
                   },
                   Object {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "alt": "homepage-graphic",
-                      "className": "homepage-graphic",
-                      "src": "group-ss.svg",
+                      "children": Array [
+                        <h4>
+                          Use Tools You Already Know
+</h4>,
+                        <p>
+                          Use your existing Github credentials for a pain free signup and login.
+</p>,
+                        <p>
+                          After your initial sign in, snaps can be sent or received in-app or via Slack using slash commands.
+</p>,
+                      ],
+                      "className": "section-3-text",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Use Tools You Already Know",
+                        },
+                        "ref": null,
+                        "rendered": "Use Tools You Already Know",
+                        "type": "h4",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Use your existing Github credentials for a pain free signup and login.",
+                        },
+                        "ref": null,
+                        "rendered": "Use your existing Github credentials for a pain free signup and login.",
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "After your initial sign in, snaps can be sent or received in-app or via Slack using slash commands.",
+                        },
+                        "ref": null,
+                        "rendered": "After your initial sign in, snaps can be sent or received in-app or via Slack using slash commands.",
+                        "type": "p",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "github-graphic",
+                      "className": "github-graphic",
+                      "src": "github.svg",
                     },
                     "ref": null,
                     "rendered": null,
@@ -1549,24 +3639,26 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <a
-                href="https://tr-personal-proj.e1.loginrocket.com/"
+              "children": <Link
+                replace={false}
+                to="/snap-ninja/user"
 >
                 start SNAP NINJA now
-</a>,
+</Link>,
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "class",
               "props": Object {
                 "children": "start SNAP NINJA now",
-                "href": "https://tr-personal-proj.e1.loginrocket.com/",
+                "replace": false,
+                "to": "/snap-ninja/user",
               },
               "ref": null,
               "rendered": "start SNAP NINJA now",
-              "type": "a",
+              "type": [Function],
             },
             "type": "button",
           },

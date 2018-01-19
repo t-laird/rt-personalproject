@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class RecipientInput extends Component {
   constructor() {
@@ -12,7 +13,7 @@ class RecipientInput extends Component {
   }
 
   componentWillReceiveProps = (nextProps) => {
-    this.populateSuggestions({target: {value: nextProps.recipient} })
+    this.populateSuggestions({target: {value: nextProps.recipient} });
   }
 
   handleInput = (event) => {
@@ -154,3 +155,10 @@ export const mapStateToProps = ( store ) => ({
 
 
 export default connect(mapStateToProps, null)(RecipientInput);
+
+RecipientInput.propTypes = {
+  UserList: PropTypes.array,
+  User: PropTypes.object,
+  updateRecipient: PropTypes.func,
+  recipient: PropTypes.object
+};

@@ -3,7 +3,6 @@ import React from 'react';
 import { Slack, mapStateToProps } from './Slack';
 import { mockUserData } from '../../mockData/mockUserData';
 
-
 describe('Slack component tests', () => {
   let mockProps;
   let renderedSlack;
@@ -26,7 +25,7 @@ describe('Slack component tests', () => {
 
     renderedSlack = shallow(<Slack {...newMockProps} />);
 
-    const expectedHistory = '/login';
+    const expectedHistory = '/snap-ninja/login';
 
     expect(renderedSlack.instance().props.history).toContain(expectedHistory);
   });

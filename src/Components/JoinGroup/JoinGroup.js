@@ -55,8 +55,8 @@ export class JoinGroup extends Component {
               placeholder={this.state.placeholder}
               value={this.state.passphrase}
               onChange={this.handleChange}
-              onFocus={() => { this.replacePlaceholder() }}  
-              onBlur={() => { this.restorePlaceholder() }}            
+              onFocus={() => { this.replacePlaceholder(); }}  
+              onBlur={() => { this.restorePlaceholder(); }}            
               name='passphrase'
             />
           </div>
@@ -158,15 +158,21 @@ export class JoinGroup extends Component {
   errorMessage = (message) => {
     if (document.querySelector('.j-message-1')) {
       document.querySelector('.j-message-1').className = 'j-message-0';
-      this.setState({message: <div><img className="warning-icon" src={require('./assets/warning.svg')} alt="warning" />{message}</div> })
+      this.setState({
+        message: 
+          <div>
+            <img className="warning-icon" src={require('./assets/warning.svg')} alt="warning" />
+            {message}
+          </div>
+      });
       setTimeout(() => {
         document.querySelector('.j-message-0').className = 'j-message-1';
-      }, 10)
+      }, 10);
       setTimeout(() => {
         if (document.querySelector('.j-message-1')) {
           document.querySelector('.j-message-1').className = 'j-message-2';
         }
-      }, 4010)
+      }, 4010);
       setTimeout(() => {
         if (document.querySelector('.j-message-2')) {
           this.setState({message: null});
