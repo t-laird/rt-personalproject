@@ -63,8 +63,7 @@ export const Header = (props) => {
       displayTabs = (
         <div className="nav-tabs">
           <NavLink exact to="/snap-ninja/">HOME</NavLink>
-          <NavLink to="/snap-ninja/creategroup">CREATE</NavLink>
-          <NavLink to="/snap-ninja/joingroup">JOIN</NavLink>
+          <NavLink to="/snap-ninja/account">ACCOUNT</NavLink>          
         </div>
       );
     }
