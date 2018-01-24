@@ -148,7 +148,6 @@ class Routes extends Component {
         pathname.includes('/snap-ninja/user') ||
         pathname.includes('/snap-ninja/group') ||
         pathname.includes('/snap-ninja/send') ||
-        pathname.includes('/snap-ninja/account') ||
         (
           pathname.includes('/snap-ninja/creategroup') && 
           nextProps.initialLoad
