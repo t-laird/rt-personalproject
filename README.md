@@ -24,13 +24,10 @@ Other levels of education can also benefit from a tool like Snap Ninja that trie
 
 ![Home-Desktop](./Screenshots/Home-Desktop-Full.png?raw=true)
 ![User-Desktop](./Screenshots/User-Desktop.png?raw=true)
-![User-Desktop](./Screenshots/User-Desktop2.png?raw=true)
-![User-Desktop](./Screenshots/Group-Desktop.png?raw=true)
-![User-Desktop](./Screenshots/.png?raw=true)
-![User-Desktop](./Screenshots/.png?raw=true)
-![User-Desktop](./Screenshots/.png?raw=true)
-![User-Desktop](./Screenshots/.png?raw=true)
-![User-Desktop](./Screenshots/.png?raw=true)
-![User-Desktop](./Screenshots/.png?raw=true)
-
-!
+![User-Desktop2](./Screenshots/User-Desktop2.png?raw=true)
+![Group-Desktop](./Screenshots/Group-Desktop.png?raw=true)
+![Group-graph](./Screenshots/Group-graph.png?raw=true)
+![Mobile-Home](./Screenshots/Mobile-Home.png?raw=true)
+![User-Mobile](./Screenshots/User-Mobile.png?raw=true)
+![Transaction-Mobile](./Screenshots/Transaction-Mobile.png?raw=true)
+![Group-Mobile](./Screenshots/Group-Mobile.png?raw=true)
